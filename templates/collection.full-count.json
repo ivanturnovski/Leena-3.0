@@ -1,8 +1,0 @@
-{
-	"sections": {
-		"template": {
-			"type": "collection-full-count"
-		}
-	},
-	"order": ["template"]
-}
