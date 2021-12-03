@@ -1,28 +1,27 @@
 {%- layout 'naked' -%}
 <div class="container">
-	<h1 class="text-center py-3">{{ page.title }}</h1>
-	<div class="row">
-		<div class="col">
-			<div class="contact-form">
-				{%- form 'contact' -%}
-				{%- if form.posted_successfully? -%}
-				<div class="alert alert-success">Thank you for your contact</div>
-				{%- endif -%}
-				{% render 'form-error', form: form %}
-				<label for="ContactFormName">Name</label>
-				<input class="form-control rounded-0 my-2" type="text" id="ContactFormName" name="contact[name]">
-				<label for="ContactFormEmail">Email</label>
-				<input class="form-control rounded-0 my-2" type="email" id="ContactFormEmail" name="contact[email]">
-				<label for="ContactFormPhone">Phone</label>
-				<input class="form-control rounded-0 my-2" type="tel" id="ContactFormPhone" name="contact[phone]">
-				<label for="ContactOrderNumber">Order #</label>
-				<input class="form-control rounded-0 my-2" type="text" id="ContactOrderNumber"
-					name="contact[order_number]">
-				<label for="ContactFormMessage">Message</label>
-				<textarea class="form-control rounded-0 my-2" id="ContactFormMessage" name="contact[body]"></textarea>
-				<input class="btn btn-primary btn-lg w-100 rounded-0" type="submit" value="Send">
-				{%- endform -%}
-			</div>
-		</div>
-	</div>
+    <h1 class="text-center py-3">{{ page.title }}</h1>
+    <div class="row">
+        <div class="col">
+            <div class="contact-form">
+                {%- form 'contact' -%}
+                    {%- if form.posted_successfully? -%}
+                        <div class="alert alert-success">Thank you for your contact</div>
+                    {%- endif -%}
+                    {% render 'form-error', form: form %}
+                    <label for="ContactFormName">Name</label>
+                    <input class="form-control rounded-0 my-2" id="ContactFormName" name="contact[name]" type="text">
+                    <label for="ContactFormEmail">Email</label>
+                    <input class="form-control rounded-0 my-2" id="ContactFormEmail" name="contact[email]" type="email">
+                    <label for="ContactFormPhone">Phone</label>
+                    <input class="form-control rounded-0 my-2" id="ContactFormPhone" name="contact[phone]" type="tel">
+                    <label for="ContactOrderNumber">Order #</label>
+                    <input class="form-control rounded-0 my-2" id="ContactOrderNumber" name="contact[order_number]" type="text">
+                    <label for="ContactFormMessage">Message</label>
+                    <textarea class="form-control rounded-0 my-2" id="ContactFormMessage" name="contact[body]"></textarea>
+                    <input class="btn btn-primary btn-lg w-100 rounded-0" type="submit" value="Send">
+                {%- endform -%}
+            </div>
+        </div>
+    </div>
 </div>

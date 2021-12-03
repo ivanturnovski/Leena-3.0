@@ -1,64 +1,66 @@
 <div class="container">
-	<div class="row">
-		<h1 class="text-center my-3">All Collections</h1>
-		{%- assign count = 0 -%}
-		{%- for collection in collections -%}
-		{%- assign count = count | plus: 1 -%}
+    <div class="row">
+        <h1 class="text-center my-3">All Collections</h1>
+        {%- assign count = 0 -%}
+        {%- for collection in collections -%}
+            {%- assign count = count | plus: 1 -%}
 
-		<div class="col-12 g-3">
-			<div class="card shadow text-start">
-				<div class="row w-100 px-4 py-2 align-items-center">
-					<div class="col-1 text-center display-5">{{ count }}</div>
-					{% for block in section.blocks %}
-					{% case block.type %}
-					{% when 'coll_img' %}
-					<div class="col-3">
-						{%- if collection.image -%}
-						<div class="thumbnails">
-							<img src=" {{ collection.image | img_url: '150x' }}" alt="">
-						</div>
-						{%- else -%}
-						<div class="thumbnails">{{ 'image' | placeholder_svg_tag: 'card-img-top' }}</div>
-						{%- endif -%}
-					</div>
-					{% when 'coll_title' %}
-					<div class="col-4">
-						<h4><a href="{{ collection.url }}">{{ collection.title }}</a></h4>
-					</div>
-					{% when 'coll_desc' %}
-					<div class="col-4">
-						<span>{{ collection.description | truncatewords: 25, '...' }}</span>
-					</div>
-					{% endcase %}
-					{% endfor %}
-				</div>
-			</div>
-		</div>
+            <div class="col-12 g-3">
+                <div class="card shadow text-start">
+                    <div class="row w-100 px-4 py-2 align-items-center">
+                        <div class="col-1 text-center display-5">{{ count }}</div>
+                        {% for block in section.blocks %}
+                            {% case block.type %}
+                                {% when 'coll_img' %}
+                                    <div class="col-3">
+                                        {%- if collection.image -%}
+                                            <div class="thumbnails">
+                                                <img alt="" src=" {{ collection.image | img_url: '150x' }}">
+                                            </div>
+                                        {%- else -%}
+                                            <div class="thumbnails">{{ 'image' | placeholder_svg_tag: 'card-img-top' }}</div>
+                                        {%- endif -%}
+                                    </div>
+                                {% when 'coll_title' %}
+                                    <div class="col-4">
+                                        <h4>
+                                            <a href="{{ collection.url }}">{{ collection.title }}</a>
+                                        </h4>
+                                    </div>
+                                {% when 'coll_desc' %}
+                                    <div class="col-4">
+                                        <span>{{ collection.description | truncatewords: 25, '...' }}</span>
+                                    </div>
+                            {% endcase %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
 
-		{%- endfor -%}
-	</div>
+        {%- endfor -%}
+    </div>
 </div>
 
 
 {% schema %}
+
 {
-"name": "List ALL Collections",
-"blocks": [
-{
-"type": "coll_img",
-"name": "Collection Image",
-"limit": 1
-},
-{
-"type": "coll_title",
-"name": "Collection Title",
-"limit": 1
-},
-{
-"type": "coll_desc",
-"name": "Collection Description",
-"limit": 1
+    "name": "List ALL Collections",
+    "blocks": [
+        {
+            "type": "coll_img",
+            "name": "Collection Image",
+            "limit": 1
+        }, {
+            "type": "coll_title",
+            "name": "Collection Title",
+            "limit": 1
+        }, {
+            "type": "coll_desc",
+            "name": "Collection Description",
+            "limit": 1
+        }
+    ]
 }
-]
-}
+
 {% endschema %}

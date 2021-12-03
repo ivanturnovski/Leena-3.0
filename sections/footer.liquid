@@ -1,112 +1,110 @@
 <div class="footer-section py-5 mt-5">
-	<div class="container">
-		<div class="row row-cols-1 row-cols-md-{{ section.settings.col_num }}">
-			{%- for block in section.blocks -%}
-			{%- assign item = block.settings -%}
-			{% case block.type %}
-			{% when 'link_list' %}
-			<div class="col py-3">
-				<h5>{{ item.title }}</h5>
-				{%- assign footer_linklist = item.menu -%}
-				<ul class="list-unstyled text-small">
-					{%- for link in linklists[footer_linklist].links -%}
-					<li><a href="{{ link.url }}">{{ link.title | escape }}</a></li>
-					{%- endfor -%}
-				</ul>
-			</div>
-			{% when 'text' %}
-			<div class="col py-3">
-				<a href="/"><img data-src="{{ item.logo | img_url: '200x200' }}" class="mb-4 lazyload"></a>
-				<h5>{{ item.title }}</h5>
-				{{ item.description }}
-			</div>
-			{% endcase %}
-			{%- endfor -%}
-		</div>
-	</div>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-{{ section.settings.col_num }}">
+            {%- for block in section.blocks -%}
+                {%- assign item = block.settings -%}
+                {% case block.type %}
+                    {% when 'link_list' %}
+                        <div class="col py-3">
+                            <h5>{{ item.title }}</h5>
+                            {%- assign footer_linklist = item.menu -%}
+                            <ul class="list-unstyled text-small">
+                                {%- for link in linklists[footer_linklist].links -%}
+                                    <li>
+                                        <a href="{{ link.url }}">{{ link.title | escape }}</a>
+                                    </li>
+                                {%- endfor -%}
+                            </ul>
+                        </div>
+                    {% when 'text' %}
+                        <div class="col py-3">
+                            <a href="/"><img data-src="{{ item.logo | img_url: '200x200' }}" class="mb-4 lazyload"></a>
+                            <h5>{{ item.title }}</h5>
+                            {{ item.description }}
+                        </div>
+                {% endcase %}
+            {%- endfor -%}
+        </div>
+    </div>
 
-	{%- if section.settings.enable_payment_types == true -%}
-	<div class="container text-center">
-		{%- for payment_type in shop.enabled_payment_types -%}
-		<img width="38" height="24" class="lazyload" data-src="{{ payment_type | payment_type_img_url }}" alt="">
-		{%- endfor -%}
-	</div>
-	{%- endif -%}
+    {%- if section.settings.enable_payment_types == true -%}
+        <div class="container text-center">
+            {%- for payment_type in shop.enabled_payment_types -%}
+                <img width="38" height="24" class="lazyload" data-src="{{ payment_type | payment_type_img_url }}" alt="">
+            {%- endfor -%}
+        </div>
+    {%- endif -%}
 </div>
 
 {{ 'bootstrap.min.js' | asset_url | script_tag }}
 <!-- {{ 'application.js' | asset_url | script_tag }} -->
 <script type="module" src="{{ 'application.js' | asset_url }}"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" type="text/javascript"></script>
 
 
 {% schema %}
+
 {
-"name": "Footer",
-"tag": "footer",
-"settings": [
-{
-"type": "range",
-"id": "col_num",
-"default": 3,
-"min": 2,
-"max": 4,
-"label": "Number of columns"
-},
-{
-"type": "header",
-"content": "Payment"
-},
-{
-"type": "checkbox",
-"id": "enable_payment_types",
-"label": "Enable Payment Type Icons",
-"default": true
+    "name": "Footer",
+    "tag": "footer",
+    "settings": [
+        {
+            "type": "range",
+            "id": "col_num",
+            "default": 3,
+            "min": 2,
+            "max": 4,
+            "label": "Number of columns"
+        }, {
+            "type": "header",
+            "content": "Payment"
+        }, {
+            "type": "checkbox",
+            "id": "enable_payment_types",
+            "label": "Enable Payment Type Icons",
+            "default": true
+        }
+    ],
+    "max_blocks": 4,
+    "blocks": [
+        {
+            "type": "link_list",
+            "name": "Navigation",
+            "limit": 3,
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "Quick Links"
+                }, {
+                    "type": "link_list",
+                    "id": "menu",
+                    "label": "Menu"
+                }
+            ]
+        }, {
+            "type": "text",
+            "name": "Store Details",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "logo",
+                    "label": "Store Logo"
+                }, {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Heading",
+                    "default": "Store information"
+                }, {
+                    "type": "richtext",
+                    "id": "description",
+                    "label": "Text"
+                }
+            ]
+        }
+    ]
 }
-],
-"max_blocks": 4,
-"blocks": [
-{
-"type": "link_list",
-"name": "Navigation",
-"limit": 3,
-"settings": [
-{
-"type": "text",
-"id": "title",
-"label": "Title",
-"default": "Quick Links"
-},
-{
-"type": "link_list",
-"id": "menu",
-"label": "Menu"
-}
-]
-},
-{
-"type": "text",
-"name": "Store Details",
-"limit": 1,
-"settings": [
-{
-"type": "image_picker",
-"id": "logo",
-"label": "Store Logo"
-},
-{
-"type": "text",
-"id": "title",
-"label": "Heading",
-"default": "Store information"
-},
-{
-"type": "richtext",
-"id": "description",
-"label": "Text"
-}
-]
-}
-]
-}
+
 {% endschema %}

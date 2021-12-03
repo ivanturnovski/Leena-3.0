@@ -106,36 +106,36 @@
 </script>
 
 {% schema %}
+
 {
-"name": "Product Pages",
-"settings": [
-{
-"type": "checkbox",
-"id": "dynamic_buttons_checkbox",
-"label": "Enable Dynamic Buttons",
-"default": false
-},
-{
-"type": "range",
-"id": "recomended_products",
-"label": "Number of Recomended Products",
-"min": 4,
-"max": 8,
-"step": 1,
-"default": 4
+    "name": "Product Pages",
+    "settings": [
+        {
+            "type": "checkbox",
+            "id": "dynamic_buttons_checkbox",
+            "label": "Enable Dynamic Buttons",
+            "default": false
+        }, {
+            "type": "range",
+            "id": "recomended_products",
+            "label": "Number of Recomended Products",
+            "min": 4,
+            "max": 8,
+            "step": 1,
+            "default": 4
+        }
+    ],
+    "blocks": [
+        {
+            "type": "product_main",
+            "name": "Product Main",
+            "limit": 1
+        }, {
+            "type": "product_carousel",
+            "name": "Product Carousel",
+            "limit": 1
+        }
+    ]
 }
-],
-"blocks": [
-{
-"type": "product_main",
-"name": "Product Main",
-"limit": 1
-},
-{
-"type": "product_carousel",
-"name": "Product Carousel",
-"limit": 1
-}
-]
-}
+
 {% endschema %}

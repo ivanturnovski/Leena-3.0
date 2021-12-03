@@ -1,17 +1,16 @@
-<div id="slick-{{ section.id }}" class="inner-slideshow-hero-section">
-	{%- for block in section.blocks -%}
-	{%- assign item = block.settings -%}
-	<div>
-		<img src="{{ item.img | img_url: '1x1' }}" data-src="{{ item.img | img_url: '2048x680' }}" alt=""
-			class="lazyload">
-		<div class="hero text-center">
-			<h1>{{ item.title }}</h1>
-			{{ item.description }}
-			<a href="{{ item.button_url }}" class="btn" style="background-color: {{ item.button_color }};">
-				{{ item.button_text }}</a>
-		</div>
-	</div>
-	{%- endfor -%}
+<div class="inner-slideshow-hero-section" id="slick-{{ section.id }}">
+    {%- for block in section.blocks -%}
+        {%- assign item = block.settings -%}
+        <div>
+            <img src="{{ item.img | img_url: '1x1' }}" data-src="{{ item.img | img_url: '2048x680' }}" alt="" class="lazyload">
+            <div class="hero text-center">
+                <h1>{{ item.title }}</h1>
+                {{ item.description }}
+                <a href="{{ item.button_url }}" class="btn" style="background-color: {{ item.button_color }};">
+                    {{ item.button_text }}</a>
+            </div>
+        </div>
+    {%- endfor -%}
 </div>
 
 
@@ -29,54 +28,51 @@
 
 
 {% schema %}
+
 {
-"name": "Slideshow Hero",
-"class": "slideshow-hero-section py-4",
-"tag": "section",
-"settings": [],
-"blocks": [
-{
-"name": "Slide",
-"type": "slide",
-"settings": [
-{
-"type": "text",
-"id": "title",
-"label": "Slide Heading"
-},
-{
-"type": "image_picker",
-"id": "img",
-"label": "Slide Image"
-},
-{
-"type": "richtext",
-"id": "description",
-"label": "Slide Description"
-},
-{
-"type": "url",
-"id": "button_url",
-"label": "Slide Button URL"
-},
-{
-"type": "text",
-"id": "button_text",
-"label": "Slide Button Text"
-},
-{
-"type": "color",
-"id": "button_color",
-"label": "Slide Button Color"
+    "name": "Slideshow Hero",
+    "class": "slideshow-hero-section py-4",
+    "tag": "section",
+    "settings": [],
+    "blocks": [
+        {
+            "name": "Slide",
+            "type": "slide",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Slide Heading"
+                }, {
+                    "type": "image_picker",
+                    "id": "img",
+                    "label": "Slide Image"
+                }, {
+                    "type": "richtext",
+                    "id": "description",
+                    "label": "Slide Description"
+                }, {
+                    "type": "url",
+                    "id": "button_url",
+                    "label": "Slide Button URL"
+                }, {
+                    "type": "text",
+                    "id": "button_text",
+                    "label": "Slide Button Text"
+                }, {
+                    "type": "color",
+                    "id": "button_color",
+                    "label": "Slide Button Color"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "category": "Slideshow",
+            "name": "Hero Slideshow"
+        }
+    ]
 }
-]
-}
-],
-"presets": [
-{
-"category": "Slideshow",
-"name":"Hero Slideshow"
-}
-]
-}
+
 {% endschema %}

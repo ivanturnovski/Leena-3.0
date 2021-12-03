@@ -1,129 +1,126 @@
 <div class="container py-4">
-	<h2 class="text-center my-3">{{ section.settings.title }}</h2>
-	<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
-		{%- for product in collections[section.settings.featured_collection].products -%}
-		{%- assign image = product.featured_media.preview_image -%}
-		<div class="col g-4">
-			{%- comment -%}
+    <h2 class="text-center my-3">{{ section.settings.title }}</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
+        {%- for product in collections[section.settings.featured_collection].products -%}
+            {%- assign image = product.featured_media.preview_image -%}
+            <div class="col g-4">
+                {%- comment -%}
 			{%- render 'product-card', product: product, image: image -%}
 			{%- endcomment -%}
 
-			<div class="card shadow">
-				<div class="thumbnails m-3">
-					{%- if image != blank -%}
-					<a href="#" id="productInfoAnchor" product-handle="{{ product.handle }}"
-						product-price="{{ product.price | money }}"><img width="150" height="100"
-							class="card-img-top lazyload" src="{{ 'spinner.gif' | asset_img_url: '150x'}}"
-							data-src="{{ image | img_url: '150x' }}" alt="{{ product.title }}"></a>
-					{%- else -%}
-					<a href="#" id="productInfoAnchor" product-handle="{{ product.handle }}"
-						product-price="{{ product.price | money }}">{{ 'image' | placeholder_svg_tag: 'card-img-top'
+                <div class="card shadow">
+                    <div class="thumbnails m-3">
+                        {%- if image != blank -%}
+                            <a href="#" id="productInfoAnchor" product-handle="{{ product.handle }}" product-price="{{ product.price | money }}"><img width="150" height="100" class="card-img-top lazyload" src="{{ 'spinner.gif' | asset_img_url: '150x'}}" data-src="{{ image | img_url: '150x' }}" alt="{{ product.title }}"></a>
+                        {%- else -%}
+                            <a href="#" id="productInfoAnchor" product-handle="{{ product.handle }}" product-price="{{ product.price | money }}">{{ 'image' | placeholder_svg_tag: 'card-img-top'
 						}}</a>
-					{%- endif -%}
-				</div>
-				<div class="card-body">
-					<h5><a href="{{ product.url }}">{{ product.title }}</a></h5>
-					<p class="price">{{ product.price | money }}</p>
-					{%- if product.available -%}
-					<p><span class="badge bg-success">In Stock</span></p>
-					{%- else -%}
-					<p><span class="badge bg-danger">Sold Out</span></p>
-					{%- endif -%}
+                        {%- endif -%}
+                    </div>
+                    <div class="card-body">
+                        <h5>
+                            <a href="{{ product.url }}">{{ product.title }}</a>
+                        </h5>
+                        <p class="price">{{ product.price | money }}</p>
+                        {%- if product.available -%}
+                            <p>
+                                <span class="badge bg-success">In Stock</span>
+                            </p>
+                        {%- else -%}
+                            <p>
+                                <span class="badge bg-danger">Sold Out</span>
+                            </p>
+                        {%- endif -%}
 
 
-					{%- if section.settings.show_cart_button == true -%}
-					{%- form 'product', product, class: "product-form", id: "AddToCartForm" -%}
-					<div class="mb-3">
-						<select name="id" id="ProductSelect" class="form-select form-select-sm">
-							{%- for variant in product.variants -%}
-							{%- if variant.available -%}
-							<option value="{{ variant.id }}">
-								{{ variant.title }}
-							</option>
-							{%- else -%}
-							<option value="{{ variant.id }}" disabled="disabled">
-								{{ variant.title }}
-							</option>
-							{%- endif -%}
-							{%- endfor -%}
-						</select>
-					</div>
-					<div class="mb-3">
-						<input type="number" class="form-control form-control-sm" value="1" min="1" name="quantity"
-							id="Quantity">
-					</div>
-					<button type="submit" name="add" id="AddToCart"
-						class="btn btn-primary-custom btn-sm w-100 rounded-0"
-						{% if product.available != true %}disabled{% endif %}>
-						Add To Cart
-					</button>
-					{%- endform -%}
-					{%- endif -%}
+                        {%- if section.settings.show_cart_button == true -%}
+                            {%- form 'product', product, class: "product-form", id: "AddToCartForm" -%}
+                                <div class="mb-3">
+                                    <select class="form-select form-select-sm" id="ProductSelect" name="id">
+                                        {%- for variant in product.variants -%}
+                                            {%- if variant.available -%}
+                                                <option value="{{ variant.id }}">
+                                                    {{ variant.title }}
+                                                </option>
+                                            {%- else -%}
+                                                <option value="{{ variant.id }}" disabled="disabled">
+                                                    {{ variant.title }}
+                                                </option>
+                                            {%- endif -%}
+                                        {%- endfor -%}
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <input class="form-control form-control-sm" id="Quantity" min="1" name="quantity" type="number" value="1">
+                                </div>
+                                <button type="submit" name="add" id="AddToCart" class="btn btn-primary-custom btn-sm w-100 rounded-0" {% if product.available != true %} disabled {% endif %}>
+                                    Add To Cart
+                                </button>
+                            {%- endform -%}
+                        {%- endif -%}
 
-				</div>
-			</div>
+                    </div>
+                </div>
 
-			<div class="modal fade" id="productInfoModal" tabIndex="-1" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered modal-xl">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-						</div>
-						<div class="modal-body">
-							<div class="row">
-								<div class="col-12 col-md-6">
-									<img class="img-fluid lazyload" src="" id="productInfoImage" alt="">
-								</div>
-								<div class="col-12 col-md-6">
-									<h1 id="productInfoTitle"></h1>
-									<h3 id="productInfoPrice"></h3>
-									<p id="productInfoDescription"></p>
-								</div>
-							</div>
-						</div>
-						<div class="modal-footer">
-							<form id="addToCartForms" class="row">
-								<select name="id" id="modalItemID" class="form-select mb-2">
-								</select>
-								<input type="number" name="quantity" value="1" id="modalItemQuantity" min="1"
-									class="col-auto">
-								<button id="modal_add_to_cart" type="submit"
-									class="btn btn-success col-auto ms-auto">Add to cart</button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
+                <div aria-hidden="true" class="modal fade" id="productInfoModal" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <img alt="" class="img-fluid lazyload" id="productInfoImage" src="">
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <h1 id="productInfoTitle"></h1>
+                                        <h3 id="productInfoPrice"></h3>
+                                        <p id="productInfoDescription"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <form class="row" id="addToCartForms">
+                                    <select class="form-select mb-2" id="modalItemID" name="id"></select>
+                                    <input class="col-auto" id="modalItemQuantity" min="1" name="quantity" type="number" value="1">
+                                    <button class="btn btn-success col-auto ms-auto" id="modal_add_to_cart" type="submit">Add to cart</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-		</div>
-		{%- endfor -%}
-	</div>
+            </div>
+        {%- endfor -%}
+    </div>
 </div>
 {% schema %}
+
 {
-"name": "Featured Collection",
-"class": "featured-collection-section",
-"tag": "section",
-"settings": [
-{
-"type": "collection",
-"id": "featured_collection",
-"label": "Collection"
-},
-{
-"type": "text",
-"id": "title",
-"default": "Featured Collection",
-"label": "Title"
+    "name": "Featured Collection",
+    "class": "featured-collection-section",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "collection",
+            "id": "featured_collection",
+            "label": "Collection"
+        }, {
+            "type": "text",
+            "id": "title",
+            "default": "Featured Collection",
+            "label": "Title"
+        }
+    ],
+    "presets": [
+        {
+            "category": "Collection",
+            "name": "Featured Collection"
+        }
+    ]
 }
-],
-"presets": [
-{
-"category": "Collection",
-"name": "Featured Collection"
-}
-]
-}
+
 {% endschema %}
 
 {%- comment -%}

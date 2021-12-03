@@ -1,121 +1,124 @@
 {% paginate search.results by 10 %}
-<div class="container">
-	<div class="row my-5">
-		<form action="/search" method="get" role="search">
-			{% for block in section.blocks %}
-			{% case block.type %}
-			{% when 'search_input' %}
-			<input class="form-control mb-4 rounded form-control-lg" type="search" name="q"
-				value="{{ search.terms | escape }}">
-			{% when 'search_buttons' %}
-			<div class="form-check form-check-inline">
-				<input class="form-check-input" type="checkbox" id="product-type" name="type" value="product">
-				<label class="form-check-label" for="product-type">Product</label>
-			</div>
-			<div class="form-check form-check-inline">
-				<input class="form-check-input" type="checkbox" id="product-type" name="type" value="article">
-				<label class="form-check-label" for="product-type">Article</label>
-			</div>
-			<div class="form-check form-check-inline">
-				<input class="form-check-input" type="checkbox" id="product-type" name="type" value="page">
-				<label class="form-check-label" for="product-type">Page</label>
-			</div>
-			<button class="btn btn-primary search-button" type="submit">Search</button>
-			{% else %}
-			{% endcase %}
-			{% endfor %}
-		</form>
-	</div>
+    <div class="container">
+        <div class="row my-5">
+            <form action="/search" method="get" role="search">
+                {% for block in section.blocks %}
+                    {% case block.type %}
+                        {% when 'search_input' %}
+                            <input class="form-control mb-4 rounded form-control-lg" type="search" name="q" value="{{ search.terms | escape }}">
+                        {% when 'search_buttons' %}
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" id="product-type" name="type" type="checkbox" value="product">
+                                <label class="form-check-label" for="product-type">Product</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" id="product-type" name="type" type="checkbox" value="article">
+                                <label class="form-check-label" for="product-type">Article</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" id="product-type" name="type" type="checkbox" value="page">
+                                <label class="form-check-label" for="product-type">Page</label>
+                            </div>
+                            <button class="btn btn-primary search-button" type="submit">Search</button>
+                        {% else %}
+                    {% endcase %}
+                {% endfor %}
+            </form>
+        </div>
 
-	<div class="row">
-		<h3 class="text-center">{{ search.results_count }} results found</h3>
-	</div>
+        <div class="row">
+            <h3 class="text-center">{{ search.results_count }}
+                results found</h3>
+        </div>
 
-	{%- if search.performed -%}
-	<div class="row row-cols-3 g-5 my-4">
+        {%- if search.performed -%}
+            <div class="row row-cols-3 g-5 my-4">
 
-		{%- for item in search.results -%}
-		{%- if item.object_type == 'product' -%}
-		<div class="col">
-			<div class="card shadow p-3">
-				{%- if item.featured_image -%}
-				<a href="{{ item.url | within: collection }}" title="{{ item.title | escape }}">
-					{{ item.featured_image.src | img_url: 'medium' | img_tag: item.featured_image.alt }}
-				</a>
-				{%- endif -%}
-				<div class="card-body">
-					<h5>{{ item.title | link_to: item.url }}</h5>
-					<p>{{ item.content | strip_html | truncatewords: 50 }}</p>
-				</div>
-			</div>
-		</div>
-		{%- elsif item.object_type == 'article' -%}
-		<div class="col">
-			<div class="card shadow p-3">
-				{%- if item.image -%}
-				<a href="{{ item.url | within: collection }}" title="{{ item.title | escape }}">
-					{{ item.image.src | img_url: 'medium' | img_tag: item.image.alt }}
-				</a>
-				{%- endif -%}
-				<div class="card-body">
-					<h5>{{ item.title | link_to: item.url }}</h5>
-					<p>{{ item.content | strip_html | truncatewords: 50 }}</p>
-				</div>
-			</div>
-		</div>
-		{%- elsif item.object_type == 'page' -%}
-		<div class="col">
-			<div class="card shadow p-3">
-				<div class="card-body">
-					<h5>{{ item.title | link_to: item.url }}</h5>
-					<p>{{ item.content | strip_html | truncatewords: 50 }}</p>
-				</div>
-			</div>
-		</div>
-		{%- endif -%}
-		{%- else -%}
-		{%- endfor -%}
+                {%- for item in search.results -%}
+                    {%- if item.object_type == 'product' -%}
+                        <div class="col">
+                            <div class="card shadow p-3">
+                                {%- if item.featured_image -%}
+                                    <a href="{{ item.url | within: collection }}" title="{{ item.title | escape }}">
+                                        {{ item.featured_image.src | img_url: 'medium' | img_tag: item.featured_image.alt }}
+                                    </a>
+                                {%- endif -%}
+                                <div class="card-body">
+                                    <h5>{{ item.title | link_to: item.url }}</h5>
+                                    <p>{{ item.content | strip_html | truncatewords: 50 }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {%- elsif item.object_type == 'article' -%}
+                        <div class="col">
+                            <div class="card shadow p-3">
+                                {%- if item.image -%}
+                                    <a href="{{ item.url | within: collection }}" title="{{ item.title | escape }}">
+                                        {{ item.image.src | img_url: 'medium' | img_tag: item.image.alt }}
+                                    </a>
+                                {%- endif -%}
+                                <div class="card-body">
+                                    <h5>{{ item.title | link_to: item.url }}</h5>
+                                    <p>{{ item.content | strip_html | truncatewords: 50 }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {%- elsif item.object_type == 'page' -%}
+                        <div class="col">
+                            <div class="card shadow p-3">
+                                <div class="card-body">
+                                    <h5>{{ item.title | link_to: item.url }}</h5>
+                                    <p>{{ item.content | strip_html | truncatewords: 50 }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {%- endif -%}
+                    {%- else -%}
+                {%- endfor -%}
 
-	</div>
-	{%- endif -%}
-</div>
+            </div>
+        {%- endif -%}
+    </div>
 
-<div class="row">
-	{% render 'pagination', paginate: paginate %}
-</div>
+    <div class="row">
+        {% render 'pagination', paginate: paginate %}
+    </div>
 
 {% endpaginate %}
 
 
 {% schema %}
+
 {
-"name": "Search",
-"settings" : [
-{
-"type": "color",
-"id": "button_color",
-"label": "Search Button Color",
-"default": "#000000"
+    "name": "Search",
+    "settings": [
+        {
+            "type": "color",
+            "id": "button_color",
+            "label": "Search Button Color",
+            "default": "#000000"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "search_input",
+            "name": "Search Input Fields",
+            "limit": 1
+        }, {
+            "type": "search_buttons",
+            "name": "Search Buttons",
+            "limit": 1
+        }
+    ]
 }
-],
-"blocks": [
-{
-"type": "search_input",
-"name": "Search Input Fields",
-"limit": 1
-},
-{
-"type": "search_buttons",
-"name": "Search Buttons",
-"limit": 1
-}
-]
-}
+
 {% endschema %}
 
 
 {% style %}
+
 .search-button {
-background-color: {{ section.settings.button_color }};
+    background-color: {{section.settings.button_color}};
 }
+
 {% endstyle %}

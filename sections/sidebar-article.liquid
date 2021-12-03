@@ -1,84 +1,91 @@
 {%- if section.settings.show_sidebar == 'yes' -%}
-<div class="article-sidebar-section text-center px-5">
-	{%- for block in section.blocks -%}
-	{%- assign item = block.settings -%}
+    <div class="article-sidebar-section text-center px-5">
+        {%- for block in section.blocks -%}
+            {%- assign item = block.settings -%}
 
-	{%- if block.type == 'sidebar_image' -%}
-	<div class="mb-5">
-		<p><strong>{{item.title}}</strong></p>
-		<a href="{{ item.url }}"><img src="{{ item.image | img_url: " master" }}" alt="{{ item.image.alt }}"></a>
-	</div>
-	{%- endif -%}
+            {%- if block.type == 'sidebar_image' -%}
+                <div class="mb-5">
+                    <p>
+                        <strong>{{item.title}}</strong>
+                    </p>
+                    <a href="{{ item.url }}"><img src="{{ item.image | img_url: " master" }}" alt="{{ item.image.alt }}"></a>
+                </div>
+            {%- endif -%}
 
-	{%- if block.type == 'sidebar_text' -%}
-	<div class="mb-5">
-		<p><strong>{{ item.title }}</strong></p>
-		<p>{{ item.description }}</p>
-	</div>
-	{%- endif -%}
+            {%- if block.type == 'sidebar_text' -%}
+                <div class="mb-5">
+                    <p>
+                        <strong>{{ item.title }}</strong>
+                    </p>
+                    <p>{{ item.description }}</p>
+                </div>
+            {%- endif -%}
 
-	{%- endfor -%}
-</div>
+        {%- endfor -%}
+    </div>
 {%- endif -%}
 
 {% schema %}
+
 {
-"name": "Article Sidebar",
-"class": "col-md-4 col-12",
-"tag": "section",
-"settings": [
-{
-"id": "show_sidebar",
-"type": "radio",
-"label": "Show sidebar?",
-"options": [
-{ "value": "yes", "label": "Show" },
-{ "value": "no", "label": "Don't Show" }
-],
-"default": "yes"
+    "name": "Article Sidebar",
+    "class": "col-md-4 col-12",
+    "tag": "section",
+    "settings": [
+        {
+            "id": "show_sidebar",
+            "type": "radio",
+            "label": "Show sidebar?",
+            "options": [
+                {
+                    "value": "yes",
+                    "label": "Show"
+                }, {
+                    "value": "no",
+                    "label": "Don't Show"
+                }
+            ],
+            "default": "yes"
+        }
+    ],
+    "max_blocks": 4,
+    "blocks": [
+        {
+            "name": "Article Sidebar Image",
+            "type": "sidebar_image",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "Article Sidebar Title"
+                }, {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                }, {
+                    "type": "url",
+                    "id": "url",
+                    "label": "Link"
+                }
+            ]
+        }, {
+            "name": "Article Sidebar Text",
+            "type": "sidebar_text",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "Article Sidebar Title"
+                }, {
+                    "type": "richtext",
+                    "id": "description",
+                    "label": "Description"
+                }
+            ]
+        }
+    ]
 }
-],
-"max_blocks": 4,
-"blocks": [
-{
-"name": "Article Sidebar Image",
-"type": "sidebar_image",
-"settings": [
-{
-"type": "text",
-"id": "title",
-"label": "Title",
-"default": "Article Sidebar Title"
-},
-{
-"type": "image_picker",
-"id": "image",
-"label": "Image"
-},
-{
-"type": "url",
-"id": "url",
-"label": "Link"
-}
-]
-},
-{
-"name": "Article Sidebar Text",
-"type": "sidebar_text",
-"settings": [
-{
-"type": "text",
-"id": "title",
-"label": "Title",
-"default": "Article Sidebar Title"
-},
-{
-"type": "richtext",
-"id": "description",
-"label": "Description"
-}
-]
-}
-]
-}
+
 {% endschema %}

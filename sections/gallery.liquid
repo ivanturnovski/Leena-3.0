@@ -1,118 +1,111 @@
 <div class="container py-4">
-	<h2 class="text-center my-3">{{ section.settings.title }}</h2>
-	{%- assign sm = section.settings.cols_sm -%}
-	{%- assign md = section.settings.cols_md -%}
-	{%- assign lg = section.settings.cols_lg -%}
-	<div class="row justify-content-center row-cols-1 row-cols-sm-{{ sm }} row-cols-md-{{ md }} row-cols-lg-{{ lg }}">
-		{%- for block in section.blocks -%}
-		{%- assign item = block.settings -%}
-		{%- if block.type == "image" -%}
-		<div class="col g-4">
-			<img src="{{ item.image | img_url: '1x1' }}" data-src="{{ item.image | img_url: '500x' }}"
-				alt="{{ item.title }}" class="lazyload">
-		</div>
-		{%- endif -%}
-		{%- if block.type == "video" -%}
-		<div class="col g-4">
-			<iframe data-src="//www.youtube.com/embed/{{ item.video_url.id }}" class="lazyload"></iframe>
-		</div>
-		{%- endif -%}
-		{%- endfor -%}
-	</div>
+    <h2 class="text-center my-3">{{ section.settings.title }}</h2>
+    {%- assign sm = section.settings.cols_sm -%}
+    {%- assign md = section.settings.cols_md -%}
+    {%- assign lg = section.settings.cols_lg -%}
+    <div class="row justify-content-center row-cols-1 row-cols-sm-{{ sm }} row-cols-md-{{ md }} row-cols-lg-{{ lg }}">
+        {%- for block in section.blocks -%}
+            {%- assign item = block.settings -%}
+            {%- if block.type == "image" -%}
+                <div class="col g-4">
+                    <img src="{{ item.image | img_url: '1x1' }}" data-src="{{ item.image | img_url: '500x' }}" alt="{{ item.title }}" class="lazyload">
+                </div>
+            {%- endif -%}
+            {%- if block.type == "video" -%}
+                <div class="col g-4">
+                    <iframe class="lazyload" data-src="//www.youtube.com/embed/{{ item.video_url.id }}"></iframe>
+                </div>
+            {%- endif -%}
+        {%- endfor -%}
+    </div>
 </div>
 
 
 {% schema %}
+
 {
-"name": "Gallery",
-"tag": "section",
-"class": "gallery-section",
-"settings": [
-{
-"type": "header",
-"content": "Section Title"
-},
-{
-"type": "text",
-"id": "title",
-"label": "Title"
-},
-{
-"type": "header",
-"content": "Responsiveness",
-"info": "Please set the values below"
-},
-{
-"type": "range",
-"id": "cols_sm",
-"info": "576px - 767px",
-"label": "Columns for Small devices",
-"min": 1,
-"max": 3,
-"step": 1,
-"default": 1
-},
-{
-"type": "range",
-"id": "cols_md",
-"info": "768px - 991px",
-"label": "Columns for Medium devices",
-"min": 1,
-"max": 3,
-"step": 1,
-"default": 2
-},
-{
-"type": "range",
-"id": "cols_lg",
-"info": "Larger than: 991px",
-"label": "Columns for Large devices",
-"min": 1,
-"max": 6,
-"step": 1,
-"default": 4
+    "name": "Gallery",
+    "tag": "section",
+    "class": "gallery-section",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Section Title"
+        }, {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        }, {
+            "type": "header",
+            "content": "Responsiveness",
+            "info": "Please set the values below"
+        }, {
+            "type": "range",
+            "id": "cols_sm",
+            "info": "576px - 767px",
+            "label": "Columns for Small devices",
+            "min": 1,
+            "max": 3,
+            "step": 1,
+            "default": 1
+        }, {
+            "type": "range",
+            "id": "cols_md",
+            "info": "768px - 991px",
+            "label": "Columns for Medium devices",
+            "min": 1,
+            "max": 3,
+            "step": 1,
+            "default": 2
+        }, {
+            "type": "range",
+            "id": "cols_lg",
+            "info": "Larger than: 991px",
+            "label": "Columns for Large devices",
+            "min": 1,
+            "max": 6,
+            "step": 1,
+            "default": 4
+        }
+    ],
+    "blocks": [
+        {
+            "type": "image",
+            "name": "Image Block",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                }, {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "image"
+                }
+            ]
+        }, {
+            "type": "video",
+            "name": "Video Block",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                }, {
+                    "type": "video_url",
+                    "id": "video_url",
+                    "label": "Video Url",
+                    "accept": ["youtube"]
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "category": "Images",
+            "name": "Gallery"
+        }
+    ]
 }
-],
-"blocks": [
-{
-"type": "image",
-"name": "Image Block",
-"settings": [
-{
-"type": "text",
-"id": "title",
-"label": "Title"
-},
-{
-"type": "image_picker",
-"id": "image",
-"label": "image"
-}
-]
-},
-{
-"type": "video",
-"name": "Video Block",
-"settings": [
-{
-"type": "text",
-"id": "title",
-"label": "Title"
-},
-{
-"type": "video_url",
-"id": "video_url",
-"label": "Video Url",
-"accept": ["youtube"]
-}
-]
-}
-],
-"presets": [
-{
-"category": "Images",
-"name":"Gallery"
-}
-]
-}
+
 {% endschema %}

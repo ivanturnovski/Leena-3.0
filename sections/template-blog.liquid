@@ -1,95 +1,98 @@
 {%- assign blogs_per_page = section.settings.blogs_per_page -%}
 <div class="position-relative text-center bg-light p-3 p-md-5">
-	<div class="col-md-5 p-lg-5 mx-auto my-5">
-		{% for block in section.blocks %}
-		{% case block.type %}
-		{% when 'blog_title' %}
-		<h1 class="display-4">{{ blog.title }}</h1>
-		{% when 'blog_description' %}
-		<p class="lead">{{ section.settings.blog_description }}</p>
-		{% when 'blog_articles_count' %}
-		<p>{{ block.settings.blog_articles_count_description }} {{ blog.articles_count }}</p>
-		{% else %}
+    <div class="col-md-5 p-lg-5 mx-auto my-5">
+        {% for block in section.blocks %}
+            {% case block.type %}
+                {% when 'blog_title' %}
+                    <h1 class="display-4">{{ blog.title }}</h1>
+                {% when 'blog_description' %}
+                    <p class="lead">{{ section.settings.blog_description }}</p>
+                {% when 'blog_articles_count' %}
+                    <p>{{ block.settings.blog_articles_count_description }}
+                        {{ blog.articles_count }}</p>
+                {% else %}
 
-		{% endcase %}
-		{% endfor %}
-	</div>
+            {% endcase %}
+        {% endfor %}
+    </div>
 </div>
 {%- paginate blog.articles by blogs_per_page -%}
-<div class="container my-5">
-	<div class="row row-cols-1 row cols-md-2 row-cols-lg-3 justify-content-center g-3 py-5">
-		{%- for article in blog.articles -%}
-		<div class="col">
-			<div class="card shadow">
-				<div class="thumbnails m-3">
-					{%- if article.image.src != null -%}
-					<a href="{{ article.url }}"><img class="img-fluid"
-							src="{{ article.image.src | img_url: '150x150' }}" alt="{{ article.image.alt }}"></a>
-					{%- else -%}
-					<a href="{{ article.url }}">{{ 'image' | placeholder_svg_tag: 'card-img-top' }}</a>
-					{%- endif -%}
-				</div>
-				<div class="card-body">
-					<h4><a href="{{ article.url }}">{{ article.title }}</a></h4>
-					<p class="mb-0 mt-auto">{{ article.author }} | {{ article.published_at | date: format: 'long' }}</p>
-					{%- if article.excerpt.size > 0 -%}
-					<p class="mb-0">{{ article.excerpt | truncate: 30, '...'}}</p>
-					{%- else -%}
-					{%- endif -%}
-				</div>
-			</div>
-		</div>
-		{%- endfor -%}
-	</div>
-</div>
-<div class="container">
-	{%- render 'pagination' , paginate: paginate -%}
-</div>
+    <div class="container my-5">
+        <div class="row row-cols-1 row cols-md-2 row-cols-lg-3 justify-content-center g-3 py-5">
+            {%- for article in blog.articles -%}
+                <div class="col">
+                    <div class="card shadow">
+                        <div class="thumbnails m-3">
+                            {%- if article.image.src != null -%}
+                                <a href="{{ article.url }}"><img class="img-fluid" src="{{ article.image.src | img_url: '150x150' }}" alt="{{ article.image.alt }}"></a>
+                            {%- else -%}
+                                <a href="{{ article.url }}">{{ 'image' | placeholder_svg_tag: 'card-img-top' }}</a>
+                            {%- endif -%}
+                        </div>
+                        <div class="card-body">
+                            <h4>
+                                <a href="{{ article.url }}">{{ article.title }}</a>
+                            </h4>
+                            <p class="mb-0 mt-auto">{{ article.author }}
+                                |
+                                {{ article.published_at | date: format: 'long' }}</p>
+                            {%- if article.excerpt.size > 0 -%}
+                                <p class="mb-0">{{ article.excerpt | truncate: 30, '...'}}</p>
+                                {%- else -%}
+                            {%- endif -%}
+                        </div>
+                    </div>
+                </div>
+            {%- endfor -%}
+        </div>
+    </div>
+    <div class="container">
+        {%- render 'pagination' , paginate: paginate -%}
+    </div>
 {%- endpaginate -%}
 
 
 {% schema %}
+
 {
-"name": "Blog Section",
-"settings": [
-{
-"id": "blogs_per_page",
-"label": "Blogs Per Page",
-"type": "range",
-"min": 3,
-"max": 12,
-"step": 3,
-"default": 6
-},
-{
-"id": "blog_description",
-"label": "Blog Description",
-"type": "text"
+    "name": "Blog Section",
+    "settings": [
+        {
+            "id": "blogs_per_page",
+            "label": "Blogs Per Page",
+            "type": "range",
+            "min": 3,
+            "max": 12,
+            "step": 3,
+            "default": 6
+        }, {
+            "id": "blog_description",
+            "label": "Blog Description",
+            "type": "text"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "blog_title",
+            "name": "Blog Title",
+            "limit": 1
+        }, {
+            "type": "blog_description",
+            "name": "Blog Description",
+            "limit": 1
+        }, {
+            "type": "blog_articles_count",
+            "name": "Blog Articles Number",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "text",
+                    "label": "Blog Articles Number Description",
+                    "id": "blog_articles_count_description"
+                }
+            ]
+        }
+    ]
 }
-],
-"blocks":[
-{
-"type": "blog_title",
-"name": "Blog Title",
-"limit": 1
-},
-{
-"type": "blog_description",
-"name": "Blog Description",
-"limit": 1
-},
-{
-"type": "blog_articles_count",
-"name": "Blog Articles Number",
-"limit": 1,
-"settings": [
-{
-"type": "text",
-"label": "Blog Articles Number Description",
-"id": "blog_articles_count_description"
-}
-]
-}
-]
-}
+
 {% endschema %}
