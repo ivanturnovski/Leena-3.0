@@ -5,11 +5,15 @@
       "blocks": {
         "carousel": {
           "type": "product_carousel",
-          "settings": {}
+          "settings": {
+          }
         },
         "main": {
           "type": "product_main",
-          "settings": {}
+          "settings": {
+            "option1": "{{ product.metafields.my_fields.grip.value }}",
+            "option2": "{{ product.vendor }}"
+          }
         }
       },
       "block_order": [
