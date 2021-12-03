@@ -1,8 +1,11 @@
 <div class="col col-sm-6 col-md-4 col-lg-3">
-	<select name="sorting" id="sort_by" class="form-select form-select-sm">
-		{%- for option in collection.sort_options -%}
-		{% capture selected %}{% if option.value == collection.sort_by %}selected{% endif %}{% endcapture %}
-		<option value="{{ option.value }}" {{ selected }}>{{ option.name }}</option>
-		{%- endfor -%}
-	</select>
+    <select class="form-select form-select-sm" id="sort_by" name="sorting">
+        {%- for option in collection.sort_options -%}
+            {% capture selected %}
+                {% if option.value == collection.sort_by %}selected
+                {% endif %}
+            {% endcapture %}
+            <option value="{{ option.value }}" {{ selected }}>{{ option.name }}</option>
+        {%- endfor -%}
+    </select>
 </div>

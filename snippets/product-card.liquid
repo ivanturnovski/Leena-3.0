@@ -1,49 +1,52 @@
 <div class="card shadow">
-	<div class="thumbnails m-3">
-		{%- if image != blank -%}
-		<a href="{{ product.url | within: collection }}"><img width="150" height="100" class="card-img-top lazyload"
-				src="{{ 'spinner.gif' | asset_img_url: '150x'}}" data-src="{{ image | img_url: '150x' }}"
-				alt="{{ product.title }}"></a>
-		{%- else -%}
-		<a href="{{ product.url }}">{{ 'image' | placeholder_svg_tag: 'card-img-top' }}</a>
-		{%- endif -%}
-	</div>
-	<div class="card-body">
-		<h5><a href="{{ product.url }}">{{ product.title }}</a></h5>
-		<p class="price">{{ product.price | money }}</p>
-		{%- if product.available -%}
-		<p><span class="badge bg-success">In Stock</span></p>
-		{%- else -%}
-		<p><span class="badge bg-danger">Sold Out</span></p>
-		{%- endif -%}
+    <div class="thumbnails m-3">
+        {%- if image != blank -%}
+            <a href="{{ product.url | within: collection }}"><img width="150" height="100" class="card-img-top lazyload" src="{{ 'spinner.gif' | asset_img_url: '150x'}}" data-src="{{ image | img_url: '150x' }}" alt="{{ product.title }}"></a>
+        {%- else -%}
+            <a href="{{ product.url }}">{{ 'image' | placeholder_svg_tag: 'card-img-top' }}</a>
+        {%- endif -%}
+    </div>
+    <div class="card-body">
+        <h5>
+            <a href="{{ product.url }}">{{ product.title }}</a>
+        </h5>
+        <p class="price">{{ product.price | money }}</p>
+        {%- if product.available -%}
+            <p>
+                <span class="badge bg-success">In Stock</span>
+            </p>
+        {%- else -%}
+            <p>
+                <span class="badge bg-danger">Sold Out</span>
+            </p>
+        {%- endif -%}
 
 
-		{%- if section.settings.show_cart_button == true -%}
-		{%- form 'product', product, class: "product-form", id: "AddToCartForm" -%}
-		<div class="mb-3">
-			<select name="id" id="ProductSelect" class="form-select form-select-sm">
-				{%- for variant in product.variants -%}
-				{%- if variant.available -%}
-				<option value="{{ variant.id }}">
-					{{ variant.title }}
-				</option>
-				{%- else -%}
-				<option value="{{ variant.id }}" disabled="disabled">
-					{{ variant.title }}
-				</option>
-				{%- endif -%}
-				{%- endfor -%}
-			</select>
-		</div>
-		<div class="mb-3">
-			<input type="number" class="form-control form-control-sm" value="1" min="1" name="quantity" id="Quantity">
-		</div>
-		<button type="submit" name="add" id="AddToCart" class="btn btn-primary-custom btn-sm w-100 rounded-0"
-			{% if product.available != true %}disabled{% endif %}>
-			Add To Cart
-		</button>
-		{%- endform -%}
-		{%- endif -%}
+        {%- if section.settings.show_cart_button == true -%}
+            {%- form 'product', product, class: "product-form", id: "AddToCartForm" -%}
+                <div class="mb-3">
+                    <select class="form-select form-select-sm" id="ProductSelect" name="id">
+                        {%- for variant in product.variants -%}
+                            {%- if variant.available -%}
+                                <option value="{{ variant.id }}">
+                                    {{ variant.title }}
+                                </option>
+                            {%- else -%}
+                                <option value="{{ variant.id }}" disabled="disabled">
+                                    {{ variant.title }}
+                                </option>
+                            {%- endif -%}
+                        {%- endfor -%}
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <input class="form-control form-control-sm" id="Quantity" min="1" name="quantity" type="number" value="1">
+                </div>
+                <button type="submit" name="add" id="AddToCart" class="btn btn-primary-custom btn-sm w-100 rounded-0" {% if product.available != true %} disabled {% endif %}>
+                    Add To Cart
+                </button>
+            {%- endform -%}
+        {%- endif -%}
 
-	</div>
+    </div>
 </div>

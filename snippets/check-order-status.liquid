@@ -1,21 +1,21 @@
 {%- capture fulfillment_status -%}
-{%- if fulfstat == 'fulfilled' -%}
-bg-primary
-{%- elsif fulfstat == 'unfulfilled'-%}
-bg-danger
-{%- else -%}
-bg-secondary
-{%- endif -%}
+    {%- if fulfstat == 'fulfilled' -%}
+        bg-primary
+    {%- elsif fulfstat == 'unfulfilled'-%}
+        bg-danger
+    {%- else -%}
+        bg-secondary
+    {%- endif -%}
 {%- endcapture -%}
 
 {%- capture financial_status -%}
-{%- if finstat == 'paid' -%}
-bg-success
-{%- elsif finstat == 'partially_refunded'-%}
-bg-warning
-{%- elsif finstat == 'refunded'-%}
-bg-light-green
-{%- else -%}
-bg-secondary
-{%- endif -%}
+    {%- if finstat == 'paid' -%}
+        bg-success
+    {%- elsif finstat == 'partially_refunded'-%}
+        bg-warning
+    {%- elsif finstat == 'refunded'-%}
+        bg-light-green
+    {%- else -%}
+        bg-secondary
+    {%- endif -%}
 {%- endcapture -%}
