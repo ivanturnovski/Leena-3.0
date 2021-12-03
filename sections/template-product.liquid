@@ -7,7 +7,16 @@
 		{% case block.type %}
 		{% when 'product_main' %}
 		<div class="col-md-6 col-12 g-5">
-			<h1>{{ product.title }}</h1>
+			<h1>{{ product.title }}</h1>	
+
+			{% if block.settings.option1  != blank %}
+			<span>{{  block.settings.option1 }}</span>
+			{% endif %}	
+			<br>
+			{% if block.settings.option2  != blank %}
+			<span>{{  block.settings.option2 }}</span>
+			{% endif %}	
+				
 			<p>{{ current_product.price | money }}</p>
 			{% if product.available %}
 			<p class="badge bg-success">In Stock</p>
@@ -129,7 +138,18 @@
         {
             "type": "product_main",
             "name": "Product Main",
-            "limit": 1
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "text",
+                    "label": "Option 1",
+                    "id": "option1"
+                }, {
+                    "type": "text",
+                    "label": "Option 2",
+                    "id": "option2"
+                }
+            ]
         }, {
             "type": "product_carousel",
             "name": "Product Carousel",
