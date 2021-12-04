@@ -1,6 +1,6 @@
 <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light">
 	<div class="container">
-		<a class="navbar-brand" href="/">HOME</a>
+		<a class="navbar-brand text-secondary" href="/">{% render 'icon-home' %}</a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
 			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -41,7 +41,7 @@
 					{%- endif -%}
 				</li>
 				{%- endfor -%}
-				<li class="nav-item"><a href="/cart" class="nav-link">Cart<span id="cart_items"
+				<li class="nav-item"><a href="/cart" class="nav-link text-secondary">{% render 'icon-shopping-cart' %}<span id="cart_items"
 							class="badge bg-danger rounded-pill">0</span></a></li>
 			</ul>
 			<ul class="navbar-nav">
