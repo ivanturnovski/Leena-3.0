@@ -232,7 +232,7 @@ function fetchPredictiveSearch() {
 			document.getElementById('search_results_body').innerHTML = '';
 			products.forEach(function (product, index) {
 				document.getElementById('search_results_body').innerHTML += `
-				<div class="card" style="width: 100%">
+				<div class="card my-3" style="width: 100%">
 					<a href="${product.url}"><img src="${product.image}" class="card-img-top"></a>
 					<div class="card-body">
 						<h5 class="card-title"><a href="${product.url}">${product.title}</a></h5>

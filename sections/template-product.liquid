@@ -10,11 +10,11 @@
 			<h1>{{ product.title }}</h1>	
 
 			{% if block.settings.option1  != blank %}
-			<span>{{  block.settings.option1 }}</span>
+			<p>{{  block.settings.option1 }}</p>
 			{% endif %}	
-			<br>
+			
 			{% if block.settings.option2  != blank %}
-			<span>{{  block.settings.option2 }}</span>
+			<p class="lead text-muted">{{  block.settings.option2 }}</p>
 			{% endif %}	
 				
 			<p>{{ current_product.price | money }}</p>
