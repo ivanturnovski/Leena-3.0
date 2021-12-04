@@ -7,7 +7,7 @@
         "title": "Welcome to my theme",
         "description": "<p>This is fully customizable and responsive theme made from scratch<\/p>",
         "button_label": "Learn now",
-        "button_link": "\/blogs\/development"
+        "button_link": "shopify:\/\/blogs\/development"
       }
     },
     "featured-collection": {
@@ -59,7 +59,8 @@
         "23709e4b-f665-44ad-9d84-df4431db0e9c",
         "2312f81e-99c5-4f63-939e-a24019e8e953"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "gallery": {
       "type": "gallery",
