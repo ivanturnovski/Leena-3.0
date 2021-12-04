@@ -223,7 +223,7 @@ if (predictiveSearch != null) {
 
 function fetchPredictiveSearch() {
 	fetch(
-		`search/suggest.json?q=${predictiveSearch.value}&resources[type]=product`
+		`/search/suggest.json?q=${predictiveSearch.value}&resources[type]=product`
 	)
 		.then((resp) => resp.json())
 		.then((data) => {
@@ -232,10 +232,10 @@ function fetchPredictiveSearch() {
 			document.getElementById('search_results_body').innerHTML = '';
 			products.forEach(function (product, index) {
 				document.getElementById('search_results_body').innerHTML += `
-				<div class="card" style="width: 18rem;">
-					<img src="${product.image}" class="card-img-top">
+				<div class="card" style="width: 100%">
+					<a href="${product.url}"><img src="${product.image}" class="card-img-top"></a>
 					<div class="card-body">
-						<h5 class="card-title">${product.title}</h5>
+						<h5 class="card-title"><a href="${product.url}">${product.title}</a></h5>
 						<p class="card-text">$${product.price}</p>
 					</div>
 				</div>

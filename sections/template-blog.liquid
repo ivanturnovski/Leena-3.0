@@ -21,7 +21,7 @@
         <div class="row row-cols-1 row cols-md-2 row-cols-lg-3 justify-content-center g-3 py-5">
             {%- for article in blog.articles -%}
                 <div class="col">
-                    <div class="card shadow">
+                    <div class="card shadow h-100">
                         <div class="thumbnails m-3">
                             {%- if article.image.src != null -%}
                                 <a href="{{ article.url }}"><img class="img-fluid" src="{{ article.image.src | img_url: '150x150' }}" alt="{{ article.image.alt }}"></a>

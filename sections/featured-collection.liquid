@@ -8,7 +8,7 @@
 			{%- render 'product-card', product: product, image: image -%}
 			{%- endcomment -%}
 
-                <div class="card shadow">
+                <div class="card shadow h-100">
                     <div class="thumbnails m-3">
                         {%- if image != blank -%}
                             <a href="#" id="productInfoAnchor" product-handle="{{ product.handle }}" product-price="{{ product.price | money }}"><img width="150" height="100" class="card-img-top lazyload" src="{{ 'spinner.gif' | asset_img_url: '150x'}}" data-src="{{ image | img_url: '150x' }}" alt="{{ product.title }}"></a>
