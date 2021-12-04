@@ -1,8 +1,8 @@
 {
   "current": {
-    "header_footer_color": "#ae886b",
-    "header_text_font": "assistant_n4",
-    "body_text_font": "catamaran_n4",
+    "header_footer_color": "#ece2da",
+    "header_text_font": "karla_n4",
+    "body_text_font": "karla_n4",
     "body_font_size": 16,
     "sections": {
       "header": {
