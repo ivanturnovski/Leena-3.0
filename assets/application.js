@@ -185,6 +185,7 @@ if (modalAddToCartForm != null) {
 				}
 			})
 			.then((data) => update_cart())
+			.then((data) => loadDrawerCart())
 			.catch((err) => {
 				console.log('Error:' + err);
 			});
@@ -205,6 +206,33 @@ document.addEventListener('DOMContentLoaded', function () {
 	update_cart();
 });
 //Cart API
+
+//Cart Drawer
+function loadDrawerCart() {
+	fetch('/cart.js')
+		.then((resp) => resp.json())
+		.then(function (data) {
+			console.log(data);
+			if (data.items.length > 0) {
+				data.items.forEach(function (product, index) {
+					var property = product.properties;
+
+					for (var key in property) {
+						console.log(property[key]);
+						var value = property[key];
+					}
+					document.querySelector('#cart-drawer').innerHTML += `<div class="cart-drawer-item"><div class="cart-drawer-image"><img class="img-fluid" src="${product.image}"></img></div><div class="cart-drawer-details">${product.title}<br> $${product.price / 100}<br>Gift:${value} </div></div>`;
+				});
+			}
+		})
+		.catch((err) => console.log(err));
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+	loadDrawerCart();
+});
+//Cart Drawer
+
 // Predictive Search
 
 var predictiveSearch = document.getElementById('search');

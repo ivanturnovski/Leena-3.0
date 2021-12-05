@@ -44,8 +44,13 @@
 				
 			</ul>
 			<ul class="navbar-nav">
-				<li class="nav-item"><a href="/cart" class="nav-link text-secondary"><span>Cart</span>{% render 'icon-shopping-cart' %}<span id="cart_items"
-					class="badge bg-danger rounded-pill">0</span></a></li>
+				<li  class="nav-item dropdown dropdown-hover"><a id="cart" href="/cart" class="nav-link text-secondary has-dropdown"><span>Cart</span>{% render 'icon-shopping-cart' %}<span id="cart_items"
+					class="badge bg-danger rounded-pill">0</span></a>
+					<div id="cart-drawer" class="bg-light dropdown-menu">		
+							
+					</div>
+				</li>
+				
 				{%- if shop.customer_accounts_enabled -%}
 				{%- if customer -%}
 				<li class="nav-item">
