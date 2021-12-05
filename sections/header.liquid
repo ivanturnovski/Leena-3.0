@@ -9,7 +9,7 @@
 			<ul id="main-menu" class="navbar-nav me-auto">
 				{%- for link in linklists.main-menu.links -%}
 				<li class="nav-item{% if link.links != blank %} dropdown dropdown-hover{%- endif -%}">
-					<a class="nav-link{% if link.links != blank %} has-dropdown{%- endif -%}" href="{{ link.url }}">
+					<a class="nav-link text-secondary{% if link.links != blank %} has-dropdown{%- endif -%}" href="{{ link.url }}">
 						{{ link.title }}{%- if link.links != blank -%}<i class="arrow down"></i>{%- endif -%}
 					</a>
 
@@ -41,10 +41,11 @@
 					{%- endif -%}
 				</li>
 				{%- endfor -%}
-				<li class="nav-item"><a href="/cart" class="nav-link text-secondary">{% render 'icon-shopping-cart' %}<span id="cart_items"
-							class="badge bg-danger rounded-pill">0</span></a></li>
+				
 			</ul>
 			<ul class="navbar-nav">
+				<li class="nav-item"><a href="/cart" class="nav-link text-secondary"><span>Cart</span>{% render 'icon-shopping-cart' %}<span id="cart_items"
+					class="badge bg-danger rounded-pill">0</span></a></li>
 				{%- if shop.customer_accounts_enabled -%}
 				{%- if customer -%}
 				<li class="nav-item">
@@ -55,10 +56,10 @@
 				</li>
 				{%- else -%}
 				<li class="nav-item">
-					<a class="nav-link" href="{{ routes.account_login_url }}">Login</a>
+					<a class="nav-link text-secondary" href="{{ routes.account_login_url }}"><span>Login</span>{% render 'icon-login' %}</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="{{ routes.account_register_url }}">Register</a>
+					<a class="nav-link text-secondary" href="{{ routes.account_register_url }}"><span>Register</span>{% render 'icon-register' %}</a>
 				</li>
 				{%- endif -%}
 				{%- endif -%}
