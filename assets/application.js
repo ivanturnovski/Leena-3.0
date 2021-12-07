@@ -208,11 +208,22 @@ document.addEventListener('DOMContentLoaded', function () {
 //Cart API
 
 //Cart Drawer
-function loadDrawerCart() {
+
+var offcanvasCartDrawer = document.getElementById('offcanvasCartDrawer');
+var bsoffcanvasDrawer = new bootstrap.Offcanvas(offcanvasCartDrawer);
+var cart = document.getElementById('cart');
+
+cart.addEventListener('click', function (e) {	
+	loadDrawerCart();
+	e.stopPropagation();
+});
+
+function loadDrawerCart() {	
 	fetch('/cart.js')
 		.then((resp) => resp.json())
 		.then(function (data) {
 			console.log(data);
+			document.getElementById('cart_drawer_body').innerHTML = '';
 			if (data.items.length > 0) {
 				data.items.forEach(function (product, index) {
 					var property = product.properties;
@@ -221,16 +232,21 @@ function loadDrawerCart() {
 						console.log(property[key]);
 						var value = property[key];
 					}
-					document.querySelector('#cart-drawer').innerHTML += `<div class="cart-drawer-item"><div class="cart-drawer-image"><img class="img-fluid" src="${product.image}"></img></div><div class="cart-drawer-details">${product.title}<br> $${product.price / 100}<br>Gift:${value} </div></div>`;
+					document.getElementById('cart_drawer_body').innerHTML += 
+					`<div class="card my-3 cart-drawer-item">
+						<div class="cart-drawer-image">
+							<img class="img-fluid card-img-top" src="${product.image}"></img>
+						</div>
+						<div class="card-body cart-drawer-details">
+						<h5 class="card-title">${product.title}</h5>$${product.price / 100}<br>Gift:${value}
+						</div>
+					</div>`;
 				});
 			}
-		})
+		})		
 		.catch((err) => console.log(err));
+		bsoffcanvasDrawer.show();
 }
-
-document.addEventListener('DOMContentLoaded', function () {
-	loadDrawerCart();
-});
 //Cart Drawer
 
 // Predictive Search
@@ -273,3 +289,5 @@ function fetchPredictiveSearch() {
 		});
 }
 // Predictive Search
+
+
