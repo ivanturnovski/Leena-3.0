@@ -218,6 +218,7 @@ cart.addEventListener('click', function (e) {
 	e.stopPropagation();
 });
 
+
 function loadDrawerCart() {	
 	fetch('/cart.js')
 		.then((resp) => resp.json())
@@ -225,6 +226,7 @@ function loadDrawerCart() {
 			console.log(data);
 			document.getElementById('cart_drawer_body').innerHTML = '';
 			if (data.items.length > 0) {
+				document.getElementById('offcanvas-buttons').innerHTML = `<a href="/cart" class="btn btn-secondary">View Cart</a>`;
 				data.items.forEach(function (product, index) {
 					var property = product.properties;
 
@@ -242,6 +244,8 @@ function loadDrawerCart() {
 						</div>
 					</div>`;
 				});
+			} else {
+				document.getElementById('cart_drawer_body').innerHTML = '<h3>The Cart Is Empty</h3>';
 			}
 		})		
 		.catch((err) => console.log(err));
