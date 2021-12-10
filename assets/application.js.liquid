@@ -237,7 +237,7 @@ function loadDrawerCart() {
 					document.getElementById('cart_drawer_body').innerHTML += 
 					`<div class="card my-3 cart-drawer-item">
 						<div class="cart-drawer-image">
-							<img class="img-fluid card-img-top" src="${product.image}"></img>
+							<img width="200" class="lazyload blur-up" data-src="${product.image}&width=300"></img>
 						</div>
 						<div class="card-body cart-drawer-details">
 						<h5 class="card-title">${product.title}</h5>$${product.price / 100}<br>Gift:${value}
@@ -281,7 +281,7 @@ function fetchPredictiveSearch() {
 			products.forEach(function (product, index) {
 				document.getElementById('search_results_body').innerHTML += `
 				<div class="card my-3" style="width: 100%">
-					<a href="${product.url}"><img src="${product.image}" class="card-img-top"></a>
+					<a href="${product.url}"><img width="200" data-src="${product.image}&width=300" class="lazyload blur-up"></a>
 					<div class="card-body">
 						<h5 class="card-title"><a href="${product.url}">${product.title}</a></h5>
 						<p class="card-text">$${product.price}</p>
