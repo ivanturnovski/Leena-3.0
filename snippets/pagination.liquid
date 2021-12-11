@@ -2,26 +2,26 @@
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center mt-3">
             {%- if paginate.previous.is_link -%}
-                <li class="page-item">
-                    <a href="{{ paginate.previous.url }}" class="page-link">{{ paginate.previous.title }}</a>
+                <li class="page-item mx-3">
+                    <a href="{{ paginate.previous.url }}" class="page-link bg-secondary text-light px-3">{{ paginate.previous.title }}</a>
                 </li>
             {%- endif -%}
 
             {%- for part in paginate.parts -%}
                 {%- if part.is_link -%}
                     <li class="page-item">
-                        <a href="{{ part.url }}" class="page-link">{{ part.title }}</a>
+                        <a href="{{ part.url }}" class="page-link bg-secondary text-light px-3">{{ part.title }}</a>
                     </li>
                 {%- else -%}
                     <li class="page-item disabled">
-                        <a href="{{ part.url }}" class="page-link">{{ part.title }}</a>
+                        <a href="{{ part.url }}" class="page-link bg-secondary text-light px-3">{{ part.title }}</a>
                     </li>
                 {%- endif -%}
             {%- endfor -%}
 
             {%- if paginate.next.is_link -%}
-                <li class="page-item">
-                    <a href="{{ paginate.next.url }}" class="page-link">{{ paginate.next.title }}</a>
+                <li class="page-item mx-3">
+                    <a href="{{ paginate.next.url }}" class="page-link bg-secondary text-light px-3">{{ paginate.next.title }}</a>
                 </li>
             {%- endif -%}
         </ul>
