@@ -40,6 +40,7 @@
                                 <p class="mb-0">{{ article.excerpt | truncate: 30, '...'}}</p>
                                 {%- else -%}
                             {%- endif -%}
+                            <a class="mt-5 text-primary fw-bold" href="{{ article.url }}">Read More</a>
                         </div>
                     </div>
                 </div>
