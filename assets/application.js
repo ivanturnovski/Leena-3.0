@@ -226,7 +226,7 @@ function loadDrawerCart() {
 			console.log(data);
 			document.getElementById('cart_drawer_body').innerHTML = '';
 			if (data.items.length > 0) {
-				document.getElementById('offcanvas-buttons').innerHTML = `<a href="/cart" class="btn btn-secondary">View Cart</a>`;
+				document.getElementById('offcanvas-buttons').innerHTML = `<a href="/cart" class="btn btn-secondary w-100">View Cart</a>`;
 				data.items.forEach(function (product, index) {
 					var property = product.properties;
 

@@ -1,93 +1,102 @@
 <div class="container my-5">
     {%- if cart.item_count > 0 -%}
         <div class="row">
-            <p class="h2 my-3 text-center">
-                {{ 'general.cart.title' | t }}
-            </p>
+            <div class="cart-header d-flex justify-content-between align-items-center">
+                <span class="h2 my-3 text-center">{{ 'general.cart.title' | t }}</span>
+                <a class="text-primary" href="{{ routes.all_products_collection_url }}">Continue Shopping</a>
+            </div>
         </div>
-        <div class="mb-5">
-            <form action="/cart" class="row" method="POST" novalidate>
-                <div class="col-12 col-lg-8 g-3">
-                    <div class="card shadow h-100">
-                        <div class="card-body">
-                            <table class="table table-borderless">
-                                <thead>
-                                    <th colspan="2">{{ 'general.cart.product' | t }}</th>
-                                    <th>{{ 'general.cart.price' | t }}</th>
-                                    <th>{{ 'general.cart.quantity' | t }}</th>
-                                    <th>{{ 'general.cart.total' | t }}</th>
-                                    <th>
-                                        Additional Info
-                                    </th>
-                                </thead>
-                                <tbody>
-                                    {%- for item in cart.items -%}
-                                        <tr>
-                                            <td>
-                                                <a href="{{ item.url | within: collections.all }}">
-                                                    <img src="{{ item | img_url: 'small' }}" alt="{{ item.title | escape }}">
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <a href="{{ item.url }}">{{ item.product.title }}</a>
-                                                <p class="small">{{ item.variant.title }}</p>
-                                                <a class="btn btn-danger" href="/cart/change?line={{ forloop.index }}&amp;quantity=0">{{
-											'general.cart.remove' | t }}</a>
-                                            </td>
-                                            <td>{{ item.original_price | money }}</td>
-                                            <td>
-                                                <input type="number" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" min="0">
-                                            </td>
-                                            <td>
-                                                {%- if item.original_line_price != item.line_price -%}
-                                                    {{
-										item.original_line_price | money }}
-                                                {%-
-										endif -%}
+
+        <form action="/cart" class="row" method="POST" novalidate>
+            <div class="col-12 g-3">
+                <div class="card shadow h-100">
+                    <div class="card-body w-100">
+                        <table class="table table-borderless" id="cart-table">
+                            <thead class="border-bottom">
+                                <th colspan="2">{{ 'general.cart.product' | t }}</th>
+                                <th>{{ 'general.cart.price' | t }}</th>
+                                <th>{{ 'general.cart.quantity' | t }}</th>
+                                <th>{{ 'general.cart.total' | t }}</th>
+                                <th>Additional Info</th>
+                                <th>{{ 'general.cart.remove' | t }}</th>
+                            </thead>
+                            <tbody>
+                                {%- for item in cart.items -%}
+                                    <tr class="border-bottom">
+                                        <td>
+                                            <a href="{{ item.url | within: collections.all }}">
+                                                <img src="{{ item | img_url: 'small' }}" alt="{{ item.title | escape }}">
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="{{ item.url }}">{{ item.product.title }}</a>
+                                            <p class="small">{{ item.variant.title }}</p>
+                                        </td>
+                                        <td>{{ item.original_price | money }}</td>
+                                        <td>
+                                            <input type="number" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" min="0">
+                                        </td>
+                                        <td>
+                                            {%- if item.original_line_price != item.line_price -%}
                                                 {{ item.original_line_price | money }}
-                                                {%- for discount in item.discounts -%}
-                                                    {{ discount.title }}
-                                                {%- endfor -%}
-                                            </td>
-                                            <td>
-                                                {% for property in item.properties %}
-                                                    {{ property.first }}
-                                                    :
-                                                    {{ property.last }}
-                                                {% endfor %}
-                                            </td>
-                                        </tr>
-                                    {%- endfor -%}
-                                </tbody>
-                            </table>
-                        </div>
+                                            {%- endif -%}
+                                            {{ item.original_line_price | money }}
+                                            {%- for discount in item.discounts -%}
+                                                {{ discount.title }}
+                                            {%- endfor -%}
+                                        </td>
+                                        <td>
+                                            {% for property in item.properties %}
+                                                {{ property.first }}
+                                                :
+                                                {{ property.last }}
+                                            {% endfor %}
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-danger" href="{{ routes.cart_change_url }}?line={{ forloop.index }}&amp;quantity=0">{{ 'general.cart.remove' | t }}</a>
+                                        </td>
+                                    </tr>
+                                {%- endfor -%}
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4 g-3">
-                    <div class="card shadow h-100">
-                        <div class="card-body">
-                            {% for block in section.blocks %}
-                                {% case block.type %}
-                                    {% when 'cart_total' %}
-                                        <div class="cart-totals my-3">
-                                            <p class="h3">{{ 'general.cart.total_amount' | t }}:</p>
-                                            <p>{{ cart.total_price | money }}</p>
-                                        </div>
-                                    {% when 'cart_buttons' %}
-                                        <div class="cart-buttons d-grid gap-2 my-3">
-                                            <button class="btn btn-primary" name="update" type="submit">{{ 'general.cart.update' | t
-								}}</button>
-                                            <button class="btn btn-primary" name="checkout" type="submit">{{ 'general.cart.checkout' | t
-								}}</button>
-                                        </div>
-                                    {% else %}
-                                {% endcase %}
-                            {% endfor %}
+            </div>
+            <div class="col-12 g-3">
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="card card-shadow h-100">
+                            <div class="card-body w-100">
+                                <label for="CartNote" class="my-3">Special instructions</label>
+                                <textarea name="note" id="CartNote" rows="5">{{ cart.note }}</textarea>
+                            </div>
                         </div>
                     </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="card shadow h-100">
+                            <div class="card-body">
+                                {% for block in section.blocks %}
+                                    {% case block.type %}
+                                        {% when 'cart_total' %}
+                                            <div class="cart-totals my-3">
+                                                <p class="h3">{{ 'general.cart.total_amount' | t }}:</p>
+                                                <p>{{ cart.total_price | money }}</p>
+                                            </div>
+                                        {% when 'cart_buttons' %}
+                                            <div class="cart-buttons d-grid gap-2 my-3">
+                                                <button class="btn btn-primary" name="update" type="submit">{{ 'general.cart.update' | t }}</button>
+                                                <button class="btn btn-success" name="checkout" type="submit">{{ 'general.cart.checkout' | t }}</button>
+                                            </div>
+                                        {% else %}
+                                    {% endcase %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>                    
                 </div>
-            </form>
-        </div>
+            </div>
+        </form>
+
 
     {%- else -%}
         <div class="row">
