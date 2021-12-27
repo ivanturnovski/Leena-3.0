@@ -7,6 +7,8 @@
 	{% for product in collection.products %}
 	{
 		"title": "{{ product.title }}",
+		"price_min": "{{ product.price_min | | money_without_trailing_zeros}}",
+		"price_max": "{{ product.price_max | | money_without_trailing_zeros}}",
 		"variants": [
 		{% for variant in product.variants %}
 			{
