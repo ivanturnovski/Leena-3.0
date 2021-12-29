@@ -8,6 +8,7 @@
       "header": {
         "type": "header",
         "settings": {
+          "search_bar": "#d4e4f5"
         }
       },
       "1617375064ce83f223": {
