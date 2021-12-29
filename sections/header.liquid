@@ -1,140 +1,236 @@
-<nav id="main-navbar" class="navbar navbar-expand-lg navbar-light">
-	<div class="container">
-		<a class="navbar-brand text-secondary" href="/">{% render 'icon-home' %}</a>
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNav">
-			<ul id="main-menu" class="navbar-nav me-auto">
-				{%- for link in linklists.main-menu.links -%}
-				<li class="nav-item{% if link.links != blank %} dropdown dropdown-hover{%- endif -%}">
-					<a class="nav-link text-secondary{% if link.links != blank %} has-dropdown{%- endif -%}"
-						href="{{ link.url }}">
-						{{ link.title }}{%- if link.links != blank -%}<i class="arrow down"></i>{%- endif -%}
-					</a>
+<div class="top-bar">
+    <div class="container-fluid d-flex align-items-center justify-content-around">
+        <div class="row w-100">
+            <div class="col-sm-12 col-lg-9">
+                <div class="top-bar-links navbar navbar-expand-lg">
+                    <ul class="navbar-nav" id="top-menu">
+                        {%- for link in linklists.main-menu.links -%}
+                            <li class="nav-item{% if link.links != blank %} dropdown dropdown-hover{%- endif -%}">
+                                <a class="nav-link text-secondary{% if link.links != blank %} has-dropdown{%- endif -%}" href="{{ link.url }}">
+                                    {{ link.title }}
+                                    {%- if link.links != blank -%}
+                                        <i class="arrow down"></i>
+                                    {%- endif -%}
+                                </a>
 
-					{%- if link.links != blank -%}
-					<ul class="dropdown-menu">
-						<li class="nav-item menu-view-all">
-							<a class="nav-link" href="{{ link.url }}">View All {{ link.title }}</a>
-						</li>
-						{%- for child_link in link.links -%}
-						<li class="nav-item{% if child_link.links != blank %} dropdown dropdown-hover{% endif %}">
-							<a class="nav-link{% if child_link.links != blank %} has-dropdown{%- endif -%}"
-								href="{{ child_link.url }}">{{ child_link.title }}{%- if
-								child_link.links != blank -%}<i class="arrow right"></i>{%- endif -%}</a>
-							{%- if child_link.links != blank -%}
-							<ul class="dropdown-menu dropdown-menu-horizontal">
-								<li class="nav-item menu-view-all">
-									<a class="nav-link" href="{{ child_link.url }}">View All {{ child_link.title }}</a>
-								</li>
-								{%- for grandchild_link in child_link.links -%}
-								<li class="nav-item">
-									<a class="nav-link" href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
-								</li>
-								{%- endfor -%}
-							</ul>
-							{%- endif -%}
-						</li>
-						{%- endfor -%}
-					</ul>
-					{%- endif -%}
-				</li>
-				{%- endfor -%}
-			</ul>
-			<ul class="navbar-nav">
-				<li class="nav-item dropdown dropdown-hover"><span id="cart"
-						class="nav-link text-secondary has-dropdown">{% render 'icon-shopping-cart'	%}<span id="cart_items" class="badge bg-danger rounded-pill">0</span></span>
-				</li>
-				<li class="nav-item">
-					<a data-bs-toggle="collapse" data-bs-target=".search-wrapper" href="javascript:void(0)" id="search_icon" class="nav-link text-secondary">{% render 'icon-search' %}</a>
-				</li>
+                                {%- if link.links != blank -%}
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item menu-view-all">
+                                            <a class="nav-link" href="{{ link.url }}">View All
+                                                {{ link.title }}</a>
+                                        </li>
+                                        {%- for child_link in link.links -%}
+                                            <li class="nav-item{% if child_link.links != blank %} dropdown dropdown-hover{% endif %}">
+                                                <a class="nav-link{% if child_link.links != blank %} has-dropdown{%- endif -%}" href="{{ child_link.url }}">{{ child_link.title }}
+                                                    {%- if
+										child_link.links != blank -%}
+                                                        <i class="arrow right"></i>
+                                                    {%- endif -%}
+                                                </a>
+                                                {%- if child_link.links != blank -%}
+                                                    <ul class="dropdown-menu dropdown-menu-horizontal">
+                                                        <li class="nav-item menu-view-all">
+                                                            <a class="nav-link" href="{{ child_link.url }}">View All
+                                                                {{ child_link.title }}</a>
+                                                        </li>
+                                                        {%- for grandchild_link in child_link.links -%}
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                                                            </li>
+                                                        {%- endfor -%}
+                                                    </ul>
+                                                {%- endif -%}
+                                            </li>
+                                        {%- endfor -%}
+                                    </ul>
+                                {%- endif -%}
+                            </li>
+                        {%- endfor -%}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-3">
+                <div class="top-bar-icons">
+                    <ul class="d-flex list-style-none m-0 p-0 justify-content-around justify-content-lg-end">
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary" data-bs-target=".search-bar" data-bs-toggle="collapse" href="javascript:void(0)" id="search_icon">{% render 'icon-search' %}</a>
+                        </li>
+                        {%- if shop.customer_accounts_enabled -%}
+                            {%- if customer -%}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ routes.account_url }}">Account</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ routes.account_logout_url }}">Logout</a>
+                                </li>
+                            {%- else -%}
+                                <li class="nav-item">
+                                    <a class="nav-link text-secondary" href="{{ routes.account_login_url }}">{% render 'icon-login'
+								%}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-secondary" href="{{ routes.account_register_url }}">{% render
+								'icon-register' %}</a>
+                                </li>
+                            {%- endif -%}
+                        {%- endif -%}
+                        <li class="nav-item dropdown dropdown-hover">
+                            <span class="nav-link text-secondary has-dropdown" id="cart">{% render 'icon-shopping-cart' %}<span class="badge bg-danger rounded-pill" id="cart_items">0</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-				{%- if shop.customer_accounts_enabled -%}
-				{%- if customer -%}
-				<li class="nav-item">
-					<a class="nav-link" href="{{ routes.account_url }}">Account</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="{{ routes.account_logout_url }}">Logout</a>
-				</li>
-				{%- else -%}
-				<li class="nav-item">
-					<a class="nav-link text-secondary" href="{{ routes.account_login_url }}">{% render 'icon-login'
-						%}</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link text-secondary" href="{{ routes.account_register_url }}">{% render
-						'icon-register' %}</a>
-				</li>
-				{%- endif -%}
-				{%- endif -%}
-			</ul>
-		</div>
 
-		{%- form 'localization', id: "localization_form_tag", class: "dropup" -%}
-		<div class="localeBtn"><img width="25" height="25" class="lazyload"
-				data-src="{{ 'globe.png' | asset_img_url: '25x' }}" alt=""></div>
-		<div class="dropup-content">
-			{%- for locale in shop.published_locales -%}
-			<a id="localeItem" class="text-decoration-none" lang="{{ locale.iso_code }}">{{ locale.iso_code }}</a>
-			{%- endfor -%}
-		</div>
-		<input id="localeCode" type="hidden" name="locale_code" value="{{ form.current_locale.iso_code }}">
-		{%- endform -%}
-	</div>	
+    </div>
+</div>
+<div class="search-bar collapse">
+    <div class="container">
+        <div class="w-50 mx-auto p-2">
+            <form action="/search" method="GET" role="search">
+                <input id="search" class="w-100 p-1 border shadow" type="text" name="q" value="{{ search.terms | escape }}" placeholder="Search">
+            </form>
+        </div>
+    </div>
+</div>
+<nav class="navbar-main navbar navbar-expand-lg navbar-light" id="main-navbar">
+    <div class="container">
+        <a class="navbar-brand text-secondary" href="/">{% render 'icon-home' %}</a>
+        <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav" id="main-menu">
+                {%- for link in linklists.main-menu.links -%}
+                    <li class="nav-item{% if link.links != blank %} dropdown dropdown-hover{%- endif -%}">
+                        <a class="nav-link text-secondary{% if link.links != blank %} has-dropdown{%- endif -%}" href="{{ link.url }}">
+                            {{ link.title }}
+                            {%- if link.links != blank -%}
+                                <i class="arrow down"></i>
+                            {%- endif -%}
+                        </a>
+
+                        {%- if link.links != blank -%}
+                            <ul class="dropdown-menu">
+                                <li class="nav-item menu-view-all">
+                                    <a class="nav-link" href="{{ link.url }}">View All
+                                        {{ link.title }}</a>
+                                </li>
+                                {%- for child_link in link.links -%}
+                                    <li class="nav-item{% if child_link.links != blank %} dropdown dropdown-hover{% endif %}">
+                                        <a class="nav-link{% if child_link.links != blank %} has-dropdown{%- endif -%}" href="{{ child_link.url }}">{{ child_link.title }}
+                                            {%- if
+								child_link.links != blank -%}
+                                                <i class="arrow right"></i>
+                                            {%- endif -%}
+                                        </a>
+                                        {%- if child_link.links != blank -%}
+                                            <ul class="dropdown-menu dropdown-menu-horizontal">
+                                                <li class="nav-item menu-view-all">
+                                                    <a class="nav-link" href="{{ child_link.url }}">View All
+                                                        {{ child_link.title }}</a>
+                                                </li>
+                                                {%- for grandchild_link in child_link.links -%}
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                                                    </li>
+                                                {%- endfor -%}
+                                            </ul>
+                                        {%- endif -%}
+                                    </li>
+                                {%- endfor -%}
+                            </ul>
+                        {%- endif -%}
+                    </li>
+                {%- endfor -%}
+            </ul>
+
+        </div>
+
+        {%- form 'localization', id: "localization_form_tag", class: "dropup" -%}
+            <div class="localeBtn"><img width="25" height="25" class="lazyload" data-src="{{ 'globe.png' | asset_img_url: '25x' }}" alt=""></div>
+            <div class="dropup-content">
+                {%- for locale in shop.published_locales -%}
+                    <a id="localeItem" class="text-decoration-none" lang="{{ locale.iso_code }}">{{ locale.iso_code }}</a>
+                {%- endfor -%}
+            </div>
+            <input id="localeCode" type="hidden" name="locale_code" value="{{ form.current_locale.iso_code }}">
+        {%- endform -%}
+    </div>
 </nav>
-<div class="search-wrapper collapse">
-	<div class="container">
-		<div class="w-50 mx-auto p-2">
-			<form action="/search" method="GET" role="search">
-				<input id="search" class="w-100 p-1 border shadow" type="text" name="q" value="{{ search.terms | escape }}" placeholder="Search">
-			</form>
-		</div>
-	</div>
-</div>
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasSearchResult" aria-labelledby="offcanvasLabel">
-	<div class="offcanvas-header">
-		<h5 class="offcanvas-title" id="offcanvasLabel">Product Search Result</h5>
-		<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-	</div>
-	<div class="offcanvas-body" id="search_results_body">
-	</div>
+
+<div aria-labelledby="offcanvasLabel" class="offcanvas offcanvas-end" id="offcanvasSearchResult" tabindex="-1">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasLabel">Product Search Result</h5>
+        <button aria-label="Close" class="btn-close text-reset" data-bs-dismiss="offcanvas" type="button"></button>
+    </div>
+    <div class="offcanvas-body" id="search_results_body"></div>
 </div>
 
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCartDrawer" aria-labelledby="offcanvasDrawer">
-	<div class="offcanvas-header">
-		<h5 class="offcanvas-title" id="offcanvasDrawer">Cart Drawer</h5>
-		<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-	</div>
-	<div id="offcanvas-buttons"></div>
-	<div class="offcanvas-body" id="cart_drawer_body"></div>
-	<div class="offcanvas-footer text-center"><a href="{{ routes.cart_clear_url }}" class="btn btn-danger w-100">Remove	Everything From Cart</a></div>
+<div aria-labelledby="offcanvasDrawer" class="offcanvas offcanvas-end" id="offcanvasCartDrawer" tabindex="-1">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasDrawer">Cart Drawer</h5>
+        <button aria-label="Close" class="btn-close text-reset" data-bs-dismiss="offcanvas" type="button"></button>
+    </div>
+    <div id="offcanvas-buttons"></div>
+    <div class="offcanvas-body" id="cart_drawer_body"></div>
+    <div class="offcanvas-footer text-center">
+        <a href="{{ routes.cart_clear_url }}" class="btn btn-danger w-100">Remove
+                                                			Everything From Cart</a>
+    </div>
 </div>
 
 {% schema %}
+
 {
-	"name": "Header Section",
-	"tag": "header",
-	"settings": [
-	{
-		"type": "header",
-		"content": "Search Bar"		
-	},
-	{
-		"type": "color",
-		"id": "search_bar"	,
-		"label": "Search Bar Background Color"	
-	}
-	]
+    "name": "Header Section",
+    "tag": "header",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Top Bar"
+        }, {
+            "type": "color",
+            "id": "top_bar",
+            "label": "Top Bar Background Color"
+        }, {
+            "type": "link_list",
+            "id": "top_menu",
+            "label": "Top Bar Menu"
+        }, {
+            "type": "header",
+            "content": "Search Bar"
+        }, {
+            "type": "color",
+            "id": "search_bar",
+            "label": "Search Bar Background Color"
+        }, {
+            "type": "header",
+            "content": "Nav Bar"
+        }, {
+            "type": "color",
+            "id": "navbar_main",
+            "label": "Navigational Bar Background Color"
+        }
+    ]
 }
+
 {% endschema %}
 
 {% style %}
 
-.search-wrapper {
-    background-color: {{ section.settings.search_bar }};
+.top-bar {
+    background-color: {{section.settings.top_bar}};
+}
+
+.search-bar {
+    background-color: {{section.settings.search_bar}};
+}
+
+.navbar-main {
+    background-color: {{section.settings.navbar_main}};
 }
 
 {% endstyle %}

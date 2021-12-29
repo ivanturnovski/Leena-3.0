@@ -1,267 +1,268 @@
 {
-  "current": {
-    "header_footer_color": "#ece2da",
-    "header_text_font": "karla_n4",
-    "body_text_font": "karla_n4",
-    "body_font_size": 16,
-    "sections": {
-      "header": {
-        "type": "header",
-        "settings": {
-          "search_bar": "#d4e4f5"
-        }
-      },
-      "1617375064ce83f223": {
-        "type": "featured-collection",
-        "settings": {
-          "featured_collection": "featured",
-          "title": "Featured Collection"
-        }
-      },
-      "1617375081919027c2": {
-        "type": "hero",
-        "settings": {
-          "image": "shopify:\/\/shop_images\/hero.jpg",
-          "title": "Welcome to my theme",
-          "description": "<p>This is fully customizable and responsive theme made from scratch<\/p>",
-          "button_label": "Learn now",
-          "button_link": "\/blogs\/development"
-        }
-      },
-      "sidebar-article": {
-        "type": "sidebar-article",
-        "blocks": {
-          "970f4fd9-c219-4e2e-8a06-ef9e2119fc61": {
-            "type": "sidebar_image",
-            "settings": {
-              "title": "Shopify Cheet Sheet",
-              "image": "shopify:\/\/shop_images\/shopify-bag.png",
-              "url": "https:\/\/www.shopify.com\/partners\/shopify-cheat-sheet"
-            }
-          },
-          "b4bd4b96-44ab-4303-97e9-19c80e88a5c2": {
-            "type": "sidebar_text",
-            "settings": {
-              "title": "Liquid",
-              "description": "<p><a title=\"https:\/\/shopify.github.io\/liquid\/\" href=\"https:\/\/shopify.github.io\/liquid\/\" target=\"_blank\">https:\/\/shopify.github.io\/liquid\/<\/a><\/p>"
-            }
-          },
-          "f19ebad0-4eff-4026-aed3-d0074dbae823": {
-            "type": "sidebar_text",
-            "settings": {
-              "title": "Liquid Code Examples",
-              "description": "<p><a title=\"https:\/\/shopify.github.io\/liquid-code-examples\/\" href=\"https:\/\/shopify.github.io\/liquid-code-examples\/\" target=\"_blank\">https:\/\/shopify.github.io\/liquid-code-examples\/<\/a><\/p>"
-            }
-          },
-          "5d774bb0-5258-4ea0-9ae9-b030daac8194": {
-            "type": "sidebar_text",
-            "settings": {
-              "title": "Product CSVs and Images",
-              "description": "<p><a title=\"https:\/\/github.com\/levinmejia\/Shopify-Product-CSVs-and-Images\" href=\"https:\/\/github.com\/levinmejia\/Shopify-Product-CSVs-and-Images\" target=\"_blank\">https:\/\/github.com\/levinmejia\/Shopify-Product-CSVs-and-Images<\/a><\/p>"
-            }
-          }
-        },
-        "block_order": [
-          "970f4fd9-c219-4e2e-8a06-ef9e2119fc61",
-          "b4bd4b96-44ab-4303-97e9-19c80e88a5c2",
-          "f19ebad0-4eff-4026-aed3-d0074dbae823",
-          "5d774bb0-5258-4ea0-9ae9-b030daac8194"
-        ],
-        "settings": {
-          "show_sidebar": "yes"
-        }
-      },
-      "footer": {
-        "type": "footer",
-        "blocks": {
-          "a8586ee1-50c6-4dfa-b77d-7049a800c021": {
-            "type": "text",
-            "settings": {
-              "logo": "shopify:\/\/shop_images\/logo2resized200_c9315971-2eaf-4314-afcf-1351168c3fea.png",
-              "title": "Store Information",
-              "description": "<p><strong>Address:<\/strong> 11 Oktomvri 4 Novo Selo, Macedonia<\/p><p><strong>Email:<\/strong> ivanturnovski@gmail.com<\/p><p><strong>Number:<\/strong> +38970617575<\/p>"
-            }
-          },
-          "67c7d64c-0d46-453c-b3b5-4ed881addc6c": {
-            "type": "link_list",
-            "settings": {
-              "title": "Quick Links",
-              "menu": "footer"
-            }
-          }
-        },
-        "block_order": [
-          "a8586ee1-50c6-4dfa-b77d-7049a800c021",
-          "67c7d64c-0d46-453c-b3b5-4ed881addc6c"
-        ],
-        "settings": {
-          "col_num": 2,
-          "enable_payment_types": true
-        }
-      },
-      "1619098944c88bd80b": {
-        "type": "gallery",
-        "blocks": {
-          "8c6688c8-6661-4f80-b9c1-6e15c6f7e994": {
-            "type": "image",
-            "settings": {
-              "title": "Man on Bike",
-              "image": "shopify:\/\/shop_images\/KAR_20130707-4298_2048x2048_023ca988-345a-4c59-973f-d2976ec2d518.jpg"
-            }
-          },
-          "688e4539-066d-4e07-b441-4852ec378ade": {
-            "type": "image",
-            "settings": {
-              "title": "Yellow bike",
-              "image": "shopify:\/\/shop_images\/KAR_20130707-4329_2048x2048_1f934155-9f2c-4386-8612-42919e2e3828.jpg"
-            }
-          },
-          "991053fd-9f57-46f2-82cf-4646a5494260": {
-            "type": "image",
-            "settings": {
-              "title": "Blue bike",
-              "image": "shopify:\/\/shop_images\/KAR_20130428-3038_2048x2048_d0b0bb0c-e9d4-4262-b452-e519b08e0acf.jpg"
-            }
-          },
-          "08a0ee60-4f08-47b8-a406-88d1118dd2c3": {
-            "type": "video",
-            "settings": {
-              "title": "Bike Riding",
-              "video_url": "https:\/\/www.youtube.com\/watch?v=h6t5eDe5gUE"
-            }
-          },
-          "60eca201-f474-49c8-99a4-6723469da93c": {
-            "type": "image",
-            "settings": {
-              "title": "Man & Bike",
-              "image": "shopify:\/\/shop_images\/KAR_20130707-4295_2048x2048_fa2f4d93-440a-4a59-b59b-4f76a984e970.jpg"
-            }
-          }
-        },
-        "block_order": [
-          "8c6688c8-6661-4f80-b9c1-6e15c6f7e994",
-          "688e4539-066d-4e07-b441-4852ec378ade",
-          "991053fd-9f57-46f2-82cf-4646a5494260",
-          "08a0ee60-4f08-47b8-a406-88d1118dd2c3",
-          "60eca201-f474-49c8-99a4-6723469da93c"
-        ],
-        "settings": {
-          "title": "Gallery",
-          "cols_sm": 2,
-          "cols_md": 3,
-          "cols_lg": 5
-        }
-      },
-      "1619167202b200ae93": {
-        "type": "featured-products",
-        "blocks": {
-          "8664b711-b83e-435b-8a10-e90c10815e0d": {
-            "type": "product",
-            "settings": {
-              "product": "15mm-combo-wrench"
-            }
-          },
-          "8714d3f5-1035-49ad-ad64-a2c7502bebdd": {
-            "type": "product",
-            "settings": {
-              "product": "acs-maindrive-freewheel"
-            }
-          },
-          "96512de3-78b7-4204-b4e6-e230031ee006": {
-            "type": "product",
-            "settings": {
-              "product": "airboy-mini-pump"
-            }
-          },
-          "14dc5248-7e47-4cb8-8c03-95dde5e1d997": {
-            "type": "product",
-            "settings": {
-              "product": "650c-micro-wheelset"
-            }
-          },
-          "e12358a6-2a07-49e9-83ee-23d80c6684b8": {
-            "type": "product",
-            "settings": {
-              "product": "rear-brake-kit"
-            }
-          },
-          "26d02eb9-480e-45d9-a09a-a2a61fdefdad": {
-            "type": "product",
-            "settings": {
-              "product": "all-in-one-track-tool"
-            }
-          }
-        },
-        "block_order": [
-          "8664b711-b83e-435b-8a10-e90c10815e0d",
-          "8714d3f5-1035-49ad-ad64-a2c7502bebdd",
-          "96512de3-78b7-4204-b4e6-e230031ee006",
-          "14dc5248-7e47-4cb8-8c03-95dde5e1d997",
-          "e12358a6-2a07-49e9-83ee-23d80c6684b8",
-          "26d02eb9-480e-45d9-a09a-a2a61fdefdad"
-        ],
-        "settings": {
-          "title": "Featured Products",
-          "show_cart_button": true,
-          "slideshow": true
-        }
-      },
-      "1619255445582697f1": {
-        "type": "slideshow-hero",
-        "blocks": {
-          "4597a8cd-5bd0-424e-9a46-5a485a61d7c6": {
-            "type": "slide",
-            "settings": {
-              "title": "Bikes",
-              "img": "shopify:\/\/shop_images\/KAR_20130707-4298_2048x2048_023ca988-345a-4c59-973f-d2976ec2d518.jpg",
-              "description": "<p>Collection List Template<\/p>",
-              "button_url": "\/collections\/bikes",
-              "button_text": "Click",
-              "button_color": "#815050"
-            }
-          },
-          "23709e4b-f665-44ad-9d84-df4431db0e9c": {
-            "type": "slide",
-            "settings": {
-              "title": "Featured",
-              "img": "shopify:\/\/shop_images\/KAR_20130428-3038_2048x2048_d0b0bb0c-e9d4-4262-b452-e519b08e0acf.jpg",
-              "description": "",
-              "button_url": "\/collections\/featured",
-              "button_text": "Shop!",
-              "button_color": "#32ce49"
-            }
-          },
-          "2312f81e-99c5-4f63-939e-a24019e8e953": {
-            "type": "slide",
-            "settings": {
-              "title": "About Us",
-              "img": "shopify:\/\/shop_images\/KAR_20130707-4295_2048x2048_fa2f4d93-440a-4a59-b59b-4f76a984e970.jpg",
-              "description": "",
-              "button_url": "\/pages\/about-us",
-              "button_text": "Find Out",
-              "button_color": "#8522e1"
-            }
-          }
-        },
-        "block_order": [
-          "4597a8cd-5bd0-424e-9a46-5a485a61d7c6",
-          "23709e4b-f665-44ad-9d84-df4431db0e9c",
-          "2312f81e-99c5-4f63-939e-a24019e8e953"
-        ],
-        "settings": {
-        }
-      }
-    },
-    "content_for_index": [
-      "1617375081919027c2",
-      "1617375064ce83f223",
-      "1619255445582697f1",
-      "1619167202b200ae93",
-      "1619098944c88bd80b"
-    ]
-  },
-  "presets": {
-    "Default": {
-    }
-  }
+	"current": {
+		"header_footer_color": "#ece2da",
+		"header_text_font": "karla_n4",
+		"body_text_font": "karla_n4",
+		"body_font_size": 16,
+		"sections": {
+			"header": {
+				"type": "header",
+				"settings": {
+					"top_bar": "#cae6da",
+					"top_menu": "",
+					"search_bar": "#d4e4f5",
+					"navbar_main": "#fef5b9"
+				}
+			},
+			"1617375064ce83f223": {
+				"type": "featured-collection",
+				"settings": {
+					"featured_collection": "featured",
+					"title": "Featured Collection"
+				}
+			},
+			"1617375081919027c2": {
+				"type": "hero",
+				"settings": {
+					"image": "shopify://shop_images/hero.jpg",
+					"title": "Welcome to my theme",
+					"description": "<p>This is fully customizable and responsive theme made from scratch</p>",
+					"button_label": "Learn now",
+					"button_link": "/blogs/development"
+				}
+			},
+			"sidebar-article": {
+				"type": "sidebar-article",
+				"blocks": {
+					"970f4fd9-c219-4e2e-8a06-ef9e2119fc61": {
+						"type": "sidebar_image",
+						"settings": {
+							"title": "Shopify Cheet Sheet",
+							"image": "shopify://shop_images/shopify-bag.png",
+							"url": "https://www.shopify.com/partners/shopify-cheat-sheet"
+						}
+					},
+					"b4bd4b96-44ab-4303-97e9-19c80e88a5c2": {
+						"type": "sidebar_text",
+						"settings": {
+							"title": "Liquid",
+							"description": "<p><a title=\"https://shopify.github.io/liquid/\" href=\"https://shopify.github.io/liquid/\" target=\"_blank\">https://shopify.github.io/liquid/</a></p>"
+						}
+					},
+					"f19ebad0-4eff-4026-aed3-d0074dbae823": {
+						"type": "sidebar_text",
+						"settings": {
+							"title": "Liquid Code Examples",
+							"description": "<p><a title=\"https://shopify.github.io/liquid-code-examples/\" href=\"https://shopify.github.io/liquid-code-examples/\" target=\"_blank\">https://shopify.github.io/liquid-code-examples/</a></p>"
+						}
+					},
+					"5d774bb0-5258-4ea0-9ae9-b030daac8194": {
+						"type": "sidebar_text",
+						"settings": {
+							"title": "Product CSVs and Images",
+							"description": "<p><a title=\"https://github.com/levinmejia/Shopify-Product-CSVs-and-Images\" href=\"https://github.com/levinmejia/Shopify-Product-CSVs-and-Images\" target=\"_blank\">https://github.com/levinmejia/Shopify-Product-CSVs-and-Images</a></p>"
+						}
+					}
+				},
+				"block_order": [
+					"970f4fd9-c219-4e2e-8a06-ef9e2119fc61",
+					"b4bd4b96-44ab-4303-97e9-19c80e88a5c2",
+					"f19ebad0-4eff-4026-aed3-d0074dbae823",
+					"5d774bb0-5258-4ea0-9ae9-b030daac8194"
+				],
+				"settings": {
+					"show_sidebar": "yes"
+				}
+			},
+			"footer": {
+				"type": "footer",
+				"blocks": {
+					"a8586ee1-50c6-4dfa-b77d-7049a800c021": {
+						"type": "text",
+						"settings": {
+							"logo": "shopify://shop_images/logo2resized200_c9315971-2eaf-4314-afcf-1351168c3fea.png",
+							"title": "Store Information",
+							"description": "<p><strong>Address:</strong> 11 Oktomvri 4 Novo Selo, Macedonia</p><p><strong>Email:</strong> ivanturnovski@gmail.com</p><p><strong>Number:</strong> +38970617575</p>"
+						}
+					},
+					"67c7d64c-0d46-453c-b3b5-4ed881addc6c": {
+						"type": "link_list",
+						"settings": {
+							"title": "Quick Links",
+							"menu": "footer"
+						}
+					}
+				},
+				"block_order": [
+					"a8586ee1-50c6-4dfa-b77d-7049a800c021",
+					"67c7d64c-0d46-453c-b3b5-4ed881addc6c"
+				],
+				"settings": {
+					"col_num": 2,
+					"enable_payment_types": true
+				}
+			},
+			"1619098944c88bd80b": {
+				"type": "gallery",
+				"blocks": {
+					"8c6688c8-6661-4f80-b9c1-6e15c6f7e994": {
+						"type": "image",
+						"settings": {
+							"title": "Man on Bike",
+							"image": "shopify://shop_images/KAR_20130707-4298_2048x2048_023ca988-345a-4c59-973f-d2976ec2d518.jpg"
+						}
+					},
+					"688e4539-066d-4e07-b441-4852ec378ade": {
+						"type": "image",
+						"settings": {
+							"title": "Yellow bike",
+							"image": "shopify://shop_images/KAR_20130707-4329_2048x2048_1f934155-9f2c-4386-8612-42919e2e3828.jpg"
+						}
+					},
+					"991053fd-9f57-46f2-82cf-4646a5494260": {
+						"type": "image",
+						"settings": {
+							"title": "Blue bike",
+							"image": "shopify://shop_images/KAR_20130428-3038_2048x2048_d0b0bb0c-e9d4-4262-b452-e519b08e0acf.jpg"
+						}
+					},
+					"08a0ee60-4f08-47b8-a406-88d1118dd2c3": {
+						"type": "video",
+						"settings": {
+							"title": "Bike Riding",
+							"video_url": "https://www.youtube.com/watch?v=h6t5eDe5gUE"
+						}
+					},
+					"60eca201-f474-49c8-99a4-6723469da93c": {
+						"type": "image",
+						"settings": {
+							"title": "Man & Bike",
+							"image": "shopify://shop_images/KAR_20130707-4295_2048x2048_fa2f4d93-440a-4a59-b59b-4f76a984e970.jpg"
+						}
+					}
+				},
+				"block_order": [
+					"8c6688c8-6661-4f80-b9c1-6e15c6f7e994",
+					"688e4539-066d-4e07-b441-4852ec378ade",
+					"991053fd-9f57-46f2-82cf-4646a5494260",
+					"08a0ee60-4f08-47b8-a406-88d1118dd2c3",
+					"60eca201-f474-49c8-99a4-6723469da93c"
+				],
+				"settings": {
+					"title": "Gallery",
+					"cols_sm": 2,
+					"cols_md": 3,
+					"cols_lg": 5
+				}
+			},
+			"1619167202b200ae93": {
+				"type": "featured-products",
+				"blocks": {
+					"8664b711-b83e-435b-8a10-e90c10815e0d": {
+						"type": "product",
+						"settings": {
+							"product": "15mm-combo-wrench"
+						}
+					},
+					"8714d3f5-1035-49ad-ad64-a2c7502bebdd": {
+						"type": "product",
+						"settings": {
+							"product": "acs-maindrive-freewheel"
+						}
+					},
+					"96512de3-78b7-4204-b4e6-e230031ee006": {
+						"type": "product",
+						"settings": {
+							"product": "airboy-mini-pump"
+						}
+					},
+					"14dc5248-7e47-4cb8-8c03-95dde5e1d997": {
+						"type": "product",
+						"settings": {
+							"product": "650c-micro-wheelset"
+						}
+					},
+					"e12358a6-2a07-49e9-83ee-23d80c6684b8": {
+						"type": "product",
+						"settings": {
+							"product": "rear-brake-kit"
+						}
+					},
+					"26d02eb9-480e-45d9-a09a-a2a61fdefdad": {
+						"type": "product",
+						"settings": {
+							"product": "all-in-one-track-tool"
+						}
+					}
+				},
+				"block_order": [
+					"8664b711-b83e-435b-8a10-e90c10815e0d",
+					"8714d3f5-1035-49ad-ad64-a2c7502bebdd",
+					"96512de3-78b7-4204-b4e6-e230031ee006",
+					"14dc5248-7e47-4cb8-8c03-95dde5e1d997",
+					"e12358a6-2a07-49e9-83ee-23d80c6684b8",
+					"26d02eb9-480e-45d9-a09a-a2a61fdefdad"
+				],
+				"settings": {
+					"title": "Featured Products",
+					"show_cart_button": true,
+					"slideshow": true
+				}
+			},
+			"1619255445582697f1": {
+				"type": "slideshow-hero",
+				"blocks": {
+					"4597a8cd-5bd0-424e-9a46-5a485a61d7c6": {
+						"type": "slide",
+						"settings": {
+							"title": "Bikes",
+							"img": "shopify://shop_images/KAR_20130707-4298_2048x2048_023ca988-345a-4c59-973f-d2976ec2d518.jpg",
+							"description": "<p>Collection List Template</p>",
+							"button_url": "/collections/bikes",
+							"button_text": "Click",
+							"button_color": "#815050"
+						}
+					},
+					"23709e4b-f665-44ad-9d84-df4431db0e9c": {
+						"type": "slide",
+						"settings": {
+							"title": "Featured",
+							"img": "shopify://shop_images/KAR_20130428-3038_2048x2048_d0b0bb0c-e9d4-4262-b452-e519b08e0acf.jpg",
+							"description": "",
+							"button_url": "/collections/featured",
+							"button_text": "Shop!",
+							"button_color": "#32ce49"
+						}
+					},
+					"2312f81e-99c5-4f63-939e-a24019e8e953": {
+						"type": "slide",
+						"settings": {
+							"title": "About Us",
+							"img": "shopify://shop_images/KAR_20130707-4295_2048x2048_fa2f4d93-440a-4a59-b59b-4f76a984e970.jpg",
+							"description": "",
+							"button_url": "/pages/about-us",
+							"button_text": "Find Out",
+							"button_color": "#8522e1"
+						}
+					}
+				},
+				"block_order": [
+					"4597a8cd-5bd0-424e-9a46-5a485a61d7c6",
+					"23709e4b-f665-44ad-9d84-df4431db0e9c",
+					"2312f81e-99c5-4f63-939e-a24019e8e953"
+				],
+				"settings": {}
+			}
+		},
+		"content_for_index": [
+			"1617375081919027c2",
+			"1617375064ce83f223",
+			"1619255445582697f1",
+			"1619167202b200ae93",
+			"1619098944c88bd80b"
+		]
+	},
+	"presets": {
+		"Default": {}
+	}
 }
