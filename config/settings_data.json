@@ -9,7 +9,7 @@
 				"type": "header",
 				"settings": {
 					"top_bar": "#cae6da",
-					"top_menu": "",
+					"top_menu": "top-menu",
 					"search_bar": "#d4e4f5",
 					"navbar_main": "#fef5b9"
 				}

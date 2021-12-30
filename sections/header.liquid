@@ -4,7 +4,7 @@
             <div class="col-sm-12 col-lg-9">
                 <div class="top-bar-links navbar navbar-expand-lg">
                     <ul class="navbar-nav" id="top-menu">
-                        {%- for link in linklists.main-menu.links -%}
+                        {% for link in linklists[section.settings.top_menu].links %}
                             <li class="nav-item{% if link.links != blank %} dropdown dropdown-hover{%- endif -%}">
                                 <a class="nav-link text-secondary{% if link.links != blank %} has-dropdown{%- endif -%}" href="{{ link.url }}">
                                     {{ link.title }}
@@ -15,24 +15,15 @@
 
                                 {%- if link.links != blank -%}
                                     <ul class="dropdown-menu">
-                                        <li class="nav-item menu-view-all">
-                                            <a class="nav-link" href="{{ link.url }}">View All
-                                                {{ link.title }}</a>
-                                        </li>
                                         {%- for child_link in link.links -%}
                                             <li class="nav-item{% if child_link.links != blank %} dropdown dropdown-hover{% endif %}">
                                                 <a class="nav-link{% if child_link.links != blank %} has-dropdown{%- endif -%}" href="{{ child_link.url }}">{{ child_link.title }}
-                                                    {%- if
-										child_link.links != blank -%}
+                                                    {%- if	child_link.links != blank -%}
                                                         <i class="arrow right"></i>
                                                     {%- endif -%}
                                                 </a>
                                                 {%- if child_link.links != blank -%}
                                                     <ul class="dropdown-menu dropdown-menu-horizontal">
-                                                        <li class="nav-item menu-view-all">
-                                                            <a class="nav-link" href="{{ child_link.url }}">View All
-                                                                {{ child_link.title }}</a>
-                                                        </li>
                                                         {%- for grandchild_link in child_link.links -%}
                                                             <li class="nav-item">
                                                                 <a class="nav-link" href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
@@ -97,11 +88,11 @@
 </div>
 <nav class="navbar-main navbar navbar-expand-lg navbar-light" id="main-navbar">
     <div class="container">
-        <a class="navbar-brand text-secondary" href="/">{% render 'icon-home' %}</a>
+        <a class="navbar-brand text-secondary m-0 p-2" href="/">{% render 'icon-home' %}</a>
         <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">            
             <ul class="navbar-nav" id="main-menu">
                 {%- for link in linklists.main-menu.links -%}
                     <li class="nav-item{% if link.links != blank %} dropdown dropdown-hover{%- endif -%}">
@@ -178,7 +169,7 @@
     <div class="offcanvas-body" id="cart_drawer_body"></div>
     <div class="offcanvas-footer text-center">
         <a href="{{ routes.cart_clear_url }}" class="btn btn-danger w-100">Remove
-                                                			Everything From Cart</a>
+                                                            			Everything From Cart</a>
     </div>
 </div>
 
