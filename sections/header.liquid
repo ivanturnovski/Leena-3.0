@@ -1,48 +1,25 @@
 <div class="top-bar">
     <div class="container-fluid d-flex align-items-center justify-content-around">
         <div class="row w-100">
-            <div class="col-sm-12 col-lg-9">
-                <div class="top-bar-links navbar navbar-expand-lg">
-                    <ul class="navbar-nav" id="top-menu">
-                        {% for link in linklists[section.settings.top_menu].links %}
-                            <li class="nav-item{% if link.links != blank %} dropdown dropdown-hover{%- endif -%}">
-                                <a class="nav-link text-secondary{% if link.links != blank %} has-dropdown{%- endif -%}" href="{{ link.url }}">
-                                    {{ link.title }}
-                                    {%- if link.links != blank -%}
-                                        <i class="arrow down"></i>
-                                    {%- endif -%}
-                                </a>
-
-                                {%- if link.links != blank -%}
-                                    <ul class="dropdown-menu">
-                                        {%- for child_link in link.links -%}
-                                            <li class="nav-item{% if child_link.links != blank %} dropdown dropdown-hover{% endif %}">
-                                                <a class="nav-link{% if child_link.links != blank %} has-dropdown{%- endif -%}" href="{{ child_link.url }}">{{ child_link.title }}
-                                                    {%- if	child_link.links != blank -%}
-                                                        <i class="arrow right"></i>
-                                                    {%- endif -%}
-                                                </a>
-                                                {%- if child_link.links != blank -%}
-                                                    <ul class="dropdown-menu dropdown-menu-horizontal">
-                                                        {%- for grandchild_link in child_link.links -%}
-                                                            <li class="nav-item">
-                                                                <a class="nav-link" href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
-                                                            </li>
-                                                        {%- endfor -%}
-                                                    </ul>
-                                                {%- endif -%}
-                                            </li>
-                                        {%- endfor -%}
-                                    </ul>
-                                {%- endif -%}
-                            </li>
-                        {%- endfor -%}
-                    </ul>
+            <div class="col-sm-12 col-lg-8">
+                <div class="top-bar-links navbar navbar-expand-lg d-none d-lg-block">
+                  {% render 'top-bar' %}
                 </div>
             </div>
-            <div class="col-sm-12 col-lg-3">
+            <div class="col-sm-12 col-lg-4">
                 <div class="top-bar-icons">
                     <ul class="d-flex list-style-none m-0 p-0 justify-content-around justify-content-lg-end">
+                        <li class="nav-item">
+                            {%- form 'localization', id: "localization_form_tag" -%}                               
+                                <a class="nav-link" data-bs-target=".locale-items" data-bs-toggle="collapse" href="javascript:void(0)">{{ form.current_locale.name | upcase }}<i class="arrow down"></i></a>
+                                <div class="locale-items collapse">
+                                    {%- for locale in shop.published_locales -%}
+                                        <a id="localeItem" class="nav-link d-block text-decoration-none" lang="{{ locale.iso_code }}">{{ locale.name | upcase }}</a>
+                                    {%- endfor -%}
+                                </div>
+                                <input id="localeCode" type="hidden" name="locale_code" value="{{ form.current_locale.iso_code }}">
+                            {%- endform -%}
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link text-secondary" data-bs-target=".search-bar" data-bs-toggle="collapse" href="javascript:void(0)" id="search_icon">{% render 'icon-search' %}</a>
                         </li>
@@ -68,6 +45,7 @@
                         <li class="nav-item dropdown dropdown-hover">
                             <span class="nav-link text-secondary has-dropdown" id="cart">{% render 'icon-shopping-cart' %}<span class="badge bg-danger rounded-pill" id="cart_items">0</span>
                             </span>
+                            
                         </li>
                     </ul>
                 </div>
@@ -92,7 +70,7 @@
         <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">            
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav" id="main-menu">
                 {%- for link in linklists.main-menu.links -%}
                     <li class="nav-item{% if link.links != blank %} dropdown dropdown-hover{%- endif -%}">
@@ -137,18 +115,12 @@
                     </li>
                 {%- endfor -%}
             </ul>
-
+            <div class="top-bar-links navbar navbar-expand-lg border-top border-warning d-lg-none">                
+                {% render 'top-bar' %}
+              </div>
         </div>
 
-        {%- form 'localization', id: "localization_form_tag", class: "dropup" -%}
-            <div class="localeBtn"><img width="25" height="25" class="lazyload" data-src="{{ 'globe.png' | asset_img_url: '25x' }}" alt=""></div>
-            <div class="dropup-content">
-                {%- for locale in shop.published_locales -%}
-                    <a id="localeItem" class="text-decoration-none" lang="{{ locale.iso_code }}">{{ locale.iso_code }}</a>
-                {%- endfor -%}
-            </div>
-            <input id="localeCode" type="hidden" name="locale_code" value="{{ form.current_locale.iso_code }}">
-        {%- endform -%}
+
     </div>
 </nav>
 
@@ -169,7 +141,7 @@
     <div class="offcanvas-body" id="cart_drawer_body"></div>
     <div class="offcanvas-footer text-center">
         <a href="{{ routes.cart_clear_url }}" class="btn btn-danger w-100">Remove
-                                                            			Everything From Cart</a>
+                                                                        			Everything From Cart</a>
     </div>
 </div>
 

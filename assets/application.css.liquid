@@ -174,7 +174,7 @@ a {
 	color: inherit;
 	margin-left: 5px;
 	position: relative;
-	top: -1px;
+	top: -2px;
 }
 .right {
 	transform: rotate(-45deg);
@@ -227,46 +227,15 @@ a {
 /* ===== Forms ===== */
 
 /* ===== Translate Icon ===== */
-.dropup {
-	position: relative;
-	display: inline-block;
-}
-.localeBtn {
-	display: flex;
-	flex-direction: column;
-	position: fixed;
-	bottom: 25px;
-	right: 25px;
-	padding: 10px;
-}
-#localization_form_tag {
-	position: fixed;
+.locale-items {
+	position: absolute;
 	z-index: 9999;
+	background-color: #cae6da;
 }
-.dropup-content {
-	display: flex;
-	text-align: center;
-	flex-direction: column;
-	visibility: hidden;
-	opacity: 0;
-	position: fixed;
-	bottom: 60px;
-	right: 38px;
-	z-index: 1;
-	transition: all 0.3s;
+.locale-items a:hover {
 	cursor: pointer;
 }
-.dropup:hover .dropup-content {
-	visibility: visible;
-	opacity: 1;
-	background-color: transparent;
-}
-.dropup-content a {
-	color: #000;
-	font-size: 15px;
-}
 /* ===== Translate Icon ===== */
-
 
 /* ===== Responsive tables in the account pages ===== */
 @media (max-width: 767.98px) {
