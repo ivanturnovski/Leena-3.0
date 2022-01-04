@@ -17,7 +17,7 @@
 			<p class="lead text-muted">{{  block.settings.option2 }}</p>
 			{% endif %}	
 				
-			<p id="product-price">{{ current_product.price | money }}</p>
+			<p id="product-price">{% if product.price_varies %}From:{% endif %}{{ product.price | money }}</p>
 			{% if product.available %}
 			<p class="badge bg-success">In Stock</p>
 			{% else %}

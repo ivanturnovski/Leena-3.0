@@ -136,7 +136,7 @@ if (productInfoAnchors.length > 0) {
 							);
 						}
 					});
-					productModal.show();
+					productModal.show();					
 					if (data.available == false) {
 						document
 							.getElementById('modal_add_to_cart')
@@ -294,8 +294,14 @@ function fetchPredictiveSearch() {
 }
 // Predictive Search
 
+
+document.addEventListener('DOMContentLoaded', function () {
+	var price = $(this).find("option:selected").attr('price');
+    console.log(price);
+	$("#product-price").text(price);
+});
 $("#ProductSelect").change(function() {
 	var price = $(this).find("option:selected").attr('price');
     console.log(price);
-	$("#product-price").text(price);	
+	$("#product-price").text(price);
 })

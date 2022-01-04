@@ -11,7 +11,9 @@
                 <div class="card shadow h-100">
                     <div class="thumbnails m-3">
                         {%- if image != blank -%}
-                            <a href="#" id="productInfoAnchor" product-handle="{{ product.handle }}" product-price="{{ product.price | money }}"><img width="150" height="100" class="card-img-top lazyload blur-up" src="{{ 'spinner.gif' | asset_img_url: '150x'}}" data-src="{{ image | img_url: '150x' }}" alt="{{ product.title }}"></a>
+                            <a href="#" id="productInfoAnchor" product-handle="{{ product.handle }}" product-price="{% if product.price_varies %}
+                                From:
+                            {% endif %} {{ product.price | money }}"><img width="150" height="100" class="card-img-top lazyload blur-up" src="{{ 'spinner.gif' | asset_img_url: '150x'}}" data-src="{{ image | img_url: '150x' }}" alt="{{ product.title }}"></a>
                         {%- else -%}
                             <a href="#" id="productInfoAnchor" product-handle="{{ product.handle }}" product-price="{{ product.price | money }}">{{ 'image' | placeholder_svg_tag: 'card-img-top'
 						}}</a>
@@ -21,7 +23,11 @@
                         <h5>
                             <a href="{{ product.url }}">{{ product.title }}</a>
                         </h5>
-                        <p class="price">{{ product.price | money }}</p>
+                        <p class="price">
+                        {% if product.price_varies %}
+                            From:
+                        {% endif %}
+                            {{ product.price | money }}</p>
                         {%- if product.available -%}
                             <p>
                                 <span class="badge bg-success">In Stock</span>
