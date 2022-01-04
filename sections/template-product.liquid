@@ -17,7 +17,7 @@
 			<p class="lead text-muted">{{  block.settings.option2 }}</p>
 			{% endif %}	
 				
-			<p>{{ current_product.price | money }}</p>
+			<p id="product-price">{{ current_product.price | money }}</p>
 			{% if product.available %}
 			<p class="badge bg-success">In Stock</p>
 			{% else %}
@@ -28,11 +28,11 @@
 				<select name="id" id="ProductSelect" class="form-select">
 					{%- for variant in product.variants -%}
 					{%- if variant.available -%}
-					<option value="{{ variant.id }}">
+					<option price="{{ variant.price | money }}" value="{{ variant.id }}">
 						{{ variant.title }}
 					</option>
 					{%- else -%}
-					<option value="{{ variant.id }}" disabled="disabled">
+					<option price="{{ variant.price | money }}" value="{{ variant.id }}" disabled="disabled">
 						{{ variant.title }}
 					</option>
 					{%- endif -%}

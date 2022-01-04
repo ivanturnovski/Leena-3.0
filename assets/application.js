@@ -294,4 +294,8 @@ function fetchPredictiveSearch() {
 }
 // Predictive Search
 
-
+$("#ProductSelect").change(function() {
+	var price = $(this).find("option:selected").attr('price');
+    console.log(price);
+	$("#product-price").text(price);	
+})
