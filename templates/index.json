@@ -1,212 +1,211 @@
 {
-  "sections": {
-    "hero": {
-      "type": "hero",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/hero.jpg",
-        "title": "Welcome to my theme",
-        "description": "<p>This is fully customizable and responsive theme made from scratch<\/p>",
-        "button_label": "Learn now",
-        "button_link": "shopify:\/\/blogs\/development"
-      }
-    },
-    "featured-collection": {
-      "type": "featured-collection",
-      "settings": {
-        "featured_collection": "featured",
-        "title": "Featured Collection"
-      }
-    },
-    "slideshow-hero": {
-      "type": "slideshow-hero",
-      "blocks": {
-        "4597a8cd-5bd0-424e-9a46-5a485a61d7c6": {
-          "type": "slide",
-          "settings": {
-            "title": "Bikes",
-            "img": "shopify:\/\/shop_images\/KAR_20130707-4298_2048x2048_023ca988-345a-4c59-973f-d2976ec2d518.jpg",
-            "description": "<p>Collection List Template<\/p>",
-            "button_url": "\/collections\/bikes",
-            "button_text": "Click",
-            "button_color": "#815050"
-          }
-        },
-        "23709e4b-f665-44ad-9d84-df4431db0e9c": {
-          "type": "slide",
-          "settings": {
-            "title": "Featured",
-            "img": "shopify:\/\/shop_images\/KAR_20130428-3038_2048x2048_d0b0bb0c-e9d4-4262-b452-e519b08e0acf.jpg",
-            "description": "",
-            "button_url": "\/collections\/featured",
-            "button_text": "Shop!",
-            "button_color": "#32ce49"
-          }
-        },
-        "2312f81e-99c5-4f63-939e-a24019e8e953": {
-          "type": "slide",
-          "settings": {
-            "title": "About Us",
-            "img": "shopify:\/\/shop_images\/KAR_20130707-4295_2048x2048_fa2f4d93-440a-4a59-b59b-4f76a984e970.jpg",
-            "description": "",
-            "button_url": "\/pages\/about-us",
-            "button_text": "Find Out",
-            "button_color": "#8522e1"
-          }
-        }
-      },
-      "block_order": [
-        "4597a8cd-5bd0-424e-9a46-5a485a61d7c6",
-        "23709e4b-f665-44ad-9d84-df4431db0e9c",
-        "2312f81e-99c5-4f63-939e-a24019e8e953"
-      ],
-      "settings": {
-      }
-    },
-    "gallery": {
-      "type": "gallery",
-      "blocks": {
-        "8c6688c8-6661-4f80-b9c1-6e15c6f7e994": {
-          "type": "image",
-          "settings": {
-            "title": "Man on Bike",
-            "image": "shopify:\/\/shop_images\/KAR_20130707-4298_2048x2048_023ca988-345a-4c59-973f-d2976ec2d518.jpg"
-          }
-        },
-        "688e4539-066d-4e07-b441-4852ec378ade": {
-          "type": "image",
-          "settings": {
-            "title": "Yellow bike",
-            "image": "shopify:\/\/shop_images\/KAR_20130707-4329_2048x2048_1f934155-9f2c-4386-8612-42919e2e3828.jpg"
-          }
-        },
-        "991053fd-9f57-46f2-82cf-4646a5494260": {
-          "type": "image",
-          "settings": {
-            "title": "Blue bike",
-            "image": "shopify:\/\/shop_images\/KAR_20130428-3038_2048x2048_d0b0bb0c-e9d4-4262-b452-e519b08e0acf.jpg"
-          }
-        },
-        "08a0ee60-4f08-47b8-a406-88d1118dd2c3": {
-          "type": "video",
-          "settings": {
-            "title": "Bike Riding",
-            "video_url": "https:\/\/www.youtube.com\/watch?v=h6t5eDe5gUE"
-          }
-        },
-        "60eca201-f474-49c8-99a4-6723469da93c": {
-          "type": "image",
-          "settings": {
-            "title": "Man & Bike",
-            "image": "shopify:\/\/shop_images\/KAR_20130707-4295_2048x2048_fa2f4d93-440a-4a59-b59b-4f76a984e970.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "8c6688c8-6661-4f80-b9c1-6e15c6f7e994",
-        "688e4539-066d-4e07-b441-4852ec378ade",
-        "991053fd-9f57-46f2-82cf-4646a5494260",
-        "08a0ee60-4f08-47b8-a406-88d1118dd2c3",
-        "60eca201-f474-49c8-99a4-6723469da93c"
-      ],
-      "settings": {
-        "title": "Gallery",
-        "cols_sm": 2,
-        "cols_md": 3,
-        "cols_lg": 5
-      }
-    },
-    "featured-products": {
-      "type": "featured-products",
-      "blocks": {
-        "8664b711-b83e-435b-8a10-e90c10815e0d": {
-          "type": "product",
-          "settings": {
-            "product": "the-alfa"
-          }
-        },
-        "8714d3f5-1035-49ad-ad64-a2c7502bebdd": {
-          "type": "product",
-          "settings": {
-            "product": "acs-maindrive-freewheel"
-          }
-        },
-        "96512de3-78b7-4204-b4e6-e230031ee006": {
-          "type": "product",
-          "settings": {
-            "product": "airboy-mini-pump"
-          }
-        },
-        "14dc5248-7e47-4cb8-8c03-95dde5e1d997": {
-          "type": "product",
-          "settings": {
-            "product": "650c-micro-wheelset"
-          }
-        },
-        "e12358a6-2a07-49e9-83ee-23d80c6684b8": {
-          "type": "product",
-          "settings": {
-            "product": "rear-brake-kit"
-          }
-        },
-        "26d02eb9-480e-45d9-a09a-a2a61fdefdad": {
-          "type": "product",
-          "settings": {
-            "product": "all-in-one-track-tool"
-          }
-        }
-      },
-      "block_order": [
-        "8664b711-b83e-435b-8a10-e90c10815e0d",
-        "8714d3f5-1035-49ad-ad64-a2c7502bebdd",
-        "96512de3-78b7-4204-b4e6-e230031ee006",
-        "14dc5248-7e47-4cb8-8c03-95dde5e1d997",
-        "e12358a6-2a07-49e9-83ee-23d80c6684b8",
-        "26d02eb9-480e-45d9-a09a-a2a61fdefdad"
-      ],
-      "settings": {
-        "title": "Featured Products",
-        "show_cart_button": true,
-        "slideshow": true
-      }
-    },
-    "from-the-blog": {
-      "type": "from-the-blogs",
-      "blocks": {
-        "c92ea982-d39d-486c-9b85-12e25045fa84": {
-          "type": "blog_article",
-          "settings": {
-            "article": "development\/themekit"
-          }
-        },
-        "c28d326d-dca9-4494-9b0e-4488c7697567": {
-          "type": "blog_article",
-          "settings": {
-            "article": "development\/featured-collection"
-          }
-        },
-        "a0f44de5-80e0-4282-9c2f-cc78c71f8589": {
-          "type": "blog_article",
-          "settings": {
-            "article": "development\/shopify-cli-useful-commands"
-          }
-        }
-      },
-      "block_order": [
-        "c92ea982-d39d-486c-9b85-12e25045fa84",
-        "c28d326d-dca9-4494-9b0e-4488c7697567",
-        "a0f44de5-80e0-4282-9c2f-cc78c71f8589"
-      ],
-      "settings": {
-        "bg_color": "#cae6da"
-      }
-    }
-  },
-  "order": [
-    "hero",
-    "featured-collection",
-    "slideshow-hero",
-    "gallery",
-    "featured-products",
-    "from-the-blog"
-  ]
+	"sections": {
+		"hero": {
+			"type": "hero",
+			"settings": {
+				"image": "shopify://shop_images/hero.jpg",
+				"title": "Welcome to my theme",
+				"description": "<p>This is fully customizable and responsive theme made from scratch</p>",
+				"button_label": "Learn now",
+				"button_link": "shopify://blogs/development"
+			}
+		},
+		"featured-collection": {
+			"type": "featured-collection",
+			"settings": {
+				"featured_collection": "featured",
+				"title": "Featured Collection"
+			}
+		},
+		"slideshow-hero": {
+			"type": "slideshow-hero",
+			"blocks": {
+				"4597a8cd-5bd0-424e-9a46-5a485a61d7c6": {
+					"type": "slide",
+					"settings": {
+						"title": "Bikes",
+						"img": "shopify://shop_images/KAR_20130707-4298_2048x2048_023ca988-345a-4c59-973f-d2976ec2d518.jpg",
+						"description": "<p>Collection List Template</p>",
+						"button_url": "/collections/bikes",
+						"button_text": "Click",
+						"button_color": "#815050"
+					}
+				},
+				"23709e4b-f665-44ad-9d84-df4431db0e9c": {
+					"type": "slide",
+					"settings": {
+						"title": "Featured",
+						"img": "shopify://shop_images/KAR_20130428-3038_2048x2048_d0b0bb0c-e9d4-4262-b452-e519b08e0acf.jpg",
+						"description": "",
+						"button_url": "/collections/featured",
+						"button_text": "Shop!",
+						"button_color": "#32ce49"
+					}
+				},
+				"2312f81e-99c5-4f63-939e-a24019e8e953": {
+					"type": "slide",
+					"settings": {
+						"title": "About Us",
+						"img": "shopify://shop_images/KAR_20130707-4295_2048x2048_fa2f4d93-440a-4a59-b59b-4f76a984e970.jpg",
+						"description": "",
+						"button_url": "/pages/about-us",
+						"button_text": "Find Out",
+						"button_color": "#8522e1"
+					}
+				}
+			},
+			"block_order": [
+				"4597a8cd-5bd0-424e-9a46-5a485a61d7c6",
+				"23709e4b-f665-44ad-9d84-df4431db0e9c",
+				"2312f81e-99c5-4f63-939e-a24019e8e953"
+			],
+			"settings": {}
+		},
+		"gallery": {
+			"type": "gallery",
+			"blocks": {
+				"8c6688c8-6661-4f80-b9c1-6e15c6f7e994": {
+					"type": "image",
+					"settings": {
+						"title": "Man on Bike",
+						"image": "shopify://shop_images/KAR_20130707-4298_2048x2048_023ca988-345a-4c59-973f-d2976ec2d518.jpg"
+					}
+				},
+				"688e4539-066d-4e07-b441-4852ec378ade": {
+					"type": "image",
+					"settings": {
+						"title": "Yellow bike",
+						"image": "shopify://shop_images/KAR_20130707-4329_2048x2048_1f934155-9f2c-4386-8612-42919e2e3828.jpg"
+					}
+				},
+				"991053fd-9f57-46f2-82cf-4646a5494260": {
+					"type": "image",
+					"settings": {
+						"title": "Blue bike",
+						"image": "shopify://shop_images/KAR_20130428-3038_2048x2048_d0b0bb0c-e9d4-4262-b452-e519b08e0acf.jpg"
+					}
+				},
+				"08a0ee60-4f08-47b8-a406-88d1118dd2c3": {
+					"type": "video",
+					"settings": {
+						"title": "Bike Riding",
+						"video_url": "https://www.youtube.com/watch?v=h6t5eDe5gUE"
+					}
+				},
+				"60eca201-f474-49c8-99a4-6723469da93c": {
+					"type": "image",
+					"settings": {
+						"title": "Man & Bike",
+						"image": "shopify://shop_images/KAR_20130707-4295_2048x2048_fa2f4d93-440a-4a59-b59b-4f76a984e970.jpg"
+					}
+				}
+			},
+			"block_order": [
+				"8c6688c8-6661-4f80-b9c1-6e15c6f7e994",
+				"688e4539-066d-4e07-b441-4852ec378ade",
+				"991053fd-9f57-46f2-82cf-4646a5494260",
+				"08a0ee60-4f08-47b8-a406-88d1118dd2c3",
+				"60eca201-f474-49c8-99a4-6723469da93c"
+			],
+			"settings": {
+				"title": "Gallery",
+				"cols_sm": 2,
+				"cols_md": 3,
+				"cols_lg": 5
+			}
+		},
+		"from-the-blog": {
+			"type": "from-the-blogs",
+			"blocks": {
+				"c92ea982-d39d-486c-9b85-12e25045fa84": {
+					"type": "blog_article",
+					"settings": {
+						"article": "development/themekit"
+					}
+				},
+				"c28d326d-dca9-4494-9b0e-4488c7697567": {
+					"type": "blog_article",
+					"settings": {
+						"article": "development/featured-collection"
+					}
+				},
+				"a0f44de5-80e0-4282-9c2f-cc78c71f8589": {
+					"type": "blog_article",
+					"settings": {
+						"article": "development/shopify-cli-useful-commands"
+					}
+				}
+			},
+			"block_order": [
+				"c92ea982-d39d-486c-9b85-12e25045fa84",
+				"c28d326d-dca9-4494-9b0e-4488c7697567",
+				"a0f44de5-80e0-4282-9c2f-cc78c71f8589"
+			],
+			"settings": {
+				"bg_color": "#cae6da"
+			}
+		},
+		"featured-products": {
+			"type": "featured-products",
+			"blocks": {
+				"8664b711-b83e-435b-8a10-e90c10815e0d": {
+					"type": "product",
+					"settings": {
+						"product": "the-alfa"
+					}
+				},
+				"8714d3f5-1035-49ad-ad64-a2c7502bebdd": {
+					"type": "product",
+					"settings": {
+						"product": "acs-maindrive-freewheel"
+					}
+				},
+				"96512de3-78b7-4204-b4e6-e230031ee006": {
+					"type": "product",
+					"settings": {
+						"product": "airboy-mini-pump"
+					}
+				},
+				"14dc5248-7e47-4cb8-8c03-95dde5e1d997": {
+					"type": "product",
+					"settings": {
+						"product": "650c-micro-wheelset"
+					}
+				},
+				"e12358a6-2a07-49e9-83ee-23d80c6684b8": {
+					"type": "product",
+					"settings": {
+						"product": "rear-brake-kit"
+					}
+				},
+				"26d02eb9-480e-45d9-a09a-a2a61fdefdad": {
+					"type": "product",
+					"settings": {
+						"product": "all-in-one-track-tool"
+					}
+				}
+			},
+			"block_order": [
+				"8664b711-b83e-435b-8a10-e90c10815e0d",
+				"8714d3f5-1035-49ad-ad64-a2c7502bebdd",
+				"96512de3-78b7-4204-b4e6-e230031ee006",
+				"14dc5248-7e47-4cb8-8c03-95dde5e1d997",
+				"e12358a6-2a07-49e9-83ee-23d80c6684b8",
+				"26d02eb9-480e-45d9-a09a-a2a61fdefdad"
+			],
+			"settings": {
+				"title": "Featured Products",
+				"show_cart_button": true,
+				"slideshow": true
+			}
+		}
+	},
+	"order": [
+		"hero",
+		"featured-collection",
+		"slideshow-hero",
+		"gallery",
+		"from-the-blog",
+		"featured-products"
+	]
 }
