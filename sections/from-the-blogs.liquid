@@ -1,0 +1,66 @@
+<div class="container-fluid">
+    <div class="h2 p-3 text-center">From The Blogs</div>
+    <div class="row row-cols-md-6 g-3 py-5 justify-content-around">
+        {% for block in section.blocks %}
+            <div class="col flex-fill">
+                {% assign item = block.settings.article %}                
+					<div class="thumbnails m-3 mx-auto">
+						{% if item.image.src != blank %}
+						{{ item.image | image_url: width: 150, height: 100 | image_tag: srcset: nil, class: 'img-fluid' }}
+						{% else %}
+						{{ 'image' | placeholder_svg_tag: 'card-img-top' }}
+						{% endif %}
+					</div>
+
+					<div class="card-body">
+                        <div class="card-title h5 text-center"><a href="{{ item.url }}">{{ item.title }}</a></div>
+                        <div class="card-excerpt text-center text-muted">
+                           {{ item.content | strip_html | truncatewords: 15, '...' }}
+                        </div>						
+					</div>              
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% style %}
+.from-the-blogs {
+    background-color: {{ section.settings.bg_color }};
+}
+{% endstyle %}
+
+{% schema %}
+
+{
+    "name": "From The Blogs",
+    "tag": "section",
+    "class": "from-the-blogs",
+    "settings": [
+    {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color"
+    }
+    ],
+    "blocks": [
+        {
+            "name": "Blog Article",
+            "type": "blog_article",
+            "settings": [
+                {
+                    "type": "article",
+                    "id": "article",
+                    "label": "Choose Article"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "category": "Blogs",
+            "name": "From the Blogs"
+        }
+    ]
+}
+
+{% endschema %}

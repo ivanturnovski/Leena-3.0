@@ -3,15 +3,16 @@
         <div class="row w-100">
             <div class="col-sm-12 col-lg-8">
                 <div class="top-bar-links navbar navbar-expand-lg d-none d-lg-block">
-                  {% render 'top-bar' %}
+                    {% render 'top-bar' %}
                 </div>
             </div>
             <div class="col-sm-12 col-lg-4">
                 <div class="top-bar-icons">
                     <ul class="d-flex list-style-none m-0 p-0 justify-content-around justify-content-lg-end">
                         <li class="nav-item">
-                            {%- form 'localization', id: "localization_form_tag" -%}                               
-                                <a class="nav-link" data-bs-target=".locale-items" data-bs-toggle="collapse" href="javascript:void(0)">{{ form.current_locale.name | upcase }}<i class="arrow down"></i></a>
+                            {%- form 'localization', id: "localization_form_tag" -%}
+                                <a class="nav-link" data-bs-target=".locale-items" data-bs-toggle="collapse" href="javascript:void(0)">{{ form.current_locale.name | upcase }}<i class="arrow down"></i>
+                                </a>
                                 <div class="locale-items collapse">
                                     {%- for locale in shop.published_locales -%}
                                         <a id="localeItem" class="nav-link d-block text-decoration-none" lang="{{ locale.iso_code }}">{{ locale.name | upcase }}</a>
@@ -45,7 +46,7 @@
                         <li class="nav-item dropdown dropdown-hover">
                             <span class="nav-link text-secondary has-dropdown" id="cart">{% render 'icon-shopping-cart' %}<span class="badge bg-danger rounded-pill" id="cart_items">0</span>
                             </span>
-                            
+
                         </li>
                     </ul>
                 </div>
@@ -64,6 +65,13 @@
         </div>
     </div>
 </div>
+
+{% if section.settings.logo != blank %}
+    <div class="logo-bar text-center">
+        {{ section.settings.logo | image_url: width: 200 | image_tag: width: 200, loading: 'lazy'  }}
+    </div>
+{% endif %}
+
 <nav class="navbar-main navbar navbar-expand-lg navbar-light" id="main-navbar">
     <div class="container">
         <a class="navbar-brand text-secondary m-0 p-2" href="/">{% render 'icon-home' %}</a>
@@ -115,9 +123,9 @@
                     </li>
                 {%- endfor -%}
             </ul>
-            <div class="top-bar-links navbar navbar-expand-lg border-top border-warning d-lg-none">                
+            <div class="top-bar-links navbar navbar-expand-lg border-top border-warning d-lg-none">
                 {% render 'top-bar' %}
-              </div>
+            </div>
         </div>
 
 
@@ -141,7 +149,7 @@
     <div class="offcanvas-body" id="cart_drawer_body"></div>
     <div class="offcanvas-footer text-center">
         <a href="{{ routes.cart_clear_url }}" class="btn btn-danger w-100">Remove
-                                                                        			Everything From Cart</a>
+                                                                                                			Everything From Cart</a>
     </div>
 </div>
 
@@ -152,6 +160,17 @@
     "tag": "header",
     "settings": [
         {
+            "type": "header",
+            "content": "Logo"
+        }, {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "Select Logo"
+        }, {
+            "type": "color",
+            "id": "logo_bar",
+            "label": "Logo Bar"
+        }, {
             "type": "header",
             "content": "Top Bar"
         }, {
@@ -191,7 +210,9 @@
 .search-bar {
     background-color: {{section.settings.search_bar}};
 }
-
+.logo-bar {
+    background-color: {{ section.settings.logo_bar }};
+}
 .navbar-main {
     background-color: {{section.settings.navbar_main}};
 }

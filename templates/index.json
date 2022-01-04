@@ -168,6 +168,37 @@
         "show_cart_button": true,
         "slideshow": true
       }
+    },
+    "from-the-blog": {
+      "type": "from-the-blogs",
+      "blocks": {
+        "c92ea982-d39d-486c-9b85-12e25045fa84": {
+          "type": "blog_article",
+          "settings": {
+            "article": "development\/themekit"
+          }
+        },
+        "c28d326d-dca9-4494-9b0e-4488c7697567": {
+          "type": "blog_article",
+          "settings": {
+            "article": "development\/featured-collection"
+          }
+        },
+        "a0f44de5-80e0-4282-9c2f-cc78c71f8589": {
+          "type": "blog_article",
+          "settings": {
+            "article": "development\/shopify-cli-useful-commands"
+          }
+        }
+      },
+      "block_order": [
+        "c92ea982-d39d-486c-9b85-12e25045fa84",
+        "c28d326d-dca9-4494-9b0e-4488c7697567",
+        "a0f44de5-80e0-4282-9c2f-cc78c71f8589"
+      ],
+      "settings": {
+        "bg_color": "#cae6da"
+      }
     }
   },
   "order": [
@@ -175,6 +206,7 @@
     "featured-collection",
     "slideshow-hero",
     "gallery",
-    "featured-products"
+    "featured-products",
+    "from-the-blog"
   ]
 }
