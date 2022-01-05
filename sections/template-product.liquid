@@ -28,7 +28,9 @@
 				<select name="id" id="ProductSelect" class="form-select">
 					{%- for variant in product.variants -%}
 					{%- if variant.available -%}
-					<option price="{{ variant.price | money }}" value="{{ variant.id }}">
+					<option price="{{ variant.price | money }}" value="{{ variant.id }}" {% if variant.selected %}
+						selected="selected"
+					{% endif %}>
 						{{ variant.title }}
 					</option>
 					{%- else -%}
