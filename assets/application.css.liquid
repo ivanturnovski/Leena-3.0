@@ -328,3 +328,16 @@ img[data-sizes="auto"] { display: block; width: 100%;}
 	border-right: 1px solid grey;
 	flex: 1;
 }
+
+.thumbnails .secondary-image {
+	visibility: hidden;
+	height: 0;
+	opacity: 0;
+	transition: all 0.2s ease-in-out;
+}
+.thumbnails .secondary-image.show {
+	visibility: visible;
+	height: auto;
+	opacity: 1;
+	position: absolute;
+}

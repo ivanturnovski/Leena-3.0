@@ -68,7 +68,7 @@
 
 {% if section.settings.logo != blank %}
     <div class="logo-bar text-center">
-        {{ section.settings.logo | image_url: width: 200, height: 200 | image_tag: srcset: nil, class: 'lazyload', loading: 'lazy' }}
+        {{ section.settings.logo | image_url: width: 200, height: 200 | image_tag: srcset: nil }}
     </div>
 {% endif %}
 

@@ -294,7 +294,7 @@ function fetchPredictiveSearch() {
 }
 // Predictive Search
 
-
+//Update Price on Dropdown Select
 document.addEventListener('DOMContentLoaded', function () {
 	var price = $(this).find("option:selected").attr('price');
     console.log(price);
@@ -305,3 +305,10 @@ $("#ProductSelect").change(function() {
     console.log(price);
 	$("#product-price").text(price);
 })
+//Update Price on Dropdown Select
+
+// Reveal Second Image on Hover Effect 
+$(".thumbnails").hover(function() {
+	$(this).find(".secondary-image").toggleClass("show");
+});
+// Reveal Second Image on Hover Effect 
