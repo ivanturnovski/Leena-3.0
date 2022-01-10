@@ -52,10 +52,9 @@
                 </div>
             </div>
         </div>
-
-
     </div>
 </div>
+
 <div class="search-bar collapse">
     <div class="container">
         <div class="w-50 mx-auto p-2">
@@ -68,7 +67,7 @@
 
 {% if section.settings.logo != blank %}
     <div class="logo-bar text-center">
-        {{ section.settings.logo | image_url: width: 200, height: 200 | image_tag: srcset: nil }}
+        <a href="{{ shop.url }}">{{ section.settings.logo | image_url: width: 200, height: 200 | image_tag: srcset: nil }}</a>
     </div>
 {% endif %}
 
