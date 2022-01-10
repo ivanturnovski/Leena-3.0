@@ -3,21 +3,24 @@
     <div class="row row-cols-md-6 g-3 py-5 justify-content-around">
         {% for block in section.blocks %}
             <div class="col flex-fill">
-                {% assign item = block.settings.article %}                
+                <div class="d-flex flex-column h-100">
+                    {% assign item = block.settings.article %}                
 					<div class="thumbnails m-3 mx-auto">
 						{% if item.image.src != blank %}
-						{{ item.image | image_url: width: 150, height: 100 | image_tag: srcset: nil, class: 'img-fluid' }}
+						{{ item.image | image_url: width: 150, height: 100 | image_tag: srcset: nil, class: 'img-fluid lazyload', loading: 'lazy' }}
 						{% else %}
 						{{ 'image' | placeholder_svg_tag: 'card-img-top' }}
 						{% endif %}
 					</div>
-
 					<div class="card-body">
                         <div class="card-title h5 text-center"><a href="{{ item.url }}">{{ item.title }}</a></div>
-                        <div class="card-excerpt text-center text-muted">
+                        <div class="mb-2 text-muted text-center">{{ item.author }} | {{ item.published_at | date: format: 'long' }}</div>
+                        <div class="card-excerpt text-center">
                            {{ item.content | strip_html | truncatewords: 15, '...' }}
-                        </div>						
-					</div>              
+                        </div>
+                        <a class="mt-auto text-primary fw-bold text-center" href="{{ item.url }}">Read More</a>						
+					</div>   
+                </div>           
             </div>
         {% endfor %}
     </div>
