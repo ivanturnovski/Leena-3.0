@@ -304,7 +304,12 @@ img[data-sizes="auto"] { display: block; width: 100%;}
 	-webkit-filter: blur(0);
 	filter: blur(0);
 }
-
+.zoom {
+	transition: transform 0.3s ease-in-out;
+}
+.zoom:hover {
+	transform: scale(1.1);
+}
 .page-item .page-link:hover {
 	background-color: #6c757d!important;
 	color: #fff!important;
