@@ -1,53 +1,61 @@
 {
-	"current": {
-		"header_footer_color": "#ece2da",
-		"header_text_font": "karla_n4",
-		"body_text_font": "karla_n4",
-		"body_font_size": 16,
-		"sections": {
-			"header": {
-				"type": "header",
-				"settings": {
-					"logo": "shopify://shop_images/logo2resized200_c9315971-2eaf-4314-afcf-1351168c3fea.png",
-					"logo_bar": "#d3eaf4",
-					"top_bar": "#cae6da",
-					"top_menu": "top-menu",
-					"search_bar": "#d4e4f5",
-					"navbar_main": "#fef5b9"
-				}
-			},
-			"footer": {
-				"type": "footer",
-				"blocks": {
-					"a8586ee1-50c6-4dfa-b77d-7049a800c021": {
-						"type": "text",
-						"settings": {
-							"logo": "shopify://shop_images/logo2resized200_c9315971-2eaf-4314-afcf-1351168c3fea.png",
-							"title": "Store Information",
-							"description": "<p><strong>Address:</strong> 11 Oktomvri 4 Novo Selo, Macedonia</p><p><strong>Email:</strong> ivanturnovski@gmail.com</p><p><strong>Number:</strong> +38970617575</p>"
-						}
-					},
-					"67c7d64c-0d46-453c-b3b5-4ed881addc6c": {
-						"type": "link_list",
-						"settings": {
-							"title": "Quick Links",
-							"menu": "footer"
-						}
-					}
-				},
-				"block_order": [
-					"a8586ee1-50c6-4dfa-b77d-7049a800c021",
-					"67c7d64c-0d46-453c-b3b5-4ed881addc6c"
-				],
-				"settings": {
-					"col_num": 2,
-					"enable_payment_types": true
-				}
-			}
-		},
-		"content_for_index": []
-	},
-	"presets": {
-		"Default": {}
-	}
+  "current": {
+    "header_footer_color": "#ece2da",
+    "header_text_font": "karla_n4",
+    "body_text_font": "karla_n4",
+    "body_font_size": 16,
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/logo2resized200_c9315971-2eaf-4314-afcf-1351168c3fea.png",
+          "logo_bar": "#d3eaf4",
+          "top_bar": "#cae6da",
+          "top_menu": "top-menu",
+          "search_bar": "#d4e4f5",
+          "navbar_main": "#fef5b9"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "a8586ee1-50c6-4dfa-b77d-7049a800c021": {
+            "type": "text",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/logo2resized200_c9315971-2eaf-4314-afcf-1351168c3fea.png",
+              "title": "Store Information",
+              "description": "<p><strong>Address:<\/strong> 11 Oktomvri 4 Novo Selo, Macedonia<\/p><p><strong>Email:<\/strong> ivanturnovski@gmail.com<\/p><p><strong>Number:<\/strong> +38970617575<\/p>"
+            }
+          },
+          "67c7d64c-0d46-453c-b3b5-4ed881addc6c": {
+            "type": "link_list",
+            "settings": {
+              "title": "Quick Links",
+              "menu": "footer"
+            }
+          }
+        },
+        "block_order": [
+          "a8586ee1-50c6-4dfa-b77d-7049a800c021",
+          "67c7d64c-0d46-453c-b3b5-4ed881addc6c"
+        ],
+        "settings": {
+          "col_num": 2,
+          "enable_payment_types": true
+        }
+      },
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {
+          "announcement": "The ongoing pandemic has caused worldwide delays in shipping. These delays have affected the entire technology industry, particularly disrupting supply chains for retailers.",
+          "bg_color": "#eaa4a4",
+          "text_color": "#fff"
+        }
+      }
+    },
+    "content_for_index": []
+  },
+  "presets": {
+    "Default": {}
+  }
 }
