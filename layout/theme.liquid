@@ -40,6 +40,7 @@
     </head>
 
     <body class="{{ template | handleize }}-template">
+        {% section 'announcement-bar' %}
         {% section 'header' %}
         <main role="main">
             {{ content_for_layout }}

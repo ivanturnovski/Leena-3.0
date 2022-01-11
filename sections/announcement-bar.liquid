@@ -1,0 +1,40 @@
+<div id="announcement">
+    <div class="container p-1">
+        <marquee>{{ section.settings.announcement }}</marquee>
+    </div>
+</div>
+
+{% schema %}
+
+{
+    "name": "Announcement Bar",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "announcement",
+            "label": "Announcement Text"
+        }, {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Select Background Colors",
+            "default": "#000000"
+        }, {
+            "type": "color",
+            "id": "text_color",
+            "label": "Select Text Colors",
+            "default": "#000000"
+        }
+    ]
+}
+
+{% endschema %}
+
+{% style %}
+
+#announcement {
+    background-color: {{section.settings.bg_color}};
+    color: {{section.settings.text_color}};
+}
+
+{% endstyle %}

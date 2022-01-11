@@ -11,7 +11,7 @@
                     <ul class="d-flex list-style-none m-0 p-0 justify-content-around justify-content-lg-end">
                         <li class="nav-item">
                             {%- form 'localization', id: "localization_form_tag" -%}
-                                <a class="nav-link" data-bs-target=".locale-items" data-bs-toggle="collapse" href="javascript:void(0)">{{ form.current_locale.name | upcase }}<i class="arrow down"></i>
+                                <a class="nav-link" data-bs-target=".locale-items" data-bs-toggle="collapse" href="javascript:void(0)">{{ form.current_locale.name | upcase }}<i class="arrow down d-none d-md-inline-block"></i>
                                 </a>
                                 <div class="locale-items collapse">
                                     {%- for locale in shop.published_locales -%}

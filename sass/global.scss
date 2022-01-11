@@ -1,8 +1,9 @@
-$color-primary: #f5f3e0;
-$color-secondary: #282424;
+$color-body: #fefefe;
+$color-headings: #282424;
+$color-links: #00b386;
 
 body {
-	background-color: $color-primary;
+	background-color: $color-body;
 }
 
 h1,
@@ -17,8 +18,31 @@ h6,
 .h4,
 .h5,
 .h6 {
-	color: $color-secondary;
+	color: $color-headings;
 }
 a {
-	color: #00b386;
+	color: $color-links;
+}
+.bg-purple {
+	background-color: #bf00ff;
+}
+.bg-light-green {
+	background-color: #00cc00;
+}
+.bg-light-green2 {
+	background-color: #ccffcc;
+}
+.bg-orange {
+	background-color: #ffd9b3;
+}
+.btn-primary-custom {
+	background-color: #eaa4a4;
+	border-color: #eaa4a4;
+	color: #fff;
+	transition: all 0.2s;
+}
+.btn-primary-custom:hover {
+	background-color: #fff;
+	color: #eaa4a4;
+	border-color: #eaa4a4;
 }
