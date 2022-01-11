@@ -7,6 +7,29 @@
             </div>
         </div>
 
+        {% assign needed_for_discount = 5 %}
+        {% assign cart_items = cart.item_count %}
+
+        {% if cart.item_count >= needed_for_discount %}
+            <div class="bg-light-green2 p-3">
+                {% for discount_application in cart.cart_level_discount_applications %}
+                    You are getting:
+                    {{ discount_application.value | remove: '.0'}}
+                    {{ discount_application.value_type }}
+                    OFF!
+                    <br>
+                    You save:
+                    {{ discount_application.total_allocated_amount | money }}
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="bg-orange p-3">
+                Add
+                {{ needed_for_discount | minus: cart.item_count }}
+                more item(s) to unlock the discount!
+            </div>
+        {% endif %}
+
         <form action="/cart" class="row" method="POST" novalidate>
             <div class="col-12 g-3">
                 <div class="card shadow h-100">
@@ -37,13 +60,10 @@
                                             <input type="number" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" min="0">
                                         </td>
                                         <td>
-                                            {%- if item.original_line_price != item.line_price -%}
-                                                {{ item.original_line_price | money }}
+                                            {%- if item.original_line_price != item.final_line_price -%}
+                                                <s>{{ item.original_line_price | money }}</s>
                                             {%- endif -%}
-                                            {{ item.original_line_price | money }}
-                                            {%- for discount in item.discounts -%}
-                                                {{ discount.title }}
-                                            {%- endfor -%}
+                                            {{ item.final_line_price | money }}
                                         </td>
                                         <td>
                                             {% for property in item.properties %}
@@ -67,8 +87,8 @@
                     <div class="col-12 col-lg-6">
                         <div class="card card-shadow h-100">
                             <div class="card-body w-100">
-                                <label for="CartNote" class="my-3">Special instructions</label>
-                                <textarea name="note" id="CartNote" rows="5">{{ cart.note }}</textarea>
+                                <label class="my-3" for="CartNote">Special instructions</label>
+                                <textarea id="CartNote" name="note" rows="5">{{ cart.note }}</textarea>
                             </div>
                         </div>
                     </div>
@@ -79,6 +99,8 @@
                                     {% case block.type %}
                                         {% when 'cart_total' %}
                                             <div class="cart-totals my-3">
+                                                <p class="h3">Before Discounts:</p>
+                                                <p>{{ cart.original_total_price | money }}</p>
                                                 <p class="h3">{{ 'general.cart.total_amount' | t }}:</p>
                                                 <p>{{ cart.total_price | money }}</p>
                                             </div>
@@ -92,7 +114,7 @@
                                 {% endfor %}
                             </div>
                         </div>
-                    </div>                    
+                    </div>
                 </div>
             </div>
         </form>
