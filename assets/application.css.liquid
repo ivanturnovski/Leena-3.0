@@ -201,10 +201,15 @@ body {
 	transition: all 0.3s ease-in-out;
 	opacity: 0;
 }
-.is-visible {
-	height: 100%;
-	opacity: 1;
+.not-visible {	
+	opacity: 0;
+	visibility: hidden;
 }
+.is-visible {	
+	opacity: 1;
+	visibility: visible;
+}
+
 /* ===== Forms ===== */
 
 /* ===== Translate Icon ===== */
@@ -326,4 +331,14 @@ img[data-sizes="auto"] { display: block; width: 100%;}
 	height: auto;
 	opacity: 1;
 	position: absolute;
+}
+
+#back_to_top {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+	color: #ff3333;
 }

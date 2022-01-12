@@ -312,3 +312,21 @@ $(".thumbnails").hover(function() {
 	$(this).find(".secondary-image").toggleClass("show");
 });
 // Reveal Second Image on Hover Effect 
+
+//Back to top
+
+var backToTop = $('#back_to_top');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    backToTop.addClass('is-visible');
+  } else {
+    backToTop.removeClass('is-visible');
+  }
+});
+
+backToTop.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+
