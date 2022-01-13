@@ -46,33 +46,6 @@
                                     {% else %}
                                 {% endcase %}
                             {% endfor %}
-
-                            {%- if section.settings.show_cart_button == true -%}
-                                {%- form 'product', product, class: "product-form", id: "AddToCartForm" -%}
-                                    <div class="mb-3">
-                                        <select class="form-select form-select-sm" id="ProductSelect" name="id">
-                                            {%- for variant in product.variants -%}
-                                                {%- if variant.available -%}
-                                                    <option value="{{ variant.id }}">
-                                                        {{ variant.title }}
-                                                    </option>
-                                                {%- else -%}
-                                                    <option value="{{ variant.id }}" disabled="disabled">
-                                                        {{ variant.title }}
-                                                    </option>
-                                                {%- endif -%}
-                                            {%- endfor -%}
-                                        </select>
-                                    </div>
-                                    <div class="mb-3">
-                                        <input class="form-control form-control-sm" id="Quantity" min="1" name="quantity" type="number" value="1">
-                                    </div>
-                                    <button type="submit" name="add" id="AddToCart" class="btn btn-primary-custom btn-sm w-100 rounded-0" {% if product.available != true %} disabled {% endif %}>
-                                        Add To Cart
-                                    </button>
-                                {%- endform -%}
-                            {%- endif -%}
-
                         </div>
                     </div>
                 </div>

@@ -1,3 +1,4 @@
+{% assign show_buttons = section.settings.show_cart_button %}
 <div class="container py-4">
     <div class="row">
         <h2 class="text-center my-3">
@@ -10,7 +11,7 @@
             {%- assign featured_product = all_products[item.product] -%}
             {%- assign featured_product_img = featured_product.featured_media.preview_image -%}
             <div class="col p-3">
-                {%- render 'product-card', product: featured_product, image: featured_product_img -%}
+                {%- render 'product-card', product: featured_product, image: featured_product_img, cart_buttons: show_buttons -%}
             </div>
         {%- endfor -%}
     </div>

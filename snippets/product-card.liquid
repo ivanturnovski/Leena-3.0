@@ -27,7 +27,7 @@
         {%- endif -%}
 
 
-        {%- if section.settings.show_cart_button == true -%}
+        {%- if cart_buttons == true -%}
             {%- form 'product', product, class: "product-form", id: "AddToCartForm" -%}
                 <div class="mb-3">
                     <select class="form-select form-select-sm" id="ProductSelect" name="id">
@@ -47,7 +47,7 @@
                 <div class="mb-3">
                     <input class="form-control form-control-sm" id="Quantity" min="1" name="quantity" type="number" value="1">
                 </div>
-                <button type="submit" name="add" id="AddToCart" class="btn btn-primary-custom btn-sm w-100 rounded-0" {% if product.available != true %} disabled {% endif %}>
+                <button type="submit" name="add" class="btn btn-primary-custom btn-sm w-100 rounded-0" {% if product.available != true %} disabled {% endif %}>
                     Add To Cart
                 </button>
             {%- endform -%}

@@ -131,7 +131,7 @@ if (productInfoAnchors.length > 0) {
 						console.log(variant);
 						if (variant.available == true) {
 							variantSelect.options[variantSelect.options.length] = new Option(
-								variant.option1,
+								variant.public_title,
 								variant.id
 							);
 						}
@@ -178,7 +178,7 @@ if (modalAddToCartForm != null) {
 		})
 			.then((resp) => {
 				console.log(resp.status);
-				if (resp.ok) {
+				if (resp.ok) {					
 					return resp.json();
 				} else {
 					alert('Out of stock');
@@ -314,7 +314,6 @@ $(".thumbnails").hover(function() {
 // Reveal Second Image on Hover Effect 
 
 //Back to top
-
 var backToTop = $('#back_to_top');
 
 $(window).scroll(function() {
@@ -329,4 +328,44 @@ backToTop.on('click', function(e) {
   e.preventDefault();
   $('html, body').animate({scrollTop:0}, '300');
 });
+//Back to top
+
+
+var offcanvasAddToCartInfo = document.getElementById('offcanvasAddToCartInfo');
+var bsoffcanvasAddToCartInfo = new bootstrap.Offcanvas(offcanvasAddToCartInfo);
+var addToCart = document.getElementById('AddToCart');
+
+if (addToCart != null) {
+	addToCart.addEventListener('click', AddToCart);
+}
+
+function AddToCart() {
+	console.log('button click test');
+
+	let addToCartForm = document.getElementById('AddToCartForm');
+	let formData = new FormData(addToCartForm);
+
+	fetch('/cart/add.js', {
+		method: 'POST',
+		body: formData,
+	})
+		.then((response) => {
+			return response.json();
+		})
+		.then((data) => {
+			// console.log(data);
+			update_cart();
+			AddToCartMessage(data);
+		})
+		.catch((error) => {
+			console.error('Error:', error);
+		});
+}
+
+function AddToCartMessage(data) {
+	console.log(data);
+	document.getElementById('offcanvasAddToCartInfoBody').innerHTML = `${data.title} has been added to the cart`;
+	console.log(`${data.title} has been added to the cart`);
+	bsoffcanvasAddToCartInfo.show();
+}
 

@@ -50,7 +50,7 @@
 				<input id="gift" type="checkbox" name="properties[Gift]" value="Yes">
 				<label for="gift">Wrap Gift +1$</label>
 			</div>
-			<button type="submit" name="add" id="AddToCart" class="btn btn-secondary btn-lg w-100 rounded-0" {% if
+			<button type="button" name="add" id="AddToCart" class="btn btn-secondary btn-lg w-100 rounded-0" {% if
 				product.available != true %}disabled{% endif %}>
 				Add To Cart
 			</button>
@@ -94,9 +94,7 @@
 	var productRecomendationBody = document.getElementById("product_recomendations_body");
 	fetch("/recommendations/products.json?product_id={{ product.id }}&limit={{ section.settings.recomended_products }}")
 		.then(resp => resp.json())
-		.then(({
-			products
-		}) => {
+		.then(({products}) => {
 			console.log(products);
 
 			if (products.length > 0) {
