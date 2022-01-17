@@ -167,7 +167,11 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3">
-                                                    test
+                                                    {% for collection in collections %}
+                                                        {% if collection.url == menu_url %}
+                                                            <img src="{{ collection.image | img_url: 'medium'}}" alt="">
+                                                        {% endif %}
+                                                    {% endfor %}
                                                 </div>
                                             </div>
                                         </div>
