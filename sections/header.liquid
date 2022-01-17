@@ -79,6 +79,65 @@
         </button>
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav" id="main-menu">
+                {% for block in section.blocks %}
+                    {% case block.type %}
+                        {% when 'flyout_menu' %}
+                            {% assign menu = block.settings.flyout_menu %}
+                            {% assign menu_url = block.settings.url %}
+                            <li class="nav-item{% if menu.links != blank %} dropdown dropdown-hover{%- endif -%}">
+                                <a class="nav-link{% if menu.links != blank %} has-dropdown{%- endif -%}" href="{{ menu_url.url }} ">
+                                    {{ menu.title }}
+                                    {%- if menu.links != blank -%}
+                                        <i class="arrow down"></i>
+                                    {%- endif -%}
+                                </a>
+                                {% if menu.links  != blank %}
+                                    <ul class="dropdown-menu">
+                                        {% for link in menu.links %}
+                                            <li class="nav-item{% if link.links != blank %} dropdown dropdown-hover{% endif %}">
+                                                <a class="nav-link{% if link.links != blank %} has-dropdown{%- endif -%}" href="{{ link.url }}">{{ link.title }}
+                                                    {%- if link.links != blank -%}
+                                                        <i class="arrow right"></i>
+                                                    {%- endif -%}
+                                                </a>
+                                                {% if link.links != blank %}
+                                                    <ul class="dropdown-menu dropdown-menu-horizontal">
+                                                        {% for child_link in link.links %}
+                                                            <li class="nav-item{% if child_link.links != blank %} dropdown dropdown-hover{% endif %}">
+                                                                <a class="nav-link{% if child_link.links != blank %} has-dropdown{%- endif -%}" href="{{ child_link.url }}">{{ child_link.title }}
+                                                                    {%- if child_link.links != blank -%}
+                                                                        <i class="arrow right"></i>
+                                                                    {%- endif -%}
+                                                                </a>
+                                                                {% if child_link.links != blank %}
+                                                                    <ul class="dropdown-menu dropdown-menu-horizontal">
+                                                                        {% for grandchild_link in child_link.links %}
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                                                                            </li>
+                                                                        {% endfor %}
+                                                                    </ul>
+                                                                {% endif %}
+                                                            </li>
+                                                        {% endfor %}
+                                                    </ul>
+                                                {% endif %}
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+                            </li>
+
+                        {% when 'mega_menu' %}
+                            <li>mega</li>
+                        {% else %}
+
+                    {% endcase %}
+
+                {% endfor %}
+
+
+                {% comment %}
                 {%- for link in linklists.main-menu.links -%}
                     <li class="nav-item{% if link.links != blank %} dropdown dropdown-hover{%- endif -%}">
                         <a class="nav-link text-secondary{% if link.links != blank %} has-dropdown{%- endif -%}" href="{{ link.url }}">
@@ -121,6 +180,7 @@
                         {%- endif -%}
                     </li>
                 {%- endfor -%}
+                {% endcomment %}
             </ul>
             <div class="top-bar-links navbar navbar-expand-lg border-top border-warning d-lg-none">
                 {% render 'top-bar' %}
@@ -148,7 +208,7 @@
     <div class="offcanvas-body" id="cart_drawer_body"></div>
     <div class="offcanvas-footer text-center">
         <a href="{{ routes.cart_clear_url }}" class="btn btn-danger w-100">Remove
-                                                                                                			Everything From Cart</a>
+                                                                                                                                                                                    			Everything From Cart</a>
     </div>
 </div>
 
@@ -195,6 +255,47 @@
             "id": "navbar_main",
             "label": "Navigational Bar Background Color"
         }
+    ],
+    "blocks": [
+        {
+            "type": "flyout_menu",
+            "name": "Flyout Menu",
+            "settings": [
+                {
+                    "type": "link_list",
+                    "label": "Choose Flyout Menu",
+                    "id": "flyout_menu"
+                }, {
+                    "type": "url",
+                    "label": "Enter URL",
+                    "id": "url"
+                }
+            ]
+        }, {
+            "type": "mega_menu",
+            "name": "Mega Menu",
+            "settings": [
+                {
+                    "type": "link_list",
+                    "label": "Choose Flyout Menu",
+                    "id": "flyout_menu"
+                }, {
+                    "type": "url",
+                    "label": "Enter URL",
+                    "id": "url"
+                }
+            ]
+        }, {
+            "type": "url",
+            "name": "Link",
+            "settings": [
+                {
+                    "type": "url",
+                    "label": "Enter URL",
+                    "id": "url"
+                }
+            ]
+        }
     ]
 }
 
@@ -209,9 +310,11 @@
 .search-bar {
     background-color: {{section.settings.search_bar}};
 }
+
 .logo-bar {
-    background-color: {{ section.settings.logo_bar }};
+    background-color: {{section.settings.logo_bar}};
 }
+
 .navbar-main {
     background-color: {{section.settings.navbar_main}};
 }
