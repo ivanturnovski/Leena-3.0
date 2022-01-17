@@ -12,7 +12,7 @@
                 <ul class="dropdown-menu">
                     {%- for child_link in link.links -%}
                         <li class="nav-item{% if child_link.links != blank %} dropdown dropdown-hover{% endif %}">
-                            <a class="nav-link{% if child_link.links != blank %} has-dropdown{%- endif -%}" href="{{ child_link.url }}">{{ child_link.title }}
+                            <a class="nav-link text-secondary{% if child_link.links != blank %} has-dropdown{%- endif -%}" href="{{ child_link.url }}">{{ child_link.title }}
                                 {%- if	child_link.links != blank -%}
                                     <i class="arrow right"></i>
                                 {%- endif -%}

@@ -23,6 +23,10 @@ h6,
 a {
 	color: $color-links;
 }
+a:hover,
+a.nav-link:hover {
+	color: #00664d !important;
+}
 .bg-purple {
 	background-color: #bf00ff;
 }

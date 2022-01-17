@@ -101,8 +101,23 @@ body {
 @media (min-width: 992px) {
 	.dropdown-hover:hover > .dropdown-menu {
 		display: block;
+		animation: growOut 400ms ease-in-out forwards;
+		transform-origin: top center;
 	}
 }
+
+@keyframes growOut {
+	0% {
+	   transform: scaleY(0)
+   }
+   50% {
+	   transform: scaleY(1.1)
+   }
+   100% {
+	   transform: scaleY(1)
+   }
+}
+
 .dropdown-menu {
 	position: absolute;
 	top: 100%;
@@ -116,8 +131,7 @@ body {
 	font-size: 14px;
 	text-align: left;
 	background-color: #fff;
-	border: 1px solid #ccc;
-	border: 1px solid rgba(0, 0, 0, 0.15);
+	border: 1px solid #ccc;	
 	border-radius: 0;
 	-webkit-box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
 	box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
@@ -155,7 +169,11 @@ body {
 	color: inherit;
 	margin-left: 5px;
 	position: relative;
-	top: -2px;
+	top: -1px;
+}
+.mega-menu .arrow {
+	border: solid #eaa4a4;
+    border-width: 0 2px 2px 0;
 }
 .right {
 	transform: rotate(-45deg);
@@ -185,6 +203,65 @@ body {
 }
 .nav-link.has-dropdown.active {
 	color: red !important;
+}
+.navbar {
+	padding: 0!important;
+}
+.nav-link {
+	padding-top: 0.8rem;
+	padding-bottom: 0.8rem;
+}
+.mm-nav-link {
+	padding-top: 0.3rem;
+	padding-bottom: 0.3rem;
+	padding-right: 0.8rem;
+	padding-left: 0.8rem;
+	display: block;
+	color: #6c757d;
+}
+.mm-nav-link:hover {
+	color: #00664d;
+}
+#main-menu > .nav-item:after {
+	background: none repeat scroll 0 0 transparent;
+	bottom: 0;
+	content: "";
+	display: block;
+	height: 2px;
+	left: 50%;
+	position: relative;
+	background: #eaa4a4;
+	transition: width 0.3s ease 0s, left 0.3s ease 0s;
+	width: 0;
+}
+#main-menu > .nav-item:hover:after {
+	width: 100%; 
+  	left: 0; 
+}
+.mega-menu {
+	columns: 4;
+    float: left;
+    max-width: 100%;
+    width: 100%;
+    column-fill: balance;
+	column-gap: 40px;
+}
+.mega-col {
+    display: grid;
+    width: 100%;
+    break-inside: avoid;
+}
+.mega-col .nav {
+	display: inline-grid;
+	width: 100%;
+	page-break-inside: avoid;
+}
+.mega-col > .nav > li > a {
+	border-bottom: 1px solid;
+	width: 100%;
+	font-size: 16px;
+	display: inline-block;	
+	padding: 5px;
 }
 /* ======= Main Menu =======  */
 
@@ -260,7 +337,6 @@ img[data-sizes="auto"] { display: block; width: 100%;}
 	font-weight: bold;
 	font-display: swap;
 }
-
 .h-6 {
     height: 1.5rem;
 }
@@ -269,13 +345,6 @@ img[data-sizes="auto"] { display: block; width: 100%;}
 }
 #cart:hover {
 	cursor: pointer;
-}
-.navbar {
-	padding: 0!important;
-}
-.nav-link {
-	padding-top: 0.8rem;
-	padding-bottom: 0.8rem;
 }
 #offcanvas-buttons, .offcanvas-footer {	
 	display: flex;
