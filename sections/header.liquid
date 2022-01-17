@@ -152,7 +152,7 @@
                                                                             <ul class="nav">
                                                                                 {% for child_link in link.links %}
                                                                                     <li>
-                                                                                        <a class="mm-nav-link text-decoration-none" href="">
+                                                                                        <a class="mm-nav-link text-decoration-none" href=" {{ child_link.url }}">
                                                                                             <i class="arrow right mx-2"></i>
                                                                                             {{ child_link.title }}</a>
                                                                                     </li>
