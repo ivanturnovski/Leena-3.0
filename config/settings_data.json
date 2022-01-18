@@ -1,118 +1,115 @@
 {
-  "current": {
-    "header_footer_color": "#ece2da",
-    "header_text_font": "karla_n4",
-    "body_text_font": "karla_n4",
-    "body_font_size": 16,
-    "favicon": "shopify:\/\/shop_images\/shopify-bag.png",
-    "sections": {
-      "header": {
-        "type": "header",
-        "blocks": {
-          "425169bb-a58a-41eb-8c4f-e711970a9af1": {
-            "type": "flyout_menu",
-            "settings": {
-              "flyout_menu": "bikes",
-              "url": "shopify:\/\/collections\/bikes"
-            }
-          },
-          "dc79aac7-84d8-4412-9562-aac3566eb19e": {
-            "type": "mega_menu",
-            "settings": {
-              "mega_menu": "main-menu",
-              "url": ""
-            }
-          },
-          "b905bee8-24e2-4063-b5fb-7edc1fe89936": {
-            "type": "mega_menu",
-            "settings": {
-              "mega_menu": "bikes",
-              "url": "shopify:\/\/collections\/bikes"
-            }
-          },
-          "5381ff17-1906-4047-85ae-f192d236bfd8": {
-            "type": "mega_menu",
-            "settings": {
-              "mega_menu": "apparel",
-              "url": "shopify:\/\/collections\/apparel"
-            }
-          },
-          "349ac1da-90fa-4260-8347-40ac88a237ee": {
-            "type": "mega_menu",
-            "settings": {
-              "mega_menu": "tools",
-              "url": "shopify:\/\/collections\/bike-tools"
-            }
-          },
-          "b928fc62-32a8-4e4a-b105-e3f91aa626aa": {
-            "type": "url",
-            "settings": {
-              "item": "Safety Gear",
-              "url": "shopify:\/\/collections\/safety-gear"
-            }
-          }
-        },
-        "block_order": [
-          "425169bb-a58a-41eb-8c4f-e711970a9af1",
-          "dc79aac7-84d8-4412-9562-aac3566eb19e",
-          "b905bee8-24e2-4063-b5fb-7edc1fe89936",
-          "5381ff17-1906-4047-85ae-f192d236bfd8",
-          "349ac1da-90fa-4260-8347-40ac88a237ee",
-          "b928fc62-32a8-4e4a-b105-e3f91aa626aa"
-        ],
-        "settings": {
-          "logo": "shopify:\/\/shop_images\/logo2resized200_c9315971-2eaf-4314-afcf-1351168c3fea.png",
-          "logo_bar": "#d3eaf4",
-          "top_bar": "#cae6da",
-          "top_menu": "top-menu",
-          "search_bar": "#d4e4f5",
-          "navbar_main": "#fef5b9",
-          "mobile_menu": "main-menu"
-        }
-      },
-      "footer": {
-        "type": "footer",
-        "blocks": {
-          "a8586ee1-50c6-4dfa-b77d-7049a800c021": {
-            "type": "text",
-            "settings": {
-              "logo": "shopify:\/\/shop_images\/logo2resized200_c9315971-2eaf-4314-afcf-1351168c3fea.png",
-              "title": "Store Information",
-              "description": "<p><strong>Address:<\/strong> 11 Oktomvri 4 Novo Selo, Macedonia<\/p><p><strong>Email:<\/strong> ivanturnovski@gmail.com<\/p><p><strong>Number:<\/strong> +38970617575<\/p>"
-            }
-          },
-          "67c7d64c-0d46-453c-b3b5-4ed881addc6c": {
-            "type": "link_list",
-            "settings": {
-              "title": "Quick Links",
-              "menu": "footer"
-            }
-          }
-        },
-        "block_order": [
-          "a8586ee1-50c6-4dfa-b77d-7049a800c021",
-          "67c7d64c-0d46-453c-b3b5-4ed881addc6c"
-        ],
-        "settings": {
-          "col_num": 2,
-          "enable_payment_types": true
-        }
-      },
-      "announcement-bar": {
-        "type": "announcement-bar",
-        "settings": {
-          "announcement": "The ongoing pandemic has caused worldwide delays in shipping. These delays have affected the entire technology industry, particularly disrupting supply chains for retailers.",
-          "bg_color": "#eaa4a4",
-          "text_color": "#f4f2f2"
-        }
-      }
-    },
-    "content_for_index": [
-
-    ]
-  },
-  "presets": {
-    "Default": {
-    }
-  }
+	"current": {
+		"header_footer_color": "#ece2da",
+		"header_text_font": "karla_n4",
+		"body_text_font": "karla_n4",
+		"body_font_size": 16,
+		"favicon": "shopify://shop_images/shopify-bag.png",
+		"sections": {
+			"header": {
+				"type": "header",
+				"blocks": {
+					"425169bb-a58a-41eb-8c4f-e711970a9af1": {
+						"type": "flyout_menu",
+						"settings": {
+							"flyout_menu": "bikes",
+							"url": "shopify://collections/bikes"
+						}
+					},
+					"dc79aac7-84d8-4412-9562-aac3566eb19e": {
+						"type": "mega_menu",
+						"settings": {
+							"mega_menu": "main-menu",
+							"url": ""
+						}
+					},
+					"b905bee8-24e2-4063-b5fb-7edc1fe89936": {
+						"type": "mega_menu",
+						"settings": {
+							"mega_menu": "bikes",
+							"url": "shopify://collections/bikes"
+						}
+					},
+					"5381ff17-1906-4047-85ae-f192d236bfd8": {
+						"type": "mega_menu",
+						"settings": {
+							"mega_menu": "apparel",
+							"url": "shopify://collections/apparel"
+						}
+					},
+					"349ac1da-90fa-4260-8347-40ac88a237ee": {
+						"type": "mega_menu",
+						"settings": {
+							"mega_menu": "tools",
+							"url": "shopify://collections/bike-tools"
+						}
+					},
+					"b928fc62-32a8-4e4a-b105-e3f91aa626aa": {
+						"type": "url",
+						"settings": {
+							"item": "Safety Gear",
+							"url": "shopify://collections/safety-gear"
+						}
+					}
+				},
+				"block_order": [
+					"425169bb-a58a-41eb-8c4f-e711970a9af1",
+					"dc79aac7-84d8-4412-9562-aac3566eb19e",
+					"b905bee8-24e2-4063-b5fb-7edc1fe89936",
+					"5381ff17-1906-4047-85ae-f192d236bfd8",
+					"349ac1da-90fa-4260-8347-40ac88a237ee",
+					"b928fc62-32a8-4e4a-b105-e3f91aa626aa"
+				],
+				"settings": {
+					"logo": "shopify://shop_images/logo2resized200_c9315971-2eaf-4314-afcf-1351168c3fea.png",
+					"logo_bar": "#d3eaf4",
+					"top_bar": "#cae6da",
+					"top_menu": "top-menu",
+					"search_bar": "#d4e4f5",
+					"navbar_main": "#fef5b9",
+					"mobile_menu": "main-menu"
+				}
+			},
+			"footer": {
+				"type": "footer",
+				"blocks": {
+					"a8586ee1-50c6-4dfa-b77d-7049a800c021": {
+						"type": "text",
+						"settings": {
+							"logo": "shopify://shop_images/logo2resized200_c9315971-2eaf-4314-afcf-1351168c3fea.png",
+							"title": "Store Information",
+							"description": "<p><strong>Address:</strong> 11 Oktomvri 4 Novo Selo, Macedonia</p><p><strong>Email:</strong> ivanturnovski@gmail.com</p><p><strong>Number:</strong> +38970617575</p>"
+						}
+					},
+					"67c7d64c-0d46-453c-b3b5-4ed881addc6c": {
+						"type": "link_list",
+						"settings": {
+							"title": "Quick Links",
+							"menu": "footer"
+						}
+					}
+				},
+				"block_order": [
+					"a8586ee1-50c6-4dfa-b77d-7049a800c021",
+					"67c7d64c-0d46-453c-b3b5-4ed881addc6c"
+				],
+				"settings": {
+					"col_num": 2,
+					"enable_payment_types": true
+				}
+			},
+			"announcement-bar": {
+				"type": "announcement-bar",
+				"settings": {
+					"announcement": "The ongoing pandemic has caused worldwide delays in shipping. These delays have affected the entire technology industry, particularly disrupting supply chains for retailers.",
+					"bg_color": "#eaa4a4",
+					"text_color": "#f4f2f2"
+				}
+			}
+		},
+		"content_for_index": []
+	},
+	"presets": {
+		"Default": {}
+	}
 }
