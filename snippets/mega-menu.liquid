@@ -1,0 +1,45 @@
+<li class="nav-item{% if menu.links != blank %} dropdown-hover{%- endif -%}">
+    <a class="nav-link text-secondary{% if menu.links != blank %} has-dropdown{%- endif -%}" href="{{ menu_url.url }} ">{{- menu.title -}}
+        {%- if menu.links != blank -%}
+            <i class="arrow down"></i>
+        {%- endif -%}
+    </a>
+    {% if menu.links != blank %}
+        <div class="dropdown-menu w-100 p-3">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="mega-menu">
+                        {% for link in menu.links %}
+                            <div class="mega-col">
+                                <ul class="nav">
+                                    <li>
+                                        <a class="text-decoration-none" href="{{ link.url }}">{{ link.title }}</a>
+                                        {% if link.links != blank %}
+                                            <ul class="nav">
+                                                {% for child_link in link.links %}
+                                                    <li>
+                                                        <a class="mm-nav-link text-decoration-none" href=" {{ child_link.url }}">
+                                                            <i class="arrow right mx-2"></i>
+                                                            {{ child_link.title }}</a>
+                                                    </li>
+                                                {% endfor %}
+                                            </ul>
+                                        {% endif %}
+
+                                    </li>
+                                </ul>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    {% for collection in collections %}
+                        {% if collection.url == menu_url %}
+                            <img src="{{ collection.image | img_url: '1x1' }}" data-src="{{ collection.image | img_url: '240x'}}" class="blur-up lazyload" alt="{{ collection.image.alt }}" width="240px" height="160px">
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</li>

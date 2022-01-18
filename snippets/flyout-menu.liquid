@@ -1,0 +1,42 @@
+<li class="nav-item{% if menu.links != blank %} dropdown dropdown-hover{%- endif -%}">
+    <a class="nav-link text-secondary{% if menu.links != blank %} has-dropdown{%- endif -%}" href="{{ menu_url.url }} ">{{- menu.title -}}
+        {%- if menu.links != blank -%}
+            <i class="arrow down"></i>
+        {%- endif -%}
+    </a>
+    {% if menu.links != blank %}
+        <ul class="dropdown-menu">
+            {% for link in menu.links %}
+                <li class="nav-item{% if link.links != blank %} dropdown dropdown-hover{% endif %}">
+                    <a class="nav-link{% if link.links != blank %} has-dropdown{%- endif -%}" href="{{ link.url }}">{{- link.title -}}
+                        {%- if link.links != blank -%}
+                            <i class="arrow right"></i>
+                        {%- endif -%}
+                    </a>
+                    {% if link.links != blank %}
+                        <ul class="dropdown-menu dropdown-menu-horizontal">
+                            {% for child_link in link.links %}
+                                <li class="nav-item{% if child_link.links != blank %} dropdown dropdown-hover{% endif %}">
+                                    <a class="nav-link{% if child_link.links != blank %} has-dropdown{%- endif -%}" href="{{ child_link.url }}">{{- child_link.title -}}
+                                        {%- if child_link.links != blank -%}
+                                            <i class="arrow right"></i>
+                                        {%- endif -%}
+                                    </a>
+                                    {% if child_link.links != blank %}
+                                        <ul class="dropdown-menu dropdown-menu-horizontal">
+                                            {% for grandchild_link in child_link.links %}
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="{{ grandchild_link.url }}">{{- grandchild_link.title -}}</a>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</li>

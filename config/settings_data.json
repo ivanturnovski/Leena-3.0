@@ -19,28 +19,28 @@
           "dc79aac7-84d8-4412-9562-aac3566eb19e": {
             "type": "mega_menu",
             "settings": {
-              "flyout_menu": "main-menu",
+              "mega_menu": "main-menu",
               "url": ""
             }
           },
           "b905bee8-24e2-4063-b5fb-7edc1fe89936": {
             "type": "mega_menu",
             "settings": {
-              "flyout_menu": "bikes",
+              "mega_menu": "bikes",
               "url": "shopify:\/\/collections\/bikes"
             }
           },
           "5381ff17-1906-4047-85ae-f192d236bfd8": {
             "type": "mega_menu",
             "settings": {
-              "flyout_menu": "apparel",
+              "mega_menu": "apparel",
               "url": "shopify:\/\/collections\/apparel"
             }
           },
           "349ac1da-90fa-4260-8347-40ac88a237ee": {
             "type": "mega_menu",
             "settings": {
-              "flyout_menu": "tools",
+              "mega_menu": "tools",
               "url": "shopify:\/\/collections\/bike-tools"
             }
           },
@@ -66,7 +66,8 @@
           "top_bar": "#cae6da",
           "top_menu": "top-menu",
           "search_bar": "#d4e4f5",
-          "navbar_main": "#fef5b9"
+          "navbar_main": "#fef5b9",
+          "mobile_menu": "main-menu"
         }
       },
       "footer": {

@@ -32,23 +32,23 @@ $(document).ready(function () {
 // Slick Slider END
 
 // Mobile Menu START
-$(document).ready(function () {
-	var vw = $(window).width();
-	var viewportWidth = vw + 17;
+// $(document).ready(function () {
+// 	var vw = $(window).width();
+// 	var viewportWidth = vw + 17;
 
-	if (viewportWidth < 992) {
-		var element = $('.has-dropdown');
-		element.click(function (event) {
-			event.preventDefault();
-		});
+// 	if (viewportWidth < 992) {
+// 		var element = $('.has-dropdown');
+// 		element.click(function (event) {
+// 			event.preventDefault();
+// 		});
 
-		$('.nav-link').click(function () {
-			var $content = $(this).next('.dropdown-menu');
-			$content.slideToggle();
-			$(this).toggleClass('active');
-		});
-	}
-});
+// 		$('.nav-link').click(function () {
+// 			var $content = $(this).next('.dropdown-menu');
+// 			$content.slideToggle();
+// 			$(this).toggleClass('active');
+// 		});
+// 	}
+// });
 // Mobile Menu END
 
 // Address Page Fetch Province START
@@ -368,4 +368,13 @@ function AddToCartMessage(data) {
 	console.log(`${data.title} has been added to the cart`);
 	bsoffcanvasAddToCartInfo.show();
 }
+
+
+$(document).ready(function () {
+	$('.mobm-nav-link.toggle').click(function () {		
+		$(this).toggleClass('active');
+		$(this).next('.dropdown-content').slideToggle();
+		$(this).find('span.fa-plus').toggleClass('fa-minus');
+	});
+});
 

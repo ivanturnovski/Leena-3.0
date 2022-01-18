@@ -1,0 +1,37 @@
+{% for link in menu.links %}
+    <li class="nav-item">
+        <a class="mobm-nav-link{% if link.links != blank %} toggle{% endif %}" {% if link.links != blank %} href="javascript:void(0)" {% else %} href="{{ link.url }}" {% endif %}>{{- link.title -}}
+            {%- if link.links != blank -%}
+                <span class="fa-plus"></span>
+            {%- endif -%}
+        </a>
+        {% if link.links != blank %}
+            <ul class="dropdown-content">
+                <li class="nav-item">
+                    <a class="mobm-nav-link" href="{{ link.url }}">View All {{ link.title }}</a>
+                </li>
+                {% for child_link in link.links %}
+                    <li class="nav-item">
+                        <a class="mobm-nav-link{% if child_link.links != blank %} toggle{% endif %}" {% if child_link.links != blank %} href="javascript:void(0)" {% else %} href="{{ child_link.url }}" {% endif %}>{{- child_link.title -}}
+                            {%- if child_link.links != blank -%}
+                                <span class="fa-plus"></span>
+                            {%- endif -%}
+                        </a>
+                        {% if child_link.links != blank %}
+                            <ul class="dropdown-content">
+                                <li class="nav-item">
+                                    <a href="{{ child_link.url }}" class="mobm-nav-link">View All {{ child_link.title }}</a>
+                                </li>
+                                {% for grandchild_link in child_link.links %}
+                                    <li class="nav-item">
+                                        <a href="{{ grandchild_link.url }}" class="mobm-nav-link">{{- grandchild_link.title -}}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </li>
+{% endfor %}
