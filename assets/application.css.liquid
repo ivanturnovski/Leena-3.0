@@ -139,7 +139,7 @@ body {
 	left: 100%;
 }
 .arrow {
-	border: solid rgba(0, 0, 0, 0.4);
+	border: solid;
 	border-width: 0 2px 2px 0;
 	display: inline-block;
 	padding: 3px;
@@ -148,6 +148,7 @@ body {
 	margin-left: 5px;
 	position: relative;
 	top: -1px;
+	
 }
 .mega-menu .arrow {
 	border: solid #eaa4a4;
@@ -170,6 +171,8 @@ body {
 	content: "\2212";
 	font-size: 24px;
     font-weight: 700;
+	position: relative;
+	top: 3px;
 }
 .fa-plus, .fa-minus {
 	float: right;
@@ -180,6 +183,9 @@ body {
 .nav-link {
 	padding-top: 0.8rem;
 	padding-bottom: 0.8rem;
+}
+.link-active {
+	color: #eaa4a4!important;
 }
 .mm-nav-link {
 	padding-top: 0.3rem;
@@ -244,7 +250,7 @@ body {
 /* ======= Main Menu =======  */
 
 /* ====== Mobile Menu ====== */
-#mobile-menu {
+#mobile-menu, #additional-menu {
 	list-style: none;
     padding: 20px;
     margin: 0;
@@ -342,8 +348,7 @@ img[data-sizes="auto"] { display: block; width: 100%;}
 #offcanvas-buttons, .offcanvas-footer {	
 	display: flex;
 	justify-content: space-between;
-    padding: 1rem 1rem;
-    overflow-y: auto;
+    padding: 1rem 1rem;    
 }
 .blur-up {
 	-webkit-filter: blur(5px);

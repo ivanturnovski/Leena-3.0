@@ -8,25 +8,30 @@
         <ul class="dropdown-menu">
             {% for link in menu.links %}
                 <li class="nav-item{% if link.links != blank %} dropdown dropdown-hover{% endif %}">
-                    <a class="nav-link{% if link.links != blank %} has-dropdown{%- endif -%}" href="{{ link.url }}">{{- link.title -}}
+                    <a class="nav-link{% if link.links != blank %} has-dropdown{%- endif -%}{% if link.current == true %} link-active{% endif %}" href="{{ link.url }}">{{- link.title -}}                        
                         {%- if link.links != blank -%}
                             <i class="arrow right"></i>
                         {%- endif -%}
+                        {% if link.current == true %} {% render 'icon-cursor' %}{% endif %}                        
                     </a>
                     {% if link.links != blank %}
                         <ul class="dropdown-menu dropdown-menu-horizontal">
                             {% for child_link in link.links %}
                                 <li class="nav-item{% if child_link.links != blank %} dropdown dropdown-hover{% endif %}">
-                                    <a class="nav-link{% if child_link.links != blank %} has-dropdown{%- endif -%}" href="{{ child_link.url }}">{{- child_link.title -}}
+                                    <a class="nav-link{% if child_link.links != blank %} has-dropdown{%- endif -%}{% if child_link.current == true %} link-active{% endif %}" href="{{ child_link.url }}">{{- child_link.title -}}                                        
                                         {%- if child_link.links != blank -%}
                                             <i class="arrow right"></i>
                                         {%- endif -%}
+                                        {% if child_link.current == true %} {% render 'icon-cursor' %}{% endif %}
                                     </a>
                                     {% if child_link.links != blank %}
                                         <ul class="dropdown-menu dropdown-menu-horizontal">
                                             {% for grandchild_link in child_link.links %}
                                                 <li class="nav-item">
-                                                    <a class="nav-link" href="{{ grandchild_link.url }}">{{- grandchild_link.title -}}</a>
+                                                    <a class="nav-link{% if grandchild_link.current == true %} link-active{% endif %}" href="{{ grandchild_link.url }}">                                                        
+                                                        {{- grandchild_link.title -}}
+                                                        {% if grandchild_link.current == true %} {% render 'icon-cursor' %}{% endif %}
+                                                    </a>
                                                 </li>
                                             {% endfor %}
                                         </ul>

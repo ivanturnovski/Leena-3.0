@@ -67,7 +67,8 @@
 					"top_menu": "top-menu",
 					"search_bar": "#d4e4f5",
 					"navbar_main": "#fef5b9",
-					"mobile_menu": "main-menu"
+					"mobile_menu": "main-menu",
+					"additional_menu": "top-menu"
 				}
 			},
 			"footer": {

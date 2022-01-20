@@ -1,6 +1,7 @@
 {% for link in menu.links %}
     <li class="nav-item">
-        <a class="mobm-nav-link{% if link.links != blank %} toggle{% endif %}" {% if link.links != blank %} href="javascript:void(0)" {% else %} href="{{ link.url }}" {% endif %}>{{- link.title -}}
+        <a class="mobm-nav-link{% if link.links != blank %} toggle{% endif %}{% if link.current == true %} link-active{% endif %}" {% if link.links != blank %} href="javascript:void(0)" {% else %} href="{{ link.url }}" {% endif %}>{{- link.title -}}
+            {% if link.current == true %} {% render 'icon-cursor' %}{% endif %}
             {%- if link.links != blank -%}
                 <span class="fa-plus"></span>
             {%- endif -%}
@@ -12,7 +13,9 @@
                 </li>
                 {% for child_link in link.links %}
                     <li class="nav-item">
-                        <a class="mobm-nav-link{% if child_link.links != blank %} toggle{% endif %}" {% if child_link.links != blank %} href="javascript:void(0)" {% else %} href="{{ child_link.url }}" {% endif %}>{{- child_link.title -}}
+                        <a class="mobm-nav-link{% if child_link.links != blank %} toggle{% endif %}{% if child_link.current == true %} link-active{% endif %}" {% if child_link.links != blank %} href="javascript:void(0)" {% else %} href="{{ child_link.url }}" {% endif %}>                            
+                            {{- child_link.title -}}
+                            {% if child_link.current == true %} {% render 'icon-cursor' %}{% endif %}
                             {%- if child_link.links != blank -%}
                                 <span class="fa-plus"></span>
                             {%- endif -%}
@@ -24,7 +27,9 @@
                                 </li>
                                 {% for grandchild_link in child_link.links %}
                                     <li class="nav-item">
-                                        <a href="{{ grandchild_link.url }}" class="mobm-nav-link">{{- grandchild_link.title -}}</a>
+                                        <a href="{{ grandchild_link.url }}" class="mobm-nav-link{% if grandchild_link.current == true %} link-active{% endif %}">{{- grandchild_link.title -}}
+                                            {% if grandchild_link.current == true %} {% render 'icon-cursor' %}{% endif %}
+                                        </a>
                                     </li>
                                 {% endfor %}
                             </ul>

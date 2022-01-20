@@ -89,14 +89,14 @@
                                 {% assign menu_url = block.settings.url %}
 
                                 {% render 'flyout-menu', menu: menu, menu_url: menu_url %}
-                               
+
                             {% when 'mega_menu' %}
                                 {% assign menu = block.settings.mega_menu %}
                                 {% assign menu_url = block.settings.url %}
 
                                 {% render 'mega-menu', menu: menu, menu_url: menu_url %}
-                                                               
-                            {% when 'url' %}                                
+
+                            {% when 'url' %}
                                 <li class="nav-item">
                                     <a class="nav-link text-secondary" href="{{ block.settings.url }}">{{ block.settings.item }}</a>
                                 </li>
@@ -108,10 +108,13 @@
                 <ul class="navbar-nav d-lg-none" id="mobile-menu">
                     {% assign menu = section.settings.mobile_menu %}
                     {% render 'mobile-menu', menu: menu %}
-                </ul>
-                <div class="top-bar-links navbar navbar-expand-lg border-top border-warning d-lg-none">
-                    {% render 'top-bar' %}
-                </div>
+                </ul>              
+                    
+                <ul class="navbar-nav d-lg-none border-top" id="additional-menu">
+                    {% assign additional = section.settings.additional_menu %}
+                    {% render 'mobile-menu', menu: additional %}
+                </ul>                   
+                
             </div>
         </nav>
     </div>
@@ -134,7 +137,7 @@
     <div class="offcanvas-body" id="cart_drawer_body"></div>
     <div class="offcanvas-footer text-center">
         <a href="{{ routes.cart_clear_url }}" class="btn btn-danger w-100">Remove
-                                                                        Everything From Cart</a>
+                                                                                    Everything From Cart</a>
     </div>
 </div>
 
@@ -187,6 +190,13 @@
             "type": "link_list",
             "id": "mobile_menu",
             "label": "Mobile Menu"
+        }, {
+            "type": "header",
+            "content": "Additional Mobile Menu"
+        }, {
+            "type": "link_list",
+            "id": "additional_menu",
+            "label": "Additional Mobile Menu"
         }
     ],
     "blocks": [

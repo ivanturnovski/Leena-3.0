@@ -13,14 +13,16 @@
                             <div class="mega-col">
                                 <ul class="nav">
                                     <li>
-                                        <a class="text-decoration-none" href="{{ link.url }}">{{ link.title }}</a>
+                                        <a class="text-decoration-none{% if link.current == true %} link-active{% endif %}" href="{{ link.url }}">{{ link.title }}{% if link.current == true %} {% render 'icon-cursor' %}{% endif %}</a>
                                         {% if link.links != blank %}
                                             <ul class="nav">
                                                 {% for child_link in link.links %}
                                                     <li>
-                                                        <a class="mm-nav-link text-decoration-none" href=" {{ child_link.url }}">
+                                                        <a class="mm-nav-link text-decoration-none{% if child_link.current == true %} link-active{% endif %}" href=" {{ child_link.url }}">
                                                             <i class="arrow right mx-2"></i>
-                                                            {{ child_link.title }}</a>
+                                                            {{ child_link.title }}
+                                                            {% if child_link.current == true %} {% render 'icon-cursor' %}{% endif %}
+                                                        </a>
                                                     </li>
                                                 {% endfor %}
                                             </ul>
