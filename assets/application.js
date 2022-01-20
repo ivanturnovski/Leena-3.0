@@ -31,26 +31,6 @@ $(document).ready(function () {
 });
 // Slick Slider END
 
-// Mobile Menu START
-// $(document).ready(function () {
-// 	var vw = $(window).width();
-// 	var viewportWidth = vw + 17;
-
-// 	if (viewportWidth < 992) {
-// 		var element = $('.has-dropdown');
-// 		element.click(function (event) {
-// 			event.preventDefault();
-// 		});
-
-// 		$('.nav-link').click(function () {
-// 			var $content = $(this).next('.dropdown-menu');
-// 			$content.slideToggle();
-// 			$(this).toggleClass('active');
-// 		});
-// 	}
-// });
-// Mobile Menu END
-
 // Address Page Fetch Province START
 var selectCountry = document.getElementById('AddressCountryNew');
 
@@ -330,7 +310,7 @@ backToTop.on('click', function(e) {
 });
 //Back to top
 
-
+//Add to Cart Pop Up
 var offcanvasAddToCartInfo = document.getElementById('offcanvasAddToCartInfo');
 var bsoffcanvasAddToCartInfo = new bootstrap.Offcanvas(offcanvasAddToCartInfo);
 var addToCart = document.getElementById('AddToCart');
@@ -368,8 +348,9 @@ function AddToCartMessage(data) {
 	console.log(`${data.title} has been added to the cart`);
 	bsoffcanvasAddToCartInfo.show();
 }
+//Add to Cart Pop Up
 
-
+//Mobile Menu
 $(document).ready(function () {
 	$('.mobm-nav-link.toggle').click(function () {		
 		$(this).toggleClass('active');
@@ -377,4 +358,19 @@ $(document).ready(function () {
 		$(this).find('span.fa-plus').toggleClass('fa-minus');
 	});
 });
+//Mobile Menu
 
+//Sticky Menu
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("main-navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+//Sticky Menu
