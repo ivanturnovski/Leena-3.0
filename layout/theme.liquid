@@ -14,10 +14,6 @@
         {% else %}
             <link rel="canonical" href="{{ canonical_url }}">
         {% endif %}
-
-        {% if request.page_type == 'product' or request.path contains 'collections' %}
-            <meta content="noindex,nofollow" name="robots">
-        {% endif %}
         <meta content="width=device-width,initial-scale=1,shrink-to-fit=no" name="viewport">
         {{ content_for_header }}
         <!-- Header hook for plugins -->
