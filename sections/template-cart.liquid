@@ -67,9 +67,13 @@
                                         </td>
                                         <td>
                                             {% for property in item.properties %}
-                                                {{ property.first }}
-                                                :
-                                                {{ property.last }}
+                                            
+                                               {% if property.first == 'file' and property.last contains 'uploads' %}
+                                                   <div><img src="{{ property.last }}" alt="" width="100"></div> 
+                                                {% else %}
+                                        
+                                                {{ property.first }}: {{ property.last }}
+                                               {% endif %}
                                             {% endfor %}
                                         </td>
                                         <td>

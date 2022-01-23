@@ -209,18 +209,27 @@ function loadDrawerCart() {
 				document.getElementById('offcanvas-buttons').innerHTML = `<a href="/cart" class="btn btn-secondary w-100">View Cart</a>`;
 				data.items.forEach(function (product, index) {
 					var property = product.properties;
-
+					
+					var file = "";
+					var gift = "";
 					for (var key in property) {
-						console.log(property[key]);
-						var value = property[key];
-					}
+						// console.log(property[key]);	
+						// console.log(key);
+						if ( key == 'file')	{
+							var file = "<img class='mx-auto' width='100' src=" + property[key] + ">";	
+						}
+						if (key == 'Gift') {
+							var gift = `Gifts: ${property[key]}`;
+						}																	
+					}					
+
 					document.getElementById('cart_drawer_body').innerHTML += 
 					`<div class="card my-3 cart-drawer-item">
 						<div class="cart-drawer-image">
 							<img width="200" class="lazyload blur-up" data-src="${product.image}&width=300"></img>
 						</div>
 						<div class="card-body cart-drawer-details">
-						<h5 class="card-title">${product.title}</h5>$${product.price / 100}<br>Gift:${value}
+						<h5 class="card-title">${product.title}</h5>$${product.price / 100}<br>${gift}</br> ${file}
 						</div>
 					</div>`;
 				});
