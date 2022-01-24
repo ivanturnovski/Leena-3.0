@@ -7,14 +7,13 @@
             </div>
         </div>
 
-        {% assign needed_for_discount = 5 %}
-        {% assign cart_items = cart.item_count %}
+        {% assign needed_for_discount = 5 %}        
 
         {% if cart.item_count >= needed_for_discount %}
             <div class="bg-light-green2 p-3">
                 {% for discount_application in cart.cart_level_discount_applications %}
                     You are getting:
-                    {{ discount_application.value | remove: '.0'}}
+                    {{ discount_application.value | remove: '.0' }}
                     {{ discount_application.value_type }}
                     OFF!
                     <br>

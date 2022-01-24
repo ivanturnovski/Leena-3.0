@@ -37,7 +37,7 @@
                                 |
                                 {{ article.published_at | date: format: 'long' }}</p>
                             {%- if article.excerpt.size > 0 -%}
-                                <p class="mb-0">{{ article.excerpt | escape | truncate: 30, '...'}}</p>
+                                <p class="mb-0">{{ article.excerpt | escape | truncate: 30, '...' }}</p>
                                 {%- else -%}
                             {%- endif -%}
                             <a class="mt-5 text-primary fw-bold" href="{{ article.url }}">Read More</a>

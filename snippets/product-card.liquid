@@ -2,9 +2,9 @@
     <div class="thumbnails m-3">
         {%- if image != blank -%}
             <a href="{{ product.url | within: collection }}" class="position-relative h-100 d-flex align-items-center">
-                <img width="150" height="100" class="featured-image card-img-top lazyload" src="{{ 'spinner.gif' | asset_img_url: '150x'}}" data-src="{{ image | img_url: '150x' }}" alt="{{ product.title }}">
+                <img width="150" height="100" class="featured-image card-img-top lazyload" src="{{ 'spinner.gif' | asset_img_url: '150x' }}" data-src="{{ image | img_url: '150x' }}" alt="{{ product.title }}">
                 {% if secondImage != blank %}                
-                    <img width="150" height="100" class="secondary-image card-img-top lazyload" src="{{ 'spinner.gif' | asset_img_url: '150x'}}" data-src="{{ secondImage | img_url: '150x' }}" alt="{{ product.title }}">
+                    <img width="150" height="100" class="secondary-image card-img-top lazyload" src="{{ 'spinner.gif' | asset_img_url: '150x' }}" data-src="{{ secondImage | img_url: '150x' }}" alt="{{ product.title }}" loading="lazy">
                 {% endif %}
             </a>
         {%- else -%}

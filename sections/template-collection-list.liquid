@@ -20,7 +20,7 @@
                     <div class="card shadow">
                         <div class="thumbnails m-3">
                             {%- if image != blank -%}
-                                <a href="{{ product.url | within: collection }}"><img width="150" height="100" class="card-img-top lazyload" src="{{ 'spinner.gif' | asset_img_url: '150x'}}" data-src="{{ image | img_url: '150x' }}" alt="{{ product.title }}"></a>
+                                <a href="{{ product.url | within: collection }}"><img width="150" height="100" class="card-img-top lazyload" src="{{ 'spinner.gif' | asset_img_url: '150x' }}" data-src="{{ image | img_url: '150x' }}" alt="{{ product.title }}"></a>
                             {%- else -%}
                                 <a href="{{ product.url }}">{{ 'image' | placeholder_svg_tag: 'card-img-top' }}</a>
                             {%- endif -%}

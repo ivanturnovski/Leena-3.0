@@ -47,7 +47,7 @@
           <tr>
             <td data-th="Product">{{ line_item.title | link_to: line_item.product.url }}</td>
             <td data-th="SKU">{{ line_item.sku }}</td>
-            <td data-th="Price">{{ line_item.original_price | money}}</td>
+            <td data-th="Price">{{ line_item.original_price | money }}</td>
             <td data-th="Quantity">{{ line_item.quantity }}</td>
             <td data-th="Info">{% for property in line_item.properties %}
               {{ property.first }} : {{ property.last }}

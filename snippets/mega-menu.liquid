@@ -37,7 +37,7 @@
                 <div class="col-lg-3">
                     {% for collection in collections %}
                         {% if collection.url == menu_url %}
-                            <img src="{{ collection.image | img_url: '1x1' }}" data-src="{{ collection.image | img_url: '240x'}}" class="blur-up lazyload" alt="{{ collection.image.alt }}" width="240px" height="160px">
+                            <img src="{{ collection.image | img_url: '1x1' }}" data-src="{{ collection.image | img_url: '240x' }}" class="blur-up lazyload" alt="{{ collection.image.alt }}" width="240px" height="160px">
                         {% endif %}
                     {% endfor %}
                 </div>

@@ -8,7 +8,7 @@
             {%- assign item = block.settings -%}
             {%- if block.type == "image" -%}
                 <div class="col g-4">
-                    <img src="{{ item.image | img_url: '1x1' }}" data-src="{{ item.image | img_url: '500x' }}" alt="{{ item.title }}" class="lazyload">
+                    <img src="{{ item.image | img_url: '1x1' }}" data-src="{{ item.image | img_url: '500x' }}" alt="{{ item.title }}" class="lazyload" loading="lazy">
                 </div>
             {%- endif -%}
             {%- if block.type == "video" -%}

@@ -6,7 +6,7 @@
             {%- if block.type == 'sidebar_image' -%}
                 <div class="mb-5">
                     <p>
-                        <strong>{{item.title}}</strong>
+                        <strong>{{ item.title }}</strong>
                     </p>
                     <a href="{{ item.url }}"><img src="{{ item.image | img_url: " master" }}" alt="{{ item.image.alt }}"></a>
                 </div>

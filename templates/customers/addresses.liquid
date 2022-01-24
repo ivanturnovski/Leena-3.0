@@ -8,7 +8,7 @@
 	<div class="row row-cols-md-4 row-cols-1 my-5 gx-2">
 		{%- for address in customer.addresses -%}
 		<div class="col">
-			<div class="card">
+			<div class="card shadow h-100">
 				<div class="card-body">
 					{{ address | format_address }}
 				</div>
