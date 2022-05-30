@@ -6,48 +6,48 @@
 		{% case block.type %}
 		{% when 'product_main' %}
 		<div class="col-md-6 col-12 g-5">
-			<h1 itemprop="name">{{ product.title }}</h1>			
-			
-			<meta itemprop="mpn" content= "{{ current_product.sku }}">
-			<meta itemprop="sku" content= "{{ current_product.sku }}">
-			<img itemprop="image" style="display: none;" src="{{ product.featured_image | img_url: 'medium' }}">			      
-    		<meta itemscope itemtype="http://schema.org/Brand" itemprop="brand" content= "{{ product.vendor }}">
-			{% if block.settings.option1  != blank %}
+			<h1 itemprop="name">{{ product.title }}</h1>
+
+			<meta itemprop="mpn" content="{{ current_product.sku }}">
+			<meta itemprop="sku" content="{{ current_product.sku }}">
+			<img itemprop="image" style="display: none;" src="{{ product.featured_image | img_url: 'medium' }}">
+			<meta itemscope itemtype="http://schema.org/Brand" itemprop="brand" content="{{ product.vendor }}">
+			{% if block.settings.option1 != blank %}
 			<p>{{ block.settings.option1 }}</p>
-			{% endif %}	
+			{% endif %}
 
 			{% if block.settings.option2 != blank %}
 			<p class="lead text-muted">{{ block.settings.option2 }}</p>
-			{% endif %}	
-			
-			<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-			<p id="product-price" itemprop="price" content="{{ current_product.price | money_without_currency }}">{% if product.price_varies %}From:{% endif %}{{ product.price | money }}</p>
-			<meta itemprop="priceCurrency" content="{{ shop.currency }}">
-			<meta itemprop="url" content= "{{shop.url}}{{ product.url }}">	
-			<meta itemprop="priceValidUntil" content="{{ "now" | date: "%d-%m-%Y" }}">		
-			{% if product.available %}
-			<p itemprop="availability" content="https://schema.org/InStock" class="badge bg-success">In Stock</p>
-			{% else %}
-			<p itemprop="availability" content="" class="badge bg-danger">Sold Out</p>
 			{% endif %}
-			{%- form 'product', product, class: "product-form", id: "AddToCartForm" -%}
-			<div class="mb-3">
-				<select name="id" id="ProductSelect" class="form-select">
-					{%- for variant in product.variants -%}
-					{%- if variant.available -%}
-					<option price="{{ variant.price | money }}" value="{{ variant.id }}" {% if variant.selected %}
-						selected="selected"
-					{% endif %}>
-						{{ variant.title }}
-					</option>
-					{%- else -%}
-					<option price="{{ variant.price | money }}" value="{{ variant.id }}" disabled="disabled">
-						{{ variant.title }}
-					</option>
-					{%- endif -%}
-					{%- endfor -%}
-				</select>
-			</div>
+
+			<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+				<p id="product-price" itemprop="price" content="{{ current_product.price | money_without_currency }}">
+					{% if product.price_varies %}From:{% endif %}{{ product.price | money }}</p>
+				<meta itemprop="priceCurrency" content="{{ shop.currency }}">
+				<meta itemprop="url" content="{{shop.url}}{{ product.url }}">
+				<meta itemprop="priceValidUntil" content="{{ " now" | date: "%d-%m-%Y" }}">
+				{% if product.available %}
+				<p itemprop="availability" content="https://schema.org/InStock" class="badge bg-success">In Stock</p>
+				{% else %}
+				<p itemprop="availability" content="" class="badge bg-danger">Sold Out</p>
+				{% endif %}
+				{%- form 'product', product, class: "product-form", id: "AddToCartForm" -%}
+				<div class="mb-3">
+					<select name="id" id="ProductSelect" class="form-select">
+						{%- for variant in product.variants -%}
+						{%- if variant.available -%}
+						<option price="{{ variant.price | money }}" value="{{ variant.id }}" {% if variant.selected %}
+							selected="selected" {% endif %}>
+							{{ variant.title }}
+						</option>
+						{%- else -%}
+						<option price="{{ variant.price | money }}" value="{{ variant.id }}" disabled="disabled">
+							{{ variant.title }}
+						</option>
+						{%- endif -%}
+						{%- endfor -%}
+					</select>
+				</div>
 			</div>
 			<div class="mb-3">
 				<label for="Quantity" class="form-label">Quantity:</label>
@@ -62,7 +62,7 @@
 				<label for="file"></label>
 			</div>
 			<button type="button" name="add" id="AddToCart" class="btn btn-secondary btn-lg w-100 rounded-0" {% if
-				product.available != true %}disabled{% endif %}>
+				product.available !=true %}disabled{% endif %}>
 				Add To Cart
 			</button>
 			{%- if section.settings.dynamic_buttons_checkbox == true -%}
