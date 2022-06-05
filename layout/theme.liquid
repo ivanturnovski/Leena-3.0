@@ -9,11 +9,20 @@
         {%- if settings.favicon != blank -%}
             <link rel="icon" type="image/png" href="{{ settings.favicon | img_url: '32x32' }}">
         {%- endif -%}
-        {% if product.metafields.global.canonical != blank %}
-            <link rel="canonical" href="{{ shop.url }}/{{ product.metafields.global.canonical }}">
+
+        {% if template contains 'collection' and current_tags %}
+        <!-- Taged collections -->
+        <meta name="robots" content="noindex,nofollow" />
+        <link rel="canonical" href="{{ shop.url }}{{ collection.url }}" />
+        <!-- Taged collections -->
         {% else %}
-            <link rel="canonical" href="{{ canonical_url }}">
+            {% if current_page != 1 %}
+            <link rel="canonical" href="{{ shop.url }}{{ collection.url }}" />
+            {% else %}
+            <link rel="canonical" href="{{ canonical_url }}" />
+            {% endif %}
         {% endif %}
+
         <meta content="width=device-width,initial-scale=1,shrink-to-fit=no" name="viewport">
         {{ content_for_header }}
         <!-- Header hook for plugins -->

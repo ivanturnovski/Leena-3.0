@@ -46,7 +46,7 @@
                                 {%- for item in cart.items -%}
                                     <tr class="border-bottom">
                                         <td>
-                                            <a href="{{ item.url | within: collections.all }}">
+                                            <a href="{{ item.url }}">
                                                 <img src="{{ item | img_url: 'small' }}" alt="{{ item.title | escape }}">
                                             </a>
                                         </td>
