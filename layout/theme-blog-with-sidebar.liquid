@@ -20,13 +20,24 @@
         <meta content="width=device-width,initial-scale=1,shrink-to-fit=no" name="viewport">
         {{ content_for_header }}
         <!-- Header hook for plugins -->
+
+        {% include 'critical-css' %}
+        <link rel="preload" href="{{ 'bootstrap.min.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="{{ 'bootstrap.min.css' | asset_url }}"></noscript>    
+
+        
+        {% comment %}
         {{ 'bootstrap.min.css' | asset_url | stylesheet_tag }}
+        {% endcomment %}
         {{ 'application.css' | asset_url | stylesheet_tag }}
         {{ 'custom.css' | asset_url | stylesheet_tag }}
         {{ 'jquery-3.6.0.min.js' | asset_url | script_tag }}
         {{ 'lazysizes.min.js' | asset_url | script_tag }}
+
+        {% comment %}
         <link href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet" type="text/css"/>
         <link href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" rel="stylesheet" type="text/css"/>
+        {% endcomment %}
     </head>
 
     <body class="{{ template | handleize }}-template">
