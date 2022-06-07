@@ -1,64 +1,74 @@
 <!doctype html>
 <html>
-    <head>
-        {{ gift_card.url }}
-        <title>{{ page_title }}</title>
-        <meta charset="utf-8">
-        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-        <meta name="description" content="{{ page_description | escape }}">
-        {%- if settings.favicon != blank -%}
-            <link rel="icon" type="image/png" href="{{ settings.favicon | img_url: '32x32' }}">
-        {%- endif -%}
 
-        {% if template contains 'collection' and current_tags %}
-        <!-- Taged collections -->
-        <meta name="robots" content="noindex,nofollow" />
-        <link rel="canonical" href="{{ shop.url }}{{ collection.url }}" />
-        <!-- Taged collections -->
-        {% else %}
-            {% if current_page != 1 %}
-            <link rel="canonical" href="{{ shop.url }}{{ collection.url }}" />
-            {% else %}
-            <link rel="canonical" href="{{ canonical_url }}" />
-            {% endif %}
-        {% endif %}
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5JBD646');</script>
+    <!-- End Google Tag Manager -->
 
-        <meta content="width=device-width,initial-scale=1,shrink-to-fit=no" name="viewport">
-        {{ content_for_header }}
-        <!-- Header hook for plugins -->
-        
-        {% include 'critical-css' %}
-        <link rel="preload" href="{{ 'bootstrap.min.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="{{ 'bootstrap.min.css' | asset_url }}"></noscript>        
-        {% comment %}
-        {{ 'bootstrap.min.css' | asset_url | stylesheet_tag }}
-        {% endcomment %}
-        {{ 'application.css' | asset_url | stylesheet_tag }} 
-        {{ 'custom.css' | asset_url | stylesheet_tag }}         
-        {{ 'jquery-3.6.0.min.js' | asset_url | script_tag }}
-        {{ 'lazysizes.min.js' | asset_url | script_tag }}        
-        {% comment %}
-        <link href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet" type="text/css"/>
-        <link href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" rel="stylesheet" type="text/css"/>
-        {% endcomment %}
+    {{ gift_card.url }}
+    <title>{{ page_title }}</title>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="description" content="{{ page_description | escape }}">
+    {%- if settings.favicon != blank -%}
+    <link rel="icon" type="image/png" href="{{ settings.favicon | img_url: '32x32' }}">
+    {%- endif -%}
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENPKQBSSS1"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag() { dataLayer.push(arguments); }
-          gtag('js', new Date());
-          gtag('config', 'G-ENPKQBSSS1');
-        </script>
-    </head>
+    {% if template contains 'collection' and current_tags %}
+    <!-- Taged collections -->
+    <meta name="robots" content="noindex,nofollow" />
+    <link rel="canonical" href="{{ shop.url }}{{ collection.url }}" />
+    <!-- Taged collections -->
+    {% else %}
+    {% if current_page != 1 %}
+    <link rel="canonical" href="{{ shop.url }}{{ collection.url }}" />
+    {% else %}
+    <link rel="canonical" href="{{ canonical_url }}" />
+    {% endif %}
+    {% endif %}
 
-    <body class="{{ template | handleize }}-template">
-        {% section 'announcement-bar' %}
-        {% section 'header' %}
-        <main role="main">
-            {{ content_for_layout }}
-        </main>
-        {% section 'footer' %}
-    </body>
+    <meta content="width=device-width,initial-scale=1,shrink-to-fit=no" name="viewport">
+    {{ content_for_header }}
+    <!-- Header hook for plugins -->
+
+    {% include 'critical-css' %}
+    <link rel="preload" href="{{ 'bootstrap.min.css' | asset_url }}" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="{{ 'bootstrap.min.css' | asset_url }}">
+    </noscript>
+    {% comment %}
+    {{ 'bootstrap.min.css' | asset_url | stylesheet_tag }}
+    {% endcomment %}
+    {{ 'application.css' | asset_url | stylesheet_tag }}
+    {{ 'custom.css' | asset_url | stylesheet_tag }}
+    {{ 'jquery-3.6.0.min.js' | asset_url | script_tag }}
+    {{ 'lazysizes.min.js' | asset_url | script_tag }}
+    {% comment %}
+    <link href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet" type="text/css" />
+    <link href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" rel="stylesheet" type="text/css" />
+    {% endcomment %}
+</head>
+
+<body class="{{ template | handleize }}-template">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JBD646" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    {% section 'announcement-bar' %}
+    {% section 'header' %}
+    <main role="main">
+        {{ content_for_layout }}
+    </main>
+    {% section 'footer' %}
+</body>
 
 </html>
