@@ -32,6 +32,28 @@
 				<p itemprop="availability" content="" class="badge bg-danger">Sold Out</p>
 				{% endif %}
 				{%- form 'product', product, class: "product-form", id: "AddToCartForm" -%}
+
+                <div class="mb-3">
+                    {{ product.selected_or_first_available_variant.id }}
+                    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">					
+					{% if product.variants.size > 1 %}
+						<div class="product-option">
+							{% for option in product.options_with_values %}
+							<fieldset>
+								<legend>{{ option.name }}</legend>
+								{% for value in option.values %}
+									<div>
+										<input {% if option.selected_value == value %} checked {% endif %} type="radio" name="{{ option.name }}" value="{{value}}" id="{{ option.name | handleize }}-{{ value | handleize }}">
+										<label for="{{ option.name | handleize }}-{{ value | handleize }}">{{ value }}</label>
+									</div>
+								{% endfor %}
+							</fieldset>                                
+							{% endfor %}
+                    </div>
+					{% endif %}
+
+                </div>
+                {%comment %}
 				<div class="mb-3">
 					<select name="id" id="ProductSelect" class="form-select">
 						{%- for variant in product.variants -%}
@@ -48,6 +70,7 @@
 						{%- endfor -%}
 					</select>
 				</div>
+                {% endcomment %}
 			</div>
 			<div class="mb-3">
 				<label for="Quantity" class="form-label">Quantity:</label>
