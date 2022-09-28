@@ -21,7 +21,7 @@
         "main"
       ],
       "settings": {
-        "dynamic_buttons_checkbox": true,
+        "dynamic_buttons_checkbox": false,
         "recomended_products": 4
       }
     },

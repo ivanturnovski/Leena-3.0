@@ -21,7 +21,7 @@
         "aa179a3e-6e7c-40ec-b50e-5e9b6f6464d7"
       ],
       "settings": {
-        "dynamic_buttons_checkbox": false,
+        "dynamic_buttons_checkbox": true,
         "recomended_products": 4
       }
     }
