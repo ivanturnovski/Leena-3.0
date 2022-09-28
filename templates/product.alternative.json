@@ -1,0 +1,32 @@
+{
+  "sections": {
+    "template": {
+      "type": "template-product-alternative",
+      "blocks": {
+        "edfbc624-dc91-4188-b81e-afbb47ed2160": {
+          "type": "product_carousel",
+          "settings": {
+          }
+        },
+        "aa179a3e-6e7c-40ec-b50e-5e9b6f6464d7": {
+          "type": "product_main",
+          "settings": {
+            "option1": "",
+            "option2": ""
+          }
+        }
+      },
+      "block_order": [
+        "edfbc624-dc91-4188-b81e-afbb47ed2160",
+        "aa179a3e-6e7c-40ec-b50e-5e9b6f6464d7"
+      ],
+      "settings": {
+        "dynamic_buttons_checkbox": false,
+        "recomended_products": 4
+      }
+    }
+  },
+  "order": [
+    "template"
+  ]
+}
