@@ -138,7 +138,30 @@
 		</section>
 	</div>
 </div>
-
+<script>
+    var product = {{ product | json }}
+    console.log(product);
+    document.querySelectorAll('.product-option input[type="radio"]').forEach(radio => {
+        radio.addEventListener('change', () => {
+                console.log("hey");
+                var selectedOption = [];
+                document.querySelectorAll('.product-option input[type="radio"]:checked').forEach(radio => {
+                    selectedOption.push(radio.value)
+                })
+                var matchedVariant = product.variants.find(variant => {
+                    var pass = true;
+                    for (var i = 0; i < selectedOption.length; i++) {
+                        if (selectedOption.indexOf(variant.options[i]) === -1) {
+                            pass = false;
+                            break
+                        }
+                    }
+                    return pass
+                })
+                console.log(matchedVariant); 
+        })
+    })
+</script>
 <script>
 	var productRecomendationBody = document.getElementById("product_recomendations_body");
 	fetch("/recommendations/products.json?product_id={{ product.id }}&limit={{ section.settings.recomended_products }}")
