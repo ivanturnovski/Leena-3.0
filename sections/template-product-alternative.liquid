@@ -21,8 +21,9 @@
 			{% endif %}
 
 			<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-				<p id="product-price" itemprop="price" content="{{ current_product.price | money_without_currency }}">
-					{% if product.price_varies %}From:{% endif %}{{ product.price | money }}</p>
+				<p class="product-compare-price"><del>{{ product.selected_or_first_available_variant.compare_at_price | money }}</del></p>
+				<p class="product-price" id="product-price" itemprop="price" content="{{ product.selected_or_first_available_variant.price | money }}">
+					{{ product.selected_or_first_available_variant.price | money }}</p>				
 				<meta itemprop="priceCurrency" content="{{ shop.currency }}">
 				<meta itemprop="url" content="{{shop.url}}{{ product.url }}">
 				<meta itemprop="priceValidUntil" content="{{ " now" | date: "%d-%m-%Y" }}">
@@ -33,27 +34,28 @@
 				{% endif %}
 				{%- form 'product', product, class: "product-form", id: "AddToCartForm" -%}
 
-                <div class="mb-3">
-                    {{ product.selected_or_first_available_variant.id }}
-                    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">					
+				<div class="mb-3">					
+					<input id="product-id" type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
 					{% if product.variants.size > 1 %}
-						<div class="product-option">
-							{% for option in product.options_with_values %}
-							<fieldset>
-								<legend>{{ option.name }}</legend>
-								{% for value in option.values %}
-									<div>
-										<input {% if option.selected_value == value %} checked {% endif %} type="radio" name="{{ option.name }}" value="{{value}}" id="{{ option.name | handleize }}-{{ value | handleize }}">
-										<label for="{{ option.name | handleize }}-{{ value | handleize }}">{{ value }}</label>
-									</div>
-								{% endfor %}
-							</fieldset>                                
+					<div class="product-option">
+						{% for option in product.options_with_values %}
+						<fieldset>
+							<legend>{{ option.name }}</legend>
+							{% for value in option.values %}
+							<div>
+								<input {% if option.selected_value==value %} checked {% endif %} type="radio"
+									name="{{ option.name }}" value="{{value}}"
+									id="{{ option.name | handleize }}-{{ value | handleize }}">
+								<label for="{{ option.name | handleize }}-{{ value | handleize }}">{{ value }}</label>
+							</div>
 							{% endfor %}
-                    </div>
+						</fieldset>
+						{% endfor %}
+					</div>
 					{% endif %}
 
-                </div>
-                {%comment %}
+				</div>
+				{%comment %}
 				<div class="mb-3">
 					<select name="id" id="ProductSelect" class="form-select">
 						{%- for variant in product.variants -%}
@@ -70,7 +72,7 @@
 						{%- endfor -%}
 					</select>
 				</div>
-                {% endcomment %}
+				{% endcomment %}
 			</div>
 			<div class="mb-3">
 				<label for="Quantity" class="form-label">Quantity:</label>
@@ -84,8 +86,7 @@
 				<input type="file" id="file" name="properties[file]">
 				<label for="file"></label>
 			</div>
-			<button 
-			onclick="dataLayer.push({ 'ecommerce': null });dataLayer.push({
+			<button onclick="dataLayer.push({ 'ecommerce': null });dataLayer.push({
 				'event': 'add_to_cart',
 				'ecommerce': {
 						'items': [{
@@ -98,8 +99,7 @@
 						'price': '{{ product.price  | times: 0.01}}'
 						}]
 					}
-				});"
-			type="button" name="add" id="AddToCart" class="btn btn-secondary btn-lg w-100 rounded-0" {% if
+				});" type="button" name="add" id="AddToCart" class="btn btn-secondary btn-lg w-100 rounded-0" {% if
 				product.available !=true %}disabled{% endif %}>
 				Add To Cart
 			</button>
@@ -127,8 +127,6 @@
 		{% endfor %}
 	</div>
 
-
-
 	<div class="row">
 		<section id="product_recomendations" class="justify-content-center my-5">
 			<div class="text-center">
@@ -138,12 +136,64 @@
 		</section>
 	</div>
 </div>
+
 <script>
+
+	// Format Money
+var Shopify = Shopify || {};
+// ---------------------------------------------------------------------------
+// Money format handler
+// ---------------------------------------------------------------------------
+Shopify.money_format = "${{amount}}";
+Shopify.formatMoney = function(cents, format) {
+  if (typeof cents == 'string') { cents = cents.replace('.',''); }
+  var value = '';
+  var placeholderRegex = /\{\{\s*(\w+)\s*\}\}/;
+  var formatString = (format || this.money_format);
+
+  function defaultOption(opt, def) {
+     return (typeof opt == 'undefined' ? def : opt);
+  }
+
+  function formatWithDelimiters(number, precision, thousands, decimal) {
+    precision = defaultOption(precision, 2);
+    thousands = defaultOption(thousands, ',');
+    decimal   = defaultOption(decimal, '.');
+
+    if (isNaN(number) || number == null) { return 0; }
+
+    number = (number/100.0).toFixed(precision);
+
+    var parts   = number.split('.'),
+        dollars = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1' + thousands),
+        cents   = parts[1] ? (decimal + parts[1]) : '';
+
+    return dollars + cents;
+  }
+
+  switch(formatString.match(placeholderRegex)[1]) {
+    case 'amount':
+      value = formatWithDelimiters(cents, 2);
+      break;
+    case 'amount_no_decimals':
+      value = formatWithDelimiters(cents, 0);
+      break;
+    case 'amount_with_comma_separator':
+      value = formatWithDelimiters(cents, 2, '.', ',');
+      break;
+    case 'amount_no_decimals_with_comma_separator':
+      value = formatWithDelimiters(cents, 0, '.', ',');
+       break;
+  }
+
+  return formatString.replace(placeholderRegex, value);
+};
+
+
     var product = {{ product | json }}
     console.log(product);
     document.querySelectorAll('.product-option input[type="radio"]').forEach(radio => {
-        radio.addEventListener('change', () => {
-                console.log("hey");
+        radio.addEventListener('change', () => {                
                 var selectedOption = [];
                 document.querySelectorAll('.product-option input[type="radio"]:checked').forEach(radio => {
                     selectedOption.push(radio.value)
@@ -158,7 +208,28 @@
                     }
                     return pass
                 })
-                console.log(matchedVariant); 
+				//Change product form variant id
+                console.log(matchedVariant);
+				document.querySelector('#product-id').value = matchedVariant.id;
+				
+
+				
+				var url = new URL(window.location.href);
+				url.searchParams.set('variant', matchedVariant.id);
+				window.history.replaceState(null, null, url)
+				//window.location = url.href; 
+
+				//change url
+				/*
+				var url = new URLParse(window.location.href, true);
+				url.query.variant = matchedVariant.id;
+				console.log(url.toString());
+				window.history.replaceState(null, null, url) */
+
+				//change prices
+				document.querySelector('.product-price').textContent = matchedVariant.price;
+				//document.querySelector('.product-compare-price').textContent = formatMoney(matchedVariant.price, "{{ shop.money_format }}");
+				
         })
     })
 </script>
