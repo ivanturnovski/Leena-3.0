@@ -19,48 +19,339 @@
             <a href="{{ section.settings.button_link }}" class="btn btn-secondary">
                 {{- section.settings.button_label -}}
             </a>
+            <button id="open__quiz" type="button" class="btn btn-info">Take Quiz</button>
         </div>
     </div>
+
+    <div id="quiz">
+        <div class="quiz__content d-flex flex-column">
+            <div class="quiz__header">
+                <span class="close">&times;</span>
+            </div>
+            <div class="quiz__body d-flex flex-column justify-content-center align-items-center h-100">
+                <button class="btn btn-warning py-2 px-4 start-quiz">Start</button>
+
+                <div class="questions">
+                    <div id="hud">
+                        <div id="hud-item">
+                            <p class="hud-prefix">
+                                Question
+                            </p>
+                            <h1 class="hud-main-text" id="questionCounter">1/3</h1>
+                            <div id="progressBar">
+                                <div id="progressBarFull">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="questions__content">
+                        <p class="quiz__question">
+                            What is the answer to this question</p>
+                        <div class="quiz__choice d-flex">
+                            <p class="choice__prefix">A</p>
+                            <p class="choice__question" data-number="1">Question 1</p>
+                        </div>
+                        <div class="quiz__choice d-flex">
+                            <p class="choice__prefix">B</p>
+                            <p class="choice__question" data-number="2">Choice 2</p>
+                        </div>
+                        <div class="quiz__choice d-flex">
+                            <p class="choice__prefix">C</p>
+                            <p class="choice__question" data-number="3">Choice 3</p>
+                        </div>
+                        <div class="quiz__choice d-flex">
+                            <p class="choice__prefix">D</p>
+                            <p class="choice__question" data-number="4">Choice 4</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 </div>
 
+<style>
+    #quiz {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+        
+    }
+    .quiz__content {
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0;
+        border: 1px solid #888;
+        width: 80%;
+        height: 80%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s;
+        opacity:0;
+        top: -300px;
+        transition: all 0.5s;
+    }
+
+    .quiz__content.show {
+        opacity: 1;
+        top: 0;
+    }
+    .quiz__choice {
+        border: 1px solid navy;
+        margin: 5px;
+        border-radius: 3px;
+    }
+    .quiz__choice .choice__question {
+        width: 100%;
+    }
+    .quiz__choice:hover {
+        cursor: pointer;
+        box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 233, 0.5);
+        transform: translateY(-0.1rem);
+        transition: transform 150ms;
+    }
+    .quiz__choice .choice__prefix {
+        background-color: navy;
+        color: white;
+    }
+    .quiz__choice > p {
+        margin: 0;
+        padding: 5px 8px;
+    }
+    .questions {
+        display: none;
+    }
+    /* Add Animation */
+    @-webkit-keyframes animatetop {
+        from {
+            top: -300px;
+            opacity: 0
+        }
+        to {
+            top: 0;
+            opacity: 1
+        }
+    }
+
+    @keyframes animatetop {
+        from {
+            top: -300px;
+            opacity: 0
+        }
+        to {
+            top: 0;
+            opacity: 1
+        }
+    }
+    /* The Close Button */
+    .close {
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .chosen-answer {
+        background: navy;
+        color: #fff;
+    }
+    #hud {
+        display: flex;
+        justify-content: center;
+    }
+    #progressBar {
+        width: 200px;
+        height: 40px;
+        border: 5px solid navy;
+    }
+    #progressBarFull {
+        height: 30px;
+        width: 50%;
+        background-color: navy;
+    }
+</style>
+
+<script>
+
+
+
+    // Get the modal
+    var modal = document.getElementById("quiz");
+
+// Get the button that opens the modal
+    var btn = document.getElementById("open__quiz");
+
+// Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    var modalContent = document.querySelector('.quiz__content');
+
+// When the user clicks the button, open the modal 
+    btn.onclick = function() {
+        modal.style.display = "block";
+        modalContent.classList.add('show');
+    }
+
+// When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modalContent.classList.remove('show');       
+
+         setTimeout(()=>{
+           modal.style.display = "none";
+        }, 500) 
+        
+    }
+
+    var startQuiz = document.querySelector('.start-quiz');
+    var questionsWrapper = document.querySelector('.questions');
+    startQuiz.addEventListener('click', function() {
+        setTimeout(() => {
+            this.style.display = 'none';
+            questionsWrapper.style.display = 'block';
+
+// questions.children.classList.add('active');
+        }, 1000)
+    })
+
+    var question = document.querySelector('.quiz__question');
+    const choices = Array.from(document.getElementsByClassName('choice__question'));
+    const questionCounterText = document.getElementById('questionCounter');
+    console.log(choices);
+
+    let currentQuestion = {}
+    let acceptingAnswers = false;
+    let score = 0;
+    let questionCounter = 0;
+    let availableQuestions;
+    let questions = [
+        {
+            question: 'Inside which HTML element do we put the JavaScript??',
+            choice1: '<script>',
+            choice2: '<javascript>',
+            choice3: '<js>',
+            choice4: '<scripting>',
+            answer: 1
+        }, {
+            question: "What is the correct syntax for referring to an external script called 'xxx.js'?",
+            choice1: "<script href='xxx.js'>",
+            choice2: "<script name='xxx.js'>",
+            choice3: "<script src='xxx.js'>",
+            choice4: "<script file='xxx.js'>",
+            answer: 3
+        }, {
+            question: " How do you write 'Hello World' in an alert box?",
+            choice1: "msgBox('Hello World');",
+            choice2: "alertBox('Hello World');",
+            choice3: "msg('Hello World');",
+            choice4: "alert('Hello World');",
+            answer: 4
+        }
+    ];
+
+    const MAX_QUESTIONS = 3;
+
+    startGame = () => {
+        questionCounter = 0;
+        availableQuestions = [... questions];
+        console.log(availableQuestions);
+        getNewQuestion();
+    }
+
+    getNewQuestion = () => {
+        if (availableQuestions.length == 0 || questionCounter >= MAX_QUESTIONS) {
+            // go to the end page
+            return window.location.assign("/");
+        }
+        questionCounter++;
+        questionCounterText.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
+        const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+        currentQuestion = availableQuestions[questionIndex];
+        question.innerText = currentQuestion.question;
+        choices.forEach((choice) => {
+            const number = choice.dataset["number"];
+            choice.innerText = currentQuestion["choice" + number];
+        });
+        availableQuestions.splice(questionIndex, 1);
+        acceptingAnswers = true;
+    }
+
+    choices.forEach((choice) => {
+        choice.addEventListener('click', e => {
+            console.log(e.target);
+            if(!acceptingAnswers) return;
+            acceptingAnswers = false;
+            const selectedChoice = e.target;
+            const selectedAnswer = selectedChoice.dataset['number'];
+            const classToApply = 'chosen-answer';
+            console.log(selectedAnswer == currentQuestion.answer)
+            selectedChoice.parentElement.classList.add(classToApply);
+            setTimeout(()=> {
+                selectedChoice.parentElement.classList.remove(classToApply);
+                getNewQuestion();
+            }, 1000)
+            
+        });
+    })
+    startGame();
+</script>
+
 {% schema %}
-
-{
-    "name": "Hero",
-    "class": "simple-hero-section",
-    "tag": "section",
-    "settings": [
-        {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Hero Background Image"
-        }, {
-            "type": "text",
-            "id": "title",
-            "default": "Example Heading",
-            "label": "Hero Title"
-        }, {
-            "type": "richtext",
-            "id": "description",
-            "default": "<p>Example Paragraph</p>",
-            "label": "Hero Description"
-        }, {
-            "type": "text",
-            "id": "button_label",
-            "default": "Button",
-            "label": "Hero Button Label"
-        }, {
-            "type": "url",
-            "id": "button_link",
-            "label": "Heading Button Link"
-        }
-    ],
-    "presets": [
-        {
-            "category": "Heros",
-            "name": "Simple Hero"
-        }
-    ]
-}
-
+    {
+        "name": "Hero",
+        "class": "simple-hero-section",
+        "tag": "section",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Hero Background Image"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "default": "Example Heading",
+                "label": "Hero Title"
+            },
+            {
+                "type": "richtext",
+                "id": "description",
+                "default": "<p>Example Paragraph</p>",
+                "label": "Hero Description"
+            },
+            {
+                "type": "text",
+                "id": "button_label",
+                "default": "Button",
+                "label": "Hero Button Label"
+            }, {
+                "type": "url",
+                "id": "button_link",
+                "label": "Heading Button Link"
+            }
+        ],
+        "presets": [
+            {
+                "category": "Heros",
+                "name": "Simple Hero"
+            }
+        ]
+    }
 {% endschema %}
