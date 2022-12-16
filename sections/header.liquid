@@ -69,7 +69,7 @@
 
 {% if section.settings.logo != blank %}
     <div class="logo-bar text-center">
-        <a href="{{ shop.url }}">{{ section.settings.logo | image_url: width: 200, height: 200 | image_tag: srcset: nil
+        <a href="/">{{ section.settings.logo | image_url: width: 200, height: 200 | image_tag: srcset: nil
         }}</a>
     </div>
 {% endif %}

@@ -31,17 +31,22 @@
             <div class="quiz__body d-flex flex-column justify-content-center align-items-center h-100">
                 <button class="btn btn-warning py-2 px-4 start-quiz">Start</button>
 
-                <div class="questions">
-                    <div id="hud">
-                        <div id="hud-item">
-                            <p class="hud-prefix">
-                                Question
-                            </p>
-                            <h1 class="hud-main-text" id="questionCounter">1/3</h1>
-                            <div id="progressBar">
-                                <div id="progressBarFull">
-
+                    <div class="questions">
+                        <div id="hud">
+                            <div id="hud-item">
+                                <div class="hud-question">
+                                    <p>
+                                        Question
+                                    </p>
+                                    <h1 id="questionCounter">1/3</h1>
                                 </div>
+                         <div class="hud-score">
+                            <p>Score</p>
+                            <h1 id="scoreCounter">0</h1>
+                         </div>
+                            <div id="progressBar">
+                            <div id="progressBarFull">
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -64,17 +69,28 @@
                             <p class="choice__prefix">D</p>
                             <p class="choice__question" data-number="4">Choice 4</p>
                         </div>
-                    </div>
+                    </div>                    
+                </div>
 
+                <div id="end">
+                    <div id="finalScore"></div>
                 </div>
 
             </div>
         </div>
     </div>
 
+    
+
 </div>
 
 <style>
+    #hud-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
     #quiz {
         display: none; /* Hidden by default */
         position: fixed; /* Stay in place */
@@ -107,7 +123,7 @@
         transition: all 0.5s;
     }
 
-    .quiz__content.show {
+    .show {
         opacity: 1;
         top: 0;
     }
@@ -170,8 +186,12 @@
         text-decoration: none;
         cursor: pointer;
     }
-    .chosen-answer {
-        background: navy;
+    .chosen-answer-true {
+        background: greenyellow;
+        color: #fff;
+    }
+    .chosen-answer-false {
+        background: red;
         color: #fff;
     }
     #hud {
@@ -185,37 +205,34 @@
     }
     #progressBarFull {
         height: 30px;
-        width: 50%;
+        width: 0%;
         background-color: navy;
     }
+
 </style>
 
 <script>
-
-
-
-    // Get the modal
+    
     var modal = document.getElementById("quiz");
 
-// Get the button that opens the modal
     var btn = document.getElementById("open__quiz");
 
-// Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
     var modalContent = document.querySelector('.quiz__content');
 
-// When the user clicks the button, open the modal 
+    var progressBarFull = document.getElementById('progressBarFull');
+
     btn.onclick = function() {
         modal.style.display = "block";
         modalContent.classList.add('show');
     }
 
-// When the user clicks on <span> (x), close the modal
     span.onclick = function() {
-        modalContent.classList.remove('show');       
-
-         setTimeout(()=>{
+        modalContent.classList.remove('show');
+        setTimeout(()=>{
            modal.style.display = "none";
+           //localStorage.clear('vrednost');
+           getNewQuestion();
         }, 500) 
         
     }
@@ -226,20 +243,25 @@
         setTimeout(() => {
             this.style.display = 'none';
             questionsWrapper.style.display = 'block';
+            questionsWrapper.classList.add('questions-active');
 
 // questions.children.classList.add('active');
         }, 1000)
     })
 
     var question = document.querySelector('.quiz__question');
-    const choices = Array.from(document.getElementsByClassName('choice__question'));
+    const choices = Array.from(document.getElementsByClassName('choice__question'));      
     const questionCounterText = document.getElementById('questionCounter');
+    const questionsEnd = document.getElementById('end'); 
+    const scoreCounter = document.getElementById('scoreCounter');
+    storedAnswers = [];
+    questionsEnd.style.display = "none";
     console.log(choices);
 
     let currentQuestion = {}
     let acceptingAnswers = false;
     let score = 0;
-    let questionCounter = 0;
+    let questionCounter = 0;     
     let availableQuestions;
     let questions = [
         {
@@ -270,6 +292,7 @@
 
     startGame = () => {
         questionCounter = 0;
+        questionIndex = 1;
         availableQuestions = [... questions];
         console.log(availableQuestions);
         getNewQuestion();
@@ -277,11 +300,16 @@
 
     getNewQuestion = () => {
         if (availableQuestions.length == 0 || questionCounter >= MAX_QUESTIONS) {
-            // go to the end page
-            return window.location.assign("/");
-        }
-        questionCounter++;
-        questionCounterText.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
+            questionsWrapper.style.display ="none";
+            questionsEnd.style.display = "block";
+            getValueFromArray();
+           
+        } else {
+        questionCounter++;        
+        
+        questionCounterText.innerText = `${questionCounter}/${MAX_QUESTIONS}`;        
+        
+        progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS)*100}%`;
         const questionIndex = Math.floor(Math.random() * availableQuestions.length);
         currentQuestion = availableQuestions[questionIndex];
         question.innerText = currentQuestion.question;
@@ -292,6 +320,7 @@
         availableQuestions.splice(questionIndex, 1);
         acceptingAnswers = true;
     }
+    }
 
     choices.forEach((choice) => {
         choice.addEventListener('click', e => {
@@ -300,17 +329,57 @@
             acceptingAnswers = false;
             const selectedChoice = e.target;
             const selectedAnswer = selectedChoice.dataset['number'];
-            const classToApply = 'chosen-answer';
-            console.log(selectedAnswer == currentQuestion.answer)
+            const SelectedAnswerText = selectedChoice.innerText;           
+
+            pushToArray(selectedAnswer);
+
+           var classToApply = 'chosen-answer-true';
+           if (selectedAnswer == currentQuestion.answer) {
+                var classToApply = 'chosen-answer-true';             
+                incrementScore(10);             
+           } else {
+            var classToApply = 'chosen-answer-false';
+           }
             selectedChoice.parentElement.classList.add(classToApply);
             setTimeout(()=> {
                 selectedChoice.parentElement.classList.remove(classToApply);
                 getNewQuestion();
             }, 1000)
-            
         });
     })
+
+    incrementScore = num => {
+    score += num;
+    scoreCounter.innerText = score;
+    }
+    
+    pushToArray = value => {
+      storedAnswers.push(value);      
+      localStorage.setItem("vrednost", storedAnswers);     
+    }
+
+    function getValueFromArray() {
+        var storedNames = localStorage.getItem("vrednost");
+        console.log(storedNames);        
+        var option1 = [1,1,1];
+        var option2 = [1,1,2];
+        var option3 = [4,4,4];
+
+        if(option1.toString() === storedNames.toString()) {
+            return window.location.assign("/collections/safety-gear")
+        }
+        else if (option2.toString() === storedNames.toString()) {
+            return window.location.assign("/collections/bikes")
+        }
+         else if (option3.toString() === storedNames.toString()) {
+            return window.location.assign("/collections/apparel")
+        } else {
+            document.getElementById('finalScore').innerText = "Test Failed";
+        }
+    }
+
     startGame();
+
 </script>
 
 {% schema %}
