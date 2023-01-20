@@ -60,6 +60,28 @@
     <link href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" rel="stylesheet" type="text/css" />
     {% endcomment %}
    {%- comment -%} <script src="https://cdn.jsdelivr.net/npm/url-parse@1.5.10/dist/url-parse.min.js"></script> {%- endcomment -%}
+   <script>
+    jQuery.event.special.touchstart = {
+    setup: function( _, ns, handle ) {
+        this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
+        }
+    };
+    jQuery.event.special.touchmove = {
+        setup: function( _, ns, handle ) {
+            this.addEventListener("touchmove", handle, { passive: !ns.includes("noPreventDefault") });
+        }
+    };
+    jQuery.event.special.wheel = {
+        setup: function( _, ns, handle ){
+            this.addEventListener("wheel", handle, { passive: true });
+        }
+    };
+    jQuery.event.special.mousewheel = {
+        setup: function( _, ns, handle ){
+            this.addEventListener("mousewheel", handle, { passive: true });
+        }
+    };
+   </script>
 </head>
 
 <body class="{{ template | handleize }}-template">
