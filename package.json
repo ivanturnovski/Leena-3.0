@@ -17,14 +17,14 @@
 	},
 	"homepage": "https://github.com/ivanturnovski/Shopify-Theme-Development-Create-Shopify-Themes-2021---Udemy#readme",
 	"dependencies": {
-		"@shopify/themekit": "^1.1.7"
+		"@shopify/themekit": "^1.1.7",
+		"gulp-cli": "^2.3.0",
+		"node-sass": "^8.0.0"
 	},
 	"devDependencies": {
-		"browser-sync": "^2.26.14",
 		"gulp": "^4.0.2",
 		"gulp-clean-css": "^4.3.0",
-		"gulp-sass": "^5.0.0",
-		"node-sass": "^6.0.1",
-		"sass": "^1.43.4"
+		"gulp-sass": "^5.1.0",
+		"sass": "^1.62.1"
 	}
 }

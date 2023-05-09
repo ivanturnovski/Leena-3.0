@@ -1,9 +1,9 @@
 $color-body: #f2f3f2;
 $color-headings: #282424;
-$color-links: #00b386;
+$color-links: #b30062;
 
 body {
-	background-color: $color-body;
+  background-color: $color-body;
 }
 
 h1,
@@ -18,35 +18,35 @@ h6,
 .h4,
 .h5,
 .h6 {
-	color: $color-headings;
+  color: $color-headings;
 }
 a {
-	color: $color-links;
+  color: $color-links;
 }
 a:hover,
 a.nav-link:hover {
-	color: #33ccff !important;
+  color: #33ccff !important;
 }
 .bg-purple {
-	background-color: #bf00ff;
+  background-color: #bf00ff;
 }
 .bg-light-green {
-	background-color: #00cc00;
+  background-color: #00cc00;
 }
 .bg-light-green2 {
-	background-color: #ccffcc;
+  background-color: #ccffcc;
 }
 .bg-orange {
-	background-color: #ffd9b3;
+  background-color: #ffd9b3;
 }
 .btn-primary-custom {
-	background-color: #eaa4a4;
-	border-color: #eaa4a4;
-	color: #fff;
-	transition: all 0.2s;
+  background-color: #eaa4a4;
+  border-color: #eaa4a4;
+  color: #fff;
+  transition: all 0.2s;
 }
 .btn-primary-custom:hover {
-	background-color: #fff;
-	color: #eaa4a4;
-	border-color: #eaa4a4;
+  background-color: #fff;
+  color: #eaa4a4;
+  border-color: #eaa4a4;
 }
