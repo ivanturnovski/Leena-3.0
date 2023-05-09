@@ -1,10 +1,10 @@
 <div class="inner-hero-section">
     {%- if section.settings.image != blank -%}
         <picture>
-            <source data-srcset="{{ section.settings.image | img_url: '300x' }} 300w, {{ section.settings.image | img_url: '500x' }} 500w" media="(max-width: 550px)"/>
-            <source data-srcset="{{ section.settings.image | img_url: '640x' }} 640w, {{ section.settings.image | img_url: '1024x' }} 1024w" media="(max-width: 1024px)"/>
-            <source data-srcset="{{ section.settings.image | img_url: '1200x' }} 1200w"/>
-            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ section.settings.image | img_url: '640x' }}" class="lazyload" alt="{{ section.settings.image.alt }}"/>
+            <source src="{{ section.settings.image | img_url: '300x' }} 300w, {{ section.settings.image | img_url: '500x' }} 500w" media="(max-width: 550px)"/>
+            <source src="{{ section.settings.image | img_url: '640x' }} 640w, {{ section.settings.image | img_url: '1024x' }} 1024w" media="(max-width: 1024px)"/>
+            <source src="{{ section.settings.image | img_url: '1200x' }} 1200w"/>
+            <img src="{{ section.settings.image | img_url: '640x' }}" alt="{{ section.settings.image.alt }}"/>
         </picture>
     {%- else -%}
         {% capture current %}

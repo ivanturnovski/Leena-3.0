@@ -3,11 +3,11 @@
     "hero": {
       "type": "hero",
       "settings": {
-        "image": "shopify:\/\/shop_images\/hero.jpg",
+        "image": "shopify://shop_images/KAR_20130707-4298_2048x2048_023ca988-345a-4c59-973f-d2976ec2d518.jpg",
         "title": "Welcome to my theme",
-        "description": "<p>This is fully customizable and responsive theme made from scratch<\/p>",
+        "description": "<p>This is fully customizable and responsive theme made from scratch</p>",
         "button_label": "Learn now",
-        "button_link": "shopify:\/\/blogs\/development"
+        "button_link": "shopify://blogs/development"
       }
     },
     "featured-collection": {
@@ -24,9 +24,9 @@
           "type": "slide",
           "settings": {
             "title": "Bikes",
-            "img": "shopify:\/\/shop_images\/KAR_20130707-4298_2048x2048_023ca988-345a-4c59-973f-d2976ec2d518.jpg",
-            "description": "<p>Collection List Template<\/p>",
-            "button_url": "\/collections\/bikes",
+            "img": "shopify://shop_images/KAR_20130707-4298_2048x2048_023ca988-345a-4c59-973f-d2976ec2d518.jpg",
+            "description": "<p>Collection List Template</p>",
+            "button_url": "/collections/bikes",
             "button_text": "Click",
             "button_color": "#815050"
           }
@@ -35,9 +35,9 @@
           "type": "slide",
           "settings": {
             "title": "Featured",
-            "img": "shopify:\/\/shop_images\/KAR_20130428-3038_2048x2048_d0b0bb0c-e9d4-4262-b452-e519b08e0acf.jpg",
+            "img": "shopify://shop_images/KAR_20130428-3038_2048x2048_d0b0bb0c-e9d4-4262-b452-e519b08e0acf.jpg",
             "description": "",
-            "button_url": "\/collections\/featured",
+            "button_url": "/collections/featured",
             "button_text": "Shop!",
             "button_color": "#32ce49"
           }
@@ -46,9 +46,9 @@
           "type": "slide",
           "settings": {
             "title": "About Us",
-            "img": "shopify:\/\/shop_images\/KAR_20130707-4295_2048x2048_fa2f4d93-440a-4a59-b59b-4f76a984e970.jpg",
+            "img": "shopify://shop_images/KAR_20130707-4295_2048x2048_fa2f4d93-440a-4a59-b59b-4f76a984e970.jpg",
             "description": "",
-            "button_url": "\/pages\/about-us",
+            "button_url": "/pages/about-us",
             "button_text": "Find Out",
             "button_color": "#8522e1"
           }
@@ -68,35 +68,35 @@
           "type": "image",
           "settings": {
             "title": "Man on Bike",
-            "image": "shopify:\/\/shop_images\/KAR_20130707-4298_2048x2048_023ca988-345a-4c59-973f-d2976ec2d518.jpg"
+            "image": "shopify://shop_images/hero.jpg"
           }
         },
         "688e4539-066d-4e07-b441-4852ec378ade": {
           "type": "image",
           "settings": {
             "title": "Yellow bike",
-            "image": "shopify:\/\/shop_images\/KAR_20130707-4329_2048x2048_1f934155-9f2c-4386-8612-42919e2e3828.jpg"
+            "image": "shopify://shop_images/KAR_20130707-4329_2048x2048_1f934155-9f2c-4386-8612-42919e2e3828.jpg"
           }
         },
         "991053fd-9f57-46f2-82cf-4646a5494260": {
           "type": "image",
           "settings": {
             "title": "Blue bike",
-            "image": "shopify:\/\/shop_images\/KAR_20130428-3038_2048x2048_d0b0bb0c-e9d4-4262-b452-e519b08e0acf.jpg"
+            "image": "shopify://shop_images/KAR_20130428-3038_2048x2048_d0b0bb0c-e9d4-4262-b452-e519b08e0acf.jpg"
           }
         },
         "08a0ee60-4f08-47b8-a406-88d1118dd2c3": {
           "type": "video",
           "settings": {
             "title": "Bike Riding",
-            "video_url": "https:\/\/www.youtube.com\/watch?v=h6t5eDe5gUE"
+            "video_url": "https://www.youtube.com/watch?v=h6t5eDe5gUE"
           }
         },
         "60eca201-f474-49c8-99a4-6723469da93c": {
           "type": "image",
           "settings": {
             "title": "Man & Bike",
-            "image": "shopify:\/\/shop_images\/KAR_20130707-4295_2048x2048_fa2f4d93-440a-4a59-b59b-4f76a984e970.jpg"
+            "image": "shopify://shop_images/KAR_20130707-4295_2048x2048_fa2f4d93-440a-4a59-b59b-4f76a984e970.jpg"
           }
         }
       },
@@ -120,19 +120,19 @@
         "c92ea982-d39d-486c-9b85-12e25045fa84": {
           "type": "blog_article",
           "settings": {
-            "article": "development\/themekit"
+            "article": "development/themekit"
           }
         },
         "c28d326d-dca9-4494-9b0e-4488c7697567": {
           "type": "blog_article",
           "settings": {
-            "article": "development\/featured-collection"
+            "article": "development/featured-collection"
           }
         },
         "a0f44de5-80e0-4282-9c2f-cc78c71f8589": {
           "type": "blog_article",
           "settings": {
-            "article": "development\/shopify-cli-useful-commands"
+            "article": "development/shopify-cli-useful-commands"
           }
         }
       },

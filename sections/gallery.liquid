@@ -8,12 +8,12 @@
             {%- assign item = block.settings -%}
             {%- if block.type == "image" -%}
                 <div class="col g-4">
-                    <img src="{{ item.image | img_url: '1x1' }}" data-src="{{ item.image | img_url: '500x' }}" alt="{{ item.title }}" class="lazyload" loading="lazy">
+                    <img src="{{ item.image | img_url: '500x' }}" alt="{{ item.title }}" loading="lazy">
                 </div>
             {%- endif -%}
             {%- if block.type == "video" -%}
                 <div class="col g-4">
-                    <iframe class="lazyload" data-src="//www.youtube.com/embed/{{ item.video_url.id }}"></iframe>
+                    <iframe src="//www.youtube.com/embed/{{ item.video_url.id }}" loading="lazy"></iframe>
                 </div>
             {%- endif -%}
         {%- endfor -%}

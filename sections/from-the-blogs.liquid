@@ -7,7 +7,7 @@
                     {% assign item = block.settings.article %}                
 					<div class="thumbnails m-3 mx-auto">
 						{% if item.image.src != blank %}
-						{{ item.image | image_url: width: 150, height: 100 | image_tag: srcset: nil, class: 'img-fluid lazyload', loading: 'lazy' }}
+						{{ item.image | image_url: width: 150, height: 100 | image_tag: srcset: nil, class: 'img-fluid', loading: 'lazy' }}
 						{% else %}
 						{{ 'image' | placeholder_svg_tag: 'card-img-top' }}
 						{% endif %}

@@ -18,7 +18,7 @@
                     </div>
                 {% when 'text' %}
                     <div class="col py-3">
-                        <a href="/"><img data-src="{{ item.logo | img_url: '200x200' }}" class="mb-4 lazyload"></a>
+                        <a href="/"><img src="{{ item.logo | img_url: '200x200' }}" class="mb-4"></a>
                         <h5>{{ item.title }}</h5>
                         {{ item.description }}
                     </div>
@@ -30,7 +30,7 @@
 {%- if section.settings.enable_payment_types == true -%}
     <div class="container text-center p-4">
         {%- for payment_type in shop.enabled_payment_types -%}
-            <img width="38" height="24" class="lazyload" data-src="{{ payment_type | payment_type_img_url }}" alt="">
+            <img width="38" height="24" src="{{ payment_type | payment_type_img_url }}" alt="">
         {%- endfor -%}
     </div>
 {%- endif -%}

@@ -2,7 +2,7 @@
     {%- for block in section.blocks -%}
         {%- assign item = block.settings -%}
         <div>
-            <img src="{{ item.img | img_url: '1x1' }}" data-src="{{ item.img | img_url: '2048x680' }}" alt="" class="lazyload" loading="lazy">
+            <img src="{{ item.img | img_url: '2048x680' }}" alt="" loading="lazy">
             <div class="hero text-center">
                 <h1>{{ item.title }}</h1>
                 {{ item.description }}
