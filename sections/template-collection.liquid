@@ -35,16 +35,17 @@
 
                 {% assign allowed_tags = "Black,Yellow,Blue,White,Red,Gold,Orange" | split: "," %}
                 {% for tag in allowed_tags %}
-                  {% assign tagCount = 0 %}
-                  {% for product in collections[handle].products %}
-                    {% for productTag in product.tags %}
-                      {% if productTag == tag %}
-                         {% assign tagCount = tagCount | plus: 1 %}
-                      {% endif %}
-                    {% endfor %}
-                  {% endfor %}
-                
-                <div>{{ tag | link_to_tag: tag }} ({{ tagCount }})</div>
+                    {% if collection.all_tags contains tag %}
+                        {% assign tagCount = 0 %}
+                        {% for product in collections[handle].products %}
+                        {% for productTag in product.tags %}
+                            {% if productTag == tag %}
+                            {% assign tagCount = tagCount | plus: 1 %}
+                            {% endif %}
+                        {% endfor %}
+                        {% endfor %}
+                        <div>{{ tag | link_to_tag: tag }} ({{ tagCount }})</div>
+                    {% endif %}               
                 {% endfor %}
 
                 {% endpaginate %}
