@@ -1,0 +1,25 @@
+{
+  "sections": {
+    "template": {
+      "type": "template-collection",
+      "blocks": {
+        "ae99ccf8-dd66-42de-823b-b357989c2c09": {
+          "type": "sort_order",
+          "settings": {}
+        },
+        "94a6f2f7-b0c2-4935-bcf2-eb911963386e": {
+          "type": "products_number",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "ae99ccf8-dd66-42de-823b-b357989c2c09",
+        "94a6f2f7-b0c2-4935-bcf2-eb911963386e"
+      ],
+      "settings": {
+        "products": 9
+      }
+    }
+  },
+  "order": ["template"]
+}

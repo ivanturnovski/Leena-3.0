@@ -1,5 +1,10 @@
+
+
+
+
+    
 {%- assign products = section.settings.products -%}
-{%- paginate collection.products by products -%}
+{%- paginate collection.products by 9 -%}
 <div class="container">
     <div class="row">
         <h1 class="text-center my-3">
@@ -7,6 +12,7 @@
             {{ collection.title }}
         </h1>
     </div>
+    
     <div class="row justify-content-between">
         {% for block in section.blocks %}
         {% case block.type %}
@@ -21,6 +27,30 @@
     </div>
     <div class="row my-4">
         <div class="col-md-3">
+            <div class="tags">
+                <div class="h4">Filter By Color</div>                
+                <div>
+                {% assign handle = collection.handle %}                   
+                {%- paginate collection.products by 100 -%}
+
+                {% assign allowed_tags = "Black,Yellow,Blue,White,Red,Gold,Orange" | split: "," %}
+                {% for tag in allowed_tags %}
+                  {% assign tagCount = 0 %}
+                  {% for product in collections[handle].products %}
+                    {% for productTag in product.tags %}
+                      {% if productTag == tag %}
+                         {% assign tagCount = tagCount | plus: 1 %}
+                      {% endif %}
+                    {% endfor %}
+                  {% endfor %}
+                
+                <div>{{ tag | link_to_tag: tag }} ({{ tagCount }})</div>
+                {% endfor %}
+
+                {% endpaginate %}
+                </div>              
+                <hr>
+            </div>
             <div class="h4">Filters</div>
             {% render 'collection-product-filter' %}
         </div>
