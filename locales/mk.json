@@ -595,6 +595,286 @@
         "more_than_three_products_accessibility_label": "Нарачката вклучува {{lineItemName1}} , {{lineItemName2}} и уште {{numberOfAdditionalProducts}} производи",
         "more_than_four_products_accessibility_label": "Нарачката вклучува {{lineItemName1}} , {{lineItemName2}} , {{lineItemName3}} и уште {{numberOfAdditionalProducts}} производи",
         "plus_more": "+ {{numberOfAdditionalProducts}}"
+      },
+      "order_status": {
+        "delivered_description_gift_card": {
+          "one": "Картичката за подарок е испратена по е-пошта.",
+          "other": "Картичките за подароци беа испратени по е-пошта."
+        },
+        "delivered_description_gift_card_text": {
+          "one": "Картичката за подарок беше испратена преку СМС.",
+          "other": "Подарок картички беа испратени по текст."
+        },
+        "gift_card_label": {
+          "one": "Честитка",
+          "other": "Картички за подароци"
+        },
+        "gift_card_resend": {
+          "one": "Повторно прати е-пошта",
+          "other": "Повторно праќање е-пошта"
+        },
+        "gift_card_resend_text": {
+          "one": "Повторно прати текст",
+          "other": "Повторно праќање текстови"
+        },
+        "gift_resend_success": {
+          "one": "Подарок картичка повторно испратена",
+          "other": "Подарок картички повторно испратени"
+        },
+        "gift_resend_failure": {
+          "one": "Настана проблем при повторното испраќање на вашата картичка за подарок. Обидете се повторно или контактирајте со нас.",
+          "other": "Имаше проблем со повторното испраќање на вашите картички за подарок. Обидете се повторно или контактирајте со нас."
+        },
+        "gift_card_resend_description": {
+          "one": "Ако не е примена, повторно испратете ја е-поштата или",
+          "other": "Доколку не се примени, повторно испратете ги е-поштата или"
+        },
+        "gift_card_resend_description_text": {
+          "one": "Ако не е примена, повторно испратете го текстот или",
+          "other": "Ако не се примени, повторно испратете ги текстовите или"
+        },
+        "confirmed_gift_card_additional_description": {
+          "one": "Картичката за подарок ќе биде испратена во посебна е-пошта.",
+          "other": "Секоја картичка за подарок ќе биде испратена во посебна е-пошта."
+        },
+        "confirmed_gift_card_additional_description_text": {
+          "one": "Картичката за подарок ќе биде испратена во посебен текст.",
+          "other": "Секоја картичка за подарок ќе биде испратена во посебен текст."
+        },
+        "estimated_delivery": "Предвиден {{date}}",
+        "in_review_description": "Ќе ве известиме ако ни требаат повеќе информации или кога вашата нарачка ќе биде потврдена.",
+        "in_review_label": "Во преглед",
+        "in_review_title": "Вашата нарачка се разгледува",
+        "last_updated": "Последно ажурирање {{date}}",
+        "multiple_shipments_label": "Повеќе пратки",
+        "no_tracking_number": "Нема следен број за оваа пратка.",
+        "on_its_way_label": "На својот пат",
+        "on_its_way_title": "Вашата пратка е на пат",
+        "out_for_delivery_label": "Излезете за испорака",
+        "out_for_delivery_title": "Вашата пратка е излезена за испорака",
+        "resume_tracking": "Продолжете со следење",
+        "submitted_label": "Поднесено",
+        "submitted_description": "Прегледајте ги деталите за нарачката и плаќањето.",
+        "there_was_a_problem_label": "Имаше проблем",
+        "track_shipment": "Следете ја пратката",
+        "request_return": "Побарајте враќање",
+        "view_order_for_details": "Погледнете ја нарачката за детали",
+        "amazon_buy_with_prime": {
+          "order_tracking_link": {
+            "text": "Следете и управувајте со нарачката Купи со Prime",
+            "new_window_disclaimer": "(отвара нов прозорец)"
+          }
+        }
+      },
+      "status_mark_as_delivered": "Обележете како доставено",
+      "status_title": "Статус на нарачка",
+      "buy_again": "Купи повторно",
+      "buy_again_accessibility_label": "Купете повторно за нарачка {{orderId}}",
+      "manage": "Управувај",
+      "manage_accessiblity_label": "Управувајте со нарачката {{orderId}}",
+      "group_title_label": "Дел од: {{groupTitle}}",
+      "havent_received_your_delivery": "Не ја добивте вашата испорака?",
+      "didnt_pick_up_order": "Не ја подигнавте вашата нарачка?",
+      "if_you_didnt_receive_this": "Ако не сте го добиле ова,",
+      "if_not_received": {
+        "one": "Ако не беше примен,",
+        "other": "Ако не беа примени,"
+      },
+      "let_us_know": "Дозволете ни да знаеме",
+      "contact_us": "Контактирајте не."
+    },
+    "order_details": {
+      "shipment_timeline": {
+        "expand_events_label": "Покажи детали",
+        "expand_events_accessibility_label": "Прикажи детали за пратката за нарачка",
+        "hide_events_label": "Сокриј детали",
+        "hide_events_accessibility_label": "Сокриј ги деталите за пратката на нарачката"
+      },
+      "addresses_section_title": "Наплата и испорака",
+      "order_details": "Детали за НАРАЧКА",
+      "order_details_skeleton_accessibility_label": "Најавете се за да ги видите сите детали за нарачката.",
+      "billing_address": "Адреса за фактурирање",
+      "card_ending_with": "завршува со {{lastDigits}}",
+      "contact": "Контакт",
+      "contact_information": "Контакт информации",
+      "company": "Компанијата",
+      "fully_refunded_label": "РЕФУНСИРАНО",
+      "group_title_label": "Дел од: {{groupTitle}}",
+      "discount": "Попуст",
+      "hide_items": "Скриј предмети",
+      "loading": "Се вчитуваат деталите за нарачката",
+      "loading_finished_accessibility_message": "Деталите за нарачката се вчитани",
+      "location": "Локација",
+      "image_gallery": {
+        "next": "Прикажи ги следните ставки",
+        "previous": "Прикажи претходни ставки"
+      },
+      "mobile_summary_toggle_button": {
+        "open": "Прикажи резиме на нарачката",
+        "closed": "Сокриј го резимето на нарачката"
+      },
+      "no_data": "Никој",
+      "no_data_provided_accessibility_label": "{{fieldName}} е празен",
+      "paid_amount": "Платено",
+      "partially_refunded_label": "ДЕЛУМНО РЕФУНСИРАНО",
+      "payment": {
+        "status_in_review": "Плаќањето доспева по прегледот",
+        "status_unpaid": "Доспевање на плаќање на {{date}}",
+        "title": "Плаќање",
+        "card_payment_details": "завршува со {{lastDigits}} - {{formattedTransactionAmount}}",
+        "gift_card_payment_details": "завршува со {{lastDigits}} - {{formattedTransactionAmount}}",
+        "store_credit_payment_details": "Кредит на продавницата - {{formattedTransactionAmount}}",
+        "shop_pay_installments": {
+          "paid_in_installments": "Се плаќа со Shop Pay рати",
+          "view_schedule": "Погледнете го распоредот"
+        },
+        "manual_payment_methods": {
+          "money_order": "Паричен налог - {{formattedTransactionAmount}}",
+          "cash_on_delivery": "Готовина при испорака (COD) - {{formattedTransactionAmount}}",
+          "bank_deposit": "банкарски депозит - {{formattedTransactionAmount}}",
+          "manual": "Прирачник - {{formattedTransactionAmount}}"
+        },
+        "transactions": {
+          "show_all": "Покажи се",
+          "show_less": "Покажете помалку"
+        }
+      },
+      "paid_with_shop_pay_installments_card": {
+        "paid_with_shop_pay_installments": "Се плаќа со рати во продавница",
+        "description": "Останете во тек со распоредот за плаќање со потсетници во апликацијата Купување."
+      }
+    },
+    "addresses": {
+      "save_new_address_accessibility_label": "Зачувај адреса",
+      "title": "Адреси",
+      "billing_address_dropdown_placeholder": "Адреса за фактурирање"
+    },
+    "address_form": {
+      "attention": "Внимание",
+      "attention_company": "Компанија\/внимание",
+      "attention_help_text": "Име на лице или оддел",
+      "auto_complete_close_accessibility_label": "Затворете ги предлозите",
+      "auto_complete_title": "Предлози",
+      "billing_address": "Користете како адреса за наплата",
+      "cancel": "Откажи",
+      "cancel_accessibility_label": "Откажи ја уредувањето на адресата {{address}}",
+      "creation_success_notification": "Додадена е адреса",
+      "default_address": "Ова е мојата стандардна адреса",
+      "default_address_creation_success_notification": "Стандардна адреса е додадена",
+      "default_address_update_success_notification": "Стандардна адреса е ажурирана",
+      "loading_add_form_accessibility_message": "Се вчитува нов формулар за адреса",
+      "loading_edit_form_accessibility_message": "Се вчитува формуларот за уредување адреса",
+      "loading_form_accessibility_message": "Се вчитува формуларот за адреса",
+      "loading_finished_accessibility_message": "Формуларот за адреса е вчитан",
+      "save": "Зачувај",
+      "save_accessibility_label": "Зачувај адреса {{address}}",
+      "section_title_accessibility_label": "Додадете адреса",
+      "update_success_notification": "Адресата е ажурирана"
+    },
+    "B2B": {
+      "account_information": {
+        "company_card_name_label": "Име на компанија",
+        "company_card_section_accessibility_label": "Компанијата"
+      },
+      "locations": {
+        "contact_email": "Е-пошта",
+        "contact_list_title": "Луѓе",
+        "contact_name": "Име",
+        "contact_permissions": "Дозволи",
+        "contact_phone_number": "Телефонски број",
+        "location_picker_label": "Име на локација",
+        "location_picker_accessibility_label": "Име на локација: {{locationName}}",
+        "net_payment_terms_description": "{{name}} : плаќањата доспеваат во рок од {{numberOfDays}} дена",
+        "own_role_contact_name": "Вие",
+        "pagination": {
+          "load_more": "Товари повеќе",
+          "load_more_accessibility_label": "Вчитај повеќе локации"
+        },
+        "payment_details_title": "Детали за плаќањата",
+        "payment_terms": "Услови на плаќање",
+        "permissions_label": "Вашите дозволи",
+        "permissions_title": "Дозволи",
+        "section_title": "Локација",
+        "shipping_address_required": "Додајте адреса за испорака на оваа локација за да започнете со нарачки.",
+        "staff_and_permissions_title": "Персонал и дозволи",
+        "tax_details_title": "Детали за данок",
+        "tax_id": "Даночен ID",
+        "tax_exemptions": "Даночни ослободувања",
+        "multiple_tax_exemptions": "{{taxExemptionsCount}} повеќе",
+        "multiple_tax_exemptions_and": "и",
+        "tax_exemptions_modal_close": "Затвори",
+        "taxes_none": "Никој",
+        "tax_exemptions_modal_button_accessibility_label": "Погледнете ги сите даночни ослободувања"
+      },
+      "location_selection": {
+        "continue_to_store": "Продолжете да складирате",
+        "description": "Ако веќе имате ставки во вашата кошничка, промената на локациите може да влијае на цените и количините на количката.",
+        "list_accessibility_label": "Список на локации",
+        "list_item_without_address_accessibility_label": "{{name}} : Нема адреса",
+        "list_loading_accessibility_message": "Се вчитува список со локации",
+        "list_loading_address_accessibility_message": "Се вчитува адресата за {{locationName}}",
+        "list_loading_finished_accessibility_message": "Списокот на локации е вчитан",
+        "loading_store_accessibility_message": "Одење во продавница",
+        "no_location_title": "Само лични нарачки",
+        "no_location_description": "Веќе немате дозвола да поставувате нарачки за {{company}} . Сè уште можете да поставувате лични нарачки.",
+        "no_locations_found": "Не се пронајдени локации",
+        "search": "Пребарајте локација",
+        "search_location_title": "Изберете локација",
+        "selection_cancel_button": "Откажи",
+        "selection_confirmation_button": "Изберете локација",
+        "title": "За која локација купувате?",
+        "clear_search": "Исчистете го пребарувањето",
+        "try_new_search": "Обидете се со ново пребарување"
+      },
+      "addresses": {
+        "add_billing_address_button": "Додајте адреса за наплата",
+        "add_billing_address_section_accessibility_label": "Додајте адреса за наплата",
+        "add_shipping_address_button": "Додадете адреса за испорака",
+        "add_shipping_address_section_accessibility_label": "Додадете адреса за испорака",
+        "billing_address_card_title": "Адреса за фактурирање",
+        "cancel_adding_billing_address_accessibility_label": "Откажете го додавањето адреса за наплата",
+        "cancel_adding_shipping_address_accessibility_label": "Откажете ја додавањето адреса за испорака",
+        "save_new_billing_address_accessibility_label": "Зачувајте ја адресата за наплата",
+        "save_new_shipping_address_accessibility_label": "Зачувајте ја адресата за испорака",
+        "shipping_address_card_title": "Адреса за достава"
+      },
+      "orders": {
+        "draft_order_list": {
+          "hide_all": "Сокриј се",
+          "show_all": "Покажи се",
+          "hide_all_accessibility_label": "Сокриј ги сите нарачки во преглед",
+          "show_all_accessibility_label": "Прикажи ги сите нарачки во преглед",
+          "show_all_orders_in_review": "Прикажи ги сите нарачки во преглед",
+          "show_less_orders_in_review": "Прикажи помалку нарачки во преглед",
+          "title": "Во очекување",
+          "pending_tab_accessibility_label": {
+            "no_pending_orders": "Немате нарачки што чекаат",
+            "pending_orders": {
+              "one": "Имате {{count}} нарачка што чека",
+              "other": "Имате {{count}} нарачки што чекаат"
+            },
+            "more_than_pagination_length": "Имате повеќе од {{count}} нарачки што чекаат"
+          },
+          "pending_orders_count_more_than_pagination_length": "{{count}} +",
+          "pagination": {
+            "nav_accessibility_label": "Копчиња за навигација за нарачки во преглед"
+          }
+        },
+        "order_list_column_headers_location": "Локација",
+        "order_list_column_headers_contact": "Контакт",
+        "removed_company_contact_tooltip": "Отстрането од компанијата"
+      },
+      "draft_order_details": {
+        "draft_order_subtitle": "Потврдено {{date}} од нарачката {{draftOrderName}}",
+        "loading": "Се вчитуваат деталите за нарачката",
+        "loading_finished_accessibility_message": "Деталите за нарачката се вчитани",
+        "payment_status": {
+          "pending": {
+            "banner_overdue": {
+              "one": "Вашата уплата доцни за {{count}} ден"
+            }
+          }
+        }
       }
     }
   }
