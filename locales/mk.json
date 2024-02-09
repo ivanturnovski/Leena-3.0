@@ -455,6 +455,154 @@
             "one": "Се прикажува %{first} - %{last} од %{count} точка"
           }
         }
+      },
+      "contact": {
+        "change_company_location_link_label": "Променете ја локацијата на компанијата",
+        "change_location_link_label": "Променете ја локацијата",
+        "ship_to_company": "Испрати до {{companyName}}"
+      },
+      "delivery_options": {
+        "free_total_label": "Бесплатно",
+        "ship": "Брод",
+        "shipping_address": "Адреса за достава",
+        "pick_up": "Земам",
+        "pick_up_locations": "Локации за подигање",
+        "pick_up_in_one_hour": "Обично готови за 1 час",
+        "pick_up_in_two_hours": "Обично готови за 2 часа",
+        "pick_up_in_four_hours": "Обично готови за 4 часа",
+        "pick_up_in_twenty_four_hours": "Обично готови за 24 часа",
+        "pick_up_in_two_to_four_days": "Обично готови за 2-4 дена",
+        "pick_up_in_five_or_more_days": "Обично готови за 5+ дена",
+        "pick_up_in_zero_to_two_hours": "Подготвен за подигнување за 2 часа",
+        "pick_up_in_two_to_four_hours": "Подготвен за подигнување за 4 часа",
+        "pick_up_immediately": "Подготвен за подигање сега",
+        "pick_up_next_day": "Подготвен за подигање следниот ден",
+        "pickup_point_method_definition": "Испорака до точка за подигање",
+        "retail_method_definition": "Испорака на мало",
+        "none_method_definition": "Нема испорака",
+        "subscription_pickup_information": "Овој начин на испорака ќе важи за сите ставки во оваа нарачка и за сите идни нарачки за оваа претплата."
+      },
+      "customer_account": {
+        "not_user_label": "Не %{first_name}?",
+        "have_an_account_label": "Дали имате сметка?",
+        "sign_in_link_label": "Логирај Се",
+        "sign_out_link_label": "Одјави се",
+        "save_my_information_label": "Зачувајте ги овие информации за следниот пат",
+        "invalid_address": "Избраната адреса е неважечка. %{update_address_link} или изберете друга адреса.",
+        "incomplete_address": "Избраната адреса е некомплетна. %{update_address_link} или изберете друга адреса.",
+        "rollup_label": "Сметка",
+        "invalid_shipping_method_summary": "Изберете валидна адреса за испорака за да ги видите достапните методи за испорака"
+      },
+      "stock": {
+        "page_title": "Проблеми со залихите",
+        "title": "Нема на залиха",
+        "items_unavailable_notice": "Некои ставки веќе не се достапни.",
+        "product_column_header": "Производи",
+        "quantity_column_header": "Квантитет",
+        "price_column_header": "Цена",
+        "status_column_header": "Статус",
+        "removed_from_cart_notice": "Отстрането од количката",
+        "sold_out_label": "Продадено",
+        "reduced_label": "Намалени",
+        "reduced_with_quantity_label": "Преостана само %{quantity_available}",
+        "remove_from_cart_button_label": "Отстрани од количката",
+        "continue_shopping_button_label": "Продолжи",
+        "go_back_to_cart_button_label": "Врати се во мојата количка",
+        "remove": "Отстрани",
+        "return_to_store_label": "Врати се во продавница",
+        "continue_cta_label": "Продолжи со наплата",
+        "item_label": {
+          "one": "{{count}} ставка",
+          "other": "{{count}} ставки"
+        },
+        "empty_cart_label": "Вашата количка е празна",
+        "quantity_update": {
+          "page_title": "Ажурирање на количината",
+          "title": "Ажурирање на количината",
+          "description": "Достапните количини за овие артикли се променети и се ажурираат во вашата кошничка."
+        },
+        "unpurchasable_product": {
+          "title": "Некуплив производ",
+          "header": "Некои ставки се отстранети од вашата кошничка",
+          "message": "Овие ставки не се достапни за B2B нарачки.",
+          "status_column_header": "Не е достапно"
+        },
+        "unpurchasable_product_generic": {
+          "title": "Некуплив производ",
+          "header": "Некои ставки се отстранети од вашата кошничка",
+          "message": "Овие ставки не се достапни.",
+          "status_column_header": "Не е достапно"
+        },
+        "unshippable_product": {
+          "title": "Не е достапна испорака",
+          "header": {
+            "one": "Не е достапна испорака за %{count} ставка",
+            "other": "Не е достапна испорака за %{count} ставки"
+          },
+          "message": {
+            "one": "Оваа ставка ќе биде отстранета од вашата кошничка бидејќи нема достапни начини за испорака за вашата адреса.",
+            "other": "Овие ставки ќе бидат отстранети од вашата кошничка бидејќи нема достапни начини за испорака за вашата адреса."
+          },
+          "status_column_header": "Нема испорака"
+        },
+        "price_update": {
+          "title": "Ажурирање на цената",
+          "description": "Цените за овие артикли се променети и се ажурираат во вашата кошничка."
+        },
+        "out_of_stock": {
+          "description": "Ставкиве веќе не се достапни и се отстранети од вашата кошничка.",
+          "items_unavailable": "Некои ставки веќе не се достапни и се отстранети од вашата кошничка."
+        }
+      },
+      "contextual_availability": {
+        "title": {
+          "one": "Недостапен производ",
+          "other": "Недостапни производи"
+        },
+        "products_not_available": {
+          "one": "Овој производ ќе биде отстранет од вашата кошничка бидејќи не е достапен во вашата земја\/регион.",
+          "other": "Овие производи ќе бидат отстранети од вашата кошничка бидејќи не се достапни во вашата земја\/регион."
+        },
+        "all_products_in_cart_unavailable": {
+          "one": "Овој производ не е достапен во вашата земја\/регион.",
+          "other": "Овие производи не се достапни во вашата земја\/регион."
+        },
+        "unavailable_label": "Недостапно"
+      },
+      "deliverability": {
+        "not_deliverable": {
+          "title": {
+            "one": "Не е достапна испорака за %{count} ставка",
+            "other": "Не е достапна испорака за %{count} ставки"
+          },
+          "message": {
+            "one": "Оваа ставка ќе биде отстранета од вашата кошничка бидејќи нема достапни начини за испорака за вашата адреса.",
+            "other": "Овие ставки ќе бидат отстранети од вашата кошничка бидејќи нема достапни начини за испорака за вашата адреса."
+          },
+          "label": "Нема испорака"
+        }
+      },
+      "order_summary": {
+        "title": "Резиме на нарачка",
+        "group_title_label": "Дел од „%{group_title}“",
+        "order_name_label": "Нарачајте %{name}",
+        "shopping_cart_label": "Купувачка кошничка",
+        "discount_title": "Попуст",
+        "discount_title_stacking": {
+          "one": "Попуст",
+          "other": "Попусти"
+        },
+        "discount_order_stacking": {
+          "one": "Нарачајте попуст",
+          "other": "Нарачајте попусти"
+        },
+        "discount_label": "Шифра за попуст",
+        "discount_not_found": "Не може да се најде важечки попуст што одговара на внесениот код",
+        "discount_placeholder": "Шифра за попуст",
+        "discount_code_applied": "Применет код за попуст",
+        "gift_card_applied": "Применета картичка за подарок",
+        "enter_shipping_address": "Внесете адреса за испорака",
+        "gift_card_title": "Честитка"
       }
     },
     "search": {
