@@ -343,7 +343,94 @@
         "address_last_name_too_long": "Презимето е предолго (максимум е 255 знаци)",
         "address_last_name_contains_emojis": "Презимето не може да содржи емотикони",
         "address_last_name_contains_html_tags": "Презимето не може да содржи HTML ознаки.",
-        "address_last_name_contains_url": "Презимето не може да содржи URL"
+        "address_last_name_contains_url": "Презимето не може да содржи URL",
+        "address_last_name_contains_mathematical_symbols": "Презимето не може да содржи математички симболи",
+        "address_address1_blank": "Внесете адреса",
+        "address_address1_too_long": "Првата линија за адреса е премногу долга (максимум е 255 знаци)",
+        "address_address1_contains_emojis": "Адресата 1 не може да содржи емотикони",
+        "address_address1_contains_html_tags": "Address1 не може да содржи HTML ознаки.",
+        "address_address1_contains_mathematical_symbols": "Првата адресна линија не може да содржи математички симболи",
+        "address_address2_blank": "Внесете стан, апартман, итн.",
+        "address_address2_too_long": "Втората линија за адреса е предолга (максимум е 255 знаци)",
+        "address_address2_contains_emojis": "Адресата 2 не може да содржи емотикони",
+        "address_address2_contains_html_tags": "Address2 не може да содржи HTML ознаки.",
+        "address_address2_contains_mathematical_symbols": "Втората линија за адреса не може да содржи математички симболи",
+        "address_city_blank": "Внесете град",
+        "address_city_too_long": "Градот е предолг (максимум е 255 знаци)",
+        "address_city_contains_emojis": "Градот не може да содржи емотикони",
+        "address_city_contains_html_tags": "Градот не може да содржи HTML ознаки.",
+        "address_city_contains_mathematical_symbols": "Градот не може да содржи математички симболи",
+        "address_country_blank": "Изберете земја\/регион",
+        "address_country_not_supported": "Ние не испраќаме во оваа земја или регион. Внесете нова адреса за испорака и обидете се повторно.",
+        "address_province_blank": "Изберете држава \/ провинција",
+        "address_province_invalid": "Изберете валидна држава\/провинција",
+        "address_company_blank": "Внесете име на компанија",
+        "address_company_too_long": "Името на компанијата е предолго (максимумот е 255 знаци)",
+        "address_company_contains_emojis": "Компанијата не може да содржи емотикони",
+        "address_company_contains_html_tags": "Компанијата не може да содржи HTML ознаки.",
+        "address_company_contains_mathematical_symbols": "Компанијата не може да содржи математички симболи",
+        "address_phone_blank": "Внесете важечки телефонски број",
+        "address_phone_contains_emojis": "Телефонскиот број не може да содржи емотикони",
+        "address_phone_invalid": "Внесете важечки телефонски број",
+        "address_zip_blank": "Внесете поштенски\/поштенски број",
+        "address_zip_too_long": "Поштенски \/ поштенски код е премногу долг (максимум е 255 знаци)",
+        "address_zip_not_supported": "Оваа локација не е поддржана.",
+        "address_zip_invalid_for_country": "Внесете важечки поштенски број \/ поштенски број за %{country}",
+        "address_zip_invalid_for_province": "Внесете важечки поштенски\/поштенски број за %{province}",
+        "address_zip_invalid_for_country_and_province": "Внесете важечки поштенски број \/ поштенски број за %{province}, %{country}",
+        "address_zip_contains_emojis": "Поштенски \/ поштенски код не може да содржи емотикони",
+        "address_zip_contains_mathematical_symbols": "Поштенски \/ поштенски код не може да содржи математички симболи",
+        "address_generic_blank": "задолжително поле",
+        "address_generic_invalid": "Неважечки запис",
+        "address_generic_error": "Грешка на теренот",
+        "credit_card_name_blank": "Внесете го вашето име точно како што е напишано на вашата картичка",
+        "credit_card_name_invalid": "Внесете го вашето име точно како што е напишано на вашата картичка",
+        "credit_card_number_invalid": "Внесете важечки број на картичка",
+        "credit_card_expiry_invalid": "Внесете важечки датум на истекување",
+        "credit_card_month_invalid": "Внесете важечки месец на истекување",
+        "credit_card_year_invalid": "Внесете важечка година на истекување",
+        "credit_card_start_invalid": "Внесете важечки датум за почеток на картичката",
+        "credit_card_start_month_invalid": "Внесете важечки месец за почеток на картичката",
+        "credit_card_start_year_invalid": "Внесете валидна почетна година на картичката",
+        "credit_card_number_blank": "Внесете број на картичка",
+        "credit_card_verification_value_blank": "Внесете го CVV или безбедносната шифра на вашата картичка",
+        "delivery_line_detail_changed": "Некои детали за испораката можеби се променети. Потврдете го вашиот начин на испорака и обидете се повторно.",
+        "delivery_zone_not_found": "Наведената зона не беше пронајдена во наведената земја.",
+        "reduction_code_code_not_found": "Внесете важечки код за попуст или картичка за подарок",
+        "reduction_code_discount_not_found": "Внесете важечки код за попуст",
+        "reduction_code_gift_card_code_invalid": "Внесете важечка картичка за подарок",
+        "reduction_code_gift_card_unusable": "Не можете да користите картичка за подарок за да купите друга картичка за подарок",
+        "reduction_code_gift_cards_not_supported_with_deferred_purchase_options": "Картичките за подароци не се поддржани со опции за одложено купување.",
+        "shipping_line_phone_blank": "Внесете телефонски број за да го користите овој начин на испорака",
+        "shipping_line_phone_invalid": "Внесете важечки телефонски број",
+        "tips_invalid_tip_amount": "Внесете бакшиш помал од %{amount}",
+        "gift_card_already_applied": "Оваа картичка за подарок веќе е применета на вашата нарачка",
+        "gift_card_disabled": "Оваа картичка за подарок повеќе не е достапна",
+        "gift_card_expired": "Оваа картичка за подарок е истечена",
+        "gift_card_depleted": "На оваа картичка за подарок нема средства",
+        "gift_card_currency_mismatch": "Со оваа нарачка може да се користат само картички за подарок во %{checkout_currency}",
+        "gift_cards_not_supported_with_deferred_purchase_options": "Картичките за подароци не се поддржани со опции за одложено купување.",
+        "gift_card_buying_gift_card": "Не можете да користите картичка за подарок за да купите друга картичка за подарок",
+        "payment_gateway_needs_paid_plan_error": "Овој начин на плаќање не е достапен во продавницата во моментов",
+        "payment_gateway_not_in_test_mode": "не е поставен за тестирање на нарачки. Продавницава не може да прифаќа вистински нарачки или реални плаќања.",
+        "payment_gateway_incompatible_with_multi_currency": "За да го завршите ова плаќање во вашата локална валута, треба да платите со кредитна картичка.",
+        "payment_gateway_unsupported_for_subscriptions": "Овој начин на плаќање не е достапен за нарачки за претплата.",
+        "payment_gateway_unsupported_for_deferred_purchase_options": "Овој начин на плаќање не е достапен за одложени опции за купување.",
+        "payment_gateway_unsupported_for_country": "Овој начин на плаќање не е достапен за вашата земја на испорака.",
+        "payment_gateway_unsupported_for_development_store_html": "За да поставите тест нарачка, ќе треба да користите пробна порта за плаќање. Дознајте повеќе за <a href=\"%{docs_link}\">нарачките за тестирање во продавниците за развој<\/a> .",
+        "payment_gateway_unsupported_for_order_above_maximum_orders_html": "Го достигнавте лимитот за развојни нарачки во продавница со овој процесор за плаќање. За да поставите друга нарачка, ќе треба да користите пробна порта за плаќање. Дознајте повеќе за <a href=\"%{docs_link}\">нарачките за тестирање во продавниците за развој<\/a> .",
+        "purchase_options_agreement_blank": "За да продолжите со купувањето, согласете се со одложените или периодичните услови за купување.",
+        "physical_gift_card_invalid_quantity": "Линиските ставки за физички картички за подарок мора да имаат количина што одговара на бројот на кодови на картичката за подарок.",
+        "physical_gift_card_duplicate_code": "Линиската ставка за физичка картичка за подарок содржи дупликат код.",
+        "physical_gift_card_invalid_code": "Кодот на физичката картичка за подарок е неважечки.",
+        "email_blank": "Внесете е-пошта",
+        "phone_blank": "Внесете телефонски број",
+        "address_country_invalid": "Изберете земја\/регион од списокот",
+        "address_zip_invalid": "Внесете важечки поштенски\/поштенски број",
+        "gift_card_invalid": "Картичката за подарок „••••%{last_four_characters}“ повеќе не е валидна",
+        "vaulting_agreement_blank": "За да продолжите, треба да ја зачувате вашата нова кредитна картичка бидејќи плаќањето за оваа нарачка ќе се случи подоцна.",
+        "sms_marketing_phone_invalid": "Внесете важечки телефонски број",
+        "address_suggestion_did_you_mean_html": "Дали мислевте на %{html}?"
       },
       "notifications": {
         "title": "Известувања"
@@ -719,6 +806,177 @@
         "gift_card_applied": "Применета картичка за подарок",
         "enter_shipping_address": "Внесете адреса за испорака",
         "gift_card_title": "Честитка"
+      },
+      "store_credit_errors": {
+        "generic_error": "Имаше проблем со кредитот во продавницата. Обидете се повторно или повторно вчитајте ја страницата."
+      },
+      "redeemable_errors": {
+        "gift_card": {
+          "duplicate": "Картичката за подарок е веќе применета на вашата нарачка",
+          "insufficient_funds": "На оваа картичка за подарок нема средства",
+          "expired": "Оваа картичка за подарок е истечена",
+          "not_available": "Оваа картичка за подарок веќе не е достапна",
+          "invalid": "Внесете важечка картичка за подарок",
+          "currency_mismatch": "Се прифаќаат само картички за подарок во %{shop_currency}",
+          "generic": "Картичката за подарок не може да се додаде на наплатата",
+          "throttle_limit_exceeded": "Го надминавте максималниот број обиди. Обидете се повторно подоцна."
+        }
+      },
+      "payment_errors": {
+        "amount_too_small": "Минималниот износ на плаќање мора да биде поголем од 0,50 УСД. Обидете се повторно со поголема сума.",
+        "method_not_available": "Бараниот начин на плаќање не е достапен.",
+        "available_methods_updated": "Достапните начини на плаќање се ажурирани.",
+        "generic_error": "Имаше проблем при обработката на вашата уплата. Обидете се повторно или користете друг начин на плаќање."
+      },
+      "thank_you": {
+        "fulfillment": {
+          "quantity_label": "Квантитет"
+        },
+        "order_updates_description_missing": "Не добивате ажурирања за испорака.",
+        "order_updates_subscribe_to_email_notifications": "Добијте ажурирања за испорака преку е-пошта",
+        "order_updates_subscribe_to_email_or_phone_notifications": "Добијте ажурирања за испорака преку е-пошта или текстуална порака",
+        "order_updates_subscribe_to_phone_notifications": "Добијте ажурирања за испорака по текст",
+        "order_updates_submit_subscription": "Поднесете",
+        "track_shipment": "Следете ја пратката",
+        "other_options": "Други опции",
+        "delivery_information_label": "Информации за испорака:",
+        "gift_card_sent_confirmation": "Испратени картички за подароци",
+        "qr_code": {
+          "send_link_to_phone": "Или испратете линк до вашиот телефон",
+          "title": "Следете на вашиот телефон"
+        },
+        "shop_qr_with_sms_upsell": {
+          "qr_code": {
+            "title": "Скенирајте со вашиот телефон"
+          },
+          "sms": {
+            "title": "Или испратете линк до вашиот телефон"
+          }
+        },
+        "view_business_customer_account": "Прикажи сметка",
+        "breadcrumbs_submitted": "Поднесено",
+        "breadcrumbs_in_review": "Во преглед",
+        "breadcrumbs_confirmed": "Потврдено",
+        "missing_shipping_address_banner": {
+          "title": "Нарачката нема адреса за испорака",
+          "text_html": "%{contact_us} за да ја додадете вашата адреса",
+          "contact_us": "Контактирајте не"
+        },
+        "first_payment_complete": "Првата исплата е завршена",
+        "in_store_purchase": "Купување во продавница",
+        "location_title": "Локација",
+        "thank_you_ready_for_picked_up": "Вашата нарачка е подигната на %{address}.",
+        "ready_for_delivery": "Подготвен за испорака",
+        "order_updates_subscribe_to_email_notifications_failed": "Не можеме да ја складираме оваа е-пошта за ажурирања. Обидете се повторно или користете друга е-пошта.",
+        "order_updates_subscribe_to_email_notifications_email_already_exists": "Е-поштата што ја внесовте веќе постои.",
+        "subscriptions_management": {
+          "title": "Претплата",
+          "description": "Продолжете на вашата сметка за да ги гледате и управувате вашите претплати.",
+          "button_label": "Управувајте со вашата претплата"
+        },
+        "manage_order_label": "Управувајте со вашата нарачка",
+        "gift_card_confirmation_by_text_typ": {
+          "one": "Ќе добиете текстуална порака со вашата картичка за подарок за неколку минути.",
+          "other": "Ќе добиете текстуална порака со вашите картички за подарок за неколку минути."
+        },
+        "gift_card_confirmation_by_email_typ": {
+          "one": "Ќе добиете е-пошта со вашата картичка за подарок за неколку минути.",
+          "other": "Ќе добиете е-пошта со вашите картички за подарок за неколку минути."
+        },
+        "gift_card_email_title": {
+          "one": "Картичката за подарок е испратена по е-пошта",
+          "other": "Картичките за подароци беа испратени по е-пошта"
+        },
+        "gift_card_text_title": {
+          "one": "Картичката за подарок е испратена со текстуална порака",
+          "other": "Подарок картички беа испратени со СМС порака"
+        },
+        "resend_gift_cards_by_email": "Повторно прати е-пошта",
+        "resend_gift_cards_by_text": "Повторно испратете текстуална порака",
+        "gift_card_resent_confirmation": {
+          "one": "Картичката за подарок беше повторно испратена.",
+          "other": "Картичките за подароци беа повторно испратени."
+        },
+        "gift_card_resend_failure": {
+          "one": "Имаше проблем со повторното испраќање на вашата картичка за подарок. Обидете се повторно или контактирајте со нас.",
+          "other": "Имаше проблем со повторното испраќање на вашите картички за подарок. Обидете се повторно или контактирајте со нас."
+        }
+      },
+      "vaulted": {
+        "change_button": "Промена"
+      },
+      "review": {
+        "title": "Преглед",
+        "review_title": "Прегледајте и платите",
+        "checkout_as_guest": "Одјавување како гостин",
+        "checkout_a_different_way": "Проверете на поинаков начин",
+        "blocks": {
+          "contact_method_title": "Контакт",
+          "billing_address_title": "Наплата",
+          "shipping_address_title": "Се праќа во",
+          "shipping_method_title": "Метод на испорака",
+          "payment_method_title": "Метод за плаќање",
+          "change_link_label": "Промена",
+          "change_contact_method_link_label": "Променете ги информациите за контакт",
+          "change_billing_address_link_label": "Променете ја адресата за наплата",
+          "change_shipping_address_link_label": "Променете ја адресата за испорака",
+          "change_shipping_method_link_label": "Променете го начинот на испорака",
+          "change_payment_method_link_label": "Променете го начинот на плаќање",
+          "pick_up_in_store_shipping_method_html": "Подигнување во продавница · %{location_name}",
+          "purchase_order_number_title": "PO број",
+          "change_purchase_order_number_label": "Променете го PO-бројот",
+          "change_delivery_method_link_label": "Променете го начинот на испорака",
+          "no_address": "(Без адреса)",
+          "no_purchase_order_number": "(Нема PO број)",
+          "due_after_order_reviewed_html": "Достасува откако ќе се разгледа нарачката",
+          "review_title_free_order": "Прегледајте ја и завршете ја вашата нарачка",
+          "payment_method_saved_company_location": "Зачувајте картичка за оваа локација"
+        },
+        "block_title": "Прегледајте ги вашите информации"
+      },
+      "marketing": {
+        "accept_marketing_checkbox_label": "Испратете ми е-пошта со новости и понуди",
+        "post_accept_marketing_checkbox_label": "Вие сте претплатени за да добивате вести и понуди по е-пошта",
+        "pending_accept_marketing_checkbox_label": "Проверете ја вашата е-пошта за да ја потврдите вашата претплата на вести и понуди",
+        "accept_sms_checkbox_label": "Испратете ми порака со новости и понуди",
+        "disclaimer": {
+          "privacy_policy": "Политика за приватност",
+          "terms_of_service": "Услови за користење"
+        },
+        "sms": {
+          "disclaimer": {
+            "privacy_policy": "Политика за приватност",
+            "terms_of_service": "Услови за користење",
+            "description_html": "Со пријавувањето преку текстуална порака, се согласувате да добивате повторливи автоматски маркетинг пораки, вклучително и потсетници за количка, на наведениот телефонски број. Согласноста не е услов за купување. Одговорете СТОП за да се откажете. Одговорете на ПОМОШ за помош. Фреквенцијата на пораките варира. Може да важат стапки за пораки и податоци. Погледнете ги нашите %{privacy_policy_link} и %{terms_of_service_link}.",
+            "description_transactional_html": "Може да добивате текстуални пораки поврзани со потврда на нарачката и ажурирања за испорака. Одговорете СТОП за да се откажете. Одговорете на ПОМОШ за помош. Фреквенцијата на пораките варира. Може да важат стапки за пораки и податоци. Погледнете ги нашите %{privacy_policy_modal_link} и %{terms_of_service_modal_link}."
+          },
+          "mobile_phone_number": "Мобилен телефонски број",
+          "get_offers_by_text": "Добијте понуди по текст"
+        },
+        "unsubscribe": {
+          "title": "Се откажавте од претплатата",
+          "description": "Нема да добивате повеќе потсетници за количка од нас."
+        },
+        "accept_shop_pay_marketing_checkbox_label": "Регистрирајте ме за новости и понуди од оваа продавница"
+      },
+      "shop_policies": {
+        "refund_policy": "Политика за рефундирање",
+        "privacy_policy": "Политика за приватност",
+        "terms_of_service": "Услови за користење",
+        "legal_notice": "Правно известување",
+        "shipping_policy": "Политика за испорака",
+        "terms_of_sale": "Услови за продажба",
+        "subscription_policy": "Политика за претплата",
+        "purchase_options_policy": "Политика за опции за купување",
+        "contact_information": "Контакт информации",
+        "purchase_options_cancellation_policy": "Политика за откажување"
+      },
+      "mor_policies": {
+        "terms_and_conditions": "Услови и правила на Merchant of Record",
+        "privacy_policy": "Политика за приватност на Merchant of Record"
+      },
+      "markets": {
+        "invalid_market_manager_error": "Прегледајте ги вашите информации за контакт пред да завршите со плаќањето"
       }
     },
     "search": {
