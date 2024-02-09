@@ -723,7 +723,30 @@
           "next_accessibility_label": "Следна Страна",
           "previous_accessibility_label": "Претходна страна",
           "header": {
-            "one": "Се прикажува %{first} - %{last} од %{count} точка"
+            "one": "Се прикажува %{first} - %{last} од %{count} точка",
+            "other": "Се прикажува %{first} - %{last} од %{count} поени"
+          },
+          "selected_pickup_point_label": {
+            "one": "%{pickup_point_index} од %{count} поен",
+            "other": "%{pickup_point_index} од %{count} поени"
+          },
+          "selected_page": {
+            "one": "%{first} - %{last} од %{count} поен",
+            "other": "%{first} - %{last} од %{count} поени"
+          }
+        },
+        "number_of_pickup_points_near_location": {
+          "one": "%{count} точка за подигање во близина на вашата локација",
+          "other": "%{count} точки за подигање во близина на вашата локација"
+        },
+        "change": "Промена",
+        "waiting_on_pickup_point_location_notice": "Се бараат точки за подигање...",
+        "geolocation": {
+          "shared_location_button": "Користете ја мојата локација",
+          "errors": {
+            "unsuported_by_browser": "Добивањето геолокација не е поддржано од вашиот прелистувач. Обидете се повторно или користете друг прелистувач.",
+            "permission_not_allowed": "Дозволете споделување на вашата локација.",
+            "permission_denied": "Не може да се добие вашата локација. Обиди се повторно."
           }
         }
       },
@@ -1103,6 +1126,155 @@
       },
       "markets": {
         "invalid_market_manager_error": "Прегледајте ги вашите информации за контакт пред да завршите со плаќањето"
+      },
+      "error_page": {
+        "terminal": {
+          "title": "Имаше проблем со нашата наплата",
+          "message": "Освежете ја оваа страница или обидете се повторно за неколку минути",
+          "action": {
+            "cta": "Освежете ја страницата"
+          },
+          "request_id": "ID на барање: {{requestId}}"
+        }
+      },
+      "notice_banner": {
+        "return_to_cart_link_text": "Врати се во количка",
+        "return_to_cart_to_update_quantities": "%{return_to_cart_link_text} за ажурирање на количините",
+        "subscription_changed": "Една од вашите претплати е променета.",
+        "company_location_changed": "Вашата кошничка е ажурирана. Прегледајте ја вашата нарачка пред да ја поднесете.",
+        "company_location_changed_product_removed": "Вашата кошничка е ажурирана бидејќи некои производи не се достапни на оваа локација. Прегледајте ја вашата нарачка пред да ја поднесете.",
+        "violations_title": "{{violation}} недостасува или не е валиден",
+        "individual_violations_title": {
+          "DeliveryViolations": "Адреса за достава",
+          "PaymentViolations": "Адреса за фактурирање",
+          "OtherViolations": "Информации за нарачка"
+        },
+        "all_violations_content": "Јавете ни се или {{emailLink}} за да ги ажурираме овие информации и да ја завршиме вашата нарачка:",
+        "all_violations_email_link": "е-пошта",
+        "editable_shipping_address_violations_message_title": "Додадете ги овие информации за да ја завршите вашата нарачка:",
+        "editable_shipping_address_violations_message_footer": "За трајно ажурирање на адресата за оваа локација, {{emailLink}} .",
+        "editable_shipping_address_violations_email_link": "Контактирајте не",
+        "shipping_address_incomplete_title": "Адресата за испорака е некомплетна",
+        "calculating_shipping": "Испораката се уште се пресметува. Обидете се повторно за неколку секунди. Не ви е наплатено.",
+        "calculating_taxes": "Се уште се пресметуваат даноците. Обидете се повторно за неколку секунди. Не ви е наплатено."
+      },
+      "marketplaces": {
+        "legal_notice": {
+          "legal_text": "Преглед",
+          "link_label": "{{partnerDisplayName}} Правила и услови"
+        }
+      },
+      "online_store_chat": {
+        "title": "Прашања? Разговарајте со нас"
+      },
+      "local_pickup": {
+        "location_information": {
+          "one": "Има %{count} продавница со акции блиску до %{address}",
+          "other": "Има %{count} продавници со акции блиску до %{address}"
+        },
+        "toggle_location": "Смени ја мојата локација",
+        "or": "ИЛИ",
+        "cancel": "Откажи",
+        "your_location": "твојата локација",
+        "search_button": "Најдете продавници",
+        "no_stores_found": "Не се пронајдени продавници",
+        "could_not_resolve_address": "Вашата адреса не може да се лоцира. Обидете се повторно или користете друга адреса",
+        "paginator": {
+          "accessibility_label": "Локална пикап страница",
+          "previous": "Претходна страна",
+          "next": "Следна Страна",
+          "label": {
+            "one": "%{first} - %{last} од %{count} продавница",
+            "other": "%{first} - %{last} од %{count} продавници"
+          }
+        },
+        "reveal_more_label": {
+          "one": "Прикажи уште %{count} локација",
+          "other": "Прикажи уште %{count} локации"
+        }
+      },
+      "captcha": {
+        "title": "Завршете ја CAPTCHA за да продолжите",
+        "errors": {
+          "not_solved": "Завршете ја CAPTCHA за да продолжите"
+        }
+      },
+      "discount_errors": {
+        "generic_error": "Вашата нарачка не може да се обработи бидејќи вашиот код за попуст повеќе не е достапен. Прегледајте ја вкупната нарачка и обидете се повторно."
+      },
+      "shop_pay_external": {
+        "errors": {
+          "problem_loading": "Има проблем при вчитување на Shop Pay",
+          "try_again_later": "Проверете ја врската или затворете го овој прозорец и обидете се повторно за неколку моменти."
+        },
+        "return_to_store": "Врати се на {{shopName}}"
+      },
+      "wallets": {
+        "return_to_store": "Врати се во продавница",
+        "redirect_hint": "Ќе биде побарано да се најавите со {{walletName}} .",
+        "logged_in": "Поврзано со {{email}}",
+        "shipping_line_label": "Испорака",
+        "payment_in_progress_title": "Плаќањето е во тек",
+        "payment_in_progress_body": "Вашето плаќање се обработува. Вашата нарачка ќе биде завршена наскоро.",
+        "call_to_action": "Плаќајте со {{walletName}}",
+        "redirection_notice": "Откако ќе кликнете на „ {{buttonLabel}} “, ќе бидете пренасочени на {{walletName}} за безбедно да го завршите купувањето.",
+        "errors": {
+          "unavailable": {
+            "title": "{{walletName}} не е достапен",
+            "description": "{{walletName}} не беше достапен. Користете друг начин на плаќање или обидете се повторно подоцна.",
+            "instructions": "Имаше проблем со {{walletName}} . Вратете се во продавница за да се обидете повторно или проверете на поинаков начин."
+          },
+          "generic": "Имаше проблем со {{walletName}} . Обидете се повторно или користете друг начин на плаќање.",
+          "terminal": "Имаше проблем со {{walletName}} . Користете друг начин на плаќање.",
+          "detour": {
+            "stock_problems": "Некои ставки веќе не се достапни. Затворете го {{walletName}} и обидете се повторно.",
+            "price_change": "Цените на некои артикли се променети. Затворете го {{walletName}} за да ја прегледате вашата нарачка и обидете се повторно.",
+            "queue": "Сместени сте во редица за наплата. Затворете го {{walletName}} за да продолжите."
+          },
+          "unsupported": {
+            "address": "Трговецот не може да достави на оваа адреса",
+            "postal_code": "Оваа локација не е поддржана"
+          },
+          "outdated": {
+            "shipping_method": "Опциите за испорака се променети за вашата нарачка. Прегледајте го вашиот избор."
+          },
+          "invalid": {
+            "shipping_address": "Внесете важечка адреса за испорака",
+            "billing_address": "Внесете важечка адреса за наплата",
+            "shipping_option": "Изберете валидна опција за испорака",
+            "email": "Внесете валидна е-пошта",
+            "zone": "Внесете валидна држава\/провинција",
+            "postal_code": "Внесете важечки поштенски\/поштенски број",
+            "reduction_code": "Внесете важечки код за попуст или картичка за подарок"
+          },
+          "missing": {
+            "first_name": "Внесете име",
+            "last_name": "Внесете презиме",
+            "address1": "Внесете адреса",
+            "address2": "Внесете стан, апартман, итн.",
+            "city": "Внесете град",
+            "province": "Изберете држава \/ провинција",
+            "country": "Изберете земја\/регион",
+            "zip": "Внесете поштенски\/поштенски број",
+            "phone": "Внесете телефонски број"
+          },
+          "formatting": {
+            "name_contains_emojis": "Избришете ги емотиконите од вашето име",
+            "postal_code_contains_emoji": "Избришете ги емотиконите од вашиот поштенски код",
+            "first_name_too_long": "Името содржи премногу букви",
+            "last_name_too_long": "Презимето содржи премногу букви"
+          }
+        }
+      },
+      "note": {
+        "length_exceeds_maximum": "Намалете ја големината на белешката на 5000 или помалку знаци."
+      },
+      "one": {
+        "errors": {
+          "merchandise": {
+            "gift_card_price_must_be_greater_than_zero": "Цената на картичката за подарок мора да биде поголема од 0."
+          }
+        }
       }
     },
     "search": {
