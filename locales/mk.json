@@ -1819,13 +1819,137 @@
       },
       "paid_with_shop_pay_installments_card": {
         "paid_with_shop_pay_installments": "Се плаќа со рати во продавница",
-        "description": "Останете во тек со распоредот за плаќање со потсетници во апликацијата Купување."
+        "description": "Останете во тек со распоредот за плаќање со потсетници во апликацијата Купување.",
+        "payment_reminders_button": "Добијте потсетници за плаќање",
+        "desktop_qr_code_content": {
+          "title": "Скенирајте за потсетници",
+          "description": "Добијте потсетници за вашите рати со Shop."
+        }
+      },
+      "refunded_amount": "Рефундирање",
+      "request_return_failed": "Имаше проблем при обработката на вашето барање. Ве молиме обидете се повторно.",
+      "remaining_amount": "Преостанати",
+      "marketing_section_title": "Вести и понуди",
+      "marketing_description": "Ќе добивате маркетинг пораки. Може да се откажете во секое време.",
+      "marketing_checkbox_label": "Испратете ми е-пошта со новости и понуди",
+      "marketing_checkmark_label": "Вие сте претплатени за да добивате вести и понуди по е-пошта",
+      "returns": {
+        "expand_events_label": "Покажи детали",
+        "hide_events_label": "Сокриј детали",
+        "ineligible_return_message": "Ниту една ставка во оваа нарачка не е подобна за враќање.",
+        "ineligible_return_message_when_returned": "Нема дополнителни ставки во оваа нарачка се подобни за враќање.",
+        "print_shipping_label": "Печатете етикета за испорака",
+        "return_and_refund_modal_header": "Политика за рефундирање",
+        "tracking_number": "Број за следење:"
+      },
+      "shipping": {
+        "address": "Адреса за достава",
+        "address_map_marker": "Адреса за достава",
+        "method": "Метод на испорака",
+        "summary": "Испорака",
+        "free": "Бесплатно",
+        "free_shipping_discount": "Бесплатна испорака",
+        "one_time": "Еднократна испорака",
+        "subscription": "Превозот на претплата"
+      },
+      "pickup": {
+        "pickup": "Земам",
+        "pickup_location": "Локација за подигање"
+      },
+      "show_items": "Прикажи ставки",
+      "show_order_summary": "Прикажи резиме на нарачката",
+      "hide_order_summary": "Сокриј го резимето на нарачката",
+      "subtitle": "Потврдено {{date}}",
+      "subtotal": "Субтотал",
+      "summary_list_title_accessibility_label": "Нарачајте артикли",
+      "summary_title": "Резиме на нарачка",
+      "summary_totals_title_accessibility_label": "Вкупно нарачки",
+      "shop_order_tracking": {
+        "download_shop_to_track": "Преземете ја продавницата за да го следите пакетот",
+        "track_order_with_shop": "Следете ја нарачката во продавницата",
+        "title_header": "Скенирајте со вашиот телефон",
+        "real_time_delivery_updates": "Продавницата ќе ви испрати ажурирања за испорака во реално време откако ќе се испрати вашата нарачка."
+      },
+      "edit_summary": {
+        "added": "Додадено",
+        "added_with_quantity": "Додадено е {{quantity}}",
+        "removed": "Отстранет",
+        "removed_with_quantity": "Отстранет е {{quantity}}",
+        "updated_at": "Вашата нарачка беше ажурирана на {{date}}",
+        "returned": "Се врати",
+        "returned_with_quantities": "Се вратија {{delta}} од {{total}}",
+        "removed_with_quantities": "Отстранети се {{delta}} од {{total}}"
+      },
+      "shop_pay": {
+        "order_completed_with": "Нарачката е завршена со",
+        "learn_more": "Научи повеќе"
+      },
+      "taxes": "Даноци",
+      "duties": "Должности",
+      "ok_duties_tooltip": "Оваа нарачка се испраќа од друга земја, така што давачките се додадени во вкупниот износ на вашата нарачка.",
+      "error_duties_tooltip": "Оваа нарачка се испраќа од друга земја, така што може да се наплатат давачки и даноци при испораката.",
+      "zero_duties_tooltip": "Оваа нарачка се испраќа од друга земја. Давачките не се наплаќаат за нарачки од оваа вредност.",
+      "tip": "Совет",
+      "title": "Нарачајте {{name}}",
+      "total": "Вкупно",
+      "unit_price": "{{price}} \/ea",
+      "pagination": {
+        "load_more": "Товари повеќе",
+        "load_more_accessibility_label": "Вчитај повеќе ставки",
+        "loading_accessibility_label": "Се вчитуваат ставки"
+      },
+      "login_to_view_all_order_details": "Најавете се за да ги видите сите детали за нарачката.",
+      "log_in": "Логирај Се",
+      "logged_in_account_no_permission_to_order": "Најавени сте како {{email}} . Оваа сметка нема дозвола да управува со оваа нарачка.",
+      "log_in_to_a_different_account": "Најавете се на друга сметка",
+      "fees": {
+        "restocking_fee": "Надомест за пополнување на залихи",
+        "return_shipping_fee": "Повратен превоз"
       }
     },
     "addresses": {
       "save_new_address_accessibility_label": "Зачувај адреса",
       "title": "Адреси",
-      "billing_address_dropdown_placeholder": "Адреса за фактурирање"
+      "billing_address_dropdown_placeholder": "Адреса за фактурирање",
+      "add_button": "Додадете адреса",
+      "add_button_text": "Додадете",
+      "add_button_accessibility_label": "Додадете адреса",
+      "back_button": "Назад",
+      "back_button_accessibility_label": "Назад на адресата за уредување {{address}}",
+      "add_address_banner": "Додајте адреси што ќе ги користите при наплата",
+      "no_addresses_banner": "Не се додадени адреси",
+      "address_deleted_notification": "Адресата е избришана",
+      "cancel_adding_address_accessibility_label": "Откажете ја додавањето адреса",
+      "cancel_deletion_button": "Откажи",
+      "cancel_deletion_button_accessibility_label": "Откажете го бришењето на {{address}}",
+      "default_address": {
+        "title": "Стандардна адреса",
+        "title_accessibility_label": "Стандардна адреса: {{address}}"
+      },
+      "delete_button": "Избриши",
+      "delete_button_accessibility_label": "Избриши {{address}}",
+      "delete_confirmation_button": "Избришете ја адресата",
+      "delete_confirmation_button_accessibility_label": "Избриши {{address}}",
+      "delete_confirmation_message": "Да се ​​избрише адресата? Постоечките нарачки не се засегнати.",
+      "delete_confirmation_title": "Да се ​​избрише адресата?",
+      "delete_confirmation_description": "Постоечките нарачки не се засегнати.",
+      "edit_button": "Уредување",
+      "edit_button_accessibility_label": "Уреди {{address}}",
+      "edit_section_accessibility_label": "Уреди {{address}}",
+      "edit_modal_title": {
+        "default": "Уреди адреса",
+        "billing": "Уредете ја адресата за наплата",
+        "shipping": "Уредете ја адресата за испорака"
+      },
+      "loading_accessibility_message": "Се вчитува адресата",
+      "loading_addresses_accessibility_message": "Се вчитуваат адреси",
+      "loading_billing_accessibility_message": "Се вчитува адресата за наплата",
+      "loading_finished_accessibility_message": "Вчитана е нова страница со адреси",
+      "loading_shipping_accessibility_message": "Се вчитува адресата за испорака",
+      "pagination": {
+        "load_more": "Товари повеќе",
+        "load_more_accessibility_label": "Вчитај повеќе адреси"
+      }
     },
     "address_form": {
       "attention": "Внимание",
