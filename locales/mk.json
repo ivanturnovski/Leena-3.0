@@ -20,10 +20,248 @@
   "shopify": {
     "checkout": {
       "general": {
-        "page_title": "Чекирај"
+        "page_title": "Чекирај",
+        "errors": {
+          "discount": {
+            "custom_discount_not_honoured": "Доставениот прилагоден попуст не беше испочитуван.",
+            "unsupported_expectation": "Испорачаната линија за попуст содржеше очекување што политиката не може да го протолкува.",
+            "additional_requested_discount_code_discarded": "Бараниот дополнителен попуст за код е отфрлен.",
+            "allocations_mismatch": "Очекуваната распределба на попуст не се совпаѓа со вистинската распределба на попуст.",
+            "discount_code_not_honoured": "Кодот за попуст не се применува."
+          },
+          "tax": {
+            "new_tax_must_be_accepted": "Мора да се прифати нова даночна линија во предлогот на продавачот за да се продолжи.",
+            "unresolvable_tax_terms": "Предложените услови се нерешливи со оглед на моменталниот преговарачки контекст.",
+            "delivery_price_is_abstract": "Поврзаната цена за испорака е апстрактна.",
+            "tax_inclusivity_mismatch": "Повторно преговарајте со конкретната вкупен данок и должност или вкупен износ вклучен во целната вредност.",
+            "tax_exemption_not_supported": "Даночните ослободувања не се поддржани за тековната преговарачка сесија.",
+            "delivery_tax_exemption_not_supported": "Во моментов не се поддржани даночните ослободувања за линиите за испорака.",
+            "proposed_allocations_required": "Недостасува поле „предложени распределби“.",
+            "merchandise_terms_must_be_defined": "Мора да се дефинираат условите за стока.",
+            "delivery_terms_must_be_defined": "Мора да се дефинираат условите за испорака.",
+            "merchandise_discount_terms_must_be_defined": "Мора да се дефинираат условите за попуст на стоката.",
+            "delivery_discount_terms_must_be_defined": "Мора да се дефинираат условите за попуст за испорака.",
+            "allocated_required": "Недостасува „доделено“ поле.",
+            "value_required": "Недостасува поле „вредност“.",
+            "line_splits_not_supported": "Полето „линии на стоки“ мора да биде поделено така што секој да има една компонента на линија во предлогот на продавачот."
+          },
+          "payment": {
+            "manual_payments_not_allowed_for_b2b": "Во продавниците B2B не се дозволени рачни плаќања.",
+            "positive_amount_expected": "Износот за плаќање мора да биде поголем од 0.",
+            "total_amount_mismatch": "Вкупниот износ за плаќање не се совпаѓа со збирот на износот на плаќањата.",
+            "subscription_terms_not_accepted": "Условите за претплата не се прифатени.",
+            "missing_session_id": "Недостасуваат информации за сесијата за кредитна картичка.",
+            "gateway_not_supported": "Портата за плаќање не поддржува складирање на начинот на плаќање.",
+            "credit_card_last_name_required": "„презимето“ не може да биде нула.",
+            "credit_card_update_failed": "Ажурирањето на кредитната картичка не успеа.",
+            "installments_amount_invalid": "Неважечка сума за трансакција на рати.",
+            "installments_test_mode_not_allowed": "Тестниот режим не е дозволен.",
+            "installments_gift_card_not_allowed": "Ратите не дозволуваат користење на подарок картички.",
+            "installments_unsupported_currency": "Ратите не ја поддржуваат оваа валута.",
+            "installments_unsupported_shipping": "Ратите не поддржуваат испорака на оваа адреса.",
+            "installments_unsupported_billing": "Рати не ја поддржува оваа адреса за наплата.",
+            "installments_unsupported_subscriptions": "Ратите не поддржуваат претплати.",
+            "installments_ineligible_line_item": "Ратите се оневозможени за ставка од линија во ова купување.",
+            "shop_cash_not_allowed": "Купувајте готовина не е дозволена без Shop Pay.",
+            "shop_cash_unsupported_checkout_source": "Купувајте готовина не ја поддржува оваа наплата.",
+            "shop_cash_gift_card_not_allowed": "Купувајте готовина не дозволува купување подарок картички.",
+            "shop_cash_not_enabled": "Купувајте готовина не е овозможена за оваа продавница.",
+            "shop_cash_unsupported_subscriptions": "Купувајте готовина не поддржува претплати.",
+            "shop_cash_unsupported_shipping": "Купувајте готовина не поддржува стока без испорака.",
+            "invalid_address_type": "Обезбедениот тип на адреса е неважечки за овој начин на плаќање.",
+            "missing_retail_attributions": "За рачно внесени плаќања со кредитна картичка, потребни се атрибути за малопродажба.",
+            "unexpected_retail_attributions": "Атрибуции за малопродажба неочекувано се обезбедени за плаќање со кредитна картичка.",
+            "invalid_card_source": "Оваа сесија нема дозвола да го користи овој извор на картичка.",
+            "wallet_content_missing": "Недостасува содржина на паричникот.",
+            "payment_instrument_not_found": "Не може да се најде начин на плаќање",
+            "unauthorized_capture_method": "Конфигурирањето на начинот на снимање на плаќање не е дозволено.",
+            "saved_payment_methods_not_allowed": "Зачуваните начини на плаќање не се дозволени.",
+            "saved_payment_methods_not_enabled": "Зачуваните начини на плаќање не се овозможени за оваа продавница.",
+            "store_credit_not_enabled": "Кредитот на продавницата не е овозможен за оваа продавница.",
+            "store_credit_account_not_found": "Кредитната сметка на продавницата не е пронајдена.",
+            "store_credit_account_mismatch": "Кредитната сметка на продавницата не се совпаѓа со идентитетот на купувачот.",
+            "store_credit_mismatched_currency": "Валутата на кредитната сметка на продавницата не се совпаѓа со валутата за наплата.",
+            "store_credit_insufficient_funds": "Нема доволно средства на кредитната сметка на продавницата.",
+            "store_credit_buying_gift_card": "Не можете да користите кредит од продавница за да купите картичка за подарок.",
+            "gift_cards_not_allowed_for_b2b": "Картичките за подароци не се дозволени во B2B продавниците.",
+            "method_required": "Мора да се предложи начин на плаќање.",
+            "paypal_express_address_invalid": "PayPal врати неважечка адреса.",
+            "shop_cash_unsupported_currency": "Купувајте готовина не ја поддржува оваа валута.",
+            "market_manager_blocks_wallet_payments": "Начинот на плаќање не е поддржан од менаџерот на пазарот."
+          },
+          "tip": {
+            "not_accepted_by_shop": "Продавницата не прифаќа бакшиш.",
+            "only_one_tip_line_allowed": "Не се поддржани повеќе линии за совети.",
+            "tips_not_allowed_for_b2b": "Совети не се дозволени во B2B продавници.",
+            "currency_change_reset": "Бакшишот е ресетиран поради промена на валутата.",
+            "tips_not_allowed_for_deferred_purchase_options": "Советите сè уште не се поддржани за одложените опции за купување."
+          },
+          "sale_attribution": {
+            "draft_order_not_exist": "Оваа нацрт-нарачка не постои во тековната продавница.",
+            "staff_member_not_exist": "Овој персонал не постои во сегашната продавница.",
+            "location_not_exist": "Оваа локација не постои во тековната продавница.",
+            "point_of_sale_device_not_exist": "Овој уред за продажба не постои во тековната продавница.",
+            "unresolvable_target_merchandise_lines": "Предложените атрибути за продажба се нерешливи со оглед на тековниот контекст на преговори."
+          },
+          "non_negotiable": {
+            "missing_non_negotiable_terms": "Предлогот на вашиот купувач треба да содржи non-negotiable_terms.",
+            "invalid_signature": "Потписот за {{target_terms}} е неважечки."
+          },
+          "inventory": {
+            "missing_quantity_value": "Недостасува полето за количина во линиите за залихи на купувачот.",
+            "changing_behavior_not_allowed": "Овој клиент нема дозвола да го промени однесувањето на залихите.",
+            "only_one_inventory_behavior_allowed": "Во моментов е дозволено само едно однесување на залихи по наплата."
+          },
+          "optional_duties": {
+            "optional_duties_not_permitted": "Одбивањето давачки не е дозволено за оваа наплата."
+          },
+          "attribution": {
+            "retail_attribution_not_allowed": "Наведувањето на малопродажба не е дозволено за ова плаќање.",
+            "retail_attribution_required": "Потребно е наведување на малопродажба за ова плаќање."
+          },
+          "captcha": {
+            "metadata_missing": "За оваа наплата е потребно да се пополни captcha.",
+            "metadata_mismatch": "Обезбедениот провајдер и тип на captcha не се совпаѓаат со очекуваните вредности.",
+            "token_missing": "Мора да се обезбеди токен captcha за да се заврши оваа наплата.",
+            "job_enqueue_failed": "Работата за валидација на captcha не успеа да се запише во ред.",
+            "job_already_queued": "Валидацијата на Captcha веќе е наредена на ред за овој токен за captcha.",
+            "token_expired": "Обезбедениот captcha токен е истечен. Завршете нова captcha за да продолжите со наплатата.",
+            "token_invalid": "Обезбедениот captcha токен беше неважечки. Завршете нова captcha за да продолжите со наплатата.",
+            "token_not_valid_for_session": "Обезбедената captcha не може да се користи со оваа наплата."
+          },
+          "fx_reconciliation_override": {
+            "shop_currency_mismatch": "Добиениот износ мора да биде во валутата на продавницата."
+          }
+        },
+        "full_price": "Целосна цена:",
+        "title": "Наплата - {{shopName}}",
+        "full_title": "{{pageTitle}} - {{shopName}} - Наплата",
+        "loading_title": "Наплата - {{shopName}}",
+        "google_map_title": "Гугл Мапа",
+        "submit_order_button_label": "Поднесете нарачка",
+        "submit_for_review_button_label": "Поднесете за преглед",
+        "submit_for_review_notice_label": "Плаќањето нема да се доспее додека вашата нарачка не биде прегледана",
+        "continue_to_payment_plans_button_label": "Продолжете со плановите за плаќање",
+        "back_button_label": "Врати се",
+        "choose_delivery_strategy": "Изберете начин на испорака",
+        "autocomplete_zero_item": "Нема достапни ставки"
       },
       "payment": {
-        "title": "Плаќање"
+        "title": "Плаќање",
+        "amazon_payments_label": "Амазон плати",
+        "amazon_payments_login_hint": "Ќе биде побарано да се најавите со Амазон.",
+        "amazon_payments_logout": "Одјавете се од Amazon Pay",
+        "amazon_payments_failed_mfa_challenge": "Избраниот начин на плаќање не може да се користи. Изберете друг метод или контактирајте со вашата банка или издавачот на картичката.",
+        "amazon_payments_abandoned_mfa_challenge": "Вашата исплата не може да се заврши. Обидете се со друг начин на плаќање или контактирајте со вашата банка или издавачот на картичката.",
+        "amazon_payments_could_not_enqueue_authorize": "Имаше проблем при обработката на вашата уплата. Обидете се повторно или користете друг начин на плаќање.",
+        "amount_left_to_pay_label": "Доспешно плаќање:",
+        "discount_button_action_label": "Примени го кодот за попуст",
+        "gift_card_code_label": "Код на картичка за подарок",
+        "apply_gift_card_button_label": "Пријавете се",
+        "gift_card_balance_label": "Биланс:",
+        "supported_card_brands_more_label": "и повеќе…",
+        "detected_card_brand": "Откриена марка на картичка: {brand}",
+        "credit_card_vaulting_sign_in_banner_title": "Зачувајте ја вашата кредитна картичка",
+        "credit_card_vaulting_sign_in_banner_info": "Најавете се или креирајте сметка за да ја зачувате вашата кредитна картичка за идни купувања.",
+        "credit_card_vaulting_sign_in_banner_button_label": "Логирај Се",
+        "ftd_vault_credit_card_label": "Зачувајте ја оваа кредитна картичка на мојата сметка за побрзо плаќање",
+        "card_number_label": "Број на картичка",
+        "card_number_placeholder": "Број на картичка",
+        "card_pay_with": "Плати со:",
+        "card_security_notice": "Сите трансакции се безбедни и шифрирани.",
+        "card_security_vault_notice": "Ни требаат вашите податоци за идни плаќања. Сите трансакции се безбедни и шифрирани.",
+        "card_information_notice": "Сите трансакции се безбедни и шифрирани. Информациите за кредитната картичка никогаш не се чуваат.",
+        "name_on_card_label": "име на картичка",
+        "name_on_card_placeholder": "име на картичка",
+        "card_nickname_label": "Прекар (изборно)",
+        "card_expired": "Истечен",
+        "card_expiry_label": "Датум на истекување (ММ \/ ГГ)",
+        "card_expiry_placeholder": "Датум на истекување (ММ \/ ГГ)",
+        "credit_card_start_month": "Почетен месец",
+        "credit_card_start_year": "Почетна година",
+        "delete_customer_mandate_modal_title": "Да се ​​отстрани оваа платежна картичка?",
+        "delete_customer_mandate_modal_body": "Ако ја отстраните оваа картичка, ќе треба повторно да ја додадете пред да ја користите за плаќање.",
+        "delete_customer_mandate_modal_confirm": "Отстранете ја картичката",
+        "delete_customer_mandate_modal_cancel": "Откажи",
+        "card_verification_value_label": "Безбедносен код",
+        "card_verification_value_placeholder": "Безбедносен код",
+        "card_verification_confirm": "За целите на потврдата, внесете го безбедносниот код на вашата картичка.",
+        "card_expiry_date_explanation": "Датум на истекување на картичката во формат: месец, месец, година, година",
+        "card_expiration_month_label": "Месец на истекување",
+        "card_expiration_year_label": "Година на истекување",
+        "card_verification_value_explanation": "3-цифрен безбедносен код обично се наоѓа на задната страна од вашата картичка. Картичките American Express имаат 4-цифрен код кој се наоѓа на предната страна.",
+        "card_verification_value_explanation_amex": "4-цифрен безбедносен код на предната страна на вашата картичка",
+        "card_verification_value_explanation_other": "3-цифрен безбедносен код на задната страна од вашата картичка",
+        "card_start_label": "Датум на издавање (ММ \/ ГГ)",
+        "card_start_placeholder": "Датум на издавање (ММ \/ ГГ)",
+        "card_issue_number_label": "Број на издание",
+        "card_issue_number_placeholder": "Број на издание",
+        "card_change_label": "Промена",
+        "card_update_label": "Ажурирајте ја картичката",
+        "ends_with_label": "завршува со %{last_digits}",
+        "masked_digits_label": "•••• %{last_цифри}",
+        "payment_method_saved": "Начинот на плаќање е зачуван",
+        "card_vaulted_company_location": "Картичката е зачувана за оваа локација",
+        "expiry_long": "(Истекува %{month}\/%{year})",
+        "expiry_short": "(Истекување %{month}\/%{year})",
+        "saved_by_payment_method": "Зачувано од %{payment_method}",
+        "pay_with_payment_method": "Плати со %{payment_method}",
+        "different_credit_card_label": "Користете друга кредитна картичка",
+        "same_billing_address_label": "Исто како и адресата за испорака",
+        "different_billing_address_label": "Користете друга адреса за наплата",
+        "billing_address_associated_with_mandate": "Користете адреса поврзана со начинот на плаќање",
+        "billing_address_associated_with_mandate_info": "Ако сакате да ја промените адресата за наплата, отстранете ја и повторно внесете ги деталите за вашата кредитна картичка",
+        "free_order_notice_html": "Вашата нарачка е <strong>бесплатна<\/strong> . Не е потребно плаќање."
+      },
+      "shipping": {
+        "shipping_information_required_notice": "Потребни се информации за испорака. {{link}} .",
+        "shipping_information_redirect_link": "Внесете ги вашите информации овде",
+        "loading_progressive_rates": "Се бара повеќе стапки…",
+        "no_other_methods_available": "Нема достапни други методи",
+        "duties_and_taxes_options": {
+          "ddu_title": "Плати при испорака",
+          "ddu_caption": "Може да се применат дополнителни такси",
+          "ddp_title": "Плати сега",
+          "ddp_caption": "Без дополнителни трошоци при испорака"
+        },
+        "shipping_method_combinations": {
+          "combination": "%{rest} и %{current}"
+        },
+        "shipping_used_as_billing_notice": "Ова ќе се користи и како ваша адреса за наплата за оваа нарачка.",
+        "address_update": "Ажурирајте ја адресата",
+        "enter_address_manually_label": "Внесете адреса рачно",
+        "shipping_address_title": "Се праќа во",
+        "add_address": "Користете друга адреса",
+        "add_delivery_instructions": "Додадете инструкции за испорака",
+        "edit": "Уредување",
+        "delete": "Избриши",
+        "address_more": "Повеќе дејства за оваа адреса",
+        "address_edit": "Уреди адреса",
+        "address_delete": "Избришете ја адресата",
+        "address_confirm": "Дали сте сигурни дека сакате да ја избришете оваа адреса од вашата сметка?",
+        "address_form": {
+          "add_address": "Додадете адреса",
+          "save": "Зачувај",
+          "cancel": "Откажи",
+          "generic_error": "Имаше проблем со зачувувањето на вашата адреса. Ве молиме обидете се повторно.",
+          "one_time_address_subtitle": "Користете еднократна адреса за оваа нарачка"
+        },
+        "different_shipping_method_summary": "Внесете друга адреса за испорака за да ги видите достапните методи за испорака",
+        "invalid_shipping_method_summary": "Внесете важечка адреса за испорака за да ги видите достапните методи за испорака",
+        "method_summary": {
+          "incomplete_address_entered": "Внесете целосна адреса за испорака за да ги видите достапните методи за испорака",
+          "incomplete_address_selected": "Изберете целосна адреса за испорака за да ги видите достапните методи за испорака"
+        },
+        "local_pickup": {
+          "search_address": "Пребарајте адреса",
+          "rollup_title": "Локација за подигање"
+        },
+        "missing_shipping_address": "Недостасува адреса за испорака"
+      },
+      "localized_fields": {
+        "additional_information": {
+          "title": "Дополнителни информации"
+        }
       }
     }
   }
