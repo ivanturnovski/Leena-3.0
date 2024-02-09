@@ -858,7 +858,112 @@
         "four_images_accessibility_label": "Нарачката вклучува {{lineItemName1}} , {{lineItemName2}} , {{lineItemName3}} , {{lineItemName4}}",
         "more_than_three_products_accessibility_label": "Нарачката вклучува {{lineItemName1}} , {{lineItemName2}} и уште {{numberOfAdditionalProducts}} производи",
         "more_than_four_products_accessibility_label": "Нарачката вклучува {{lineItemName1}} , {{lineItemName2}} , {{lineItemName3}} и уште {{numberOfAdditionalProducts}} производи",
-        "plus_more": "+ {{numberOfAdditionalProducts}}"
+        "plus_more": "+ {{numberOfAdditionalProducts}}",
+        "plus_more_products": "+ {{numberOfAdditionalProducts}} производи",
+        "carousel": {
+          "one_products_accessibility_label": "Нарачката вклучува {{lineItemName1}} количина {{lineItemQuantity1}}",
+          "two_products_accessibility_label": "Нарачката вклучува {{lineItemName1}} количина {{lineItemQuantity1}} , {{lineItemName2}} количина {{lineItemQuantity2}}",
+          "three_products_accessibility_label": "Нарачката вклучува {{lineItemName1}} количина {{lineItemQuantity1}} , {{lineItemName2}} количина {{lineItemQuantity2}} , {{lineItemName3}} количина {{lineItemQuantity3}}",
+          "four_products_accessibility_label": "Нарачката вклучува {{lineItemName1}} количина {{lineItemQuantity1}} , {{lineItemName2}} количина {{lineItemQuantity2}} , {{lineItemName3}} количина {{lineItemQuantity3}} {{lineItemName4}} {{lineItemQuantity4}}",
+          "five_products_accessibility_label": "Нарачката вклучува {{lineItemName1}} количина {{lineItemQuantity1}} , {{lineItemName2}} количина {{lineItemQuantity2}} , {{lineItemName3}} количина {{lineItemQuantity3}} {{lineItemName4}} {{lineItemQuantity4}} {{lineItemName5}} количина {{lineItemQuantity5}}",
+          "six_products_accessibility_label": "Нарачката вклучува {{lineItemName1}} количина {{lineItemQuantity1}} , {{lineItemName2}} количина {{lineItemQuantity2}} , {{lineItemName3}} количина {{lineItemQuantity3}} {{lineItemName4}} {{lineItemQuantity4}} {{lineItemName5}} количина {{lineItemQuantity5}} , {{lineItemName6}} количина {{lineItemQuantity6}}",
+          "six_and_more_products_accessibility_label": "Нарачката вклучува {{lineItemName1}} количина {{lineItemQuantity1}} , {{lineItemName2}} количина {{lineItemQuantity2}} , {{lineItemName3}} количина {{lineItemQuantity3}} {{lineItemName4}} {{lineItemQuantity4}} {{lineItemName5}} количина {{lineItemQuantity5}} , {{lineItemName6}} количина {{lineItemQuantity6}} и повеќе",
+          "view_order_details": "Погледнете ги деталите за нарачката",
+          "previous": "Претходна",
+          "next": "Следно"
+        },
+        "items": {
+          "one": "{{count}} ставка",
+          "other": "{{count}} ставки"
+        },
+        "list_view": "Прикажи приказ на листа",
+        "no_filtered_results_description": "Отстранете ги или приспособете ги филтрите за да ги видите вашите нарачки",
+        "no_filtered_results_title": "Нема филтрирани резултати",
+        "order_link": "Прикажи ја нарачката {{name}}",
+        "order_number": "Нарачајте {{name}}",
+        "orders_title": "Потврдено",
+        "pagination": {
+          "nav_accessibility_label": "Копчиња за навигација за нарачки",
+          "next": "Следно",
+          "next_accessibility_label": "Следни нарачки",
+          "previous": "Прет",
+          "previous_accessibility_label": "Претходни нарачки",
+          "load_more": "Товари повеќе",
+          "load_more_accessibility_label": "Вчитајте повеќе нарачки"
+        },
+        "order_status_message": {
+          "list_view": {
+            "view_order_for_details": "Погледнете ја нарачката за детали",
+            "estimated_delivery": "Предвиден {{date}}",
+            "last_updated": "Последно ажурирање {{date}}"
+          },
+          "table_view": {
+            "estimated_delivery": "Est. испорака {{date}}"
+          }
+        },
+        "payment_status": {
+          "list_view": {
+            "overdue": "Задоцнета исплата",
+            "due": "Доспевање на плаќање {{date}}",
+            "due_today": "Плаќањето доспева денес",
+            "due_without_date": "Доспеана исплата",
+            "due_on_fulfillment": "Плаќање што доспева при исполнување",
+            "pay_to_confirm": "Плати за да потврдиш",
+            "payment_not_due": "Плаќањето сè уште не е доспеано"
+          },
+          "table_view": {
+            "overdue": "Задоцнета",
+            "due": "Доспешно {{date}}",
+            "due_today": "Доспева денес",
+            "paid": "Платено",
+            "due_without_date": "Се должи",
+            "due_on_fulfillment": "Доспева за исполнување",
+            "pay_to_confirm": "Плати за да потврдиш",
+            "payment_not_due": "Сè уште не треба"
+          }
+        },
+        "sort_by": "Подреди по: {{option}}",
+        "sort_hide_options_accessibility_label": "Сокриј ги опциите за сортирање за потврдени нарачки.",
+        "sort_show_options_accessibility_label": "Прикажи опции за сортирање за потврдени нарачки.",
+        "sort_currently_sorted_by_accessibility_label": "Моментално подредено по: {{option}}",
+        "sort_title": "Подреди",
+        "sort": {
+          "date": {
+            "newest": "Најнов до најстар",
+            "oldest": "Најстарото до најновото"
+          },
+          "location": {
+            "ascending": "Локација (АЗ)",
+            "descending": "Локација (ZA)"
+          },
+          "order_number": {
+            "ascending": "Број на нарачка (од ниско до високо)",
+            "descending": "Број на нарачка (висок до низок)"
+          },
+          "order_total": {
+            "ascending": "Вкупно нарачка (ниско до високо)",
+            "descending": "Вкупно нарачка (високо до ниско)"
+          }
+        },
+        "filter_title": "Филтер",
+        "filter": {
+          "clear_section": "Исчистете го делот",
+          "clear_all": "Исчисти се",
+          "apply": "Пријавете се",
+          "date": {
+            "start_date": "Почетен датум",
+            "end_date": "Крајна дата",
+            "title": "Датум на нарачка",
+            "today": "Денес",
+            "last_7_days": "Последните 7 дена",
+            "last_30_days": "Последните 30 дена",
+            "last_90_days": "Последните 90 дена",
+            "last_365_days": "Последните 12 месеци",
+            "custom": "Прилагодено"
+          }
+        },
+        "table_view": "Прикажи приказ на табелата",
+        "show_order_actions_accessibility_label": "Прикажи дејства за нарачка за нарачка {{name}}"
       },
       "order_status": {
         "delivered_description_gift_card": {
@@ -928,7 +1033,34 @@
             "text": "Следете и управувајте со нарачката Купи со Prime",
             "new_window_disclaimer": "(отвара нов прозорец)"
           }
-        }
+        },
+        "attempted_delivery_label": "Обид за испорака",
+        "attempted_delivery_description": "Обидот за испорака беше неуспешен.",
+        "attempted_to_deliver_label": "Обид за испорака",
+        "confirmed_description": "Ја добивме вашата нарачка.",
+        "on_its_way_description": "Оваа пратка е на пат.",
+        "out_for_delivery_description": "Оваа пратка е излезена за испорака.",
+        "preparing_for_shipping_label": "Подготовка за испорака",
+        "preparing_for_shipping_description": "Овие предмети се подготвуваат за испорака.",
+        "ready_for_pickup_label": "Подготвен за подигање",
+        "ready_for_pickup_description": "Овие предмети се подготвени за подигање. Ве молиме внесете ја потврдата за нарачката кога ќе ја подигнете нарачката.",
+        "ready_for_pickup_location": "Вашата нарачка е подготвена за подигнување на локацијата",
+        "picked_up_label": "Подигнато",
+        "picked_up_description": "Овие предмети се подигнати.",
+        "canceled_description": "Вашата нарачка е откажана на {{date}} .",
+        "canceled_label": "Откажано",
+        "canceled_title": "Вашата нарачка е откажана",
+        "come_back": "Вратете се на оваа страница за ажурирања за статусот на вашата пратка.",
+        "company_tracking_number": "{{company}} број за следење:",
+        "confirmed_label": "Потврдено",
+        "confirmed_title": "Вашата нарачка е потврдена",
+        "confirmed_description_pickup": "Ќе добиете е-пошта кога вашата нарачка е подготвена за подигнување.",
+        "confirmed_description_digital": "Ќе добиете е-пошта кога вашата нарачка е подготвена.",
+        "confirmed_description_gift_card_text": "Ќе добиете порака кога вашата нарачка е подготвена.",
+        "delivered_description": "Оваа пратка е испорачана.",
+        "delivered_label": "Доставено",
+        "delivered_title": "Вашата пратка е испорачана",
+        "delivered_description_digital": "Вашата нарачка е завршена."
       },
       "status_mark_as_delivered": "Обележете како доставено",
       "status_title": "Статус на нарачка",
