@@ -298,7 +298,133 @@
         "waiting_on_taxes_message": "Ако вашите даноци не се пресметаат во следните неколку секунди, освежете ја страницата.",
         "waiting_on_taxes_notice": "Пресметување даноци",
         "payment_method": "Метод за плаќање",
-        "expired_payment_method": "Избраниот начин на плаќање е истечен"
+        "expired_payment_method": "Избраниот начин на плаќање е истечен",
+        "express_checkout_free_order": "Нема да ви се наплаќа за бесплатна нарачка",
+        "order_covered_by_gift_cards_notice": {
+          "one": "Вашата нарачка е покриена со вашата картичка за подарок.",
+          "other": "Вашата нарачка е покриена со вашите картички за подарок."
+        },
+        "offsite_gateway_redirect_hint": "Откако ќе кликнете на „%{button_label}“, ќе бидете пренасочени на %{gateway_label} за безбедно да го завршите купувањето.",
+        "offsite_gateway_redirect_hint_multi_currency_html": "%{gateway_label} вкупно %{total_shop_price}",
+        "receiver_payment_experience_hint": "По поставувањето на вашата нарачка, ќе добиете детали за плаќање. Направете плаќање во Multibanco или онлајн во рок од %{due_days} дена.",
+        "billing_address_title": "Адреса за фактурирање",
+        "billing_address_description": "Изберете ја адресата што одговара на вашата картичка или начинот на плаќање.",
+        "billing_address_description_no_shipping_address": "Внесете ја адресата што одговара на вашата картичка или начинот на плаќање.",
+        "no_js_credit_card_fields_redirect_hint": "Ќе бидете пренасочени за да ги додадете вашите информации за плаќање.",
+        "card_fields_container_prefix": "Теренски контејнер за:",
+        "card_fields_unavailable_html": {
+          "one": "Плаќањата со кредитни и дебитни картички не се достапни во моментов.<br> <a href=\"%{current_url}\">Освежете ја оваа страница<\/a> или обидете се повторно подоцна.",
+          "other": "Плаќањата со кредитни и дебитни картички не се достапни во моментов.<br> <a href=\"%{current_url}\">Освежете ја оваа страница<\/a> или обидете се со друг начин на плаќање."
+        },
+        "card_fields_processing_error": "Имаше проблем при обработката на плаќањето. Обидете се да ја освежите оваа страница или проверете ја вашата интернет врска.",
+        "technical_error": "Плаќањата не може да се обработат во моментов поради технички проблем. Обидете се повторно за неколку минути.",
+        "no_method_error": "Продавницава не може да прифаќа плаќања во моментов.",
+        "not_configured_error": "Продавницава не може да прифаќа плаќања во моментов.",
+        "missing_credit_card_error": "Внесете ги деталите за вашата картичка за да го завршите плаќањето",
+        "billing_address_not_supported_for_payment_method_error": "Овој начин на плаќање не е достапен за вашата адреса за наплата и валута. Обидете се со друг начин на плаќање.",
+        "generic_incorrect_card_info": "Деталите за плаќање не можеа да се потврдат. Проверете ги деталите за вашата картичка и обидете се повторно.",
+        "sofort_label": "Софорт банкарски трансфер",
+        "shop_pay_installments_label": "Купувајте Плаќајте рати",
+        "paypal_modal": {
+          "order_contains_subscriptions": "Претплата",
+          "order_contains_fixed_selling_plans": "Вкупниот број може да не вклучува даноци, испорака, одложени трошоци и некои попусти. Продолжете со наплата за износот што треба да се плати денес."
+        },
+        "klarna_label": "Кларна",
+        "klarna_pay_later_label": "Плати подоцна со Кларна",
+        "klarna_pay_now_label": "Плати сега со Кларна",
+        "bancontact_label": "Банконтакт",
+        "giropay_label": "Жиропај",
+        "multibanco_label": "Мултибанко",
+        "klarna_slice_it_label": "Финансии со Кларна",
+        "ideal_label": "ИДЕАЛНИ",
+        "bank_picker_label": "Банка",
+        "afterpay_label": "Последователно плаќање",
+        "cashapppay_label": "Плаќање со готовина апликација",
+        "purchase_options_card_update_agreement_label_html": "Со ажурирање на вашиот начин на плаќање, ги овластувате плаќањата за секое повторливо или одложено купување според <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{cancellation_policy}\" href=\"%{policy_href}\">политиката за откажување<\/a> на оваа продавница.",
+        "subscription_card_update_agreement_label": "Промената на начинот на плаќање ќе ја ажурира вашата претплата и идните повторливи плаќања.",
+        "subscription_agreement_label": "Една или повеќе ставки во вашата кошничка е одложено купување или купување со претплата. Ако продолжите со плаќањето, се согласувате дека вашиот начин на плаќање автоматски ќе се наплаќа по цената и зачестеноста наведени на оваа страница додека не заврши или не откажете. Сите откажувања се предмет на %{cancelled}.",
+        "subscription_agreement_cancelled": "политика за откажување",
+        "subscription_heading": "Договор за претплата",
+        "subscription_agreement_label_html": "Разбирам дека се согласувам со претплата. Ќе се обновува по цената и фреквенцијата наведени додека не заврши или не биде\n <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">откажано<\/a> .\n",
+        "purchase_options_agreement_label": "Една или повеќе ставки во вашата кошничка е одложено или периодично купување. Ако продолжите со плаќањето, се согласувате дека вашиот начин на плаќање автоматски ќе се наплаќа по цената и зачестеноста наведени на оваа страница додека не заврши или не откажете. Сите откажувања се предмет на %{cancellation_policy_label}.",
+        "purchase_options_agreement_label_html": "Разбирам дека една или повеќе ставки во мојата кошничка е одложено или повторливо купување. Со продолжување, се согласувам со\n <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">политика за откажување<\/a>\n и ве овластувам да го наплатите мојот начин на плаќање по цените, зачестеноста и датумите наведени на оваа страница до мојот\n нарачката е исполнета или откажувам, доколку ми е дозволено.\n",
+        "purchase_options_agreement_label_wallets": "Продолжувајќи со плаќањето, се согласувате со идните трошоци наведени на оваа страница и политиката за откажување.",
+        "change_currency_section_description": "Изберете опција за валута",
+        "no_real_orders_dev_store": "Продавницава не може да прифаќа вистински нарачки или реални плаќања.",
+        "waiting_on_payment_methods": "Се добиваат достапни начини на плаќање...",
+        "apple_pay_payment_error": "Вашата исплата не може да се заврши. Обидете се повторно или користете друг начин на плаќање.",
+        "taxes_not_included": "Даноците не се вклучени",
+        "no_taxes_banner_content": "За оваа нарачка нема да се наплаќаат даноци. Откако ќе го наплатите плаќањето, даноците веќе не може да се додаваат.",
+        "paypal": {
+          "connect": "Кликнете за да ја поврзете вашата сметка на PayPal"
+        },
+        "apple": {
+          "connect": "Кликнете за да ја поврзете вашата сметка на Apple Pay",
+          "not_available": "Apple Pay не е достапен во овој прелистувач. За да ја поврзете вашата сметка на Apple Pay, ќе треба да користите Safari на уред на Apple."
+        },
+        "google": {
+          "connect": "Кликнете за да се поврзете со вашата сметка на Google Pay",
+          "error_authorizing": "Грешка при овластувањето за плаќање"
+        },
+        "account_connected": "Сметката е поврзана.",
+        "mor_disclaimer_html": "Со кликнување подолу и завршување на вашата нарачка, се согласувате да ги купите вашите ставки од Global-e како трговец со евиденција\n за оваа трансакција, според <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{mor_terms}\" href=\"%{terms_href}\">Условите и правилата<\/a> на Global-e\n и <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{privacy_policy}\" href=\"%{policy_href}\">Политика за приватност<\/a> . Global-e е меѓународна\n давател на услуги за исполнување до %{shop_name}\n",
+        "pending_payment": {
+          "due_notice": "Вашата исплата од %{amount_due} доспева на %{due_date}.",
+          "multibanco": {
+            "instruction_html": "Направете ја вашата исплата во Multibanco или онлајн користејќи ги деталите подолу. За прашања или за ажурирање на деталите за плаќање, %{contact_us}.",
+            "entity": "Ентитет",
+            "reference": "Референца",
+            "amount": "износ",
+            "find_nearest_atm": "Најдете го најблискиот банкомат"
+          }
+        },
+        "update_payment_method": "Ажурирајте го начинот на плаќање",
+        "order_covered_by_store_credit_notice": "Вашата нарачка е покриена со кредит од вашата продавница.",
+        "order_covered_by_redeemables_notice": "Вашата нарачка е покриена.",
+        "store_credit": {
+          "label": "Кредит за складирање",
+          "apply_label": "Примени кредит во продавницата",
+          "add_label": "Додајте кредит од продавницата",
+          "manage_label": "Управувајте со кредитот на продавницата",
+          "buying_gift_card": "Не можете да користите кредит од продавница за да купите картичка за подарок",
+          "no_fixed_selling_plans": "Не можете да користите кредит во продавницата со одложени опции за купување"
+        },
+        "clear": "Јасно",
+        "billing_must_match_shipping_notice": "Адресата за наплата на вашиот начин на плаќање мора да одговара на адресата за испорака.",
+        "same_billing_address_checkbox_label": "Користете ја адресата за испорака како адреса за наплата",
+        "location_billing_address_label": "Адреса за наплата на локација",
+        "fact_billing_address_label": "Адреса за фактурирање",
+        "location_shipping_address_label": "Локација адреса за испорака",
+        "use_order_billing_address_label": "Користете ја адресата за наплата на нарачката",
+        "use_location_billing_address_label": "Користете адреса за наплата на локација",
+        "use_location_shipping_address_label": "Користете ја адресата за испорака на локација",
+        "no_working_method_error": "Продавницава не може да прифаќа плаќања во моментов. Освежете ја оваа страница или вратете се подоцна.",
+        "brand_not_available": "Оваа продавница не прифаќа {{brand}} . Користете друга картичка за плаќање.",
+        "shipping_rate_updated": "Достапните методи за испорака се ажурирани. Потврдете го вашиот избор пред да се одјавите.",
+        "billing_address_invalid_phone": "Ажурирајте го телефонскиот број во вашата адреса за наплата за {{label}} {{last_digits}} да продолжите.",
+        "billing_address_invalid_phone_no_card": "Ажурирајте го телефонскиот број во вашата адреса за наплата за да продолжите.",
+        "preview_not_available": {
+          "title": "Прегледот не е достапен",
+          "content": "Не грижете се, оваа експресна наплата работи за вашите клиенти.",
+          "button": "Добро"
+        },
+        "card_fields": {
+          "errors": {
+            "required": {
+              "issue_date": "Внесете важечки датум на издавање",
+              "issue_number": "Внесете важечки број на издание"
+            },
+            "invalid": {
+              "verification_value": "Внесете важечки CVV или безбедносен код"
+            }
+          }
+        },
+        "simulated_checkout": "Прегледот доаѓа наскоро",
+        "vaulting_agreement_label": "Зачувајте ги моите информации за плаќање со %{company} за побрзо плаќање.",
+        "business_customer_vaulting_payment_label": "Зачувајте ја оваа картичка при наплатата и овластете ја %{company} да ја наплатува картичката за идни купувања за оваа локација. Секој клиент доделен на оваа локација ќе биде овластен да ја користи оваа картичка.",
+        "purchase_options_and_vaulting_agreement_label": "Една или повеќе ставки во вашата кошничка е одложено купување или купување со претплата. Ако продолжите со плаќањето, се согласувате дека вашиот начин на плаќање автоматски ќе се наплаќа по цената и зачестеноста наведени на оваа страница додека не заврши или не откажете. Сите откажувања се предмет на %{cancellation_policy_label}.",
+        "purchase_options_cancellation_policy_label": "политика за откажување",
+        "use_different_credit_card_label": "Користете друга картичка"
       },
       "billing": {
         "billing_address_title": "Сметка до",
@@ -1525,10 +1651,92 @@
         "payment_status": {
           "pending": {
             "banner_overdue": {
-              "one": "Вашата уплата доцни за {{count}} ден"
+              "one": "Вашата уплата доцни за {{count}} ден",
+              "other": "Вашето плаќање доцни за {{count}} дена"
+            },
+            "banner_due": {
+              "one": "Вашата уплата доспева за {{count}} ден",
+              "other": "Вашата уплата доспева за {{count}} дена"
+            },
+            "banner_due_today": "Вашата уплата доспева денес",
+            "title": "Доспеана исплата",
+            "title_with_date": "Доспевање на плаќање {{date}}",
+            "title_due_on_receipt": "Плаќањето сè уште не доспева",
+            "title_due_on_fulfillment": "Плаќање што доспева при исполнување",
+            "description_overdue": "Вашата уплата доцни.",
+            "description_partially_paid": "Оваа нарачка е делумно платена. Имате преостанат салдо.",
+            "description_authorized": "Вашиот начин на плаќање ќе се наплати на датумот на доспевање, или можете да платите сега.",
+            "description_waiting_for_manual_payment": "Нарачката ќе биде означена како платена кога ќе се прими уплатата.",
+            "description_due_on_receipt": "Ќе добиете фактура кога ќе доспее плаќањето.",
+            "description_due_on_receipt_partially_paid": "Оваа нарачка е делумно платена. Имате преостанат биланс. Ќе добиете фактура кога ќе доспее плаќањето.",
+            "description_due_on_fulfillment": "Плаќањето се доспева откако ќе се исполнат сите ставки во оваа нарачка.",
+            "description_due_on_fulfillment_partially_paid": "Оваа нарачка е делумно платена. Имате преостанат салдо. Плаќањето се доспева откако ќе се исполнат сите ставки во оваа нарачка."
+          },
+          "draft": {
+            "description": "Деталите за плаќање се одлучуваат кога ќе се потврди нарачката.",
+            "title": "Плаќањето сè уште не е доспеано",
+            "in_review": {
+              "description": "Деталите за плаќање се одлучуваат кога ќе се потврди нарачката.",
+              "title": "Плаќањето сè уште не е доспеано"
+            },
+            "submitted": {
+              "description": "Испратете плаќање за да ја потврдите оваа нарачка.",
+              "title": "Плати за да потврдиш"
             }
-          }
+          },
+          "paid": {
+            "title": "Платено",
+            "title_with_date": "Платено на {{date}}",
+            "description": "Вашата нарачка е целосно платена."
+          },
+          "refund": {
+            "title": "Рефундирање",
+            "title_with_date": "рефундирани {{date}}",
+            "description_full_refund": "Добивте целосна рефундација за оваа нарачка.",
+            "description_single_refund": "Добивте делумно рефундирање за оваа нарачка.",
+            "description_multiple_refunds": "Добивте делумно рефундирање за оваа нарачка."
+          },
+          "canceled": {
+            "title": "Плаќањето е откажано",
+            "description": "Не ви беше наплатено."
+          },
+          "pay_now": "Плати сега",
+          "pay_now_accessibility_label": "Платете сега за нарачка {{orderName}}",
+          "title": "Статус на плаќање"
+        },
+        "order_timeline": {
+          "expand_events_label": "Покажи детали",
+          "expand_events_accessibility_label": "Прикажи ги деталите за нацрт-нарачката",
+          "hide_events_label": "Сокриј детали",
+          "hide_events_accessibility_label": "Сокриј ги деталите за нацрт-нарачката"
+        },
+        "subtitle": "Испратено на {{date}}",
+        "title": "Нарачајте {{name}}"
+      },
+      "payment_methods": {
+        "payment_delete": {
+          "description_without_replacement": "Овој начин на плаќање веќе нема да биде достапен за идни купувања од оваа локација.",
+          "description_with_replacement": "Бришењето на овој начин на плаќање ќе влијае на однапред овластените плаќања за оваа локација. Заменете го со алтернативен начин на плаќање за да продолжите да ги примате претстојните нарачки."
+        },
+        "payment_details": {
+          "order_label": "Нарачајте {{name}}",
+          "draft_label": "Нацрт нарачка {{name}}"
         }
+      },
+      "purchase_order_number": {
+        "add_accessibility_label": "Додадете PO број",
+        "add_modal_title": "Додадете PO број",
+        "cancel": "Откажи",
+        "close_modal_accessibility_label": "Затворете го модалниот број на PO",
+        "discard": "Отфрли",
+        "discard_changes_modal_title": "Да се ​​отфрлат промените?",
+        "edit_accessibility_label": "Уреди PO-број",
+        "edit_modal_title": "Уреди PO-број",
+        "empty_state": "Нема PO број",
+        "modal_po_number_input_label": "PO број",
+        "modal_po_number_input_max_length_error": "PO броевите имаат максимум {{maxLength}} знаци.",
+        "save": "Зачувај",
+        "title": "PO # {{poNumber}}"
       }
     },
     "payment_methods": {
@@ -1644,7 +1852,25 @@
           "missing_billing_address_error_message": "Ве молиме наведете адреса за наплата",
           "default_checkbox": "Поставете како стандарден начин на плаќање"
         }
-      }
+      },
+      "title": "Начини за плаќање",
+      "add_payment_method_button": "Додајте начин на плаќање",
+      "add_payment_method_banner": "Додајте начин на плаќање за побрзо наплата или однапред овластени услуги",
+      "no_payment_methods_banner": "Не се додадени начини на плаќање",
+      "edit_payment_method_button_accessibility_label": "Уреди {{paymentMethodName}} што завршува на {{lastDigits}}",
+      "edit_payment_method_brand_button_accessibility_label": "Уреди {{paymentMethodName}}",
+      "delete_payment_method_button": "Избриши",
+      "delete_payment_method_button_accessibility_label": "Избриши {{paymentMethodName}}",
+      "back_button": "Назад",
+      "back_button_accessibility_label": "Назад на {{paymentMethodStepTitle}}",
+      "default": "Стандардно",
+      "generic_card": "Картичка",
+      "expiration_warning_button_accessibility_label": "Прикажи предупредување за истекување за {{paymentMethodName}} што завршува на {{lastDigits}}",
+      "expires_soon": "Оваа картичка истекува наскоро",
+      "expired": "Оваа картичка е истечена",
+      "card_update_consent": "Овој начин на плаќање ќе се зачува за идни купувања.",
+      "digital_wallet_title": "Дигитален паричник",
+      "credit_or_debit_card_title": "Кредитна или дебитна картичка"
     },
     "payment_method_brands": {
       "visa": "Виза",
@@ -1658,6 +1884,60 @@
       "hipercard": "Хиперкард",
       "laser": "Ласерски",
       "shoppay": "Продавница Плати"
+    },
+    "errors": {
+      "address_deletion_error": {
+        "description": "Имаше проблем со бришење на оваа адреса. Обидете се повторно или освежете ја страницата."
+      },
+      "addresses_loading_issue": {
+        "description": "Грешка во врската. Проверете ја вашата интернет конекција и обидете се повторно."
+      },
+      "banner_title": {
+        "one": "Има {{count}} грешка",
+        "other": "Има {{count}} грешки"
+      },
+      "failed_address_creation": {
+        "description": "Имаше проблем при креирањето на вашата адреса. Обидете се да ја освежите оваа страница или проверете ја вашата интернет врска."
+      },
+      "failed_address_update": {
+        "description": "Имаше проблем при ажурирањето на вашата адреса. Обидете се да ја освежите оваа страница или проверете ја вашата интернет врска."
+      },
+      "load_orders_error": {
+        "title": "Не може да се вчитаат нарачките",
+        "description": "Обидете се повторно или вратете се подоцна.",
+        "retry_button": "Обидете се повторно"
+      },
+      "load_paypal_error": {
+        "description": "Има проблем при вчитување на PayPal. Ве молиме обидете се повторно."
+      },
+      "logout_everywhere": {
+        "description": "Нешто тргна наопаку при одјавувањето. Ве молиме обидете се повторно."
+      },
+      "no_access": {
+        "back_to_authentication_link": "Најавете се на друга сметка",
+        "description": "Не сте регистрирани како B2B клиент со {{shopName}}",
+        "title": "Нема пристап"
+      },
+      "no_access_to_locations": {
+        "description": "Немате пристап до ниту една локација"
+      },
+      "not_found": {
+        "description": "Проверете ја URL-то или обидете се повторно за неколку минути.",
+        "title": "Има проблем при вчитувањето на оваа страница"
+      },
+      "order_not_found": {
+        "description": "Оваа нарачка не постои или немате дозвола да ја гледате.",
+        "title": "Нарачката не е пронајдена"
+      },
+      "profile_update_error": {
+        "description": "Настана проблем при ажурирањето на вашиот профил. Обидете се да ја освежите оваа страница или проверете ја вашата интернет врска."
+      },
+      "retry_action_label": "Обидете се повторно",
+      "load_extension_error": {
+        "title": "Грешка",
+        "description": "Освежете ја оваа страница или обидете се повторно за неколку минути.",
+        "refresh_button": "Освежете ја страницата"
+      }
     }
   }
 }
