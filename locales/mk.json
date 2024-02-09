@@ -148,91 +148,104 @@
       },
       "payment": {
         "title": "Плаќање",
-        "amazon_payments_label": "Амазон плати",
-        "amazon_payments_login_hint": "Ќе биде побарано да се најавите со Амазон.",
-        "amazon_payments_logout": "Одјавете се од Amazon Pay",
-        "amazon_payments_failed_mfa_challenge": "Избраниот начин на плаќање не може да се користи. Изберете друг метод или контактирајте со вашата банка или издавачот на картичката.",
-        "amazon_payments_abandoned_mfa_challenge": "Вашата исплата не може да се заврши. Обидете се со друг начин на плаќање или контактирајте со вашата банка или издавачот на картичката.",
-        "amazon_payments_could_not_enqueue_authorize": "Имаше проблем при обработката на вашата уплата. Обидете се повторно или користете друг начин на плаќање.",
-        "amount_left_to_pay_label": "Доспешно плаќање:",
-        "discount_button_action_label": "Примени го кодот за попуст",
-        "gift_card_code_label": "Код на картичка за подарок",
-        "apply_gift_card_button_label": "Пријавете се",
-        "gift_card_balance_label": "Биланс:",
-        "supported_card_brands_more_label": "и повеќе…",
-        "detected_card_brand": "Откриена марка на картичка: {brand}",
-        "credit_card_vaulting_sign_in_banner_title": "Зачувајте ја вашата кредитна картичка",
-        "credit_card_vaulting_sign_in_banner_info": "Најавете се или креирајте сметка за да ја зачувате вашата кредитна картичка за идни купувања.",
-        "credit_card_vaulting_sign_in_banner_button_label": "Логирај Се",
-        "ftd_vault_credit_card_label": "Зачувајте ја оваа кредитна картичка на мојата сметка за побрзо плаќање",
-        "card_number_label": "Број на картичка",
-        "card_number_placeholder": "Број на картичка",
-        "card_pay_with": "Плати со:",
-        "card_security_notice": "Сите трансакции се безбедни и шифрирани.",
-        "card_security_vault_notice": "Ни требаат вашите податоци за идни плаќања. Сите трансакции се безбедни и шифрирани.",
-        "card_information_notice": "Сите трансакции се безбедни и шифрирани. Информациите за кредитната картичка никогаш не се чуваат.",
-        "name_on_card_label": "име на картичка",
-        "name_on_card_placeholder": "име на картичка",
-        "card_nickname_label": "Прекар (изборно)",
-        "card_expired": "Истечен",
-        "card_expiry_label": "Датум на истекување (ММ \/ ГГ)",
-        "card_expiry_placeholder": "Датум на истекување (ММ \/ ГГ)",
-        "credit_card_start_month": "Почетен месец",
-        "credit_card_start_year": "Почетна година",
-        "delete_customer_mandate_modal_title": "Да се ​​отстрани оваа платежна картичка?",
-        "delete_customer_mandate_modal_body": "Ако ја отстраните оваа картичка, ќе треба повторно да ја додадете пред да ја користите за плаќање.",
-        "delete_customer_mandate_modal_confirm": "Отстранете ја картичката",
-        "delete_customer_mandate_modal_cancel": "Откажи",
-        "card_verification_value_label": "Безбедносен код",
-        "card_verification_value_placeholder": "Безбедносен код",
-        "card_verification_confirm": "За целите на потврдата, внесете го безбедносниот код на вашата картичка.",
-        "card_expiry_date_explanation": "Датум на истекување на картичката во формат: месец, месец, година, година",
-        "card_expiration_month_label": "Месец на истекување",
-        "card_expiration_year_label": "Година на истекување",
-        "card_verification_value_explanation": "3-цифрен безбедносен код обично се наоѓа на задната страна од вашата картичка. Картичките American Express имаат 4-цифрен код кој се наоѓа на предната страна.",
-        "card_verification_value_explanation_amex": "4-цифрен безбедносен код на предната страна на вашата картичка",
-        "card_verification_value_explanation_other": "3-цифрен безбедносен код на задната страна од вашата картичка",
-        "card_start_label": "Датум на издавање (ММ \/ ГГ)",
-        "card_start_placeholder": "Датум на издавање (ММ \/ ГГ)",
-        "card_issue_number_label": "Број на издание",
-        "card_issue_number_placeholder": "Број на издание",
-        "card_change_label": "Промена",
-        "card_update_label": "Ажурирајте ја картичката",
-        "ends_with_label": "завршува со %{last_digits}",
-        "masked_digits_label": "•••• %{last_цифри}",
-        "payment_method_saved": "Начинот на плаќање е зачуван",
-        "card_vaulted_company_location": "Картичката е зачувана за оваа локација",
-        "expiry_long": "(Истекува %{month}\/%{year})",
-        "expiry_short": "(Истекување %{month}\/%{year})",
-        "saved_by_payment_method": "Зачувано од %{payment_method}",
-        "pay_with_payment_method": "Плати со %{payment_method}",
-        "different_credit_card_label": "Користете друга кредитна картичка",
-        "same_billing_address_label": "Исто како и адресата за испорака",
-        "different_billing_address_label": "Користете друга адреса за наплата",
-        "billing_address_associated_with_mandate": "Користете адреса поврзана со начинот на плаќање",
-        "billing_address_associated_with_mandate_info": "Ако сакате да ја промените адресата за наплата, отстранете ја и повторно внесете ги деталите за вашата кредитна картичка",
-        "free_order_notice_html": "Вашата нарачка е <strong>бесплатна<\/strong> . Не е потребно плаќање."
+        "saved_credit_card": "Вашата зачувана кредитна картичка",
+        "saved_credit_card_info": "Последните четири цифри",
+        "saved_credit_card_cvv_verification": "За целите на потврдата, внесете го безбедносниот код на вашата картичка.",
+        "saved_credit_card_actions": {
+          "edit": "Уредување",
+          "delete": "Избриши"
+        },
+        "saved_credit_cards_modal": {
+          "view_all_label": "Погледнете ги сите зачувани картички",
+          "done": "Направено",
+          "cancel": "Откажи"
+        },
+        "add_credit_card_modal": {
+          "title": "Додадете картичка",
+          "save": "Зачувај",
+          "cancel": "Откажи"
+        },
+        "delete_credit_card_modal": {
+          "title": "Избришете ја картичката",
+          "confirmation": "Дали сте сигурни дека сакате да го избришете {{brandName}} што завршува на {{lastDigits}} ?",
+          "cancel": "Откажи",
+          "delete": "Избриши"
+        },
+        "edit_credit_card_modal": {
+          "title": "Уреди картичка",
+          "done": "Направено",
+          "cancel": "Откажи",
+          "description": "Може да ја менувате само адресата за наплата на вашата картичка.",
+          "fields": {
+            "default": "Поставени како основни",
+            "card_number": "Број на картичка",
+            "expiry": "Дата на истекување",
+            "security_code": "Безбедносен код",
+            "name": "име на картичка",
+            "billing": "Сметка до"
+          }
+        },
+        "expired_cards_info": {
+          "one": "Има %{count} истечена картичка, која можете да ја прегледате и уредувате на вашата сметка.",
+          "other": "Има %{count} истечени картички, кои можете да ги прегледате и уредувате на вашата сметка."
+        },
+        "local_payment_method_receiver_notice": "По поставувањето на вашата нарачка, ќе добиете детали за плаќање. Направете плаќање на банкомат или онлајн во рок од {{dueDays}} дена.",
+        "order_edit_banner_title": "Потребна е исплата на {{amount_owed}}",
+        "order_edit_banner_subtitle": "Вашата нарачка {{order_number}} беше ажурирана. Прегледајте ги овие промени, а потоа платите за да ја потврдите вашата нарачка.",
+        "order_edit_banner_items_added": {
+          "one": "Додадено",
+          "other": "%{count} е додаден"
+        },
+        "order_edit_banner_items_removed": {
+          "in_full": "Отстранет",
+          "with_quantities": "Отстранети се {{delta}} од {{quantity}}"
+        },
+        "order_edit_banner_items_returned": {
+          "in_full": "Се врати",
+          "with_quantities": "Се вратија {{delta}} од {{quantity}}"
+        },
+        "order_edit_banner_single_item_added": "Додадено",
+        "order_edit_banner_multiple_items_added": "{{amount}} додадени",
+        "order_edit_banner_single_item_removed": "Отстранет",
+        "order_edit_banner_multiple_items_removed": "{{amount}} отстранети",
+        "order_edit_banner_single_item_returned": "Се врати",
+        "order_edit_banner_multiple_items_returned": "{{amount}} вратени",
+        "order_edit_banner_updated_order_label": "Ажурирана нарачка",
+        "gift_card_wrapper": {
+          "heading": "Честитка",
+          "apply_gift_card_label": "Примени картичка за подарок",
+          "apply_another_gift_card_label": "Примени друга картичка за подарок",
+          "gift_card_label": "Подарок картичка %{identifier}",
+          "payment_tag": "Честитка",
+          "add_label": "Додадете картичка за подарок",
+          "manage_label": "Управувајте со картички за подароци"
+        },
+        "gift_card_store_credit": {
+          "add_label": "Додајте картичка за подарок или складирајте кредит",
+          "manage_label": "Управувајте со картички за подароци или складирајте кредит"
+        },
+        "custom_onsite_payment_method_modal": {
+          "title": "Прилагодена потврда за плаќање на лице место"
+        },
+        "markets_pro_disclaimer_label": "Со кликнување подолу и завршување на вашата нарачка, се согласувате да ги купите вашите ставки од Global-e како евидентен трговец за оваа трансакција, на %{markets_pro_terms} и %{privacy_policy} на Global-e. Global-e е меѓународен давател на услуги за исполнување на %{shop_name}",
+        "markets_pro_disclaimer_terms_and_conditions": "Правила и услови",
+        "markets_pro_disclaimer_privacy_policy": "Политика за приватност",
+        "markets_pro_disclaimer_terms_and_conditions_title": "Услови и правила на Merchant of Record",
+        "markets_pro_disclaimer_privacy_policy_title": "Политика за приватност на Merchant of Record",
+        "purchase_order_number": {
+          "title": "PO број",
+          "label": "Поштенски број (опционално)"
+        },
+        "alternative_payment_currency_total_notice": "Забелешка: ќе ви се наплати %{amount_due}.",
+        "waiting_on_taxes_message": "Ако вашите даноци не се пресметаат во следните неколку секунди, освежете ја страницата.",
+        "waiting_on_taxes_notice": "Пресметување даноци",
+        "payment_method": "Метод за плаќање",
+        "expired_payment_method": "Избраниот начин на плаќање е истечен"
       },
-      "shipping": {
-        "shipping_information_required_notice": "Потребни се информации за испорака. {{link}} .",
-        "shipping_information_redirect_link": "Внесете ги вашите информации овде",
-        "loading_progressive_rates": "Се бара повеќе стапки…",
-        "no_other_methods_available": "Нема достапни други методи",
-        "duties_and_taxes_options": {
-          "ddu_title": "Плати при испорака",
-          "ddu_caption": "Може да се применат дополнителни такси",
-          "ddp_title": "Плати сега",
-          "ddp_caption": "Без дополнителни трошоци при испорака"
-        },
-        "shipping_method_combinations": {
-          "combination": "%{rest} и %{current}"
-        },
-        "shipping_used_as_billing_notice": "Ова ќе се користи и како ваша адреса за наплата за оваа нарачка.",
-        "address_update": "Ажурирајте ја адресата",
-        "enter_address_manually_label": "Внесете адреса рачно",
-        "shipping_address_title": "Се праќа во",
+      "billing": {
+        "billing_address_title": "Сметка до",
+        "same_as_shipping": "Исто како и адресата за испорака",
         "add_address": "Користете друга адреса",
-        "add_delivery_instructions": "Додадете инструкции за испорака",
         "edit": "Уредување",
         "delete": "Избриши",
         "address_more": "Повеќе дејства за оваа адреса",
@@ -242,26 +255,346 @@
         "address_form": {
           "add_address": "Додадете адреса",
           "save": "Зачувај",
-          "cancel": "Откажи",
-          "generic_error": "Имаше проблем со зачувувањето на вашата адреса. Ве молиме обидете се повторно.",
-          "one_time_address_subtitle": "Користете еднократна адреса за оваа нарачка"
-        },
-        "different_shipping_method_summary": "Внесете друга адреса за испорака за да ги видите достапните методи за испорака",
-        "invalid_shipping_method_summary": "Внесете важечка адреса за испорака за да ги видите достапните методи за испорака",
-        "method_summary": {
-          "incomplete_address_entered": "Внесете целосна адреса за испорака за да ги видите достапните методи за испорака",
-          "incomplete_address_selected": "Изберете целосна адреса за испорака за да ги видите достапните методи за испорака"
-        },
-        "local_pickup": {
-          "search_address": "Пребарајте адреса",
-          "rollup_title": "Локација за подигање"
-        },
-        "missing_shipping_address": "Недостасува адреса за испорака"
-      },
-      "localized_fields": {
-        "additional_information": {
-          "title": "Дополнителни информации"
+          "cancel": "Откажи"
         }
+      },
+      "company_location": {
+        "location_title": "Локација"
+      },
+      "payment_summary": {
+        "gift_card_current_balance_notice": "Тековно салдо %{amount}",
+        "credit_card_expires_on_notice": "Истекува на %{month}\/%{year}",
+        "express_payment_gateway_label": "Експрес",
+        "manual_payment_gateway_label": "Прирачник",
+        "billing_address_title": "Адреса за фактурирање",
+        "free_label": "Бесплатно"
+      },
+      "field_errors": {
+        "handle_phone_invalid": "Внесете важечки телефонски број",
+        "handle_email_invalid": "Внесете валидна е-пошта",
+        "email_invalid": "Внесете валидна е-пошта",
+        "email_or_phone_blank": "Внесете е-пошта или телефонски број",
+        "email_or_phone_invalid": "Внесете валидна е-пошта или број на мобилен телефон",
+        "address_first_name_blank": "Внесете име",
+        "address_first_name_too_long": "Името е предолго (максимумот е 255 знаци)",
+        "address_first_name_contains_emojis": "Името не може да содржи емотикони",
+        "address_first_name_contains_html_tags": "Името не може да содржи HTML ознаки.",
+        "address_first_name_contains_url": "Името не може да содржи URL",
+        "address_first_name_contains_mathematical_symbols": "Името не може да содржи математички симболи",
+        "address_last_name_blank": "Внесете презиме",
+        "address_last_name_too_long": "Презимето е предолго (максимум е 255 знаци)",
+        "address_last_name_contains_emojis": "Презимето не може да содржи емотикони",
+        "address_last_name_contains_html_tags": "Презимето не може да содржи HTML ознаки.",
+        "address_last_name_contains_url": "Презимето не може да содржи URL"
+      },
+      "notifications": {
+        "title": "Известувања"
+      },
+      "order_payment_collection": {
+        "custom_line_item_description": "Износ што треба да се плати за нарачката %{order_name}",
+        "changes_summary": {
+          "added": {
+            "one": "Додадено",
+            "other": "%{count} е додаден"
+          },
+          "removed": "Отстранет",
+          "subtracted": "Отстранет е %{count}",
+          "returned": "%{count} се врати"
+        },
+        "additional_payment_requested": "Потребна е исплата на %{total_outstanding}",
+        "checkout_review_and_pay": "Вашата нарачка %{order_name} беше ажурирана. Прегледајте ги овие промени, а потоа платите за да ја потврдите вашата нарачка.",
+        "order_updated_on": "Вашата нарачка беше ажурирана на %{last_edited_at}.",
+        "order_review_and_pay": "Вашата нарачка беше ажурирана. Прегледајте и платите за да ја потврдите вашата нарачка.",
+        "pay_now": "Плати сега"
+      },
+      "change_currency": {
+        "credit_card_will_be_charged_html": "Од вашата кредитна картичка ќе се наплати %{amount}",
+        "payment_total_label": "Вкупно плаќање",
+        "change_currency_link": "Промени во %{currency_name}",
+        "card_provider_fx_charges_warning": "Добавувачот на вашата картичка може да наплати такси за %{currency_code} трансакции.",
+        "currency_not_supported_by_shop": "Валутата што ја избравте повеќе не е достапна. Сите цени сега се во %{currency_code}."
+      },
+      "change_country": {
+        "cart_updated_based_on_country": "Вашата кошничка е ажурирана врз основа на вашата земја на испорака.",
+        "cart_and_currency_updated_based_on_country": "Вашата количка и валута се ажурирани врз основа на вашата земја на испорака."
+      },
+      "change_cart_localization": {
+        "verify_shipping_address": "Вашата земја\/регион е ажурирана. Внесете ја вашата адреса за испорака за да продолжите со наплатата."
+      },
+      "tips": {
+        "title": "Додадете совет",
+        "description": "Покажете ја вашата поддршка за тимот на %{shop_name}",
+        "presets_description": "Изберете процент на бакшиш",
+        "custom_label": "Прилагоден совет",
+        "add_tip": "Додадете совет",
+        "update_tip": "Ажурирај совет",
+        "message": "Ви благодариме, го цениме.",
+        "no_tip_label": "Никој"
+      },
+      "open_graph_meta_tag": {
+        "title_with_products": {
+          "zero": "Купете %{product_name}",
+          "one": "Купете %{product_name} и %{count} друга ставка",
+          "other": "Купете %{product_name} и %{count} други ставки"
+        }
+      },
+      "subscriptions": {
+        "recurring_total_intervals": {
+          "day": {
+            "one": "ден",
+            "other": "%{count} дена"
+          },
+          "week": {
+            "one": "недела",
+            "other": "%{count} седмици"
+          },
+          "month": {
+            "one": "месец",
+            "other": "%{count} месеци"
+          },
+          "year": {
+            "one": "година",
+            "other": "%{count} години"
+          }
+        },
+        "recurring_totals": "%{total_price} на секои %{interval}",
+        "recurring_totals_with_initial_order_shipping_discount": "Прво плаќање %{total_price_with_discount}, потоа %{recurring_total}",
+        "recurring_totals_with_policies": {
+          "first_cycles": {
+            "one": "Прво плаќање %{total_price}",
+            "other": "Прво %{count} плаќања %{total_price} секоја"
+          },
+          "following_cycles": ", потоа %{total_price} на секои %{interval}"
+        },
+        "recurring_totals_with_initial_order_shipping_discount_with_policies": {
+          "first_cycles": {
+            "one": ", потоа %{count} плаќање по %{total_price}",
+            "other": ", потоа %{count} плаќања по %{total_price} секоја"
+          }
+        }
+      },
+      "customer_payment_methods": {
+        "page_title": "Начини за плаќање",
+        "title": "Начини за плаќање",
+        "update_card_button_label": "Ажурирајте ја картичката",
+        "delete_customer_mandate": {
+          "generic_error": "Имаше проблем при обработката на вашето барање.",
+          "success_message": "Вашиот начин на плаќање е успешно избришан"
+        }
+      },
+      "throttle": {
+        "too_many_attempts": {
+          "message": "Премногу обиди",
+          "description": "Обидете се повторно за неколку минути"
+        },
+        "line_to_check_out": "На ред сте за одјавување",
+        "cart_summary_heading": "Вашата количка",
+        "merchandise": {
+          "available": "Достапно",
+          "sold_out": "Продадено"
+        },
+        "inventory": {
+          "partial_inventory_banner": "Дел од вашата количка е распродадена и нема да биде достапна за купување при наплата.",
+          "sold_out": {
+            "heading": "Вашата количка е распродадена",
+            "storefront_body": "Вратете се во продавницата за да продолжите со купувањето",
+            "no_storefront_body": "За жал, предметот што сакате да го купите повеќе не е достапен.",
+            "link": "Назад во продавница"
+          }
+        },
+        "title": "Ред",
+        "time_to_checkout_title": "Време е за одјавување - {{shopName}}",
+        "estimated_wait_time": {
+          "calculating": "Пресметување на проценетото време на чекање",
+          "less_than_one": "Проценето време на чекање: помалку од една минута",
+          "one": "Проценето време на чекање: {{count}} минута",
+          "other": "Проценето време на чекање: {{count}} минути"
+        },
+        "last_checked": "(Последно проверено: {{time}} )",
+        "footer": {
+          "heading": "Не ја освежувајте оваа страница, таа автоматски ќе се ажурира.",
+          "body": "Ставките во вашата кошничка не се резервирани додека не го завршите наплатата."
+        }
+      },
+      "cart_checkout_validation": {
+        "runtime_error": "Имаше проблем при обработката на вашето барање, контактирајте со сопственикот на продавницата."
+      },
+      "no_address_location": {
+        "title": "Локација без адреса",
+        "header": "Немате адреса за испорака за оваа локација",
+        "alt_header": "Недостасува адреса за испорака",
+        "message": "Контактирајте со нас за да додадеме адреса за оваа локација за да го завршите плаќањето.",
+        "email_us_button_label": "Испратете ни е-пошта"
+      },
+      "order_errors": {
+        "creation_failure": "Имаше проблем при создавањето на вашата нарачка. Обидете се повторно или контактирајте со нас за повеќе детали.",
+        "network_failure": "Вашата нарачка не може да се испрати поради мрежна грешка. Проверете ја врската и обидете се повторно.",
+        "inventory_reservation_failure": "Некои ставки веќе не се достапни."
+      },
+      "session_errors": {
+        "session_not_unique": "Имаше проблем при обработката на вашата нарачка. Освежете ја оваа страница за да се вратите во продавницата.",
+        "session_already_finished": "Оваа нарачка е веќе поднесена. Можете да се вратите во продавницата за да започнете нова нарачка."
+      },
+      "pickup_point": {
+        "location_is_currently_closed": "Затворено",
+        "business_hours": "Работно време",
+        "title": "Точка за подигање",
+        "or": "или",
+        "search_button": "Пребарување",
+        "selector_tabs": "Избирач на точка за подигање",
+        "selector_tab_map": "Карта",
+        "selector_tab_list": "Список",
+        "could_not_resolve_address": "Вашата адреса не може да се лоцира. Обидете се повторно или користете друга адреса",
+        "no_pickup_points_near_you": "Не се пронајдени точки за подигање во близина на избраната адреса",
+        "no_pickup_points_near_location": "Не се пронајдени точки за подигање во близина на вашата локација",
+        "no_pickup_points_found": "Не се пронајдени точки за подигање",
+        "paginator": {
+          "next_accessibility_label": "Следна Страна",
+          "previous_accessibility_label": "Претходна страна",
+          "header": {
+            "one": "Се прикажува %{first} - %{last} од %{count} точка"
+          }
+        }
+      }
+    },
+    "search": {
+      "sorting": {
+        "price_ascending": "Цена, ниска до висока",
+        "price_descending": "Цена, висока до ниска"
+      }
+    },
+    "page_titles": {
+      "blog_or_article_with_error": "Грешка - %{title}",
+      "products": "Производи",
+      "shopping_cart": "Вашата кошничка",
+      "account": "Сметка",
+      "create_account": "Креирај сметка",
+      "reset_account": "Ресетирајте ја сметката",
+      "addresses": "Адреси",
+      "order": "Нарачајте %{name}",
+      "search": "Пребарување",
+      "search_results": {
+        "one": "Пребарај: %{count} пронајден резултат за „%{terms}“",
+        "other": "Пребарување: %{count} пронајдени резултати за „%{terms}“"
+      },
+      "collections": "Колекции",
+      "not_found": "404 Не е пронајдено",
+      "challenge": "Предизвик",
+      "checkpoint": "Контролен пункт"
+    },
+    "cart": {
+      "discounts_with_count": "Применети се %{count} попусти"
+    },
+    "challenge": {
+      "message": "За да продолжиме, кажете ни дека не сте робот.",
+      "error": "Вашиот одговор не беше точен, обидете се повторно.",
+      "submit_button_text": "Поднесете"
+    },
+    "checkpoint": {
+      "message": "Решете ја Captcha за да продолжите",
+      "error": "Потврдата на Captcha не успеа",
+      "submit_button_text": "Поднесете"
+    },
+    "store_availability": {
+      "pick_up_time": {
+        "one_hour": "Обично готови за 1 час",
+        "two_hours": "Обично готови за 2 часа",
+        "four_hours": "Обично готови за 4 часа",
+        "twenty_four_hours": "Обично готови за 24 часа",
+        "two_to_four_days": "Обично готови за 2-4 дена",
+        "five_or_more_days": "Обично готови за 5+ дена",
+        "zero_to_two_hours": "Обично готови за 2 часа",
+        "two_to_four_hours": "Обично готови за 4 часа",
+        "immediately": "Подготвен за подигање сега",
+        "next_day": "Подготвен за подигање следниот ден"
+      }
+    }
+  },
+  "customer_accounts": {
+    "enable_javascript": "За да ја видите вашата сметка, овозможете JavaScript во поставките на вашиот прелистувач или најавете се со друг прелистувач.",
+    "navigation_and_structure": {
+      "account_menu": {
+        "hide_accessibility_label": "Сокриј го менито за сметка",
+        "label": "Сметка",
+        "show_accessibility_label": "Прикажи мени за сметка",
+        "nav_accessibility_label": "Навигација на сметката",
+        "open_menu_accessibility_label": "Отворете ја навигацијата на сметката",
+        "close_menu_accessibility_label": "Затворете ја навигацијата на сметката",
+        "loading_message": "Се вчитува навигацијата на сметката"
+      },
+      "action_menu_accessibility_label": "Повеќе акции",
+      "close_menu_accessibility_label": "Затворете ја главната навигација",
+      "contact_email_subject": "Контакт од онлајн продавницата на {{shopName}}",
+      "contact_link": "Контактирајте не",
+      "delete_confirmation": {
+        "cancel": "Откажи",
+        "delete": "Избриши"
+      },
+      "dismiss_toast": "Отфрли",
+      "document_title": "{{sectionName}} - {{shopName}} - Сметка",
+      "go_to_store_link": "Одете во продавница",
+      "loading_message": "Се вчитува",
+      "log_out_link": "Одјави се",
+      "logout_overlay_label": "Се одјавувате...",
+      "nav_label_accessibility_label": "Главна навигација",
+      "navigation_accessibility_message": "Навигиравте до {{sectionName}}",
+      "open_menu_accessibility_label": "Отворете ја главната навигација",
+      "orders_link_label": "Нарачки",
+      "shop_logo_accessibility_label": "Лого на {{shopName}}",
+      "subscriptions_link_label": "Претплати",
+      "settings_link": "Поставки"
+    },
+    "account_information": {
+      "loading_accessibility_message": "Се вчитуваат информации за сметката",
+      "loading_finished_accessibility_message": "Информациите за сметката се вчитани",
+      "profile_card": {
+        "cancel": "Откажи",
+        "cancel_accessibility_label": "Откажете го уредувањето на профилот",
+        "edit": "Уредување",
+        "edit_accessibility_label": "Уреди го профилот",
+        "email_help_text": "Е-поштата што се користи за најавување не може да се смени",
+        "first_name": "Име",
+        "last_name": "Презиме",
+        "no_name_provided_accessibility_label": "Не е додадено име",
+        "phone_number_help_text": "Телефонскиот број што се користи за најавување не може да се промени",
+        "save": "Зачувај",
+        "save_accessibility_label": "Зачувај профил",
+        "title": "Профил"
+      },
+      "profile_update_confirmation_message": "Профилот е ажуриран",
+      "title": "Профил",
+      "people": {
+        "pagination": {
+          "load_more": "Товари повеќе",
+          "load_more_accessibility_label": "Вчитај повеќе луѓе",
+          "loading_accessibility_label": "Се вчитуваат луѓе"
+        }
+      },
+      "add_button": "Додадете"
+    },
+    "orders": {
+      "list_layout_accessibility_label": "Опции за распоред",
+      "list_title": "Нарачки",
+      "order_list": {
+        "column_headers": {
+          "order": "Со цел",
+          "items": "Предмети",
+          "total": "Вкупно"
+        },
+        "delivered": "Доставено на {{date}}",
+        "empty_state_order_source_description": "Овде ќе се прикажуваат само нарачките направени од {{email}} .",
+        "empty_state_subtitle": "Одете во продавница за да нарачате.",
+        "empty_state_title": "Сè уште нема нарачки",
+        "empty_state_title_for_pending_orders": "Нема нарачки што чекаат",
+        "estimated_shortform": "Est. {{date}}",
+        "estimated_delivery": "Предвиден {{date}}",
+        "one_images_accessibility_label": "Нарачката вклучува {{lineItemName1}}",
+        "two_images_accessibility_label": "Нарачката вклучува {{lineItemName1}} , {{lineItemName2}}",
+        "three_images_accessibility_label": "Нарачката вклучува {{lineItemName1}} , {{lineItemName2}} , {{lineItemName3}}",
+        "four_images_accessibility_label": "Нарачката вклучува {{lineItemName1}} , {{lineItemName2}} , {{lineItemName3}} , {{lineItemName4}}",
+        "more_than_three_products_accessibility_label": "Нарачката вклучува {{lineItemName1}} , {{lineItemName2}} и уште {{numberOfAdditionalProducts}} производи",
+        "more_than_four_products_accessibility_label": "Нарачката вклучува {{lineItemName1}} , {{lineItemName2}} , {{lineItemName3}} и уште {{numberOfAdditionalProducts}} производи",
+        "plus_more": "+ {{numberOfAdditionalProducts}}"
       }
     }
   }
