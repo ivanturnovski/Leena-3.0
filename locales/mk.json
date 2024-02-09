@@ -1530,6 +1530,134 @@
           }
         }
       }
+    },
+    "payment_methods": {
+      "google_pay": {
+        "loading": "Се вчитува Google Pay",
+        "errors": {
+          "generic": "Имаше проблем со Google Pay. Обидете се повторно или користете друг начин на плаќање.",
+          "missing_billing_address": "Google Pay бара адреса за наплата. Ве молиме додадете еден на вашата сметка."
+        }
+      },
+      "apple_pay": {
+        "loading": "Се вчитува Apple Pay",
+        "errors": {
+          "generic": "Имаше проблем со Apple Pay. Обидете се повторно или користете друг начин на плаќање.",
+          "not_available": "Apple Pay не е достапна на овој уред.",
+          "missing_billing_address": "Apple Pay бара адреса за наплата. Ве молиме додадете еден на вашата сметка."
+        }
+      },
+      "payment_details": {
+        "title": "Детали за начинот на плаќање",
+        "credit_card_details_accessibility_label": "завршува на {{lastDigits}}",
+        "billing_title": "Адреса за фактурирање",
+        "card_info_title": "Информации за картичката",
+        "payment_method_expiring_on": "Истекува на {{expiryDate}}",
+        "payment_method_expired_on": "Истече на {{expiryDate}}",
+        "preauthorized_payments": "Предовластени плаќања",
+        "close_payment_modal": "Затвори",
+        "close_payment_modal_accessibility_label": "Затворете ги модалните детали за начинот на плаќање",
+        "payment_method_not_found_error": "Не може да се најде начин на плаќање",
+        "payment_details_loading": "Се вчитуваат деталите за начинот на плаќање",
+        "pre_authorized_payments": "однапред одобрени плаќања",
+        "total_amount_of_subscription_line_items_left": "и уште {{total}}",
+        "total_amount_of_subscription_line_items_left_accessibility_label": "Вкупно {{totalItems}} ставки, прикажувајќи {{totalItemsToDisplay}} ставки.",
+        "next_payment_due": "Доспеана следно плаќање {{dueDateInMonthDayYear}}",
+        "edit_payment_method_button": "Уредување",
+        "edit_payment_method_button_accessibility_label": "Уредете го начинот на плаќање што завршува на {{lastDigits}}",
+        "loading_shop_pay": "Се вчитува Продавница Плати",
+        "invalid_payment_method": "Неважечки начин на плаќање",
+        "invalid_payment_method_message": "Користете нова кредитна картичка за да продолжите да ги примате претстојните нарачки.",
+        "replace_payment_method": "Заменете го начинот на плаќање",
+        "checkout_card_banner": "Овој начин на плаќање може да се користи само за однапред одобрени плаќања. Нема да се појави при наплатата ако сте најавени во оваа продавница.",
+        "default_checkbox": "Поставени како основни",
+        "default_checkbox_accessibility_label": "Поставете го овој начин на плаќање како стандарден"
+      },
+      "edit_payment_method": {
+        "title": "Уредете го начинот на плаќање",
+        "save_payment_method_button": "Зачувај",
+        "cancel_edit_payment_method_button": "Откажи",
+        "payment_method_updated_toast": "Начинот на плаќање е ажуриран",
+        "billing_address": "Адреса за фактурирање",
+        "billing_address_add_new": "Додади ново",
+        "billing_address_choose_from_list": "Изберете од списокот",
+        "future_purchases_notice": "Овој начин на плаќање ќе се зачува за идни купувања.",
+        "generic_error": "Имаше проблем при ажурирањето. Ве молиме обидете се повторно."
+      },
+      "card_fields": {
+        "card_number_label": "Број на картичка",
+        "card_number_placeholder": "Број на картичка",
+        "name_on_card_label": "име на картичка",
+        "name_on_card_placeholder": "име на картичка",
+        "card_expiry_label": "Датум на истекување (ММ \/ ГГ)",
+        "card_expiry_placeholder": "Датум на истекување (ММ \/ ГГ)",
+        "card_verification_value_label": "Безбедносен код",
+        "card_verification_value_placeholder": "Безбедносен код",
+        "card_start_label": "Датум на издавање (ММ \/ ГГ)",
+        "card_start_placeholder": "Датум на издавање (ММ \/ ГГ)",
+        "tooltip": {
+          "tooltip_accessibility_label": "Повеќе информации",
+          "card_verification_value_explanation_amex": "4-цифрен безбедносен код на предната страна на вашата картичка",
+          "card_verification_value_explanation_other": "3-цифрен безбедносен код на задната страна од вашата картичка",
+          "card_verification_value_explanation": "3-цифрен безбедносен код обично се наоѓа на задната страна од вашата картичка. Картичките American Express имаат 4-цифрен код кој се наоѓа на предната страна.",
+          "card_security_notice": "Сите трансакции се безбедни и шифрирани."
+        },
+        "field_errors": {
+          "credit_card_name_invalid": "Внесете го вашето име точно како што е напишано на вашата картичка",
+          "credit_card_number_invalid": "Внесете важечки број на картичка",
+          "credit_card_expiry_invalid": "Внесете важечки датум на истекување на картичката",
+          "credit_card_verification_value_blank": "Внесете го CVV или безбедносната шифра на вашата картичка"
+        }
+      },
+      "payment_delete": {
+        "title": "Избришете го начинот на плаќање",
+        "description_without_replacement": "Овој начин на плаќање веќе нема да биде достапен за идни купувања.",
+        "description_with_replacement": "Бришењето на овој начин на плаќање ќе влијае на однапред овластените плаќања. Опционално може да го замените со друг начин на плаќање за да продолжите да ги примате претстојните нарачки.",
+        "warning_message_with_replacement": {
+          "with_pending_orders_and_subscriptions": "Бришењето на овој начин на плаќање ќе влијае на однапред овластените плаќања. Освен ако не изберете алтернативен начин на плаќање, овој начин на плаќање сепак ќе се наплаќа за сите неподмирени салда на постоечките нарачки. Изборот на алтернативен начин на плаќање ќе ви овозможи да ги добивате претстојните нарачки за претплата без прекин.",
+          "with_pending_orders": "Бришењето на овој начин на плаќање ќе го отстрани од вашата сметка и повеќе нема да биде достапен за идни купувања. Освен ако не изберете алтернативен начин на плаќање, тој сепак ќе се наплатува за сите неподмирени салда на постоечките нарачки.",
+          "with_subscriptions": "Бришењето на овој начин на плаќање ќе влијае на однапред овластените плаќања. Заменете го со алтернативен начин на плаќање за да продолжите да ги примате претстојните нарачки."
+        },
+        "warning_message_without_replacement": {
+          "with_pending_orders_and_subscriptions": "Бришењето на овој начин на плаќање ќе влијае на однапред овластените плаќања. Овој начин на плаќање сè уште ќе се наплаќа за сите неподмирени салда на постоечки нарачки, но нема да добивате претстојни нарачки за претплата. Додајте алтернативен начин на плаќање за да продолжите да добивате нарачки за претплата.",
+          "with_pending_orders": "Бришењето на овој начин на плаќање ќе го отстрани од вашата сметка и повеќе нема да биде достапен за идни купувања. Сè уште ќе се наплатува за сите неподмирени салда на постојните нарачки.",
+          "with_subscriptions": "Бришењето на овој начин на плаќање ќе влијае на однапред овластените плаќања. Додајте алтернативен начин на плаќање за да продолжите да ги примате претстојните нарачки."
+        },
+        "payment_method_selector_placeholder": "Изберете заменски начин на плаќање (опционално)",
+        "payment_method_selector_no_alternative_payment": "Нема метод за замена",
+        "replace_method_with_new_method_description": "Вашиот {{currentPaymentMethodName}} ќе биде избришан и заменет со вашиот {{newPaymentMethodName}} .",
+        "error_when_deleting": "Се извинуваме, но нешто тргна наопаку и не можевме да го избришеме овој начин на плаќање. Обидете се повторно подоцна или освежете ја страницата.",
+        "delete_and_replace_button": "Избриши и замени",
+        "delete_and_replace_button_accessibility_label": "Избришете го {{currentPaymentMethodName}} и заменете го со {{newPaymentMethodName}} .",
+        "deleted_successfully": "Начинот на плаќање е успешно избришан.",
+        "loading_available_payment_methods_accessibility_label": "Се вчитуваат достапните начини на плаќање"
+      },
+      "add_payment_method": {
+        "title": "Додајте начин на плаќање",
+        "payment_method_added_confirmation": "Додаден е начин на плаќање",
+        "billing_address": {
+          "title": "Адреса за фактурирање",
+          "add_billing_address_button": "Додади ново",
+          "add_billing_address_button_accessibility_label": "Додајте нова адреса за наплата",
+          "choose_billing_address_from_list_button": "Изберете од списокот",
+          "choose_billing_address_from_list_button_accessibility_label": "Изберете адреса за наплата од списокот",
+          "missing_billing_address_error_message": "Ве молиме наведете адреса за наплата",
+          "default_checkbox": "Поставете како стандарден начин на плаќање"
+        }
+      }
+    },
+    "payment_method_brands": {
+      "visa": "Виза",
+      "americanexpress": "Американ Експрес",
+      "discover": "Откријте",
+      "dinersclub": "Динерс клуб",
+      "elo": "Ело",
+      "visaelectron": "Виза електрон",
+      "maestro": "Маестро",
+      "dankort": "Данкорт",
+      "hipercard": "Хиперкард",
+      "laser": "Ласерски",
+      "shoppay": "Продавница Плати"
     }
   }
 }
