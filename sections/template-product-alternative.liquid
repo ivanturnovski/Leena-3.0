@@ -233,6 +233,7 @@
         var selectedOption = [];
         document.querySelectorAll('.product-option input[type="radio"]:checked').forEach(radio => {
           selectedOption.push(radio.value)
+          console.log(`selected: ${selectedOption}`);
         })
         var matchedVariant = product.variants.find(variant => {
           var pass = true;
