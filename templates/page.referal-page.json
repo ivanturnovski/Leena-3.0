@@ -34,9 +34,87 @@
         "container": "container",
         "show_published_date": true
       }
+    },
+    "1732527293da44d8f9": {
+      "type": "apps",
+      "blocks": {
+        "bloop_referral_bss_referral_guide_9fpd7y": {
+          "type": "shopify://apps/bloop-referral/blocks/bss-referral-guide/9d243b55-b2a4-42a8-aa2e-043240bb5d58",
+          "settings": {
+            "guide_heading_size": "bloop_h1",
+            "guide_text_color": "#1B1731",
+            "guide_primary_color": "#5826DE",
+            "guide_background_color": "#FFFFFF",
+            "guide_heading": "How it works",
+            "guide_sub_heading": "Only 4 steps to earn your rewards!",
+            "step_1_heading": "1. Join referral program",
+            "step_1_description": "Sign up and start giving your friends a reward, then claim yours when they make a purchase",
+            "step_2_heading": "2. Refer a friend",
+            "step_2_description": "Share your referral link directly with your friends or post it on social media",
+            "step_3_heading": "3. Your friend gets referred",
+            "step_3_description": "When they visit the link, your friend will receive a discount and can start making a purchase",
+            "step_4_heading": "4. Receive your reward",
+            "step_4_description": "After your friend places an order using your gift, you'll earn a discount as a reward",
+            "guide_padding_top": 40,
+            "guide_padding_bottom": 40
+          }
+        },
+        "bloop_referral_bss_referral_main_yV7F8e": {
+          "type": "shopify://apps/bloop-referral/blocks/bss-referral-main/9d243b55-b2a4-42a8-aa2e-043240bb5d58",
+          "settings": {
+            "main_heading_size": "bloop_h1",
+            "main_text_color": "#1B1731",
+            "main_primary_color": "#5826DE",
+            "main_background_color": "#FFFFFF",
+            "main_heading": "Join referral program",
+            "main_sub_heading": "They'll get 20% off, and you'll receive $25 after they use the gift to make a purchase.",
+            "main_heading_share": "Share to your friends",
+            "main_sub_heading_share": "Share this link with your friends to give them 20% off, and you'll get $25 after they make a purchase with the gift.",
+            "button_join_program": "Join program",
+            "join_err": "You’re not eligible to join referral program",
+            "button_continue": "Continue",
+            "invalid_email_join": "Please enter valid email",
+            "place_holder": "Enter your email",
+            "sender_label": "Your friends’ emails",
+            "sender_placeholder": "Separate each email with a comma",
+            "invalid_email_sender": "Please enter valid emails, separated by commas",
+            "message_label": "Your message",
+            "message_placeholder": "A personalized message for your friends. We will take care of adding the offer link for you :)",
+            "send_button": "Send",
+            "email_sent": "Email(s) sent to your friends!",
+            "main_padding_top": 40,
+            "main_padding_bottom": 40
+          }
+        },
+        "bloop_referral_bss_referral_reward_V6Gta4": {
+          "type": "shopify://apps/bloop-referral/blocks/bss-referral-reward/9d243b55-b2a4-42a8-aa2e-043240bb5d58",
+          "settings": {
+            "reward_heading_size": "bloop_h1",
+            "reward_text_color": "#1B1731",
+            "reward_primary_color": "#5826DE",
+            "reward_background_color": "#F5F1FF",
+            "reward_heading": "Your rewards",
+            "reward_sub_heading": "Your earnings from referrals",
+            "no_rewards": "You have no rewards yet",
+            "copy": "Copy",
+            "apply": "Apply",
+            "used": "Used",
+            "reward_info": "Referred {email}",
+            "reward_padding_top": 40,
+            "reward_padding_bottom": 40
+          }
+        }
+      },
+      "block_order": [
+        "bloop_referral_bss_referral_guide_9fpd7y",
+        "bloop_referral_bss_referral_main_yV7F8e",
+        "bloop_referral_bss_referral_reward_V6Gta4"
+      ],
+      "settings": {}
     }
   },
   "order": [
-    "template"
+    "template",
+    "1732527293da44d8f9"
   ]
 }
