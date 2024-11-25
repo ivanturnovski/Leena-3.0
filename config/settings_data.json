@@ -1,10 +1,19 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "header_footer_color": "#ece2da",
     "header_text_font": "karla_n4",
     "body_text_font": "karla_n4",
     "body_font_size": 16,
-    "favicon": "shopify:\/\/shop_images\/shopify-bag.png",
+    "favicon": "shopify://shop_images/shopify-bag.png",
     "sections": {
       "header": {
         "type": "header",
@@ -13,7 +22,7 @@
             "type": "flyout_menu",
             "settings": {
               "flyout_menu": "bikes",
-              "url": "shopify:\/\/collections\/bikes"
+              "url": "shopify://collections/bikes"
             }
           },
           "dc79aac7-84d8-4412-9562-aac3566eb19e": {
@@ -27,28 +36,28 @@
             "type": "mega_menu",
             "settings": {
               "mega_menu": "bikes",
-              "url": "shopify:\/\/collections\/bikes"
+              "url": "shopify://collections/bikes"
             }
           },
           "5381ff17-1906-4047-85ae-f192d236bfd8": {
             "type": "mega_menu",
             "settings": {
               "mega_menu": "apparel",
-              "url": "shopify:\/\/collections\/apparel"
+              "url": "shopify://collections/apparel"
             }
           },
           "349ac1da-90fa-4260-8347-40ac88a237ee": {
             "type": "mega_menu",
             "settings": {
               "mega_menu": "tools",
-              "url": "shopify:\/\/collections\/bike-tools"
+              "url": "shopify://collections/bike-tools"
             }
           },
           "b928fc62-32a8-4e4a-b105-e3f91aa626aa": {
             "type": "url",
             "settings": {
               "item": "Safety Gear",
-              "url": "shopify:\/\/collections\/safety-gear"
+              "url": "shopify://collections/safety-gear"
             }
           }
         },
@@ -61,7 +70,7 @@
           "b928fc62-32a8-4e4a-b105-e3f91aa626aa"
         ],
         "settings": {
-          "logo": "shopify:\/\/shop_images\/logo2resized200_c9315971-2eaf-4314-afcf-1351168c3fea.png",
+          "logo": "shopify://shop_images/logo2resized200_c9315971-2eaf-4314-afcf-1351168c3fea.png",
           "logo_bar": "#d3eaf4",
           "top_bar": "#cae6da",
           "top_menu": "top-menu",
@@ -77,9 +86,9 @@
           "a8586ee1-50c6-4dfa-b77d-7049a800c021": {
             "type": "text",
             "settings": {
-              "logo": "shopify:\/\/shop_images\/logo2resized200_c9315971-2eaf-4314-afcf-1351168c3fea.png",
+              "logo": "shopify://shop_images/logo2resized200_c9315971-2eaf-4314-afcf-1351168c3fea.png",
               "title": "Store Information",
-              "description": "<p><strong>Address:<\/strong> 11 Oktomvri 4 Novo Selo, Macedonia<\/p><p><strong>Email:<\/strong> ivanturnovski@gmail.com<\/p><p><strong>Number:<\/strong> +38970617575<\/p>"
+              "description": "<p><strong>Address:</strong> 11 Oktomvri 4 Novo Selo, Macedonia</p><p><strong>Email:</strong> ivanturnovski@gmail.com</p><p><strong>Number:</strong> +38970617575</p>"
             }
           },
           "67c7d64c-0d46-453c-b3b5-4ed881addc6c": {
@@ -108,18 +117,15 @@
         }
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "blocks": {
       "319724205969189013": {
-        "type": "shopify:\/\/apps\/hulk-form-builder\/blocks\/app-embed\/b6b8dd14-356b-4725-a4ed-77232212b3c3",
+        "type": "shopify://apps/hulk-form-builder/blocks/app-embed/b6b8dd14-356b-4725-a4ed-77232212b3c3",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "1768834845299682660": {
-        "type": "shopify:\/\/apps\/subscriptions\/blocks\/app-embed-block\/a3bfe9ec-96f8-4508-a003-df608a36d2ad",
+        "type": "shopify://apps/subscriptions/blocks/app-embed-block/a3bfe9ec-96f8-4508-a003-df608a36d2ad",
         "disabled": false,
         "settings": {
           "color_text_title": "#6D7175",
@@ -131,11 +137,15 @@
           "supporting_text_title": "Purchase options",
           "subscription_policy_url": ""
         }
+      },
+      "234434759646961565": {
+        "type": "shopify://apps/bixgrow-affiliate/blocks/widget/b4f8e2e0-5ee6-49dd-b333-2e5542feb60a",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
   "presets": {
-    "Default": {
-    }
+    "Default": {}
   }
 }
