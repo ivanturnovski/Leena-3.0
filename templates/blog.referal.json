@@ -1,0 +1,44 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "template": {
+      "type": "template-blog",
+      "blocks": {
+        "4d829c66-dc96-4da7-be32-6d03a8ed5732": {
+          "type": "blog_title",
+          "settings": {}
+        },
+        "b76924bd-0729-4f51-bfd4-f523c5349890": {
+          "type": "blog_description",
+          "settings": {}
+        },
+        "6a659c06-ca11-4d2c-8e58-9c0c1380d4b7": {
+          "type": "blog_articles_count",
+          "settings": {
+            "blog_articles_count_description": "Number of Blogs:"
+          }
+        }
+      },
+      "block_order": [
+        "4d829c66-dc96-4da7-be32-6d03a8ed5732",
+        "b76924bd-0729-4f51-bfd4-f523c5349890",
+        "6a659c06-ca11-4d2c-8e58-9c0c1380d4b7"
+      ],
+      "settings": {
+        "blogs_per_page": 9,
+        "blog_description": "Find out how our theme is done!"
+      }
+    }
+  },
+  "order": [
+    "template"
+  ]
+}
