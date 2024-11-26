@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "template": {
@@ -5,8 +14,7 @@
       "blocks": {
         "carousel": {
           "type": "product_carousel",
-          "settings": {
-          }
+          "settings": {}
         },
         "main": {
           "type": "product_main",
@@ -27,33 +35,30 @@
     },
     "16432286948dc07db4": {
       "type": "apps",
+      "settings": {}
+    },
+    "17326391521cc571b1": {
+      "type": "apps",
       "blocks": {
-        "52ee1e45-51b4-4d33-b2df-d40e9ace4f98": {
-          "type": "shopify:\/\/apps\/product-reviews\/blocks\/reviews\/bae150af-8da8-48b2-9867-398188115e5f",
+        "rebuy_personalization_engine_rebuy_widget_HmK68K": {
+          "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-widget/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
           "settings": {
-          }
-        },
-        "9115afe3-79e4-4390-a033-908f3f2b46ac": {
-          "type": "shopify:\/\/apps\/product-reviews\/blocks\/star_rating\/bae150af-8da8-48b2-9867-398188115e5f",
-          "settings": {
-            "stars_fill_color": "#000000",
-            "star_size": 15,
-            "text_align": "center",
-            "product": "{{product}}",
-            "stars_text_empty": "No reviews"
+            "enabled": true,
+            "id": "186421",
+            "product_id_enabled": true,
+            "collection_id_enabled": false
           }
         }
       },
       "block_order": [
-        "52ee1e45-51b4-4d33-b2df-d40e9ace4f98",
-        "9115afe3-79e4-4390-a033-908f3f2b46ac"
+        "rebuy_personalization_engine_rebuy_widget_HmK68K"
       ],
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
     "template",
-    "16432286948dc07db4"
+    "16432286948dc07db4",
+    "17326391521cc571b1"
   ]
 }
