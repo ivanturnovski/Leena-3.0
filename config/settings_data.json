@@ -147,6 +147,11 @@
         "type": "shopify://apps/bloop-referral/blocks/bss_bloop_script/9d243b55-b2a4-42a8-aa2e-043240bb5d58",
         "disabled": false,
         "settings": {}
+      },
+      "10641372206048101839": {
+        "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-global-embed/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
