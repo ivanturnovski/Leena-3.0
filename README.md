@@ -2,5 +2,10 @@
 
 Update on Leena - Online Store 2.0 using Shopify CLI
 
-1. gulp watch - compile sass
-2. shopify theme serve
+1. `sh npm install `
+2. `sh gulp watch ` - compile sass
+3. `sh npm run dev `
+
+### Ivan Turnovski Dev
+
+### ivanturnovski.myshopify.com

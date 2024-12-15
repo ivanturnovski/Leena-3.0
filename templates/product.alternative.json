@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "template": {
@@ -5,8 +14,7 @@
       "blocks": {
         "edfbc624-dc91-4188-b81e-afbb47ed2160": {
           "type": "product_carousel",
-          "settings": {
-          }
+          "settings": {}
         },
         "aa179a3e-6e7c-40ec-b50e-5e9b6f6464d7": {
           "type": "product_main",
@@ -27,29 +35,7 @@
     },
     "166488669446d638b6": {
       "type": "apps",
-      "blocks": {
-        "29b6a95c-33f3-4b4b-808c-dafa25c5be92": {
-          "type": "shopify:\/\/apps\/product-reviews\/blocks\/reviews\/bae150af-8da8-48b2-9867-398188115e5f",
-          "settings": {
-          }
-        },
-        "ea321b45-0b59-4c04-bd7c-b0f438eec06b": {
-          "type": "shopify:\/\/apps\/product-reviews\/blocks\/star_rating\/bae150af-8da8-48b2-9867-398188115e5f",
-          "settings": {
-            "stars_fill_color": "#000000",
-            "star_size": 15,
-            "text_align": "center",
-            "product": "{{product}}",
-            "stars_text_empty": "No reviews"
-          }
-        }
-      },
-      "block_order": [
-        "29b6a95c-33f3-4b4b-808c-dafa25c5be92",
-        "ea321b45-0b59-4c04-bd7c-b0f438eec06b"
-      ],
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
