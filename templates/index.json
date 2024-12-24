@@ -207,6 +207,128 @@
         "show_cart_button": true,
         "slideshow": true
       }
+    },
+    "table_cpHg8T": {
+      "type": "table",
+      "blocks": {
+        "table_row_Tkc6iM": {
+          "type": "_table-row",
+          "settings": {},
+          "blocks": {
+            "table_cell_L6cKAJ": {
+              "type": "_table-cell",
+              "settings": {
+                "type_of_cell": "body"
+              },
+              "blocks": {
+                "text_JeBBEi": {
+                  "type": "text",
+                  "settings": {
+                    "text": "content 2"
+                  }
+                }
+              },
+              "block_order": [
+                "text_JeBBEi"
+              ]
+            },
+            "table_cell_6NzHg9": {
+              "type": "_table-cell",
+              "settings": {
+                "type_of_cell": "body"
+              },
+              "blocks": {
+                "text_Tga3Ha": {
+                  "type": "text",
+                  "settings": {
+                    "text": "content 1"
+                  }
+                }
+              },
+              "block_order": [
+                "text_Tga3Ha"
+              ]
+            }
+          },
+          "block_order": [
+            "table_cell_L6cKAJ",
+            "table_cell_6NzHg9"
+          ]
+        },
+        "table-header": {
+          "type": "_table-header",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "table_cell_xQhN6K": {
+              "type": "_table-cell",
+              "settings": {
+                "type_of_cell": "header"
+              },
+              "blocks": {
+                "text_XyJ6UH": {
+                  "type": "text",
+                  "settings": {
+                    "text": "test 2"
+                  }
+                }
+              },
+              "block_order": [
+                "text_XyJ6UH"
+              ]
+            },
+            "table_cell_NzGA7M": {
+              "type": "_table-cell",
+              "settings": {
+                "type_of_cell": "header"
+              },
+              "blocks": {
+                "text_fK8pPp": {
+                  "type": "text",
+                  "settings": {
+                    "text": "test"
+                  }
+                }
+              },
+              "block_order": [
+                "text_fK8pPp"
+              ]
+            }
+          },
+          "block_order": [
+            "table_cell_xQhN6K",
+            "table_cell_NzGA7M"
+          ]
+        }
+      },
+      "block_order": [
+        "table_row_Tkc6iM"
+      ],
+      "settings": {}
+    },
+    "theme_blocks_FqaNHF": {
+      "type": "theme-blocks",
+      "blocks": {
+        "card_product_BjDWYM": {
+          "type": "card-product",
+          "settings": {
+            "product": "{{ closest.product }}"
+          }
+        },
+        "text_8VwV7H": {
+          "type": "text",
+          "settings": {
+            "text": "test theme blocks"
+          }
+        }
+      },
+      "block_order": [
+        "card_product_BjDWYM",
+        "text_8VwV7H"
+      ],
+      "settings": {
+        "featured_product": "acs-crossfire-headset"
+      }
     }
   },
   "order": [
@@ -215,6 +337,8 @@
     "slideshow-hero",
     "gallery",
     "from-the-blog",
-    "featured-products"
+    "featured-products",
+    "table_cpHg8T",
+    "theme_blocks_FqaNHF"
   ]
 }

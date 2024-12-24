@@ -1,0 +1,23 @@
+
+    <table>
+        {% content_for "block", type: "_table-header", id: "table-header" %}
+        <tbody> {% content_for 'blocks' %}</tbody>
+    </table>
+
+
+{% schema %}
+  {
+    "name": "Table",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "_table-row"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Table"
+      }
+    ]
+  }
+{% endschema %}

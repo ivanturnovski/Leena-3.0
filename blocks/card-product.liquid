@@ -1,0 +1,21 @@
+{% render 'product-card'
+  , product: block.settings.product %}
+
+
+{% schema %}
+  {
+    "name": "Card Product",
+    "settings": [
+        {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+        },
+    ],
+    "presets": [
+      {
+        "name": "Card Product"
+      }
+    ]
+  }
+{% endschema %}

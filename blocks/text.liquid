@@ -1,0 +1,19 @@
+<p {{ block.shopify_attributes }}>
+  {{ block.settings.text }}</p>
+{% schema %}
+  {
+    "name": "Text",
+    "settings": [
+      {
+        "type": "text",
+        "label": "text",
+        "id": "text"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Text"
+      }
+    ]
+  }
+{% endschema %}

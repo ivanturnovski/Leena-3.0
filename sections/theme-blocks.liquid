@@ -1,0 +1,25 @@
+<div class="">{% content_for 'blocks' %}</div>
+{% schema %}
+  {
+    "name": "Theme Blocks",
+    "settings": [
+        {
+            "type": "product",
+            "label": "Featured Product",
+            "id": "featured_product"
+        }
+    ],
+    "blocks": [ {
+           "type": "@theme"
+    },
+    {
+           "type": "@app"
+    }
+    ],
+    "presets": [
+      {
+        "name": "Theme Blocks"
+      }
+    ]
+  }
+{% endschema %}
