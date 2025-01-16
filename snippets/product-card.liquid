@@ -28,9 +28,9 @@
 
 
         {%- if cart_buttons == true -%}
-            {%- form 'product', product, class: "product-form", id: "AddToCartForm" -%}
+            {%- form 'product', product, data-productid: product.id, class: "product-form", id: "AddToCartForm" -%}
                 <div class="mb-3">
-                    <select class="form-select form-select-sm" id="ProductSelect" name="id">
+                    <select class="form-select form-select-sm" id="ProductSelect" name="id" data-productid="{{ product.id }}">
                         {%- for variant in product.variants -%}
                             {%- if variant.available -%}
                                 <option value="{{ variant.id }}">

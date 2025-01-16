@@ -34,10 +34,10 @@
               {% else %}
                 <p itemprop="availability" content="" class="badge bg-danger">Sold Out</p>
               {% endif %}
-              {%- form 'product', product, class: "product-form", id: "AddToCartForm" -%}
+              {%- form 'product', product, data-productid: product.id, class: "product-form", id: "AddToCartForm" -%}
 
                 <div class="mb-3">
-                  <input id="product-id" type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                  <input id="product-id" type="hidden" name="id" data-productid="{{ product.id }}" value="{{ product.selected_or_first_available_variant.id }}">
                   {% if product.variants.size > 1 %}
                     <div class="product-option">
                       {% for option in product.options_with_values %}
@@ -57,7 +57,7 @@
                 </div>
                 {%comment %}
                   <div class="mb-3">
-                  <select name="id" id="ProductSelect" class="form-select">
+                  <select name="id" data-productid="{{ product.id }}" id="ProductSelect" class="form-select">
                   {%- for variant in product.variants -%}
                   {%- if variant.available -%}
                   <option price="{{ variant.price | money }}" value="{{ variant.id }}" {% if variant.selected %}

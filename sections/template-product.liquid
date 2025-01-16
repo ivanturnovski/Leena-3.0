@@ -31,9 +31,9 @@
 				{% else %}
 				<p itemprop="availability" content="" class="badge bg-danger">Sold Out</p>
 				{% endif %}
-				{%- form 'product', product, class: "product-form", id: "AddToCartForm" -%}
+				{%- form 'product', product, data-productid: product.id, class: "product-form", id: "AddToCartForm" -%}
 				<div class="mb-3">
-					<select name="id" id="ProductSelect" class="form-select">
+					<select name="id" data-productid="{{ product.id }}" id="ProductSelect" class="form-select">
 						{%- for variant in product.variants -%}
 						{%- if variant.available -%}
 						<option price="{{ variant.price | money }}" value="{{ variant.id }}" {% if variant.selected %}
