@@ -1,0 +1,138 @@
+{
+  "article": [],
+  "blog": [],
+  "brand": [],
+  "collection": [
+    {
+      "key": "thumb_image",
+      "namespace": "custom",
+      "name": "Thumb image",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    }
+  ],
+  "company": [],
+  "company_location": [],
+  "location": [],
+  "market": [],
+  "order": [],
+  "page": [],
+  "product": [
+    {
+      "key": "mini_images",
+      "namespace": "foursixty",
+      "name": "Foursixty Shop Mini Product Images",
+      "description": null,
+      "type": {
+        "name": "list.file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "mini_available",
+      "namespace": "foursixty",
+      "name": "Show Foursixty Product Mini",
+      "description": null,
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
+      }
+    },
+    {
+      "key": "rating",
+      "namespace": "reviews",
+      "name": "Product rating",
+      "description": "Average rating from customers",
+      "type": {
+        "name": "rating",
+        "category": "RATING"
+      }
+    },
+    {
+      "key": "rating_count",
+      "namespace": "reviews",
+      "name": "Product rating count",
+      "description": "Total number of ratings from customers",
+      "type": {
+        "name": "number_integer",
+        "category": "NUMBER"
+      }
+    },
+    {
+      "key": "wide_type",
+      "namespace": "custom",
+      "name": "Wide type",
+      "description": "",
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
+      }
+    },
+    {
+      "key": "wide_with_style_product",
+      "namespace": "custom",
+      "name": "Wide-with style Product",
+      "description": "",
+      "type": {
+        "name": "product_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "standart_type_n",
+      "namespace": "custom",
+      "name": "Standard type",
+      "description": "",
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
+      }
+    },
+    {
+      "key": "custom_badge",
+      "namespace": "custom",
+      "name": "Custom Badge",
+      "description": "Custom Badge",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "value_props",
+      "namespace": "custom",
+      "name": "Value Props",
+      "description": "Value Props",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    }
+  ],
+  "variant": [],
+  "shop": [
+    {
+      "key": "mini_images",
+      "namespace": "foursixty",
+      "name": "Foursixty Shop Mini Store Images",
+      "description": null,
+      "type": {
+        "name": "list.file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "mini_available",
+      "namespace": "foursixty",
+      "name": "Show Foursixty Store Mini",
+      "description": null,
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
+      }
+    }
+  ]
+}
